@@ -12,6 +12,7 @@ import { IoLogoYoutube } from "react-icons/io5";
 import { FiSearch } from "react-icons/fi";
 import { MdAccountCircle } from "react-icons/md";
 import logo from "../assets/logo.jpeg";
+import product1 from "../assets/product1.pdf";
 export function Product() {
   return (
     <>
@@ -109,11 +110,12 @@ export function Product() {
                   structure design makes IP65 and IK10 high protection level.
                 </p>
               </div>
-
-              <button className=" flex my-6 py-2 px-2 rounded bg-white shadow-md  shadow-black">
-                Specification File{" "}
-                <FaArrowDown className="text-[#f2667c] my-1 mx-2 " />
-              </button>
+              <a href={product1} download>
+                <button className=" flex my-6 py-2 px-2 rounded bg-white shadow-md  shadow-black">
+                  Specification File
+                  <FaArrowDown className="text-[#f2667c] my-1 mx-2 " />
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -201,7 +203,7 @@ export function Product() {
         </div>
       </section>
 
-          {/* footer */}
+      {/* footer */}
       <section>
         <div className="bg-black text-white p-8 ">
           <div className="capitalize flex flex-wrap justify-center p-1">
