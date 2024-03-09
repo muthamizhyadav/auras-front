@@ -6,6 +6,9 @@ export default {
       backgroundImage: {
         'world': "url('./asset/bgImage.png')",
       },
+      screens:{
+        xs:"428px"
+      },
     },
   },
   plugins: [],
