@@ -23,6 +23,7 @@ import { MdAccountCircle } from "react-icons/md";
 import logo from "../assets/logo.png";
 import product1 from "../assets/product1.pdf";
 import line1 from "../assets/line1.png";
+import { FaGreaterThanEqual } from "react-icons/fa6";
 
 export function Product() {
   const [isOpen, setIsOpen] = useState(false);
@@ -381,7 +382,7 @@ export function Product() {
                 <p>Operating Term: -20°C - + 45°C. </p>
                 <p>Storage Term: -40°C - + 60°C. </p>
                 <p>Degradable packaging.</p>
-                <p>PF &lte; 0.9 .</p>
+                <p className="flex items-center"> PF &nbsp;<FaGreaterThanEqual size={10}/>&nbsp; 0.9 .</p>
               </div>
               <a
                 href={product1}
