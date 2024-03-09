@@ -51,55 +51,76 @@ export function Product() {
   //   setShowActiveContent(content);
   // };
   const Specification = [
-
-    { title: "", name: "Size", spec1: "1237mm(4.06ft) x 91mm(0.30ft) x 91mm(0.30ft)", datas: "1237mm (4.06ft) x 91mm (0.30ft) x 91mm (0.30ft)", spec2: "L2456mm (4.06ft) x 91mm (0.30ft) x 91mm (0.30ft)" },
-    { title: "L8989-A45", name: "Power", spec1: "68W (11.3w/ft)", datas: "45W (11.3w/ft)", spec2: "45W (11.3w/ft)" },
-    { title: "L8989-A45S", name: "Lumen", spec1: "4860 ~ 5150lm (1215 ~ 1287lm/ft)", datas: "4860 ~ 5150lm (1215 ~ 1287lm/ft)", spec2: "9710~10300LM(1215~1287LM/fit)" },
+    {
+      title: "",
+      name: "Size",
+      spec1: "1237mm(4.06ft) x 91mm(0.30ft) x 91mm(0.30ft)",
+      datas: "1237mm (4.06ft) x 91mm (0.30ft) x 91mm (0.30ft)",
+      spec2: "L2456mm (4.06ft) x 91mm (0.30ft) x 91mm (0.30ft)",
+    },
+    {
+      title: "L8989-A45",
+      name: "Power",
+      spec1: "68W (11.3w/ft)",
+      datas: "45W (11.3w/ft)",
+      spec2: "45W (11.3w/ft)",
+    },
+    {
+      title: "L8989-A45S",
+      name: "Lumen",
+      spec1: "4860 ~ 5150lm (1215 ~ 1287lm/ft)",
+      datas: "4860 ~ 5150lm (1215 ~ 1287lm/ft)",
+      spec2: "9710~10300LM(1215~1287LM/fit)",
+    },
     { title: "L8989-A68", name: "Cover", datas: "PDM (98°)" },
     { title: "L8989-A68S", name: "CRI", datas: "85+ / 90+" },
-    { title: "L8989-A90", name: "CCT", datas: " 3000K / 4000K / 6000K (3500K / 5000K)" },
+    {
+      title: "L8989-A90",
+      name: "CCT",
+      datas: " 3000K / 4000K / 6000K (3500K / 5000K)",
+    },
     { title: "L8989-A90S", name: "IP grade", datas: "IP 66" },
     { name: "Working Voltage", datas: "AC100 ~ 277V / 50~60Hz" },
     { name: "Max Input Current", datas: "6A" },
-    { name: "Profile color", datas: "Silvery (ral9006) / Black (ral9004) / White (ral9003)" },
-  ]
+    {
+      name: "Profile color",
+      datas: "Silvery (ral9006) / Black (ral9004) / White (ral9003)",
+    },
+  ];
   const columns = [
     {
       name: <h1 className="text-black"></h1>,
-      selector: (row) => row.name
+      selector: (row) => row.name,
     },
     {
       name: <h1 className="text-black">L8989-A45</h1>,
-      selector: (row) => row.spec1
-
+      selector: (row) => row.spec1,
     },
 
     {
       name: <h1 className="text-black">L8989-A45S</h1>,
-      selector: (row) => row.spec1
+      selector: (row) => row.spec1,
     },
     {
       name: <h1 className="text-black">L8989-A68</h1>,
-      selector: (row) => row.datas
+      selector: (row) => row.datas,
     },
     {
       name: <h1 className="text-black">L8989-A68S</h1>,
-      selector: (row) => row.datas
+      selector: (row) => row.datas,
     },
     {
       name: <h1 className="text-black">L8989-A90</h1>,
-      selector: (row) => row.spec2
+      selector: (row) => row.spec2,
     },
     {
       name: <h1 className="text-black">L8989-A90S</h1>,
-      selector: (row) => row.spec2
+      selector: (row) => row.spec2,
     },
-  ]
+  ];
   const customStyles = {
     th: {
-      style: {
-
-      }
+      style: {},
     },
     rows: {
       style: {
@@ -113,7 +134,6 @@ export function Product() {
         paddingRight: "8px",
         backgroundColor: "",
         color: "#fff",
-
       },
     },
     cells: {
@@ -135,20 +155,16 @@ export function Product() {
 
   const changeBgimages = () => {
     SetIndex((prev) => (prev + 1) % bgimage.length);
-    document.querySelector('.h-[379px] img').style.opacity = 0;
-    setTimeout(() => {
-      document.querySelector('.h-[379px] img').style.opacity = 1;
-    }, 100);
   };
 
-
   React.useEffect(() => {
-    const interval = setInterval(changeBgimages, 3000);
+    const interval = setInterval(changeBgimages, 2000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <article className="font capitalize">
+
       <section ref={navbarRef}>
         <div className="w-full z-99">
           <div className="bg-black text-white  px-5 sm:px-10 md:px-20 flex justify-between">
@@ -265,8 +281,9 @@ export function Product() {
           </div>
         </div>
         <div
-          className={`${isOpen ? "block transition duration-500 ease-in-out" : "hidden"
-            } lg:hidden bg-pink-100 `}
+          className={`${
+            isOpen ? "block transition duration-500 ease-in-out" : "hidden"
+          } lg:hidden bg-pink-100 `}
         >
           <div className="px-2 pt-2 pb-3">
             <a
@@ -317,6 +334,7 @@ export function Product() {
           </div>
         </div>
       </section>
+
       <section className="">
         <div className="w-full md:flex hidden">
           <div className="w-[15%]"></div>
@@ -334,14 +352,14 @@ export function Product() {
             <div className="w-[85%] bg-[#F3F3F3]"></div>
           </div>
           <div className="lg:px-0 md:px-5 xs:px-0 px-5 md:h-[482px]  xs:pb-20 md:pb-0 bg-[#F3F3F3] md:bg-inherit w-full flex md:flex-row flex-col justify-center xl:justify-start xl:pl-[10%] items-center md:gap-3 gap-10  md:py-0 py-5 md:absolute md:-translate-x-1/2 md:-translate-y-1/2 md:top-[45%] lg:top-1/2 md:left-1/2">
-            <div className="h-[379px] shadow-2xl drop-shadow-lg rounded-xl">
-              <img
-                src={`${bgimage[index]}`}
-                alt=""
-                className="sm:w-[479px] w-full h-full rounded-xl transition-opacity duration-500"
-                style={{ opacity: 1 }}
-              />
-            </div>
+            <div
+              className="bg-cover h-[379px] shadow-2xl drop-shadow-lg rounded-xl sm:w-[479px] w-full"
+              style={{
+                backgroundImage: `url(${bgimage[index]})`,
+                backgroundPosition: "center",
+                transition: "background-image 1s ease",
+              }}
+            />
             <div className="sm:h-[387px] sm:w-[500px] lg:w-1/2 xl:w-[60%] xs:w-96 w-full pl-5 sm:pl-0">
               <p className="text-base xs:text-lg lg:text-2xl font-medium lg:pl-24 md:pl-10  border-b border-[#F2667C] sm:border-none">
                 L8989-A45 IP66 IK10 4FT linkable waterproof LED linear light
@@ -349,8 +367,12 @@ export function Product() {
               <img src={line1} alt="" className=" pt-1 sm:block hidden" />
               <div className="text-[14px] text-[#666666] lg:pl-24 md:pl-10  py-3">
                 <p className="">IP66 protection class.</p>
-                <p className="">Non-dim, support 0-10V, DALI, Triac dimming solutions.</p>
-                <p className="">Aluminium 6063-T5, good heat radiation with long lifespan.</p>
+                <p className="">
+                  Non-dim, support 0-10V, DALI, Triac dimming solutions.
+                </p>
+                <p className="">
+                  Aluminium 6063-T5, good heat radiation with long lifespan.
+                </p>
                 <p>Light source adopts LM-80 certified LED.</p>
                 <p>Adopt UL Class P certified power supply.</p>
                 <p>Long lifespan, &gt;30000 hours (L70B10). </p>
@@ -382,42 +404,76 @@ export function Product() {
             <button
               className="focus: outline-none font-medium sm:text-base text-xs 
                  text-white border-2 bg-[#F2667C] p-1 px-5 
-                 drop-shadow-2xl  rounded-md">
+                 drop-shadow-2xl  rounded-md"
+            >
               Specifications
             </button>
           </div>
           <div className="bg-white flex flex-col justify-center items-center rounded-b-xl p-10 overflow-scroll ">
-            <table style={customStyles} className="border border-black sm:ml-0 ml-auto">
+            <table
+              style={customStyles}
+              className="border border-black sm:ml-0 ml-auto"
+            >
               <thead className="border-b border-gray-400">
                 <tr className="text-center ">
                   <th className="border-r border-gray-400"></th>
-                  <th className="border-r border-gray-400 text-sm">L8989-A45</th>
-                  <th className="border-r border-gray-400 text-sm">L8989-A45S</th>
-                  <th className="border-r border-gray-400 text-sm">L8989-A68</th>
-                  <th className="border-r border-gray-400 text-sm">L8989-A68S</th>
-                  <th className="border-r border-gray-400 text-sm ">L8989-A90</th>
-                  <th className="border-r border-gray-400 text-sm">L8989-A90S</th>
+                  <th className="border-r border-gray-400 text-sm">
+                    L8989-A45
+                  </th>
+                  <th className="border-r border-gray-400 text-sm">
+                    L8989-A45S
+                  </th>
+                  <th className="border-r border-gray-400 text-sm">
+                    L8989-A68
+                  </th>
+                  <th className="border-r border-gray-400 text-sm">
+                    L8989-A68S
+                  </th>
+                  <th className="border-r border-gray-400 text-sm ">
+                    L8989-A90
+                  </th>
+                  <th className="border-r border-gray-400 text-sm">
+                    L8989-A90S
+                  </th>
                   <th></th>
                 </tr>
               </thead>
               <tbody className="">
                 {Specification.map((item, index) => (
                   <tr key={index} className=" ">
-                    <td className={` border-r border-gray-400 text-xs pl-2 border-b text-start`}>{item.name}</td>
-                    <td className={` border-r border-gray-400 text-xs border-b text-center`} colSpan="2">{item.spec1}</td>
-                    <td className={` border-r border-gray-400 text-xs border-b text-center`} colSpan="2">{item.datas}</td>
-                    <td className={` border-r border-gray-400 text-xs border-b text-center`} colSpan="2">{item.spec2}</td>
+                    <td
+                      className={` border-r border-gray-400 text-xs pl-2 border-b text-start`}
+                    >
+                      {item.name}
+                    </td>
+                    <td
+                      className={` border-r border-gray-400 text-xs border-b text-center`}
+                      colSpan="2"
+                    >
+                      {item.spec1}
+                    </td>
+                    <td
+                      className={` border-r border-gray-400 text-xs border-b text-center`}
+                      colSpan="2"
+                    >
+                      {item.datas}
+                    </td>
+                    <td
+                      className={` border-r border-gray-400 text-xs border-b text-center`}
+                      colSpan="2"
+                    >
+                      {item.spec2}
+                    </td>
                   </tr>
                 ))}
               </tbody>
             </table>
-
           </div>
         </div>
         <div className="flex flex-col">
           <img src={img1} alt="" className="pt-10 pb-5" />
         </div>
-      </div >
+      </div>
 
       <section>
         <div className="bg-Formbg bg-cover form flex lg:flex-row flex-col justify-center items-center lg:flex-nowrap sm:py-10 py-5 md:px-24 px-5 gap-10">
