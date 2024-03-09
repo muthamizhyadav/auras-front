@@ -96,9 +96,9 @@ export function Product() {
     },
   ]
   const customStyles = {
-    tr: {
+    th: {
       style: {
-        borderBottom: "1px solid #ddd",
+
       }
     },
     rows: {
@@ -113,7 +113,7 @@ export function Product() {
         paddingRight: "8px",
         backgroundColor: "",
         color: "#fff",
-        fontWeight: "bold",
+
       },
     },
     cells: {
@@ -127,17 +127,6 @@ export function Product() {
       },
     },
   };
-  const customRowRender = (row, rowIndex, handleClick) => (
-    <React.Fragment key={rowIndex}>
-      <tr>
-        <td>{row.name}</td>
-        <td colSpan={2}>{row.spec1}</td>
-        <td>{row.datas}</td>
-        <td>{row.datas}</td>
-        <td colSpan={2}>{row.spec2}</td>
-      </tr>
-    </React.Fragment>
-  )
 
   const bgimages = [linear1, linear2, linear3, linear4, linear5, linear6];
 
@@ -399,25 +388,25 @@ export function Product() {
           </div>
           <div className="bg-white flex flex-col justify-center items-center rounded-b-xl p-10 overflow-scroll ">
             <table style={customStyles} className="border border-black sm:ml-0 ml-auto">
-              <thead className="table-head border-b border-gray-400">
-                <tr className="text-center">
+              <thead className="border-b border-gray-400">
+                <tr className="text-center ">
                   <th className="border-r border-gray-400"></th>
-                  <th className="border-r border-gray-400">L8989-A45</th>
-                  <th className="border-r border-gray-400">L8989-A45S</th>
-                  <th className="border-r border-gray-400">L8989-A68</th>
-                  <th className="border-r border-gray-400">L8989-A68S</th>
-                  <th className="border-r border-gray-400 ">L8989-A90</th>
-                  <th className="border-r border-gray-400">L8989-A90S</th>
+                  <th className="border-r border-gray-400 text-sm">L8989-A45</th>
+                  <th className="border-r border-gray-400 text-sm">L8989-A45S</th>
+                  <th className="border-r border-gray-400 text-sm">L8989-A68</th>
+                  <th className="border-r border-gray-400 text-sm">L8989-A68S</th>
+                  <th className="border-r border-gray-400 text-sm ">L8989-A90</th>
+                  <th className="border-r border-gray-400 text-sm">L8989-A90S</th>
                   <th></th>
                 </tr>
               </thead>
               <tbody className="">
                 {Specification.map((item, index) => (
                   <tr key={index} className=" ">
-                    <td className={` border-r border-gray-400 pl-2 ${index % 2 === 0 ? 'bg-gray-300' : ''} text-start`}>{item.name}</td>
-                    <td className={` border-r border-gray-400  ${index % 2 === 0 ? 'bg-gray-300' : ''} text-center`} colSpan="2">{item.spec1}</td>
-                    <td className={` border-r border-gray-400  ${index % 2 === 0 ? 'bg-gray-300' : ''} text-center`} colSpan="2">{item.datas}</td>
-                    <td className={` border-r border-gray-400 ${index % 2 === 0 ? 'bg-gray-300' : ''} text-center`} colSpan="2">{item.spec2}</td>
+                    <td className={` border-r border-gray-400 text-xs pl-2 border-b text-start`}>{item.name}</td>
+                    <td className={` border-r border-gray-400 text-xs border-b text-center`} colSpan="2">{item.spec1}</td>
+                    <td className={` border-r border-gray-400 text-xs border-b text-center`} colSpan="2">{item.datas}</td>
+                    <td className={` border-r border-gray-400 text-xs border-b text-center`} colSpan="2">{item.spec2}</td>
                   </tr>
                 ))}
               </tbody>
