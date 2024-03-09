@@ -24,6 +24,8 @@ import logo from "../assets/logo.png";
 import product1 from "../assets/product1.pdf";
 import line1 from "../assets/line1.png";
 import { FaGreaterThanEqual } from "react-icons/fa6";
+import imagecontent1 from '../assets/imagecontent 1.png'
+import imagecontent2 from '../assets/imagecontent 2.png'
 
 export function Product() {
   const [isOpen, setIsOpen] = useState(false);
@@ -473,6 +475,8 @@ export function Product() {
         </div>
         <div className="flex flex-col">
           <img src={img1} alt="" className="pt-10 pb-5" />
+          {/* <img src={imagecontent1} alt="" />
+          <img src={imagecontent2} alt="" /> */}
         </div>
       </div>
 
