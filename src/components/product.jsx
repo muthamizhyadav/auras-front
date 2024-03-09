@@ -206,25 +206,25 @@ export function Product() {
 
       <section className="">
         <div className="font-int p-7">
-          <div className="p-10 md:pl-32 pl-5">
+          <div className=" md:pl-32 pl-5">
             <p className="flex text-md font-bold tracking-wide">
-              LED Downlights <FaChevronRight className="m-1" /> DL284c
+              Linear Light <FaChevronRight className="m-1" /> L8989-A45
             </p>
           </div>
-          <div className="grid md:grid-cols-2 grid-cols-1 justify-items-center gap-5 bg-[#F3F3F3] md:pl-14 pl-3 md:ml-0 ml-auto p-3 py-3">
-            <div className="xl:w-[80%] w-fit h-full bg-white rounded-3xl shadow-2xl flex items-center justify-center">
-              <img src={img3} alt="" className="w-full h-full rounded-xl " />
+          <div className="grid md:grid-cols-2 grid-cols-1 justify-items-center gap-5 bg-[#F3F3F3] md:pl-14 pl-3 md:ml-0 ml-auto p-3 ">
+            <div className="w-[60%] h-[90%] bg-white rounded-3xl shadow-2xl">
+              <img src={img3} alt="" className=" rounded-xl " />
             </div>
             <div className=" ">
-              <p className="text-2xl tracking-wider py-3 font-semibold text-justify border-[#F2667C] border-b-2">
+              <p className="text-2xl py-3 font-semibold text-justify border-[#F2667C] border-b-2">
                 L8989-A45 IP66 IK10 4FT linkable waterproof LED linear light,
                 ETL, FCC, TUV CE, CB, CCC certficates
               </p>
-              <div className="text-[14px] opacity-50 font-medium text-justify leading-10">
+              <div className="text-[14px] opacity-50 font-medium text-justify leading-7">
                 <p className="">Model L8989-A45</p>
                 <p className="">Power 45W</p>
-                <p className="">Operating temperature -30℃～+45℃</p>
-                <p>Storage temperature -40℃～+60℃</p>
+                <p className="">Operating temperature -30℃~+45℃</p>
+                <p>Storage temperature -40℃~+60℃</p>
                 <p>Surface color Silvery, White, Black</p>
                 <p>Cover type PC cover</p>
                 <p>Standard length 1237*91*91mm</p>
@@ -247,7 +247,7 @@ export function Product() {
         </div>
       </section>
 
-      <div className="bg-slate-100 w-full p-7">
+      <div className="bg-slate-100 w-full">
         {/* <div className='lg:w-[600px] md:w-[350px] sm:w-[300px] w-[300px]  h-[200px] bg-[#FF9315] top-0 absolute right-0 text-center text-white lg:pt-8 pt-4 lg:text-3xl md:text-base text-xs font-bold sm:p-4 p-1'>Customer Services</div> */}
         <div className="xl:ml-20 lg:ml-10 md:ml-5 ml-0 pt-10  drop-shadow-2xl">
           <div className="flex md:flex-row flex-col xl:gap-10 gap-1 p-4 bg-white w-fit rounded-t-md">
@@ -255,7 +255,7 @@ export function Product() {
               onClick={() => toggleContent("Overview")}
               className={`focus:outline-none font-medium sm:text-base text-xs ${showActiveContent === "Overview"
                 ? "text-white border-2 bg-[#F2667C] md:px-5 p-1 px-2 rounded-md"
-                : "bg-white drop-shadow-2xl text-black p-1 px-5 rounded-md"
+                : "bg-white drop-shadow-2xl hover:bg-[#F2667C] hover:text-white text-black p-1 px-5 rounded-md"
                 }`}
             >
               Overview
@@ -264,12 +264,12 @@ export function Product() {
               onClick={() => toggleContent("Specifications")}
               className={`focus: outline-none font-medium sm:text-base text-xs ${showActiveContent === "Specifications"
                 ? "text-white border-2 bg-[#F2667C] p-1 md:px-5 px-2 rounded-md"
-                : "bg-white drop-shadow-2xl text-black p-1 px-5 rounded-md"
+                : "bg-white drop-shadow-2xl hover:bg-[#F2667C] hover:text-white text-black p-1 px-5 rounded-md"
                 }`}
             >
               Specifications
             </button>
-            <button
+            {/* <button
               onClick={() => toggleContent("Related Products")}
               className={`focus: outline-none font-medium sm:text-base text-xs ${showActiveContent === "Related Products"
                 ? "text-white border-2 bg-[#F2667C] p-1 md:px-5 px-5 rounded-md"
@@ -277,7 +277,7 @@ export function Product() {
                 }`}
             >
               Related Products
-            </button>
+            </button> */}
           </div>
           {showActiveContent === "Overview" && (
             <div className="bg-white p-10  flex justify-center items-center h-96">
