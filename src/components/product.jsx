@@ -354,7 +354,7 @@ export function Product() {
             <div className="w-[15%] bg-white"></div>
             <div className="w-[85%] bg-[#F3F3F3]"></div>
           </div>
-          <div className="lg:px-0 md:px-5 xs:px-0 px-5 md:h-[482px]  xs:pb-20 md:pb-0 bg-[#F3F3F3] md:bg-inherit w-full flex md:flex-row flex-col justify-center xl:justify-start xl:pl-[10%] items-center md:gap-3 gap-10  md:py-0 py-5 md:absolute md:-translate-x-1/2 md:-translate-y-1/2 md:top-[45%] lg:top-1/2 md:left-1/2">
+          <div className="lg:px-0 md:px-5 xs:px-0 px-5 md:h-[482px]  xs:pb-20 md:pb-0 bg-[#F3F3F3] md:bg-inherit w-full flex md:flex-row flex-col justify-center xl:justify-start xl:pl-[10%] items-center md:gap-3 gap-10  md:py-0 py-5 md:absolute md:-translate-x-1/2 md:-translate-y-1/2 md:top-[45%]  md:left-1/2">
             <div
               className="bg-cover h-[379px] shadow-2xl drop-shadow-lg rounded-xl sm:w-[479px] w-full"
               style={{
