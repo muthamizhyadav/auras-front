@@ -40,14 +40,101 @@ export function Product() {
     };
   }, []);
 
-  const [showActiveContent, setShowActiveContent] = useState("Overview");
-  const toggleContent = (content) => {
-    setShowActiveContent(content);
-  };
+  // const [showActiveContent, setShowActiveContent] = useState("Overview");
+  // const toggleContent = (content) => {
+  //   setShowActiveContent(content);
+  // };
+  const Specification = [
 
+    { title: "", name: "Size", spec1: "1237mm(4.06ft) x 91mm(0.30ft) x 91mm(0.30ft)", datas: "1237mm (4.06ft) x 91mm (0.30ft) x 91mm (0.30ft)", spec2: "L2456mm (4.06ft) x 91mm (0.30ft) x 91mm (0.30ft)" },
+    { title: "L8989-A45", name: "Power", spec1: "68W (11.3w/ft)", datas: "45W (11.3w/ft)", spec2: "45W (11.3w/ft)" },
+    { title: "L8989-A45S", name: "Lumen", spec1: "4860 ~ 5150lm (1215 ~ 1287lm/ft)", datas: "4860 ~ 5150lm (1215 ~ 1287lm/ft)", spec2: "9710~10300LM(1215~1287LM/fit)" },
+    { title: "L8989-A68", name: "Cover", datas: "PDM (98°)" },
+    { title: "L8989-A68S", name: "CRI", datas: "85+ / 90+" },
+    { title: "L8989-A90", name: "CCT", datas: " 3000K / 4000K / 6000K (3500K / 5000K)" },
+    { title: "L8989-A90S", name: "IP grade", datas: "IP 66" },
+    { name: "Working Voltage", datas: "AC100 ~ 277V / 50~60Hz" },
+    { name: "Max Input Current", datas: "6A" },
+    { name: "Profile color", datas: "Silvery (ral9006) / Black (ral9004) / White (ral9003)" },
+  ]
+  const columns = [
+    {
+      name: <h1 className="text-black"></h1>,
+      selector: (row) => row.name
+    },
+    {
+      name: <h1 className="text-black">L8989-A45</h1>,
+      selector: (row) => row.spec1
+
+    },
+
+    {
+      name: <h1 className="text-black">L8989-A45S</h1>,
+      selector: (row) => row.spec1
+    },
+    {
+      name: <h1 className="text-black">L8989-A68</h1>,
+      selector: (row) => row.datas
+    },
+    {
+      name: <h1 className="text-black">L8989-A68S</h1>,
+      selector: (row) => row.datas
+    },
+    {
+      name: <h1 className="text-black">L8989-A90</h1>,
+      selector: (row) => row.spec2
+    },
+    {
+      name: <h1 className="text-black">L8989-A90S</h1>,
+      selector: (row) => row.spec2
+    },
+  ]
+  const customStyles = {
+    tr: {
+      style: {
+        borderBottom: "1px solid #ddd",
+      }
+    },
+    rows: {
+      style: {
+        minHeight: "25px", // override the row height
+        minWidth: "800px",
+      },
+    },
+    headCells: {
+      style: {
+        paddingLeft: "8px", // override the cell padding for head cells
+        paddingRight: "8px",
+        backgroundColor: "",
+        color: "#fff",
+        fontWeight: "bold",
+      },
+    },
+    cells: {
+      style: {
+        paddingLeft: "8px", // override the cell padding for data cells
+        paddingRight: "8px",
+        paddingTop: "10px",
+        width: "10px",
+        height: "0px",
+        color: "#364353",
+      },
+    },
+  };
+  const customRowRender = (row, rowIndex, handleClick) => (
+    <React.Fragment key={rowIndex}>
+      <tr>
+        <td>{row.name}</td>
+        <td colSpan={2}>{row.spec1}</td>
+        <td>{row.datas}</td>
+        <td>{row.datas}</td>
+        <td colSpan={2}>{row.spec2}</td>
+      </tr>
+    </React.Fragment>
+  )
   return (
     <>
-      <section ref={navbarRef}>
+      <section ref={navbarRef} className="">
         <div className="w-full z-99">
           <div className="bg-black text-white  px-5 sm:px-10 md:px-20 flex justify-between">
             <div className="py-2 flex">
@@ -247,166 +334,96 @@ export function Product() {
         </div>
       </section>
 
-      <div className="bg-slate-100 w-full">
-        {/* <div className='lg:w-[600px] md:w-[350px] sm:w-[300px] w-[300px]  h-[200px] bg-[#FF9315] top-0 absolute right-0 text-center text-white lg:pt-8 pt-4 lg:text-3xl md:text-base text-xs font-bold sm:p-4 p-1'>Customer Services</div> */}
-        <div className="xl:ml-20 lg:ml-10 md:ml-5 ml-0 pt-10  drop-shadow-2xl">
-          <div className="flex md:flex-row flex-col xl:gap-10 gap-1 p-4 bg-white w-fit rounded-t-md">
+      <div className="bg-slate-100 w-full lg:px-56 md:px-32 px-5 rounded-t-xl pt-5">
+        <div className=" shadow-2xl drop-shadow-2xl ">
+          <div className="bg-white w-fit px-8 py-5 rounded-t-md shadow-2xl ">
             <button
-              onClick={() => toggleContent("Overview")}
-              className={`focus:outline-none font-medium sm:text-base text-xs ${showActiveContent === "Overview"
-                ? "text-white border-2 bg-[#F2667C] md:px-5 p-1 px-2 rounded-md"
-                : "bg-white drop-shadow-2xl hover:bg-[#F2667C] hover:text-white text-black p-1 px-5 rounded-md"
-                }`}
-            >
-              Overview
-            </button>
-            <button
-              onClick={() => toggleContent("Specifications")}
-              className={`focus: outline-none font-medium sm:text-base text-xs ${showActiveContent === "Specifications"
-                ? "text-white border-2 bg-[#F2667C] p-1 md:px-5 px-2 rounded-md"
-                : "bg-white drop-shadow-2xl hover:bg-[#F2667C] hover:text-white text-black p-1 px-5 rounded-md"
-                }`}
-            >
+              className="focus: outline-none font-medium sm:text-base text-xs 
+                 text-white border-2 bg-[#F2667C] p-1 px-5 
+                 drop-shadow-2xl   rounded-md">
               Specifications
             </button>
-            {/* <button
-              onClick={() => toggleContent("Related Products")}
-              className={`focus: outline-none font-medium sm:text-base text-xs ${showActiveContent === "Related Products"
-                ? "text-white border-2 bg-[#F2667C] p-1 md:px-5 px-5 rounded-md"
-                : "bg-white drop-shadow-2xl text-black p-1 px-5 rounded-md"
-                }`}
-            >
-              Related Products
-            </button> */}
           </div>
-          {showActiveContent === "Overview" && (
-            <div className="bg-white p-10  flex justify-center items-center h-96">
-              <img src={img1} alt="" className="md:w-[700px] w-full " />
-            </div>
-          )}
-          {showActiveContent === "Specifications" && (
-            <div className="bg-white md:p-10 p-5 py-10 flex justify-center items-center h-96 overflow-scroll">
-              {/* <img src={img2} alt="" className="w-96 " /> */}
-              <div className="w-full border border-black sm:mt-14 mt-96">
-                <div className="flex border-b border-black">
-                  <p className="bg-gray-300 border-r border-black w-[30%] pl-5 ">Item NO.</p>
-                  <p className="bg-white w-[70%] pl-5 "> L8989-A45</p>
-                </div>
-                <div className="flex border-b border-black">
-                  <p className="border-r border-black w-[30%] pl-5 ">Size</p>
-                  <p className="bg-white w-[70%] pl-5 ">1237mm(4.06ft) x 91mm(0.30ft) x 91mm(0.30ft)</p>
-                </div>
-                <div className="flex border-b border-black">
-                  <p className="bg-gray-300 border-r border-black w-[30%] pl-5 ">Power</p>
-                  <p className="bg-white w-[70%] pl-5 ">45W (11.3w/ft)</p>
-                </div>
-                <div className="flex border-b border-black">
-                  <p className="border-r border-black w-[30%] pl-5 ">Lumen</p>
-                  <p className="bg-white w-[70%] pl-5 ">4860~5150lm (1215~1287lm/ft)</p>
-                </div>
-                <div className="flex border-b border-black">
-                  <p className="bg-gray-300 border-r border-black w-[30%] pl-5 ">Cover</p>
-                  <p className="bg-white w-[70%] pl-5 ">PDM (98°)</p>
-                </div>
-                <div className="flex border-b border-black">
-                  <p className="border-r border-black w-[30%] pl-5 ">CRI</p>
-                  <p className="bg-white w-[70%] pl-5 ">85+ / 90+</p>
-                </div>
-                <div className="flex border-b border-black">
-                  <p className="bg-gray-300 border-r border-black w-[30%] pl-5 ">CCT</p>
-                  <p className="bg-white w-[70%] pl-5 ">3000K / 4000K / 6000K (3500K / 5000K)</p>
-                </div>
-                <div className="flex border-b border-black">
-                  <p className="border-r border-black w-[30%] pl-5 ">PF</p>
-                  <p className="bg-white w-[70%] pl-5 "> ≥0.9</p>
-                </div>
-                <div className="flex border-b border-black">
-                  <p className="bg-gray-300 border-r border-black w-[30%] pl-5 ">IP grade</p>
-                  <p className="bg-white w-[70%] pl-5 ">  IP 66</p>
-                </div>
-                <div className="flex border-b border-black">
-                  <p className="border-r border-black w-[30%] pl-5 ">Working Voltage</p>
-                  <p className="bg-white w-[70%] pl-5 ">  AC100~277V / 50~60Hz</p>
-                </div>
-                <div className="flex border-b border-black">
-                  <p className="bg-gray-300 border-r border-black w-[30%] pl-5 ">Max Input Current</p>
-                  <p className="bg-white w-[70%] pl-5 ">  6A</p>
-                </div>
-                <div className="flex border-b border-black">
-                  <p className="border-r border-black w-[30%] pl-5 ">Installation way</p>
-                  <p className="bg-white w-[70%] pl-5 ">  Pendant / Ceiling mounted / Recessed / Wall mounted</p>
-                </div>
-                <div className="flex border-b border-black">
-                  <p className=" bg-gray-300 border-r border-black w-[30%] pl-5 ">Profile color</p>
-                  <p className="bg-white w-[70%] pl-5 ">   Silvery (ral9006) / Black (ral9004) / White (ral9003)</p>
-                </div>
-                <div className="flex border-b border-black">
-                  <p className="border-r border-black w-[30%] pl-5 ">Operating temperature</p>
-                  <p className="bg-white w-[70%] pl-5 ">  -20℃ ~ + 45℃ </p>
-                </div>
-                <div className="flex">
-                  <p className="bg-gray-300 border-r border-black w-[30%] pl-5">Storage temperature</p>
-                  <p className="bg-white w-[70%] pl-5">  -40℃ ~ +60℃ </p>
-                </div>
-              </div>
-            </div>
-          )}
-          {showActiveContent === "Related Products" && (
-            <div className="bg-white p-10 md:gap-10 gap-5 flex justify-center items-center py-10 h-96">
-              <img src={img5} alt="" className="md:w-96 w-1/2" />
-              <img src={img4} alt="" className="md:w-96 w-1/2" />
-            </div>
-          )}
+          <div className="bg-white flex flex-col justify-center items-center rounded-b-xl p-10 overflow-scroll ">
+            <table style={customStyles} className="border border-black sm:ml-0 ml-auto">
+              <thead className="table-head border-b border-gray-400">
+                <tr className="text-center">
+                  <th className="border-r border-gray-400"></th>
+                  <th className="border-r border-gray-400">L8989-A45</th>
+                  <th className="border-r border-gray-400">L8989-A45S</th>
+                  <th className="border-r border-gray-400">L8989-A68</th>
+                  <th className="border-r border-gray-400">L8989-A68S</th>
+                  <th className="border-r border-gray-400 ">L8989-A90</th>
+                  <th className="border-r border-gray-400">L8989-A90S</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody className="">
+                {Specification.map((item, index) => (
+                  <tr key={index} className=" ">
+                    <td className={` border-r border-gray-400 pl-2 ${index % 2 === 0 ? 'bg-gray-300' : ''} text-start`}>{item.name}</td>
+                    <td className={` border-r border-gray-400  ${index % 2 === 0 ? 'bg-gray-300' : ''} text-center`} colSpan="2">{item.spec1}</td>
+                    <td className={` border-r border-gray-400  ${index % 2 === 0 ? 'bg-gray-300' : ''} text-center`} colSpan="2">{item.datas}</td>
+                    <td className={` border-r border-gray-400 ${index % 2 === 0 ? 'bg-gray-300' : ''} text-center`} colSpan="2">{item.spec2}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+
+          </div>
         </div>
-      </div>
+        <div className="flex flex-col">
+          <img src={img1} alt="" className="pt-10 pb-5" />
+        </div>
+      </div >
 
       <section>
-        <div className="form flex lg:flex-row flex-col justify-center items-center  lg:flex-nowrap sm:py-10 sm:px-20 px-5 gap-5">
+        <div className="bg-bg form flex lg:flex-row flex-col justify-center items-center lg:flex-nowrap sm:py-10 py-5 sm:px-24 px-5 gap-10">
           <div className="">
-            <p className="text-3xl sm:text-5xl font-semibold ">
+            <p className="text-3xl sm:text-6xl font-semibold ">
               Keen to explore further?
             </p>
-            <p className="py-5 text-xs sm:text-sm ">
+            <p className="py-5  font-medium md:text-start text-justify">
               If you are interested in our products and would like to receive
               further information, please fill out the form below to send us
               your request. or mail to info@auraslighting.com directly.
             </p>
           </div>
-          <div className="form-content w-full sm:p-5 p-3  rounded-3xl shadow-2xl">
+          <div className="form-content md:w-[70%] w-full sm:p-5 p-3  rounded-3xl shadow-2xl">
             <div className="flex flex-col items-center justify-evenly ">
               <input
                 type="text"
                 name="name"
                 id="name"
                 placeholder="Name"
-                className="bg-gray-200 border hover:border-blue-400 rounded-lg p-3 my-1 w-full"
+                className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
               />
               <input
                 type="email"
                 name="mail"
                 id="mail"
                 placeholder="Mail"
-                className="bg-gray-200 border hover:border-blue-400 rounded-lg p-3 my-1 w-full"
+                className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
               />
               <input
                 type="text"
                 name="text"
                 id="text"
                 placeholder="Company Name"
-                className="bg-gray-200 border hover:border-blue-400 rounded-lg p-3 my-1 w-full"
+                className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
               />
               <input
                 type="text"
                 name="text"
                 id="text"
                 placeholder="Company Type"
-                className="bg-gray-200 border hover:border-blue-400 rounded-lg p-3 my-1 w-full"
+                className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
               />
               <textarea
                 name="messege"
                 id="messege"
                 rows="5"
-                className="bg-gray-200 p-2 my-1 rounded-lg w-full"
+                className="bg-gray-200 p-2 my-1 rounded-lg w-full border border-[#0E82B4]"
                 placeholder="Messege"
               ></textarea>
             </div>
