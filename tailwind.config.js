@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'world': "url('./asset/bgImage.png')",
+        Formbg: "url('/bgImage.png')",
       },
       screens:{
         xs:"428px"

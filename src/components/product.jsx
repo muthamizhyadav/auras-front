@@ -432,9 +432,9 @@ export function Product() {
       </div >
 
       <section>
-        <div className="bg-bg form flex lg:flex-row flex-col justify-center items-center lg:flex-nowrap sm:py-10 py-5 sm:px-24 px-5 gap-10">
+        <div className="bg-Formbg bg-cover form flex lg:flex-row flex-col justify-center items-center lg:flex-nowrap sm:py-10 py-5 md:px-24 px-5 gap-10">
           <div className="">
-            <p className="text-3xl sm:text-6xl font-semibold ">
+            <p className="text-3xl sm:text-5xl font-semibold ">
               Keen to explore further?
             </p>
             <p className="py-5  font-medium md:text-start text-justify">
