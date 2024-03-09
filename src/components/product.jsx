@@ -1,5 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
-import img3 from "../assets/light.jpg";
+import linear1 from "../assets/light.jpg";
+import linear2 from "../assets/linearLight.jpg";
+import linear3 from "../assets/linearLIght2.jpg";
+import linear4 from "../assets/linearLight3.jpg";
+import linear5 from "../assets/LinearLight4.jpg";
+import linear6 from "../assets/linearLight5.jpg";
 import img2 from "../assets/specification.png";
 import img5 from "../assets/relatedProdduccts.png";
 import img4 from "../assets/relatedProdduccts2.png";
@@ -17,6 +22,8 @@ import { FiSearch } from "react-icons/fi";
 import { MdAccountCircle } from "react-icons/md";
 import logo from "../assets/logo.png";
 import product1 from "../assets/product1.pdf";
+import line1 from "../assets/line1.png";
+
 export function Product() {
   const [isOpen, setIsOpen] = useState(false);
   const navbarRef = useRef(null);
@@ -44,8 +51,27 @@ export function Product() {
     setShowActiveContent(content);
   };
 
+  const bgimages = [linear1, linear2, linear3, linear4, linear5, linear6];
+
+  const [bgimage, Setbgimage] = React.useState(bgimages);
+  const [index, SetIndex] = React.useState(0);
+
+  const changeBgimages = () => {
+    SetIndex((prev) => (prev + 1) % bgimage.length);
+    document.querySelector('.h-[379px] img').style.opacity = 0;
+    setTimeout(() => {
+      document.querySelector('.h-[379px] img').style.opacity = 1;
+    }, 100);
+  };
+  
+
+  React.useEffect(() => {
+    const interval = setInterval(changeBgimages, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <>
+    <article className="font capitalize">
       <section ref={navbarRef}>
         <div className="w-full z-99">
           <div className="bg-black text-white  px-5 sm:px-10 md:px-20 flex justify-between">
@@ -79,18 +105,30 @@ export function Product() {
               />
             </div>
             <div className="flex ml-10 w-3/4 justify-evenly lg:text-xs xl:text-sm font-medium">
-              <p className="capitalize hover:text-[#F2667C] cursor-pointer">products</p>
-              <p className="capitalize hover:text-[#F2667C] cursor-pointer">lux edition</p>
+              <p className="capitalize hover:text-[#F2667C] cursor-pointer">
+                products
+              </p>
+              <p className="capitalize hover:text-[#F2667C] cursor-pointer">
+                lux edition
+              </p>
               <p className="capitalize hover:text-[#F2667C] cursor-pointer">
                 commercial lights
               </p>
-              <p className="capitalize hover:text-[#F2667C] cursor-pointer">outdoor lights</p>
-              <p className="capitalize hover:text-[#F2667C] cursor-pointer">home decor</p>
-              <p className="capitalize hover:text-[#F2667C] cursor-pointer">about us</p>
-              <p className="capitalize hover:text-[#F2667C] cursor-pointer">blogs</p>
+              <p className="capitalize hover:text-[#F2667C] cursor-pointer">
+                outdoor lights
+              </p>
+              <p className="capitalize hover:text-[#F2667C] cursor-pointer">
+                home decor
+              </p>
+              <p className="capitalize hover:text-[#F2667C] cursor-pointer">
+                about us
+              </p>
+              <p className="capitalize hover:text-[#F2667C] cursor-pointer">
+                blogs
+              </p>
             </div>
             <div className="w-1/4  items-center justify-around xl:px-4 flex">
-              <div className="capitalize  shadow-lg cursor-pointer text-[#F2667C] hover:bg-[#F2667C] hover:text-white xl:p-2 rounded">
+              <div className="capitalize  shadow-lg cursor-pointer text-[#F2667C] hover:bg-[#F2667C] hover:text-white px-4 py-1 rounded">
                 <p className=" lg:text-sm xl:text-base">contact us</p>
               </div>
               <div>
@@ -150,8 +188,9 @@ export function Product() {
           </div>
         </div>
         <div
-          className={`${isOpen ? "block transition duration-500 ease-in-out" : "hidden"
-            } lg:hidden bg-pink-100 `}
+          className={`${
+            isOpen ? "block transition duration-500 ease-in-out" : "hidden"
+          } lg:hidden bg-pink-100 `}
         >
           <div className="px-2 pt-2 pb-3">
             <a
@@ -202,81 +241,88 @@ export function Product() {
           </div>
         </div>
       </section>
-
       <section className="">
-        <div className="font-int p-7">
-          <div className=" md:pl-32 pl-5">
-            <p className="flex text-md font-bold tracking-wide">
-              Linear Light <FaChevronRight className="m-1" /> L8989-A45
+        <div className="w-full md:flex hidden">
+          <div className="w-[15%]"></div>
+          <div className="w-[85%]">
+            <p className="flex font-medium  text-black py-5">
+              Linear Light &nbsp; <FaChevronRight className="mt-1" /> &nbsp;
+              L8989-A45
             </p>
           </div>
-          <div className="grid md:grid-cols-2 grid-cols-1 justify-items-center gap-5 bg-[#F3F3F3] md:pl-14 pl-3 md:ml-0 ml-auto p-3 ">
-            <div className="w-[60%] h-[90%] bg-white rounded-3xl shadow-2xl">
-              <img src={img3} alt="" className=" rounded-xl " />
+        </div>
+
+        <section className="md:relative">
+          <div className="md:h-[500px] w-full md:flex hidden">
+            <div className="w-[15%] bg-white"></div>
+            <div className="w-[85%] bg-[#F3F3F3]"></div>
+          </div>
+          <div className="lg:px-0 md:px-5 xs:px-0 px-5 md:h-[482px] pb-20 md:pb-0 bg-[#F3F3F3] md:bg-inherit w-full flex md:flex-row flex-col justify-center xl:justify-start xl:pl-[10%] items-center md:gap-3 gap-5  md:py-0 py-5 md:absolute md:-translate-x-1/2 md:-translate-y-1/2 md:top-[45%] lg:top-1/2 md:left-1/2">
+            <div className="h-[379px] shadow-2xl drop-shadow-lg rounded-xl">
+              <img
+                src={`${bgimage[index]}`}
+                alt=""
+                className="sm:w-[479px] w-full h-full rounded-xl transition-opacity duration-500"
+                style={{opacity: 1}}
+              />
             </div>
-            <div className=" ">
-              <p className="text-2xl py-3 font-semibold text-justify border-[#F2667C] border-b-2">
-                L8989-A45 IP66 IK10 4FT linkable waterproof LED linear light,
-                ETL, FCC, TUV CE, CB, CCC certficates
+            <div className="h-[387px] sm:w-[500px] lg:w-1/2 xl:w-[60%] xs:w-96 w-full pl-5 sm:pl-0">
+              <p className="text-base xs:text-lg lg:text-2xl font-medium lg:pl-24 md:pl-10  border-b border-[#F2667C] sm:border-none">
+                L8989-A45 IP66 IK10 4FT linkable waterproof LED linear light
               </p>
-              <div className="text-[14px] opacity-50 font-medium text-justify leading-7">
-                <p className="">Model L8989-A45</p>
-                <p className="">Power 45W</p>
-                <p className="">Operating temperature -30℃~+45℃</p>
-                <p>Storage temperature -40℃~+60℃</p>
-                <p>Surface color Silvery, White, Black</p>
-                <p>Cover type PC cover</p>
-                <p>Standard length 1237*91*91mm</p>
-                <p>Application Indoor/Outdoor</p>
-                <p>Installation way Pendant, Surface mounted</p>
-                <p>Protection grade IP66</p>
+              <img src={line1} alt="" className=" pt-1 sm:block hidden" />
+              <div className="text-[14px] text-[#666666] lg:pl-24 md:pl-10  py-3">
+                <p className="">IP66 protection class.</p>
+                <p className="">Non-dim, support 0-10V, DALI, Triac dimming solutions.</p>
+                <p className="">Aluminium 6063-T5, good heat radiation with long lifespan.</p>
+                <p>Light source adopts LM-80 certified LED.</p>
+                <p>Adopt UL Class P certified power supply.</p>
+                <p>Long lifespan, &gt;30000 hours (L70B10). </p>
+                <p>High lighting efficiency, save energy.</p>
+                <p>Environment humidity 40-70% RH.</p>
+                <p>Operating Term: -20°C - + 45°C. </p>
+                <p>Storage Term: -40°C - + 60°C. </p>
+                <p>Degradable packaging.</p>
+                <p>PF &lte; 0.9 .</p>
               </div>
               <a
                 href={product1}
                 download
-                className="flex justify-center items-center  md:justify-start"
+                className="flex justify-center items-center  md:justify-start md:pl-24"
               >
-                <button className=" flex md:justify-start justify-center items-center my-6 py-2 px-2 rounded bg-white shadow-md  shadow-black">
+                <button className=" flex md:justify-start justify-center items-center mt-5 py-2 px-2 rounded bg-white shadow-md  shadow-black">
                   Specification File
                   <FaArrowDown className="text-[#F2667C] my-1 mx-2 " />
                 </button>
               </a>
             </div>
           </div>
-        </div>
+        </section>
       </section>
 
       <div className="bg-slate-100 w-full">
-        {/* <div className='lg:w-[600px] md:w-[350px] sm:w-[300px] w-[300px]  h-[200px] bg-[#FF9315] top-0 absolute right-0 text-center text-white lg:pt-8 pt-4 lg:text-3xl md:text-base text-xs font-bold sm:p-4 p-1'>Customer Services</div> */}
         <div className="xl:ml-20 lg:ml-10 md:ml-5 ml-0 pt-10  drop-shadow-2xl">
           <div className="flex md:flex-row flex-col xl:gap-10 gap-1 p-4 bg-white w-fit rounded-t-md">
             <button
               onClick={() => toggleContent("Overview")}
-              className={`focus:outline-none font-medium sm:text-base text-xs ${showActiveContent === "Overview"
-                ? "text-white border-2 bg-[#F2667C] md:px-5 p-1 px-2 rounded-md"
-                : "bg-white drop-shadow-2xl hover:bg-[#F2667C] hover:text-white text-black p-1 px-5 rounded-md"
-                }`}
+              className={`focus:outline-none font-medium sm:text-base text-xs ${
+                showActiveContent === "Overview"
+                  ? "text-white border-2 bg-[#F2667C] md:px-5 p-1 px-2 rounded-md"
+                  : "bg-white drop-shadow-2xl hover:bg-[#F2667C] hover:text-white text-black p-1 px-5 rounded-md"
+              }`}
             >
               Overview
             </button>
             <button
               onClick={() => toggleContent("Specifications")}
-              className={`focus: outline-none font-medium sm:text-base text-xs ${showActiveContent === "Specifications"
-                ? "text-white border-2 bg-[#F2667C] p-1 md:px-5 px-2 rounded-md"
-                : "bg-white drop-shadow-2xl hover:bg-[#F2667C] hover:text-white text-black p-1 px-5 rounded-md"
-                }`}
+              className={`focus: outline-none font-medium sm:text-base text-xs ${
+                showActiveContent === "Specifications"
+                  ? "text-white border-2 bg-[#F2667C] p-1 md:px-5 px-2 rounded-md"
+                  : "bg-white drop-shadow-2xl hover:bg-[#F2667C] hover:text-white text-black p-1 px-5 rounded-md"
+              }`}
             >
               Specifications
             </button>
-            {/* <button
-              onClick={() => toggleContent("Related Products")}
-              className={`focus: outline-none font-medium sm:text-base text-xs ${showActiveContent === "Related Products"
-                ? "text-white border-2 bg-[#F2667C] p-1 md:px-5 px-5 rounded-md"
-                : "bg-white drop-shadow-2xl text-black p-1 px-5 rounded-md"
-                }`}
-            >
-              Related Products
-            </button> */}
           </div>
           {showActiveContent === "Overview" && (
             <div className="bg-white p-10  flex justify-center items-center h-96">
@@ -285,26 +331,35 @@ export function Product() {
           )}
           {showActiveContent === "Specifications" && (
             <div className="bg-white md:p-10 p-5 py-10 flex justify-center items-center h-96 overflow-scroll">
-              {/* <img src={img2} alt="" className="w-96 " /> */}
               <div className="w-full border border-black sm:mt-14 mt-96">
                 <div className="flex border-b border-black">
-                  <p className="bg-gray-300 border-r border-black w-[30%] pl-5 ">Item NO.</p>
+                  <p className="bg-gray-300 border-r border-black w-[30%] pl-5 ">
+                    Item NO.
+                  </p>
                   <p className="bg-white w-[70%] pl-5 "> L8989-A45</p>
                 </div>
                 <div className="flex border-b border-black">
                   <p className="border-r border-black w-[30%] pl-5 ">Size</p>
-                  <p className="bg-white w-[70%] pl-5 ">1237mm(4.06ft) x 91mm(0.30ft) x 91mm(0.30ft)</p>
+                  <p className="bg-white w-[70%] pl-5 ">
+                    1237mm(4.06ft) x 91mm(0.30ft) x 91mm(0.30ft)
+                  </p>
                 </div>
                 <div className="flex border-b border-black">
-                  <p className="bg-gray-300 border-r border-black w-[30%] pl-5 ">Power</p>
+                  <p className="bg-gray-300 border-r border-black w-[30%] pl-5 ">
+                    Power
+                  </p>
                   <p className="bg-white w-[70%] pl-5 ">45W (11.3w/ft)</p>
                 </div>
                 <div className="flex border-b border-black">
                   <p className="border-r border-black w-[30%] pl-5 ">Lumen</p>
-                  <p className="bg-white w-[70%] pl-5 ">4860~5150lm (1215~1287lm/ft)</p>
+                  <p className="bg-white w-[70%] pl-5 ">
+                    4860~5150lm (1215~1287lm/ft)
+                  </p>
                 </div>
                 <div className="flex border-b border-black">
-                  <p className="bg-gray-300 border-r border-black w-[30%] pl-5 ">Cover</p>
+                  <p className="bg-gray-300 border-r border-black w-[30%] pl-5 ">
+                    Cover
+                  </p>
                   <p className="bg-white w-[70%] pl-5 ">PDM (98°)</p>
                 </div>
                 <div className="flex border-b border-black">
@@ -312,40 +367,67 @@ export function Product() {
                   <p className="bg-white w-[70%] pl-5 ">85+ / 90+</p>
                 </div>
                 <div className="flex border-b border-black">
-                  <p className="bg-gray-300 border-r border-black w-[30%] pl-5 ">CCT</p>
-                  <p className="bg-white w-[70%] pl-5 ">3000K / 4000K / 6000K (3500K / 5000K)</p>
+                  <p className="bg-gray-300 border-r border-black w-[30%] pl-5 ">
+                    CCT
+                  </p>
+                  <p className="bg-white w-[70%] pl-5 ">
+                    3000K / 4000K / 6000K (3500K / 5000K)
+                  </p>
                 </div>
                 <div className="flex border-b border-black">
                   <p className="border-r border-black w-[30%] pl-5 ">PF</p>
                   <p className="bg-white w-[70%] pl-5 "> ≥0.9</p>
                 </div>
                 <div className="flex border-b border-black">
-                  <p className="bg-gray-300 border-r border-black w-[30%] pl-5 ">IP grade</p>
-                  <p className="bg-white w-[70%] pl-5 ">  IP 66</p>
+                  <p className="bg-gray-300 border-r border-black w-[30%] pl-5 ">
+                    IP grade
+                  </p>
+                  <p className="bg-white w-[70%] pl-5 "> IP 66</p>
                 </div>
                 <div className="flex border-b border-black">
-                  <p className="border-r border-black w-[30%] pl-5 ">Working Voltage</p>
-                  <p className="bg-white w-[70%] pl-5 ">  AC100~277V / 50~60Hz</p>
+                  <p className="border-r border-black w-[30%] pl-5 ">
+                    Working Voltage
+                  </p>
+                  <p className="bg-white w-[70%] pl-5 ">
+                    {" "}
+                    AC100~277V / 50~60Hz
+                  </p>
                 </div>
                 <div className="flex border-b border-black">
-                  <p className="bg-gray-300 border-r border-black w-[30%] pl-5 ">Max Input Current</p>
-                  <p className="bg-white w-[70%] pl-5 ">  6A</p>
+                  <p className="bg-gray-300 border-r border-black w-[30%] pl-5 ">
+                    Max Input Current
+                  </p>
+                  <p className="bg-white w-[70%] pl-5 "> 6A</p>
                 </div>
                 <div className="flex border-b border-black">
-                  <p className="border-r border-black w-[30%] pl-5 ">Installation way</p>
-                  <p className="bg-white w-[70%] pl-5 ">  Pendant / Ceiling mounted / Recessed / Wall mounted</p>
+                  <p className="border-r border-black w-[30%] pl-5 ">
+                    Installation way
+                  </p>
+                  <p className="bg-white w-[70%] pl-5 ">
+                    {" "}
+                    Pendant / Ceiling mounted / Recessed / Wall mounted
+                  </p>
                 </div>
                 <div className="flex border-b border-black">
-                  <p className=" bg-gray-300 border-r border-black w-[30%] pl-5 ">Profile color</p>
-                  <p className="bg-white w-[70%] pl-5 ">   Silvery (ral9006) / Black (ral9004) / White (ral9003)</p>
+                  <p className=" bg-gray-300 border-r border-black w-[30%] pl-5 ">
+                    Profile color
+                  </p>
+                  <p className="bg-white w-[70%] pl-5 ">
+                    {" "}
+                    Silvery (ral9006) / Black (ral9004) / White (ral9003)
+                  </p>
                 </div>
                 <div className="flex border-b border-black">
-                  <p className="border-r border-black w-[30%] pl-5 ">Operating temperature</p>
-                  <p className="bg-white w-[70%] pl-5 ">  -20℃ ~ + 45℃ </p>
+                  <p className="border-r border-black w-[30%] pl-5 ">
+                    Operating temperature
+                  </p>
+                  <p className="bg-white w-[70%] pl-5 "> -20℃ ~ + 45℃ </p>
                 </div>
                 <div className="flex">
-                  <p className="bg-gray-300 border-r border-black w-[30%] pl-5">Storage temperature</p>
-                  <p className="bg-white w-[70%] pl-5">  -40℃ ~ +60℃ </p>
+                  <p className="bg-gray-300 border-r border-black w-[30%] pl-5">
+                    Storage temperature
+                  </p>
+                  <p className="bg-white w-[70%] pl-5"> -40℃ ~ +60℃ </p>
                 </div>
               </div>
             </div>
@@ -446,6 +528,6 @@ export function Product() {
           </div>
         </div>
       </section>
-    </>
+    </article>
   );
 }
