@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-import DataTable from 'react-data-table-component';
 import img3 from "../assets/light.jpg";
 import img2 from "../assets/specification.png";
 import img5 from "../assets/relatedProdduccts.png";
