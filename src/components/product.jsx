@@ -257,7 +257,7 @@ export function Product() {
             <div className="w-[15%] bg-white"></div>
             <div className="w-[85%] bg-[#F3F3F3]"></div>
           </div>
-          <div className="lg:px-0 md:px-5 xs:px-0 px-5 md:h-[482px] pb-20 md:pb-0 bg-[#F3F3F3] md:bg-inherit w-full flex md:flex-row flex-col justify-center xl:justify-start xl:pl-[10%] items-center md:gap-3 gap-5  md:py-0 py-5 md:absolute md:-translate-x-1/2 md:-translate-y-1/2 md:top-[45%] lg:top-1/2 md:left-1/2">
+          <div className="lg:px-0 md:px-5 xs:px-0 px-5 md:h-[482px]  xs:pb-20 md:pb-0 bg-[#F3F3F3] md:bg-inherit w-full flex md:flex-row flex-col justify-center xl:justify-start xl:pl-[10%] items-center md:gap-3 gap-10  md:py-0 py-5 md:absolute md:-translate-x-1/2 md:-translate-y-1/2 md:top-[45%] lg:top-1/2 md:left-1/2">
             <div className="h-[379px] shadow-2xl drop-shadow-lg rounded-xl">
               <img
                 src={`${bgimage[index]}`}
@@ -266,7 +266,7 @@ export function Product() {
                 style={{opacity: 1}}
               />
             </div>
-            <div className="h-[387px] sm:w-[500px] lg:w-1/2 xl:w-[60%] xs:w-96 w-full pl-5 sm:pl-0">
+            <div className="sm:h-[387px] sm:w-[500px] lg:w-1/2 xl:w-[60%] xs:w-96 w-full pl-5 sm:pl-0">
               <p className="text-base xs:text-lg lg:text-2xl font-medium lg:pl-24 md:pl-10  border-b border-[#F2667C] sm:border-none">
                 L8989-A45 IP66 IK10 4FT linkable waterproof LED linear light
               </p>
