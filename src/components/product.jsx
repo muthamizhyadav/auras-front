@@ -387,7 +387,7 @@ export function Product() {
         </section>
       </section>
 
-      <div className="bg-slate-100 w-full lg:px-36 md:px-36 px-5 rounded-t-xl pt-5">
+      <div className="bg-slate-100 w-full  md:px-14 px-5 rounded-t-xl pt-5">
         <div className=" shadow-2xl drop-shadow-2xl ">
           <div className="bg-white w-fit px-8 py-5 rounded-t-md shadow-2xl ">
             <button
@@ -433,16 +433,16 @@ export function Product() {
       <section>
         <div className="bg-Formbg bg-cover form flex lg:flex-row flex-col justify-center items-center lg:flex-nowrap sm:py-10 py-5 md:px-24 px-5 gap-10">
           <div className="">
-            <p className="text-3xl sm:text-5xl font-semibold ">
+            <p className="text-3xl sm:text-5xl font-medium">
               Keen to explore further?
             </p>
-            <p className="py-5  font-medium md:text-start text-justify">
+            <p className="py-5 text-xs md:text-start text-justify">
               If you are interested in our products and would like to receive
               further information, please fill out the form below to send us
               your request. or mail to info@auraslighting.com directly.
             </p>
           </div>
-          <div className="form-content md:w-[70%] w-full sm:p-5 p-3  rounded-3xl shadow-2xl">
+          <div className="form-content lg:w-[70%] w-full sm:p-5 p-3  rounded-3xl shadow-2xl">
             <div className="flex flex-col items-center justify-evenly ">
               <input
                 type="text"
