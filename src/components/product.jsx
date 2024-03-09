@@ -138,7 +138,7 @@ export function Product() {
       </tr>
     </React.Fragment>
   )
-  
+
   const bgimages = [linear1, linear2, linear3, linear4, linear5, linear6];
 
   const [bgimage, Setbgimage] = React.useState(bgimages);
@@ -151,7 +151,7 @@ export function Product() {
       document.querySelector('.h-[379px] img').style.opacity = 1;
     }, 100);
   };
-  
+
 
   React.useEffect(() => {
     const interval = setInterval(changeBgimages, 3000);
@@ -276,9 +276,8 @@ export function Product() {
           </div>
         </div>
         <div
-          className={`${
-            isOpen ? "block transition duration-500 ease-in-out" : "hidden"
-          } lg:hidden bg-pink-100 `}
+          className={`${isOpen ? "block transition duration-500 ease-in-out" : "hidden"
+            } lg:hidden bg-pink-100 `}
         >
           <div className="px-2 pt-2 pb-3">
             <a
@@ -351,7 +350,7 @@ export function Product() {
                 src={`${bgimage[index]}`}
                 alt=""
                 className="sm:w-[479px] w-full h-full rounded-xl transition-opacity duration-500"
-                style={{opacity: 1}}
+                style={{ opacity: 1 }}
               />
             </div>
             <div className="sm:h-[387px] sm:w-[500px] lg:w-1/2 xl:w-[60%] xs:w-96 w-full pl-5 sm:pl-0">
@@ -388,13 +387,13 @@ export function Product() {
         </section>
       </section>
 
-      <div className="bg-slate-100 w-full lg:px-56 md:px-32 px-5 rounded-t-xl pt-5">
+      <div className="bg-slate-100 w-full lg:px-36 md:px-36 px-5 rounded-t-xl pt-5">
         <div className=" shadow-2xl drop-shadow-2xl ">
           <div className="bg-white w-fit px-8 py-5 rounded-t-md shadow-2xl ">
             <button
               className="focus: outline-none font-medium sm:text-base text-xs 
                  text-white border-2 bg-[#F2667C] p-1 px-5 
-                 drop-shadow-2xl   rounded-md">
+                 drop-shadow-2xl  rounded-md">
               Specifications
             </button>
           </div>
