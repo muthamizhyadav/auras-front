@@ -315,7 +315,7 @@ const Outdoor = () => {
                             &nbsp; B3QEB0125
                         </p>
                         <div
-                            className="bg-cover h-[250px] sm:h-[400px] shadow-2xl drop-shadow-lg rounded-xl w-full md:w-[42%]  lg:w-[37%]"
+                            className="bg-cover bg-center h-[250px] sm:h-[400px] shadow-2xl drop-shadow-lg rounded-xl w-full md:w-[42%]  lg:w-[37%]"
                             style={{
                                 backgroundImage: `url(${ bgimage[index]})`,
                                 backgroundPosition: "center",
