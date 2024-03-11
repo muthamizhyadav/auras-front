@@ -35,7 +35,7 @@ import { MdAccountCircle } from "react-icons/md";
   }, []);
 
   return (
-    <section ref={navbarRef} className="">
+    <section ref={navbarRef} className="bg-white fixed z-50 w-full font shadow-md shadow-gray-400">
       <div className="w-full">
         <div className="bg-black text-white  px-5 sm:px-10 md:px-20 flex justify-between">
           <div className="py-2 flex">
