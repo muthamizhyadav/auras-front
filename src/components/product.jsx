@@ -222,7 +222,7 @@ export function Product() {
         </section>
       </section>
 
-      {/* <div className="bg-slate-100 w-full  md:px-14 px-5 rounded-t-xl pt-5">
+      <div className="bg-slate-100 w-full  md:px-14 px-5 rounded-t-xl pt-5">
         <div className=" shadow-2xl drop-shadow-2xl ">
           <div className="bg-white w-fit px-8 py-5 rounded-t-md shadow-2xl ">
             <button
@@ -298,9 +298,9 @@ export function Product() {
           <img src={img1} alt="" className="pt-10 pb-5" />
           
         </div>
-      </div> */}
+      </div>
 
-      {/* <section>
+      <section>
         <div className="bg-Formbg bg-cover form flex lg:flex-row flex-col justify-center items-center lg:flex-nowrap sm:py-10 py-5 md:px-24 px-5 gap-10">
           <div className="">
             <p className="text-3xl sm:text-5xl font-medium">
@@ -360,10 +360,10 @@ export function Product() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* footer */}
-      {/* <section className="lg:pt-10">
+      <section className="lg:pt-10">
         <div className="bg-black text-white p-10">
           <div className="capitalize flex flex-wrap justify-center p-1">
             <p className="pr-2 m-1  cursor-pointer">HOME </p>
@@ -386,7 +386,7 @@ export function Product() {
             <p>Powered by WHY Global Services</p>
           </div>
         </div>
-      </section> */}
+      </section>
     </article>
   );
 }
