@@ -162,7 +162,7 @@ export function Product() {
             <div className="w-[10%] bg-white"></div>
             <div className="w-[90%] bg-[#F3F3F3]"></div>
           </div>
-          <div className=" bg-[#F3F3F3] py-10 lg:py-0 md:bg-inherit w-full px-14 flex md:flex-row flex-col items-center md:gap-3 gap-10 md:absolute md:-translate-x-1/2 md:-translate-y-1/2 md:top-[45%]  md:left-1/2">
+          <div className=" bg-[#F3F3F3] py-10 lg:py-0 md:bg-inherit w-full px-5 sm:px-14 flex md:flex-row flex-col items-center md:gap-3 gap-10 md:absolute md:-translate-x-1/2 md:-translate-y-1/2 md:top-[45%]  md:left-1/2">
             <p className="flex md:hidden font-medium  text-black">
               Linear Light &nbsp; <FaChevronRight className="mt-1" /> &nbsp;
               L8989-A45

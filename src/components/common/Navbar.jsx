@@ -41,21 +41,21 @@ import { MdAccountCircle } from "react-icons/md";
           <div className="py-2 flex">
             <div className="flex items-center pr-2 sm:pr-10 border-r">
               <MdEmail className="text-white" />
-              <p className="ml-1 hidden sm:block cursor-pointer">
+              <p className="ml-1 hidden sm:block cursor-pointer text-sm">
                 contact@auraslightings.com
               </p>
             </div>
             <div className="flex items-center ml-2">
               <TiLocation className="text-white" />
-              <p className="ml-1 hidden sm:block cursor-pointer">UAE</p>
+              <p className="ml-1 hidden sm:block cursor-pointer text-sm">UAE</p>
             </div>
           </div>
-          <div className="flex items-center">
-            <RiFacebookBoxFill className="rounded-3xl icon cursor-pointer" />
-            <FaSquareTwitter className="icon mx-1 cursor-pointer" />
-            <RiInstagramFill className="icon mx-1 cursor-pointer" />
-            <FaLinkedin className="icon mx-1 cursor-pointer" />
-            <IoLogoYoutube className="icon mx-1 cursor-pointer" />
+          <div className="flex items-center gap-3 xs:gap-5">
+            <RiFacebookBoxFill className="rounded-3xl cursor-pointer" />
+            <FaSquareTwitter className="cursor-pointer" />
+            <RiInstagramFill className="cursor-pointer" />
+            <FaLinkedin className="cursor-pointer" />
+            <IoLogoYoutube className="cursor-pointer" />
           </div>
         </div>
 
@@ -91,11 +91,11 @@ import { MdAccountCircle } from "react-icons/md";
             </p>
           </div>
           <div className="w-1/4  items-center justify-around xl:px-4 flex">
-            <div className="capitalize  shadow-lg cursor-pointer text-[#F2667C] hover:bg-[#F2667C] hover:text-white px-4 py-1 rounded">
-              <p className=" lg:text-sm xl:text-base font-medium">contact us</p>
+            <div className="capitalize  shadow-lg cursor-pointer text-[#F2667C] hover:bg-[#F2667C] hover:text-white px-4 py-2 rounded">
+              <p className=" lg:text-sm ">contact us</p>
             </div>
             <div>
-              <FiSearch className="text-[#F2667C] lg:text-xl xl:text-3xl" />
+              <FiSearch className="text-[#F2667C] lg:text-xl xl:text-2xl" />
             </div>
             <div>
               <MdAccountCircle className="text-[#F2667C] lg:text-xl xl:text-3xl" />
