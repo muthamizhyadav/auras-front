@@ -363,11 +363,7 @@ export function Product() {
       </section> */}
 
       {/* footer */}
-<<<<<<< HEAD
-      <section className="">
-=======
       {/* <section className="lg:pt-10">
->>>>>>> 12a27a0c7b6790665a6b0aea3cb0f2db5b1887ba
         <div className="bg-black text-white p-10">
           <div className="capitalize flex flex-wrap justify-center p-1">
             <p className="pr-2 m-1  cursor-pointer">HOME </p>
