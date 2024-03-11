@@ -224,16 +224,10 @@ export function Product() {
 
       <div className="bg-slate-100 w-full  md:px-14 px-5 rounded-t-xl pt-5">
         <div className=" shadow-2xl drop-shadow-2xl ">
-          <div className="bg-white w-fit px-8 py-5 rounded-t-md shadow-2xl ">
-            <button
-              className="focus: outline-none font-medium sm:text-base text-xs 
-                 text-white border-2 bg-[#F2667C] p-1 px-5 
-                 drop-shadow-2xl  rounded-md"
-            >
-              Specifications
-            </button>
+          <div className=" ">
+            <p className="text-center font-bold text-lg">Specification</p>
           </div>
-          <div className="bg-white flex flex-col justify-center items-center rounded-b-xl p-10 overflow-x-scroll ">
+          <div className="bg-white flex flex-col justify-center items-center rounded-b-xl py-5 px-10 overflow-x-scroll ">
             <table
               style={customStyles}
               className="border border-black sm:ml-0 ml-auto"
