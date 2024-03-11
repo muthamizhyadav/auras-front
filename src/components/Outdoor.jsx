@@ -43,7 +43,7 @@ const Outdoor = () => {
     const data = [
         {
             name: "Housing",
-            datas: "12#Die-Casting grey powder coated aluminum.T=60 - 80μm Adhesion of ISO class 1 / ASTM class 4B"
+            datas: "12#Die-Casting grey powder coated aluminum. T=60 - 80μm Adhesion of ISO class 1 / ASTM class 4B"
         },
         {
             name: "Light Window",
@@ -67,7 +67,7 @@ const Outdoor = () => {
         },
         {
             name: "Power Cable",
-            datas: "0.5m H05RN-F 2× 1.0mm² to open wires (Low Voltage) 0.5m H05RN- F 3×0.75mm² to open wires(High Voltage) 0.5m H05RN - F 4× 0.75mm² to open wires(RGB) 0.5m H05RN - F 5× 0.50mm² to open wires(RGBW, or DMX) "
+            datas: <h1>0.5m H05RN-F 2× 1.0mm² to open wires (Low Voltage)<br /> 0.5m H05RN- F 3×0.75mm² to open wires(High Voltage)<br /> 0.5m H05RN - F 4× 0.75mm² to open wires(RGB) <br /> 0.5m H05RN - F 5× 0.50mm² to open wires(RGBW, or DMX)</h1>
         },
         {
             name: "Operating Temperature ",
@@ -295,8 +295,8 @@ const Outdoor = () => {
                             <tbody className="">
                                 {data.map((item, index) => (
                                     <tr key={index} className=" ">
-                                        <td className='border-r border-gray-400 text-xs  border-b text-start px-3 py-1'>{item.name}</td>
-                                        <td className=' border-gray-400 text-xs  border-b text-start px-3 py-1'>{item.datas}</td>
+                                        <td className='border-r border-gray-400 text-xs  border-b text-start px-3 py-2'>{item.name}</td>
+                                        <td className=' border-gray-400 text-xs  border-b text-start px-3 py-2'>{item.datas}</td>
                                     </tr>
                                 ))}
 
