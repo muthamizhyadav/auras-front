@@ -266,24 +266,24 @@ export function Product() {
                 {Specification.map((item, index) => (
                   <tr key={index} className=" ">
                     <td
-                      className={` border-r border-gray-400 text-xs  border-b text-start px-3 py-1`}
+                      className={` border-r border-gray-400 text-xs  border-b text-start px-3 py-2`}
                     >
                       {item.name}
                     </td>
                     <td
-                      className={` border-r border-gray-400 text-xs border-b text-center px-3 py-1`}
+                      className={` border-r border-gray-400 text-xs border-b text-center px-3 py-2`}
                       colSpan="2"
                     >
                       {item.spec1}
                     </td>
                     <td
-                      className={` border-r border-gray-400 text-xs border-b text-center px-3 py-1`}
+                      className={` border-r border-gray-400 text-xs border-b text-center px-3 py-2`}
                       colSpan="2"
                     >
                       {item.datas}
                     </td>
                     <td
-                      className={` border-gray-400 text-xs border-b text-center px-3 py-1`}
+                      className={` border-gray-400 text-xs border-b text-center px-3 py-2`}
                       colSpan="2"
                     >
                       {item.spec2}
@@ -312,7 +312,7 @@ export function Product() {
               your request. or mail to info@auraslighting.com directly.
             </p>
           </div>
-          <div className="form-content lg:w-[70%] w-full sm:p-5 p-3 bg-white rounded-3xl shadow-2xl">
+          <div className="form-content lg:w-[70%] w-full sm:p-5 p-3  rounded-3xl shadow-2xl">
             <div className="flex flex-col items-center justify-evenly ">
               <input
                 type="text"
@@ -364,9 +364,9 @@ export function Product() {
 
       {/* footer */}
       <section className="">
-        <div className="bg-black text-white p-10">
-          <div className="capitalize flex flex-wrap justify-center p-1">
-            <p className=" m-0.5 font-medium  cursor-pointer">Home </p>
+        <div className="bg-black text-white p-8">
+          <div className="capitalize flex flex-wrap justify-center p-1 text-sm">
+            <p className=" m-0.5 font-medium  cursor-pointer ">Home </p>
             <p className=" m-0.5 font-medium ">|</p>
             <p className=" m-0.5 font-medium  cursor-pointer">Linear Light</p>
             <p className=" m-0.5 font-medium ">|</p>
@@ -382,8 +382,8 @@ export function Product() {
             <p className=" m-0.5 font-medium ">|</p>
             <p className=" m-0.5 font-medium cursor-pointer">Contact Us </p>
           </div>
-          <div className="text-center">
-            <p>Powered by WHY Global Services</p>
+          <div className="text-center font-medium text-sm">
+            <p>Powered By WHY Global Services</p>
           </div>
         </div>
       </section>
