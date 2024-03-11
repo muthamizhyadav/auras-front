@@ -1,4 +1,4 @@
-import React, {useRef, useState, useEffect} from "react";
+import React, { useRef, useState, useEffect } from "react";
 import logo from "../../assets/logo.png";
 import { MdEmail } from "react-icons/md";
 import { TiLocation } from "react-icons/ti";
@@ -10,33 +10,24 @@ import { IoLogoYoutube } from "react-icons/io5";
 import { FiSearch } from "react-icons/fi";
 import { MdAccountCircle } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
-
-
- const Navbar = () => {
-
-    const location = useLocation();
-
-    const [isOpen, setIsOpen] = useState(false);
+const Navbar = () => {
+  const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
   const navbarRef = useRef(null);
-
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
-
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (navbarRef.current && !navbarRef.current.contains(event.target)) {
         setIsOpen(false);
       }
     };
-
     window.addEventListener("click", handleClickOutside);
-
     return () => {
       window.removeEventListener("click", handleClickOutside);
     };
   }, []);
-
   return (
     <section ref={navbarRef} className="bg-white fixed z-50 w-full font shadow-md shadow-gray-400">
       <div className="w-full">
@@ -61,7 +52,6 @@ import { Link, useLocation } from "react-router-dom";
             <IoLogoYoutube className="cursor-pointer" />
           </div>
         </div>
-
         <div className=" xl:justify-around md:justify-between w-full py-1 md:px-5 xl:px-10 items-center bg-transparent hidden lg:flex">
           <div className="">
             <img
@@ -71,7 +61,7 @@ import { Link, useLocation } from "react-router-dom";
             />
           </div>
           <div className="flex ml-10 w-3/4 justify-evenly lg:text-xs xl:text-sm font-medium">
-            <Link to="/" className={capitalize hover:text-[#F2667C] cursor-pointer ${location.pathname === "/" ? "text-[#F2667C]" : ''}}>
+            <Link to="/" className={`capitalize hover:text-[#F2667C] cursor-pointer ${location.pathname === "/" ? "text-[#F2667C]" : ''}`}>
               products
             </Link>
             <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
@@ -80,7 +70,7 @@ import { Link, useLocation } from "react-router-dom";
             <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
               commercial lights
             </Link>
-            <Link to="/outdoorlights" className={capitalize hover:text-[#F2667C] cursor-pointer ${location.pathname === "/outdoorlights" ? "text-[#F2667C]" : ''}}>
+            <Link to="/outdoorlights" className={`capitalize hover:text-[#F2667C] cursor-pointer ${location.pathname === "/outdoorlights" ? "text-[#F2667C]" : ''}`}>
               outdoor lights
             </Link>
             <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
@@ -118,7 +108,7 @@ import { Link, useLocation } from "react-router-dom";
               aria-expanded="false"
             >
               <svg
-                className={${isOpen ? "hidden" : "block"} h-6 w-6}
+                className={`${isOpen ? "hidden" : "block"} h-6 w-6`}
                 stroke="currentColor"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -131,7 +121,7 @@ import { Link, useLocation } from "react-router-dom";
                 ></path>
               </svg>
               <svg
-                className={${isOpen ? "block" : "hidden"} h-6 w-6}
+                className={`${isOpen ? "block" : "hidden"} h-6 w-6`}
                 stroke="currentColor"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -154,12 +144,11 @@ import { Link, useLocation } from "react-router-dom";
         </div>
       </div>
       <div
-        className={`${
-          isOpen ? "block transition duration-500 ease-in-out" : "hidden"
-        } lg:hidden bg-pink-100 `}
+        className={`${isOpen ? "block transition duration-500 ease-in-out" : "hidden"
+          } lg:hidden bg-pink-100 `}
       >
         <div className="px-2 pt-2 pb-3">
-          <Link 
+          <Link
             to="/"
             className="block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
           >
@@ -176,7 +165,7 @@ import { Link, useLocation } from "react-router-dom";
             Commercial Lights
           </Link>
           <Link
-          to="/outdoorlights"
+            to="/outdoorlights"
             className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
           >
             Outdoor Lights
@@ -204,7 +193,4 @@ import { Link, useLocation } from "react-router-dom";
     </section>
   );
 };
-
-
-
-export default Navbar;
+export default Navbar; 
