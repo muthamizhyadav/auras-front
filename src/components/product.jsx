@@ -11,7 +11,7 @@ import img4 from "../assets/relatedProdduccts2.png";
 import img1 from "../assets/light2.jpg";
 import { FaArrowDown } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import { MdDownload, MdEmail } from "react-icons/md";
 import { TiLocation } from "react-icons/ti";
 import { RiFacebookBoxFill } from "react-icons/ri";
 import { FaSquareTwitter } from "react-icons/fa6";
@@ -20,35 +20,14 @@ import { FaLinkedin } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io5";
 import { FiSearch } from "react-icons/fi";
 import { MdAccountCircle } from "react-icons/md";
-import logo from "../assets/logo.png";
+
 import product1 from "../assets/product1.pdf";
 import line1 from "../assets/line1.png";
 import { FaGreaterThanEqual } from "react-icons/fa6";
-import imagecontent1 from '../assets/imagecontent 1.png'
-import imagecontent2 from '../assets/imagecontent 2.png'
+import imagecontent1 from "../assets/imagecontent 1.png";
+import imagecontent2 from "../assets/imagecontent 2.png";
 
 export function Product() {
-  const [isOpen, setIsOpen] = useState(false);
-  const navbarRef = useRef(null);
-
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen);
-  };
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
-    };
-
-    window.addEventListener("click", handleClickOutside);
-
-    return () => {
-      window.removeEventListener("click", handleClickOutside);
-    };
-  }, []);
-
   // const [showActiveContent, setShowActiveContent] = useState("Overview");
   // const toggleContent = (content) => {
   //   setShowActiveContent(content);
@@ -166,182 +145,11 @@ export function Product() {
   }, []);
 
   return (
-    <article className="font capitalize">
-
-      <section ref={navbarRef}>
-        <div className="w-full z-99">
-          <div className="bg-black text-white  px-5 sm:px-10 md:px-20 flex justify-between">
-            <div className="py-2 flex">
-              <div className="flex items-center pr-2 sm:pr-10 border-r">
-                <MdEmail className="text-white" />
-                <p className="ml-1 hidden sm:block cursor-pointer">
-                  contact@auraslightings.com
-                </p>
-              </div>
-              <div className="flex items-center ml-2">
-                <TiLocation className="text-white" />
-                <p className="ml-1 hidden sm:block cursor-pointer">UAE</p>
-              </div>
-            </div>
-            <div className="flex items-center">
-              <RiFacebookBoxFill className="rounded-3xl icon cursor-pointer" />
-              <FaSquareTwitter className="icon mx-1 cursor-pointer" />
-              <RiInstagramFill className="icon mx-1 cursor-pointer" />
-              <FaLinkedin className="icon mx-1 cursor-pointer" />
-              <IoLogoYoutube className="icon mx-1 cursor-pointer" />
-            </div>
-          </div>
-
-          <div className=" xl:justify-around md:justify-between w-full py-1 md:px-5 xl:px-10 items-center bg-transparent hidden lg:flex">
-            <div className="">
-              <img
-                src={logo}
-                alt="auras logo"
-                className="xl:ml-16 xl:w-[160px] w-28"
-              />
-            </div>
-            <div className="flex ml-10 w-3/4 justify-evenly lg:text-xs xl:text-sm font-medium">
-              <p className="capitalize hover:text-[#F2667C] cursor-pointer">
-                products
-              </p>
-              <p className="capitalize hover:text-[#F2667C] cursor-pointer">
-                lux edition
-              </p>
-              <p className="capitalize hover:text-[#F2667C] cursor-pointer">
-                commercial lights
-              </p>
-              <p className="capitalize hover:text-[#F2667C] cursor-pointer">
-                outdoor lights
-              </p>
-              <p className="capitalize hover:text-[#F2667C] cursor-pointer">
-                home decor
-              </p>
-              <p className="capitalize hover:text-[#F2667C] cursor-pointer">
-                about us
-              </p>
-              <p className="capitalize hover:text-[#F2667C] cursor-pointer">
-                blogs
-              </p>
-            </div>
-            <div className="w-1/4  items-center justify-around xl:px-4 flex">
-              <div className="capitalize  shadow-lg cursor-pointer text-[#F2667C] hover:bg-[#F2667C] hover:text-white px-4 py-1 rounded">
-                <p className=" lg:text-sm xl:text-base">contact us</p>
-              </div>
-              <div>
-                <FiSearch className="text-[#F2667C] lg:text-xl xl:text-3xl" />
-              </div>
-              <div>
-                <MdAccountCircle className="text-[#F2667C] lg:text-xl xl:text-3xl" />
-              </div>
-            </div>
-          </div>
-          <div className=" flex items-center justify-between px-5 py-1 lg:hidden overflow-hidden">
-            <div className="">
-              <img src={logo} alt="auras logo" className="w-20" />
-            </div>
-            <div className="flex justify-center items-center gap-5">
-              <button
-                onClick={toggleNavbar}
-                type="button"
-                className="inline-flex items-center justify-center p-2 rounded-md text-black hover:text-white hover:bg-[#F2667C] focus:outline-none focus:bg-[#F2667C] focus:text-white transition duration-150 ease-in-out"
-                aria-label="Main menu"
-                aria-expanded="false"
-              >
-                <svg
-                  className={`${isOpen ? "hidden" : "block"} h-6 w-6`}
-                  stroke="currentColor"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16m-7 6h7"
-                  ></path>
-                </svg>
-                <svg
-                  className={`${isOpen ? "block" : "hidden"} h-6 w-6`}
-                  stroke="currentColor"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  ></path>
-                </svg>
-              </button>
-              <div>
-                <FiSearch className="text-[#F2667C] text-3xl" />
-              </div>
-              <div>
-                <MdAccountCircle className="text-[#F2667C] text-3xl" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className={`${
-            isOpen ? "block transition duration-500 ease-in-out" : "hidden"
-          } lg:hidden bg-pink-100 `}
-        >
-          <div className="px-2 pt-2 pb-3">
-            <a
-              href="#"
-              className="block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
-            >
-              Products
-            </a>
-            <a
-              href="#"
-              className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
-            >
-              Lux Edition
-            </a>
-            <a
-              href="#"
-              className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
-            >
-              Commercial Lights
-            </a>
-            <a
-              href="#"
-              className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
-            >
-              Outdoor Lights
-            </a>
-            <a
-              href="#"
-              className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
-            >
-              Home Decor
-            </a>
-            <a
-              href="#"
-              className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
-            >
-              About Us
-            </a>
-            <a
-              href="#"
-              className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
-            >
-              Blogs
-            </a>
-            <button className="capitalize shadow-lg cursor-pointer font-medium text-[#F2667C] bg-white hover:bg-[#F2667C] hover:text-white px-4 py-1 rounded">
-              Contact Us
-            </button>
-          </div>
-        </div>
-      </section>
-
+    <article className="font">
       <section className="">
         <div className="w-full md:flex hidden">
-          <div className="w-[15%]"></div>
-          <div className="w-[85%]">
+          <div className="w-[10%]"></div>
+          <div className="w-[90%]">
             <p className="flex font-medium  text-black py-5">
               Linear Light &nbsp; <FaChevronRight className="mt-1" /> &nbsp;
               L8989-A45
@@ -349,26 +157,34 @@ export function Product() {
           </div>
         </div>
 
-        <section className="md:relative">
-          <div className="md:h-[500px] w-full md:flex hidden">
-            <div className="w-[15%] bg-white"></div>
-            <div className="w-[85%] bg-[#F3F3F3]"></div>
+        <section className="md:relative ">
+          <div className="lg:h-[500px] md:h-[550px] w-full md:flex hidden">
+            <div className="w-[10%] bg-white"></div>
+            <div className="w-[90%] bg-[#F3F3F3]"></div>
           </div>
-          <div className="lg:px-0 md:px-5 xs:px-0 px-5 md:h-[482px]  xs:pb-20 md:pb-0 bg-[#F3F3F3] md:bg-inherit w-full flex md:flex-row flex-col justify-center xl:justify-start xl:pl-[10%] items-center md:gap-3 gap-10  md:py-0 py-5 md:absolute md:-translate-x-1/2 md:-translate-y-1/2 md:top-[45%]  md:left-1/2">
+          <div className=" bg-[#F3F3F3] py-10 lg:py-0 md:bg-inherit w-full px-14 flex md:flex-row flex-col items-center md:gap-3 gap-10 md:absolute md:-translate-x-1/2 md:-translate-y-1/2 md:top-[45%]  md:left-1/2">
+            <p className="flex md:hidden font-medium  text-black">
+              Linear Light &nbsp; <FaChevronRight className="mt-1" /> &nbsp;
+              L8989-A45
+            </p>
             <div
-              className="bg-cover h-[379px] shadow-2xl drop-shadow-lg rounded-xl sm:w-[479px] w-full"
+              className="bg-cover h-[379px] shadow-2xl drop-shadow-lg rounded-xl w-full md:w-[42%]  lg:w-[37%]"
               style={{
                 backgroundImage: `url(${bgimage[index]})`,
                 backgroundPosition: "center",
                 transition: "background-image 1s ease",
               }}
             />
-            <div className="sm:h-[387px] sm:w-[500px] lg:w-1/2 xl:w-[60%] xs:w-96 w-full pl-5 sm:pl-0">
-              <p className="text-base xs:text-lg lg:text-2xl font-medium lg:pl-24 md:pl-10  border-b border-[#F2667C] sm:border-none">
+            <div className="sm:h-[387px] w-full md:w-[58%] lg:w-[63%]  pl-5 sm:pl-0 capitalize">
+              <p className="text-base xs:text-lg lg:text-2xl font-medium lg:pl-[22%] md:pl-10  border-b-[1.5px] border-[#F2667C] md:border-none mb-2">
                 L8989-A45 IP66 IK10 4FT linkable waterproof LED linear light
               </p>
-              <img src={line1} alt="" className=" pt-1 sm:block hidden" />
-              <div className="text-[14px] text-[#666666] lg:pl-24 md:pl-10  py-3">
+              <img
+                src={line1}
+                alt=""
+                className=" pt-1 md:block hidden xl:w-[90%] h-10"
+              />
+              <div className="md:text-xs  lg:text-[13px]  md:leading-6 text-[#666666] lg:pl-[22%] md:pl-10">
                 <p className="">IP66 protection class.</p>
                 <p className="">
                   Non-dim, support 0-10V, DALI, Triac dimming solutions.
@@ -384,16 +200,21 @@ export function Product() {
                 <p>Operating Term: -20°C - + 45°C. </p>
                 <p>Storage Term: -40°C - + 60°C. </p>
                 <p>Degradable packaging.</p>
-                <p className="flex items-center"> PF &nbsp;<FaGreaterThanEqual size={10}/>&nbsp; 0.9 .</p>
+                <p className="flex items-center">
+                  {" "}
+                  PF &nbsp;
+                  <FaGreaterThanEqual size={10} />
+                  &nbsp; 0.9 .
+                </p>
               </div>
               <a
                 href={product1}
                 download
-                className="flex justify-center items-center  md:justify-start md:pl-24"
+                className="flex justify-center items-center  md:justify-start md:pl-10 lg:pl-[22%]"
               >
-                <button className=" flex md:justify-start justify-center items-center mt-5 py-2 px-2 rounded bg-white shadow-md  shadow-black">
+                <button className=" flex justify-center items-center mt-3  w-48 h-10 rounded bg-white shadow-md">
                   Specification File
-                  <FaArrowDown className="text-[#F2667C] my-1 mx-2 " />
+                  <MdDownload className="text-[#F2667C] my-1 mx-2 " />
                 </button>
               </a>
             </div>
@@ -401,7 +222,7 @@ export function Product() {
         </section>
       </section>
 
-      <div className="bg-slate-100 w-full  md:px-14 px-5 rounded-t-xl pt-5">
+      {/* <div className="bg-slate-100 w-full  md:px-14 px-5 rounded-t-xl pt-5">
         <div className=" shadow-2xl drop-shadow-2xl ">
           <div className="bg-white w-fit px-8 py-5 rounded-t-md shadow-2xl ">
             <button
@@ -475,12 +296,11 @@ export function Product() {
         </div>
         <div className="flex flex-col">
           <img src={img1} alt="" className="pt-10 pb-5" />
-          {/* <img src={imagecontent1} alt="" />
-          <img src={imagecontent2} alt="" /> */}
+          
         </div>
-      </div>
+      </div> */}
 
-      <section>
+      {/* <section>
         <div className="bg-Formbg bg-cover form flex lg:flex-row flex-col justify-center items-center lg:flex-nowrap sm:py-10 py-5 md:px-24 px-5 gap-10">
           <div className="">
             <p className="text-3xl sm:text-5xl font-medium">
@@ -540,10 +360,10 @@ export function Product() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* footer */}
-      <section className="lg:pt-10">
+      {/* <section className="lg:pt-10">
         <div className="bg-black text-white p-10">
           <div className="capitalize flex flex-wrap justify-center p-1">
             <p className="pr-2 m-1  cursor-pointer">HOME </p>
@@ -566,7 +386,7 @@ export function Product() {
             <p>Powered by WHY Global Services</p>
           </div>
         </div>
-      </section>
+      </section> */}
     </article>
   );
 }
