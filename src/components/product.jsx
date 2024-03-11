@@ -253,10 +253,10 @@ export function Product() {
                   <th className="border-r px-3 py-1 border-gray-400 text-sm">
                     L8989-A68S
                   </th>
-                  <th className="border-r px-3 py-1 border-gray-400 text-sm ">
+                  <th className="border-r border-gray-400 text-sm ">
                     L8989-A90
                   </th>
-                  <th className="px-3 py-1 border-gray-400 text-sm">
+                  <th className="border-gray-400 text-sm">
                     L8989-A90S
                   </th>
                   <th></th>
@@ -296,7 +296,7 @@ export function Product() {
         </div>
         <div className="flex flex-col ">
           <img src={img1} alt="" className="pt-10 pb-5" />
-          
+
         </div>
       </div>
 
@@ -325,7 +325,7 @@ export function Product() {
                 type="email"
                 name="mail"
                 id="mail"
-                placeholder="Mail"
+                placeholder="E-Mail"
                 className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
               />
               <input
@@ -363,24 +363,24 @@ export function Product() {
       </section>
 
       {/* footer */}
-      <section className="lg:pt-10">
+      <section className="">
         <div className="bg-black text-white p-10">
           <div className="capitalize flex flex-wrap justify-center p-1">
-            <p className="pr-2 m-1  cursor-pointer">HOME </p>
-            <p className="m-1 pr-2 ">|</p>
-            <p className="pr-2 m-1  cursor-pointer">LINEAR LIGHT</p>
-            <p className="m-1 pr-2">|</p>
-            <p className="pr-2 m-1  cursor-pointer">LED STRIP</p>
-            <p className="m-1 pr-2">|</p>
-            <p className="pr-2 m-1  cursor-pointer">LED NEON LIGHT </p>
-            <p className="m-1 pr-2">|</p>
-            <p className="pr-2 m-1  cursor-pointer">LED SENSOR </p>
-            <p className="m-1 pr-2">|</p>
-            <p className="pr-2 m-1  cursor-pointer">LED SENSOR </p>
-            <p className="m-1 pr-2">|</p>
-            <p className="pr-2 m-1  cursor-pointer">RECRUIT</p>
-            <p className="m-1 pr-2">|</p>
-            <p className="pr-2 m-1 cursor-pointer">CONTACT US </p>
+            <p className=" m-0.5 font-medium  cursor-pointer">Home </p>
+            <p className=" m-0.5 font-medium ">|</p>
+            <p className=" m-0.5 font-medium  cursor-pointer">Linear Light</p>
+            <p className=" m-0.5 font-medium ">|</p>
+            <p className=" m-0.5 font-medium  cursor-pointer">LED Strip</p>
+            <p className=" m-0.5 font-medium ">|</p>
+            <p className=" m-0.5 font-medium  cursor-pointer">LED Neon Light </p>
+            <p className=" m-0.5 font-medium ">|</p>
+            <p className=" m-0.5 font-medium  cursor-pointer">LED Sensor </p>
+            <p className=" m-0.5 font-medium ">|</p>
+            <p className=" m-0.5 font-medium  cursor-pointer">LED Sensor </p>
+            <p className=" m-0.5 font-medium ">|</p>
+            <p className=" m-0.5 font-medium  cursor-pointer">Recruit</p>
+            <p className=" m-0.5 font-medium ">|</p>
+            <p className=" m-0.5 font-medium cursor-pointer">Contact Us </p>
           </div>
           <div className="text-center">
             <p>Powered by WHY Global Services</p>
