@@ -298,7 +298,7 @@ const Outdoor = () => {
                     <div className="w-[10%]"></div>
                     <div className="w-[90%]">
                         <p className="flex font-medium text-black py-5">
-                            L3QE LED Architectural &nbsp; <FaChevronRight className="mt-1" />{" "}
+                            Outdoor Lights &nbsp; <FaChevronRight className="mt-1" />{" "}
                             &nbsp; B3QEB0125
                         </p>
                     </div>
@@ -311,7 +311,7 @@ const Outdoor = () => {
                     </div>
                     <div className="bg-[#F3F3F3] py-10 sm:pb-44 lg:py-0 md:bg-inherit w-full px-5 sm:px-14 flex md:flex-row flex-col items-center md:gap-3 gap-10 md:absolute md:-translate-x-1/2 md:-translate-y-1/2 md:top-[30%] lg:top-[40%] xl:top-[45%]  md:left-1/2">
                         <p className="flex md:hidden font-medium  text-black">
-                            3QE LED Architectural &nbsp; <FaChevronRight className="mt-1" />{" "}
+                            Outdoor Lights &nbsp; <FaChevronRight className="mt-1" />{" "}
                             &nbsp; B3QEB0125
                         </p>
                         <div
@@ -322,7 +322,7 @@ const Outdoor = () => {
                                 transition: "background-image 1s ease",
                             }}
                         />
-                        <div className="sm:h-[387px] w-full md:w-[58%] lg:w-[63%]   sm:pl-0 capitalize">
+                        <div className="sm:h-[387px] w-full md:w-[58%] lg:w-[63%]   sm:pl-0 ">
                             <p className="text-base xs:text-lg lg:text-2xl font-medium lg:pl-[22%] md:pl-10  border-b-[1.5px] border-[#F2667C] md:border-none mb-2">
                                 3QE LED Architectural & Landscape Spot Light
                             </p>
@@ -516,7 +516,7 @@ const Outdoor = () => {
                         <p className="py-5 text-xs md:text-start text-justify">
                             If you are interested in our products and would like to receive
                             further information, please fill out the form below to send us
-                            your request. or mail to info@auraslighting.com directly.
+                            your request or mail to info@auraslighting.com directly.
                         </p>
                     </div>
                     <div className="form-content lg:w-[70%] w-full sm:p-5 p-3  rounded-3xl shadow-2xl">
@@ -532,7 +532,7 @@ const Outdoor = () => {
                                 type="email"
                                 name="mail"
                                 id="mail"
-                                placeholder="E-Mail"
+                                placeholder="E-mail"
                                 className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
                             />
                             <input
@@ -554,7 +554,7 @@ const Outdoor = () => {
                                 id="messege"
                                 rows="4"
                                 className="bg-gray-200 p-2 my-1 rounded-lg w-full border border-[#0E82B4]"
-                                placeholder="Messege"
+                                placeholder="Message"
                             ></textarea>
                         </div>
                         <div className="flex justify-end">
