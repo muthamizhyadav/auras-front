@@ -317,7 +317,7 @@ const Outdoor = () => {
                         <div
                             className="bg-cover h-[250px] sm:h-[400px] shadow-2xl drop-shadow-lg rounded-xl w-full md:w-[42%]  lg:w-[37%]"
                             style={{
-                                backgroundImage: url(${ bgimage[index]}),
+                                backgroundImage: `url(${ bgimage[index]})`,
                                 backgroundPosition: "center",
                                 transition: "background-image 1s ease",
                             }}
