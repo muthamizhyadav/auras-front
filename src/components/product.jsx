@@ -284,9 +284,8 @@ export function Product() {
           </div>
         </div>
         <div
-          className={`${
-            isOpen ? "block transition duration-500 ease-in-out" : "hidden"
-          } lg:hidden bg-pink-100 `}
+          className={`${isOpen ? "block transition duration-500 ease-in-out" : "hidden"
+            } lg:hidden bg-pink-100 `}
         >
           <div className="px-2 pt-2 pb-3">
             <a
@@ -384,7 +383,7 @@ export function Product() {
                 <p>Operating Term: -20°C - + 45°C. </p>
                 <p>Storage Term: -40°C - + 60°C. </p>
                 <p>Degradable packaging.</p>
-                <p className="flex items-center"> PF &nbsp;<FaGreaterThanEqual size={10}/>&nbsp; 0.9 .</p>
+                <p className="flex items-center"> PF &nbsp;<FaGreaterThanEqual size={10} />&nbsp; 0.9 .</p>
               </div>
               <a
                 href={product1}
@@ -412,7 +411,7 @@ export function Product() {
               Specifications
             </button>
           </div>
-          <div className="bg-white flex flex-col justify-center items-center rounded-b-xl p-10 overflow-scroll ">
+          <div className="bg-white flex flex-col justify-center items-center rounded-b-xl p-10 overflow-x-scroll ">
             <table
               style={customStyles}
               className="border border-black sm:ml-0 ml-auto"
@@ -420,22 +419,22 @@ export function Product() {
               <thead className="border-b border-gray-400">
                 <tr className="text-center ">
                   <th className="border-r border-gray-400"></th>
-                  <th className="border-r border-gray-400 text-sm">
+                  <th className="border-r px-3 py-1 border-gray-400 text-sm">
                     L8989-A45
                   </th>
-                  <th className="border-r border-gray-400 text-sm">
+                  <th className="border-r px-3 py-1 border-gray-400 text-sm">
                     L8989-A45S
                   </th>
-                  <th className="border-r border-gray-400 text-sm">
+                  <th className="border-r px-3 py-1 border-gray-400 text-sm">
                     L8989-A68
                   </th>
-                  <th className="border-r border-gray-400 text-sm">
+                  <th className="border-r px-3 py-1 border-gray-400 text-sm">
                     L8989-A68S
                   </th>
-                  <th className="border-r border-gray-400 text-sm ">
+                  <th className="border-r px-3 py-1 border-gray-400 text-sm ">
                     L8989-A90
                   </th>
-                  <th className="border-r border-gray-400 text-sm">
+                  <th className="px-3 py-1 border-gray-400 text-sm">
                     L8989-A90S
                   </th>
                   <th></th>
@@ -445,24 +444,24 @@ export function Product() {
                 {Specification.map((item, index) => (
                   <tr key={index} className=" ">
                     <td
-                      className={` border-r border-gray-400 text-xs pl-2 border-b text-start`}
+                      className={` border-r border-gray-400 text-xs  border-b text-start px-3 py-1`}
                     >
                       {item.name}
                     </td>
                     <td
-                      className={` border-r border-gray-400 text-xs border-b text-center`}
+                      className={` border-r border-gray-400 text-xs border-b text-center px-3 py-1`}
                       colSpan="2"
                     >
                       {item.spec1}
                     </td>
                     <td
-                      className={` border-r border-gray-400 text-xs border-b text-center`}
+                      className={` border-r border-gray-400 text-xs border-b text-center px-3 py-1`}
                       colSpan="2"
                     >
                       {item.datas}
                     </td>
                     <td
-                      className={` border-r border-gray-400 text-xs border-b text-center`}
+                      className={` border-gray-400 text-xs border-b text-center px-3 py-1`}
                       colSpan="2"
                     >
                       {item.spec2}
@@ -473,7 +472,7 @@ export function Product() {
             </table>
           </div>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col ">
           <img src={img1} alt="" className="pt-10 pb-5" />
           {/* <img src={imagecontent1} alt="" />
           <img src={imagecontent2} alt="" /> */}
@@ -492,7 +491,7 @@ export function Product() {
               your request. or mail to info@auraslighting.com directly.
             </p>
           </div>
-          <div className="form-content lg:w-[70%] w-full sm:p-5 p-3  rounded-3xl shadow-2xl">
+          <div className="form-content lg:w-[70%] w-full sm:p-5 p-3 bg-white rounded-3xl shadow-2xl">
             <div className="flex flex-col items-center justify-evenly ">
               <input
                 type="text"
@@ -525,7 +524,7 @@ export function Product() {
               <textarea
                 name="messege"
                 id="messege"
-                rows="5"
+                rows="4"
                 className="bg-gray-200 p-2 my-1 rounded-lg w-full border border-[#0E82B4]"
                 placeholder="Messege"
               ></textarea>
@@ -543,7 +542,7 @@ export function Product() {
       </section>
 
       {/* footer */}
-      <section className="lg:pt-10">
+      <section className="">
         <div className="bg-black text-white p-10">
           <div className="capitalize flex flex-wrap justify-center p-1">
             <p className="pr-2 m-1  cursor-pointer">HOME </p>
