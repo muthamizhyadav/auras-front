@@ -392,7 +392,7 @@ export function Product() {
             <p className="py-5 text-xs md:text-start text-justify">
               If you are interested in our products and would like to receive
               further information, please fill out the form below to send us
-              your request. or mail to info@auraslighting.com directly.
+              your request or mail to info@auraslighting.com directly.
             </p>
           </div>
           <div className="form-content lg:w-[70%] w-full sm:p-5 p-3  rounded-3xl shadow-2xl">
@@ -408,7 +408,7 @@ export function Product() {
                 type="email"
                 name="mail"
                 id="mail"
-                placeholder="E-Mail"
+                placeholder="E-mail"
                 className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
               />
               <input
@@ -430,7 +430,7 @@ export function Product() {
                 id="messege"
                 rows="4"
                 className="bg-gray-200 p-2 my-1 rounded-lg w-full border border-[#0E82B4]"
-                placeholder="Messege"
+                placeholder="Message"
               ></textarea>
             </div>
             <div className="flex justify-end">
@@ -446,7 +446,7 @@ export function Product() {
       </section>
 
       {/* footer */}
-     
+
     </article>
   );
 }
