@@ -188,28 +188,30 @@ export function Product() {
                 alt=""
                 className=" pt-1 md:block hidden xl:w-[90%] h-10"
               />
-              <div className="md:text-xs  lg:text-[13px]  md:leading-6 text-[#666666] lg:pl-[22%] md:pl-10">
-                <p className="">IP66 protection class.</p>
-                <p className="">
-                  Non-dim, support 0-10V, DALI, Triac dimming solutions.
-                </p>
-                <p className="">
-                  Aluminium 6063-T5, good heat radiation with long lifespan.
-                </p>
-                <p>Light source adopts LM-80 certified LED.</p>
-                <p>Adopt UL Class P certified power supply.</p>
-                <p>Long lifespan, &gt;30000 hours (L70B10). </p>
-                <p>High lighting efficiency, save energy.</p>
-                <p>Environment humidity 40-70% RH.</p>
-                <p>Operating Term: -20°C - + 45°C. </p>
-                <p>Storage Term: -40°C - + 60°C. </p>
-                <p>Degradable packaging.</p>
-                <p className="flex items-center">
-                  {" "}
-                  PF &nbsp;
-                  <FaGreaterThanEqual size={10} />
-                  &nbsp; 0.9 .
-                </p>
+              <div className="md:text-xs  lg:text-[13px]  md:leading-6 text-[#666666] lg:pl-[24%] md:pl-10 pl-4">
+                <ul className="list-disc">
+                  <li className="">IP66 protection class.</li>
+                  <li className="">
+                    Non-dim, support 0-10V, DALI, Triac dimming solutions.
+                  </li>
+                  <li className="">
+                    Aluminium 6063-T5, good heat radiation with long lifespan.
+                  </li>
+                  <li>Light source adopts LM-80 certified LED.</li>
+                  <li>Adopt UL Class P certified power supply.</li>
+                  <li>Long lifespan, &gt;30000 hours (L70B10). </li>
+                  <li>High lighting efficiency, save energy.</li>
+                  <li>Environment humidity 40-70% RH.</li>
+                  <li>Operating Term: -20°C - + 45°C. </li>
+                  <li>Storage Term: -40°C - + 60°C. </li>
+                  <li>Degradable packaging.</li>
+                  <li className="flex items-center">
+                    {" "}
+                    PF &nbsp;
+                    <FaGreaterThanEqual size={10} />
+                    &nbsp; 0.9 .
+                  </li>
+                </ul>
               </div>
               <a
                 href={product1}
@@ -227,11 +229,13 @@ export function Product() {
       </section>
 
       <div className="bg-slate-100 w-full  md:px-14 px-5 rounded-t-xl pt-5">
-        <div className=" shadow-2xl drop-shadow-2xl ">
+        <div className=" ">
           <div className=" ">
-            <p className="text-center font-bold text-lg">Specification</p>
+            <p className="text-center font-semibold text-xl py-5">
+              Specification
+            </p>
           </div>
-          <div className="bg-white flex flex-col justify-center items-center rounded-b-xl py-5 px-10 overflow-x-scroll ">
+          <div className="bg-white flex flex-col justify-center items-center rounded-b-xl py-5 px-10 overflow-x-scroll shadow-2xl drop-shadow-2xl ">
             <table
               style={customStyles}
               className="border border-black sm:ml-0 ml-auto"
@@ -262,24 +266,24 @@ export function Product() {
                 {Specification.map((item, index) => (
                   <tr key={index} className=" ">
                     <td
-                      className={` border-r border-gray-400 text-xs  border-b text-start px-3 py-1`}
+                      className={` border-r border-gray-400 text-xs  border-b text-start px-3 py-2`}
                     >
                       {item.name}
                     </td>
                     <td
-                      className={` border-r border-gray-400 text-xs border-b text-center px-3 py-1`}
+                      className={` border-r border-gray-400 text-xs border-b text-center px-3 py-2`}
                       colSpan="2"
                     >
                       {item.spec1}
                     </td>
                     <td
-                      className={` border-r border-gray-400 text-xs border-b text-center px-3 py-1`}
+                      className={` border-r border-gray-400 text-xs border-b text-center px-3 py-2`}
                       colSpan="2"
                     >
                       {item.datas}
                     </td>
                     <td
-                      className={` border-gray-400 text-xs border-b text-center px-3 py-1`}
+                      className={` border-gray-400 text-xs border-b text-center px-3 py-2`}
                       colSpan="2"
                     >
                       {item.spec2}
@@ -290,27 +294,97 @@ export function Product() {
             </table>
           </div>
         </div>
-        <div className="flex items-center justify-between py-10 gap-5">
+        <div className="flex md:flex-row flex-col items-center justify-between py-10 gap-5">
           <div className="w-72 h-72 bg-white drop-shadow-xl p-5 rounded-lg">
-            <img src={linearcontent1} alt="" className="w-full " />
+            <img
+              src={linearcontent1}
+              alt=""
+              className="w-full h-full border p-2 border-gray-500"
+            />
           </div>
           <div className="w-72 h-72 bg-white drop-shadow-xl p-5 rounded-lg">
-            <img src={linearcontent2} alt="" className="w-full " />
+            <img src={linearcontent2} alt="" className="w-full h-full" />
           </div>
-          <div className="w-80 h-72  bg-white drop-shadow-xl p-5 rounded-lg">
+          <div className="w-72 h-72  bg-white drop-shadow-xl p-5 rounded-lg">
             <img src={lightsway} alt="" className="w-full" />
-            <div className="w-full  p-3  pb-7 bg-white">
+            <div className="w-full  p-3   pb-7 bg-white">
               <img src={linearoutline} alt="" className="w-full" />
             </div>
           </div>
         </div>
         <div className="flex flex-col ">
-          <img src={img1} alt="" className="pt-10 pb-5" />
+          <img src={img1} alt="" className="pt-5 py-10" />
+        </div>
+        <div>
+          <h2 className="font-semibold sm:text-xl py-5 text-center">
+            Outdoor waterproof LED linear lighting fixture: L8989
+          </h2>
+          <div className="flex md:flex-row flex-col py-5 gap-5">
+            <div className="flex flex-col gap-5 md:w-[40%] items-center">
+              <img src={imagecontent1} alt="" className="w-96 h-72" />
+            </div>
+            <div className="md:w-[60%] leading-loose xs:w-96 xs:px-0 px-5 mx-auto">
+              <ul className="list-disc lg:text-base text-[12px] lg:space-y-3">
+                <li>
+                  Aluminium 6063-T5 profile, surface treatment by oxidation or
+                  metal powder painting which is special for outdoor, good
+                  thermostability and low temperature resistance, good
+                  resistance to acids and alkalis.
+                </li>
+                <li>PC diffuser, anti-UV, fire-protection rating 94-V2.</li>
+                <li>
+                  Linkable, ladder, structure design, easy assembly and
+                  disassembly.
+                </li>
+                <li>
+                  Integrated aluminum end cap with silicone seal ring, fix by
+                  screws, fashionable surface.
+                </li>
+                <li>
+                  Support 3-in-1 (0-10V, PWM and resistor), DALI or other
+                  dimming solutions.
+                </li>
+                <li className="flex items-center">
+                  4ft or 8ft, lifespan <FaGreaterThanEqual size={10} /> 5 years.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="flex md:flex-row flex-col py-5 gap-5">
+            <div className="flex flex-col gap-5 md:w-[40%] items-center">
+              <img src={imagecontent2} alt="" className="w-96 h-72" />
+            </div>
+            <div className="md:w-[60%] leading-loose md:px-0 xs:w-96 xs:px-0 px-5 mx-auto">
+              <ul className="list-disc lg:text-base text-[12px] lg:space-y-4">
+                <li>
+                  <span className="font-medium">CONNECTION CABLE: </span>{" "}
+                  Several lighting fixtures could be connected quickly and
+                  safely by cables with male and female connectors.
+                </li>
+                <li>
+                  <span className="font-medium">STRAIGHT CONNECTION: </span>{" "}
+                  Mechanical connection and electrical connection by stainless
+                  steel 304 connectors and waterproof cable on the top of
+                  profile.
+                </li>
+                <li>
+                  <span className="font-medium">DIFFUSER: </span> PC frosted
+                  diffuser, anti-UV, fire-protection rating 94-V2.
+                </li>
+                <li>
+                  <span className="font-medium">MAIN PROFILE: </span> Aluminum
+                  6063-T5 profile, surface treated by oxidation or metal powder
+                  painting which is special for outdoor use. Good
+                  thermostability, good resistance to acids and alkalis.
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 
       <section>
-        <div className="bg-Formbg bg-cover form flex lg:flex-row flex-col justify-center items-center lg:flex-nowrap sm:py-10 py-5 md:px-24 px-5 gap-10">
+        <div className="bg-Formbg bg-cover form flex lg:flex-row flex-col justify-center items-center lg:flex-nowrap sm:py-10 py-5 md:px-24 px-5 lg:gap-10 gap-3">
           <div className="">
             <p className="text-3xl sm:text-5xl font-medium">
               Keen to explore further?
@@ -372,32 +446,7 @@ export function Product() {
       </section>
 
       {/* footer */}
-      <section className="">
-        <div className="bg-black text-white p-8">
-          <div className="capitalize flex flex-wrap justify-center p-1 text-sm">
-            <p className=" m-0.5 font-medium  cursor-pointer ">Home </p>
-            <p className=" m-0.5 font-medium ">|</p>
-            <p className=" m-0.5 font-medium  cursor-pointer">Linear Light</p>
-            <p className=" m-0.5 font-medium ">|</p>
-            <p className=" m-0.5 font-medium  cursor-pointer">LED Strip</p>
-            <p className=" m-0.5 font-medium ">|</p>
-            <p className=" m-0.5 font-medium  cursor-pointer">
-              LED Neon Light{" "}
-            </p>
-            <p className=" m-0.5 font-medium ">|</p>
-            <p className=" m-0.5 font-medium  cursor-pointer">LED Sensor </p>
-            <p className=" m-0.5 font-medium ">|</p>
-            <p className=" m-0.5 font-medium  cursor-pointer">LED Sensor </p>
-            <p className=" m-0.5 font-medium ">|</p>
-            <p className=" m-0.5 font-medium  cursor-pointer">Recruit</p>
-            <p className=" m-0.5 font-medium ">|</p>
-            <p className=" m-0.5 font-medium cursor-pointer">Contact Us </p>
-          </div>
-          <div className="text-center font-medium text-sm">
-            <p>Powered By WHY Global Services</p>
-          </div>
-        </div>
-      </section>
+     
     </article>
   );
 }
