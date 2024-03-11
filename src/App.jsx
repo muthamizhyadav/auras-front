@@ -3,6 +3,7 @@ import { Product } from "./components/product";
 import Navbar from "./components/common/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./components/common/Home";
+import Outdoor from "./components/Outdoor";
 
 function App() {
 
@@ -10,8 +11,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home/>}>
-          <Route path="/" element={<Product/>}/> 
+        <Route path="/" element={<Home />}>
+          <Route path="/" element={<Product />} />
+          <Route path="/outdoorlights" element={<Outdoor />} />
         </Route>
       </Routes>
     </Router>

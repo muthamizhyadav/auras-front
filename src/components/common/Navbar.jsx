@@ -9,9 +9,12 @@ import { FaLinkedin } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io5";
 import { FiSearch } from "react-icons/fi";
 import { MdAccountCircle } from "react-icons/md";
+import { Link, useLocation } from "react-router-dom";
 
 
  const Navbar = () => {
+
+    const location = useLocation();
 
     const [isOpen, setIsOpen] = useState(false);
   const navbarRef = useRef(null);
@@ -68,27 +71,27 @@ import { MdAccountCircle } from "react-icons/md";
             />
           </div>
           <div className="flex ml-10 w-3/4 justify-evenly lg:text-xs xl:text-sm font-medium">
-            <p className="capitalize hover:text-[#F2667C] cursor-pointer">
+            <Link to="/" className={capitalize hover:text-[#F2667C] cursor-pointer ${location.pathname === "/" ? "text-[#F2667C]" : ''}}>
               products
-            </p>
-            <p className="capitalize hover:text-[#F2667C] cursor-pointer">
+            </Link>
+            <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
               lux edition
-            </p>
-            <p className="capitalize hover:text-[#F2667C] cursor-pointer">
+            </Link>
+            <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
               commercial lights
-            </p>
-            <p className="capitalize hover:text-[#F2667C] cursor-pointer">
+            </Link>
+            <Link to="/outdoorlights" className={capitalize hover:text-[#F2667C] cursor-pointer ${location.pathname === "/outdoorlights" ? "text-[#F2667C]" : ''}}>
               outdoor lights
-            </p>
-            <p className="capitalize hover:text-[#F2667C] cursor-pointer">
+            </Link>
+            <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
               home decor
-            </p>
-            <p className="capitalize hover:text-[#F2667C] cursor-pointer">
+            </Link>
+            <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
               about us
-            </p>
-            <p className="capitalize hover:text-[#F2667C] cursor-pointer">
+            </Link>
+            <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
               blogs
-            </p>
+            </Link>
           </div>
           <div className="w-1/4  items-center justify-around xl:px-4 flex">
             <div className="capitalize  shadow-lg cursor-pointer text-[#F2667C] hover:bg-[#F2667C] hover:text-white px-4 py-2 rounded">
@@ -115,7 +118,7 @@ import { MdAccountCircle } from "react-icons/md";
               aria-expanded="false"
             >
               <svg
-                className={`${isOpen ? "hidden" : "block"} h-6 w-6`}
+                className={${isOpen ? "hidden" : "block"} h-6 w-6}
                 stroke="currentColor"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -128,7 +131,7 @@ import { MdAccountCircle } from "react-icons/md";
                 ></path>
               </svg>
               <svg
-                className={`${isOpen ? "block" : "hidden"} h-6 w-6`}
+                className={${isOpen ? "block" : "hidden"} h-6 w-6}
                 stroke="currentColor"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -156,48 +159,43 @@ import { MdAccountCircle } from "react-icons/md";
         } lg:hidden bg-pink-100 `}
       >
         <div className="px-2 pt-2 pb-3">
-          <a
-            href="#"
+          <Link 
+            to="/"
             className="block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
           >
             Products
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
             className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
           >
             Lux Edition
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
             className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
           >
             Commercial Lights
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+          to="/outdoorlights"
             className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
           >
             Outdoor Lights
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
             className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
           >
             Home Decor
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
             className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
           >
             About Us
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
             className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
           >
             Blogs
-          </a>
+          </Link>
           <button className="capitalize shadow-lg cursor-pointer font-medium text-[#F2667C] bg-white hover:bg-[#F2667C] hover:text-white px-4 py-1 rounded">
             Contact Us
           </button>
