@@ -168,14 +168,14 @@ export function Product() {
               L8989-A45
             </p>
             <div
-              className="bg-cover h-[379px] shadow-2xl drop-shadow-lg rounded-xl w-full md:w-[42%]  lg:w-[37%]"
+              className="bg-cover h-[250px] sm:h-[379px] shadow-2xl drop-shadow-lg rounded-xl w-full md:w-[42%]  lg:w-[37%]"
               style={{
                 backgroundImage: `url(${bgimage[index]})`,
                 backgroundPosition: "center",
                 transition: "background-image 1s ease",
               }}
             />
-            <div className="sm:h-[387px] w-full md:w-[58%] lg:w-[63%]  pl-5 sm:pl-0 capitalize">
+            <div className="sm:h-[387px] w-full md:w-[58%] lg:w-[63%]   sm:pl-0 capitalize">
               <p className="text-base xs:text-lg lg:text-2xl font-medium lg:pl-[22%] md:pl-10  border-b-[1.5px] border-[#F2667C] md:border-none mb-2">
                 L8989-A45 IP66 IK10 4FT linkable waterproof LED linear light
               </p>
@@ -212,7 +212,7 @@ export function Product() {
                 download
                 className="flex justify-center items-center  md:justify-start md:pl-10 lg:pl-[22%]"
               >
-                <button className=" flex justify-center items-center mt-3  w-48 h-10 rounded bg-white shadow-md">
+                <button className=" flex justify-center items-center mt-5 sm:mt-3  w-48 h-10 rounded bg-white shadow-md">
                   Specification File
                   <MdDownload className="text-[#F2667C] my-1 mx-2 " />
                 </button>

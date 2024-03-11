@@ -64,7 +64,7 @@ import { MdAccountCircle } from "react-icons/md";
             <img
               src={logo}
               alt="auras logo"
-              className="xl:ml-16 xl:w-[160px] w-28"
+              className="xl:ml-16 xl:w-[140px] w-28"
             />
           </div>
           <div className="flex ml-10 w-3/4 justify-evenly lg:text-xs xl:text-sm font-medium">
@@ -92,7 +92,7 @@ import { MdAccountCircle } from "react-icons/md";
           </div>
           <div className="w-1/4  items-center justify-around xl:px-4 flex">
             <div className="capitalize  shadow-lg cursor-pointer text-[#F2667C] hover:bg-[#F2667C] hover:text-white px-4 py-1 rounded">
-              <p className=" lg:text-sm xl:text-base">contact us</p>
+              <p className=" lg:text-sm xl:text-base font-medium">contact us</p>
             </div>
             <div>
               <FiSearch className="text-[#F2667C] lg:text-xl xl:text-3xl" />
