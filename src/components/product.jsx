@@ -223,76 +223,67 @@ export function Product() {
       </section>
 
       <div className="bg-slate-100 w-full  md:px-14 px-5 rounded-t-xl pt-5">
-        <div className=" shadow-2xl drop-shadow-2xl ">
-          <div className="bg-white w-fit px-8 py-5 rounded-t-md shadow-2xl ">
-            <button
-              className="focus: outline-none font-medium sm:text-base text-xs 
-                 text-white border-2 bg-[#F2667C] p-1 px-5 
-                 drop-shadow-2xl  rounded-md"
-            >
-              Specifications
-            </button>
-          </div>
-          <div className="bg-white flex flex-col justify-center items-center rounded-b-xl p-10 overflow-x-scroll ">
-            <table
-              style={customStyles}
-              className="border border-black sm:ml-0 ml-auto"
-            >
-              <thead className="border-b border-gray-400">
-                <tr className="text-center ">
-                  <th className="border-r border-gray-400"></th>
-                  <th className="border-r px-3 py-1 border-gray-400 text-sm">
-                    L8989-A45
-                  </th>
-                  <th className="border-r px-3 py-1 border-gray-400 text-sm">
-                    L8989-A45S
-                  </th>
-                  <th className="border-r px-3 py-1 border-gray-400 text-sm">
-                    L8989-A68
-                  </th>
-                  <th className="border-r px-3 py-1 border-gray-400 text-sm">
-                    L8989-A68S
-                  </th>
-                  <th className="border-r border-gray-400 text-sm ">
-                    L8989-A90
-                  </th>
-                  <th className="border-gray-400 text-sm">
-                    L8989-A90S
-                  </th>
-                  <th></th>
+        <p className="font-bold text-lg text-center">Specification</p>
+        <div className="bg-white flex flex-col drop-shadow-2xl shadow-2xl justify-center items-center rounded-b-xl px-10 py-5 overflow-x-scroll ">
+          <table
+            style={customStyles}
+            className="border border-black sm:ml-0 ml-auto"
+          >
+            <thead className="border-b border-gray-400">
+              <tr className="text-center ">
+                <th className="border-r border-gray-400"></th>
+                <th className="border-r px-3 py-1 border-gray-400 text-sm">
+                  L8989-A45
+                </th>
+                <th className="border-r px-3 py-1 border-gray-400 text-sm">
+                  L8989-A45S
+                </th>
+                <th className="border-r px-3 py-1 border-gray-400 text-sm">
+                  L8989-A68
+                </th>
+                <th className="border-r px-3 py-1 border-gray-400 text-sm">
+                  L8989-A68S
+                </th>
+                <th className="border-r border-gray-400 text-sm ">
+                  L8989-A90
+                </th>
+                <th className="border-gray-400 text-sm">
+                  L8989-A90S
+                </th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody className="">
+              {Specification.map((item, index) => (
+                <tr key={index} className=" ">
+                  <td
+                    className={` border-r border-gray-400 text-xs  border-b text-start px-3 py-1`}
+                  >
+                    {item.name}
+                  </td>
+                  <td
+                    className={` border-r border-gray-400 text-xs border-b text-center px-3 py-1`}
+                    colSpan="2"
+                  >
+                    {item.spec1}
+                  </td>
+                  <td
+                    className={` border-r border-gray-400 text-xs border-b text-center px-3 py-1`}
+                    colSpan="2"
+                  >
+                    {item.datas}
+                  </td>
+                  <td
+                    className={` border-gray-400 text-xs border-b text-center px-3 py-1`}
+                    colSpan="2"
+                  >
+                    {item.spec2}
+                  </td>
                 </tr>
-              </thead>
-              <tbody className="">
-                {Specification.map((item, index) => (
-                  <tr key={index} className=" ">
-                    <td
-                      className={` border-r border-gray-400 text-xs  border-b text-start px-3 py-1`}
-                    >
-                      {item.name}
-                    </td>
-                    <td
-                      className={` border-r border-gray-400 text-xs border-b text-center px-3 py-1`}
-                      colSpan="2"
-                    >
-                      {item.spec1}
-                    </td>
-                    <td
-                      className={` border-r border-gray-400 text-xs border-b text-center px-3 py-1`}
-                      colSpan="2"
-                    >
-                      {item.datas}
-                    </td>
-                    <td
-                      className={` border-gray-400 text-xs border-b text-center px-3 py-1`}
-                      colSpan="2"
-                    >
-                      {item.spec2}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+              ))}
+            </tbody>
+          </table>
+
         </div>
         <div className="flex flex-col ">
           <img src={img1} alt="" className="pt-10 pb-5" />
