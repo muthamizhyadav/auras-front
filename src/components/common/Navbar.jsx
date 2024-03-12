@@ -83,7 +83,7 @@ const Navbar = () => {
             </Link>
             {showDropdown && (
                 <div   onClick={cancelDropdown} className="dropdown-animation absolute w-fit -translate-x-1/2 -translate-y-1/2 top-[75px] left-[7.5%] bg-pink-100 text-[#F2667C]  py-2 shadow-md shadow-gray-400 rounded-b-lg z-10">
-                  <Link to="/" className="block px-4 py-2 text-xs  hover:bg-[#F2667C] hover:text-white">Linear Lights</Link>
+                  <Link to="/products/linearlights" className="block px-4 py-2 text-xs  hover:bg-[#F2667C] hover:text-white">Linear Lights</Link>
                   <Link to="/products/outdoorlights" className="block px-4 py-2 text-xs  hover:bg-[#F2667C] hover:text-white" >Outdoor Lights</Link>
                 </div>
               )}
@@ -172,15 +172,13 @@ const Navbar = () => {
       >
         <div className="px-2 pt-2 pb-3 relative">
           <Link
-           
-            to="/"
             className="block px-3 py-2 rounded-md text-base font-medium text-[#F2667C]"
           >
            <span className="flex items-center w-fit" onClick={toggleDropdown} > Products <MdArrowRight size={20} /></span>
           </Link>
           {showDropdown && (
                 <div onClick={cancelDropdown} className="dropdown-animation absolute w-32 xs:w-fit -translate-x-1/2 -translate-y-1/2 top-[50px] left-48 xs:text-base text-xs  bg-pink-100 text-[#F2667C]  py-2 shadow-md shadow-gray-400 rounded-b-lg z-10">
-                  <Link to="/" className="block px-4 py-2   hover:bg-[#F2667C] hover:text-white">Linear Lights</Link>
+                  <Link to="/products/linearlights" className="block px-4 py-2   hover:bg-[#F2667C] hover:text-white">Linear Lights</Link>
                   <Link to="/products/outdoorlights" className="block px-4 py-2   hover:bg-[#F2667C] hover:text-white" >Outdoor Lights</Link>
                 </div>
               )}

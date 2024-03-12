@@ -315,7 +315,7 @@ const Outdoor = () => {
                         <div className="w-[10%] bg-white"></div>
                         <div className="w-[90%] bg-[#F3F3F3]"></div>
                     </div>
-                    <div className="bg-[#F3F3F3]">
+                    <div className="bg-[#F3F3F3] md:bg-transparent">
                     <p className="flex px-5 pt-5 md:hidden font-medium  text-black">
                             Outdoor Lights &nbsp; <FaChevronRight className="mt-1" />{" "}
                             &nbsp; B3QEB0125
@@ -388,7 +388,7 @@ const Outdoor = () => {
                             <a
                                 href={outdoorPdf}
                                 download
-                                className="flex justify-center items-center  md:justify-start md:pl-10 lg:pl-[22%]"
+                                className="flex  items-center justify-start md:pl-10 lg:pl-[22%]"
                             >
                                 <button className=" flex justify-center items-center mt-5 sm:mt-3  w-48 h-10 rounded bg-white shadow-md">
                                     Specification File
