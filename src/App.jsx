@@ -1,5 +1,5 @@
 import "./App.css";
-import { Product } from "./components/Products/Linear";
+import { Linear } from "./components/Products/Linear";
 import Navbar from "./components/common/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./components/common/Home";
@@ -12,7 +12,7 @@ function App() {
     <Router>
       <Routes>
         <Route element={<Home />}>
-          <Route path="/" element={<Product />} />
+          <Route path="/" element={<Linear />} />
           <Route path="/products/outdoorlights" element={<Outdoor />} />
         </Route>
       </Routes>

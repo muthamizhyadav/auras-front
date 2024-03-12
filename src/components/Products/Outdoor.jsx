@@ -1,20 +1,21 @@
 import React from "react";
 import DataTable from "react-data-table-component";
-import outdoor1 from "../assets/outdoorImage1.jpg";
-import outdoor2 from "../assets/outdoorImage2.jpg";
-import outdoor3 from "../assets/outdoorImage3.jpg";
-import outdoor4 from "../assets/outdoorImage4.jpg";
-import outdoor5 from "../assets/outdoorImage5.jpg";
-import outdoor6 from "../assets/outdoorImage6.jpg";
-import outdoor7 from "../assets/outdoorImage7.jpg";
-import outdoor8 from "../assets/outdoorImage8.jpg";
-import outdoor9 from "../assets/outdoorImage9.jpg";
-import outdoorPdf from "../assets/Spec sheet for B3QE Architectural and landscape Lights.pdf";
-import line1 from "../assets/line1.png";
+import outdoor1 from "../../assets/outdoorImage1.jpg";
+import outdoor2 from "../../assets/outdoorImage2.jpg";
+import outdoor3 from "../../assets/outdoorImage3.jpg";
+import outdoor4 from "../../assets/outdoorImage4.jpg";
+import outdoor5 from "../../assets/outdoorImage5.jpg";
+import outdoor6 from "../../assets/outdoorImage6.jpg";
+import outdoor7 from "../../assets/outdoorImage7.jpg";
+import outdoor8 from "../../assets/outdoorImage8.jpg";
+import outdoor9 from "../../assets/outdoorImage9.jpg";
+import outdoorPdf from "../../assets/Spec sheet for B3QE Architectural and landscape Lights.pdf";
+import line1 from "../../assets/line1.png";
 import { FaChevronRight } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
-import overview1 from "../assets/overviewOutdoor.jpeg";
-import overview2 from "../assets/overviewOutdoor1.jpeg";
+import overview1 from "../../assets/overviewOutdoor.jpeg";
+import overview2 from "../../assets/overviewOutdoor1.jpeg";
+import { Explore } from "./Explore";
 
 const Outdoor = () => {
     const bgimages = [
@@ -522,65 +523,7 @@ const Outdoor = () => {
 
             {/* third section */}
             <section>
-                <div className="bg-Formbg bg-cover form flex lg:flex-row flex-col justify-center items-center lg:flex-nowrap sm:py-10 py-5 md:px-24 px-5 gap-10">
-                    <div className="">
-                        <p className="text-3xl sm:text-5xl font-medium">
-                            Keen to explore further?
-                        </p>
-                        <p className="py-5 text-xs md:text-start text-justify">
-                            If you are interested in our products and would like to receive
-                            further information, please fill out the form below to send us
-                            your request or mail to info@auraslighting.com directly.
-                        </p>
-                    </div>
-                    <div className="form-content lg:w-[70%] w-full sm:p-5 p-3  rounded-3xl shadow-2xl">
-                        <div className="flex flex-col items-center justify-evenly ">
-                            <input
-                                type="text"
-                                name="name"
-                                id="name"
-                                placeholder="Name"
-                                className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
-                            />
-                            <input
-                                type="email"
-                                name="mail"
-                                id="mail"
-                                placeholder="E-mail"
-                                className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
-                            />
-                            <input
-                                type="text"
-                                name="text"
-                                id="text"
-                                placeholder="Company Name"
-                                className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
-                            />
-                            <input
-                                type="text"
-                                name="text"
-                                id="text"
-                                placeholder="Company Type"
-                                className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
-                            />
-                            <textarea
-                                name="messege"
-                                id="messege"
-                                rows="4"
-                                className="bg-gray-200 p-2 my-1 rounded-lg w-full border border-[#0E82B4]"
-                                placeholder="Message"
-                            ></textarea>
-                        </div>
-                        <div className="flex justify-end">
-                            <button
-                                type="submit"
-                                className=" bg-white p-3 px-8 drop-shadow-xl  rounded-lg my-2  font-medium"
-                            >
-                                Send
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                <Explore/>
             </section>
         </article>
     );

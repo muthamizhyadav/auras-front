@@ -1,14 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
-import linear1 from "../assets/light.jpg";
-import linear2 from "../assets/linearLight.jpg";
-import linear3 from "../assets/linearLIght2.jpg";
-import linear4 from "../assets/linearLight3.jpg";
-import linear5 from "../assets/LinearLight4.jpg";
-import linear6 from "../assets/linearLight5.jpg";
-import img2 from "../assets/specification.png";
-import img5 from "../assets/relatedProdduccts.png";
-import img4 from "../assets/relatedProdduccts2.png";
-import img1 from "../assets/light2.jpg";
+import linear1 from "../../assets/light.jpg";
+import linear2 from "../../assets/linearLight.jpg";
+import linear3 from "../../assets/linearLIght2.jpg";
+import linear4 from "../../assets/linearLight3.jpg";
+import linear5 from "../../assets/LinearLight4.jpg";
+import linear6 from "../../assets/linearLight5.jpg";
+import img2 from "../../assets/specification.png";
+import img5 from "../../assets/relatedProdduccts.png";
+import img4 from "../../assets/relatedProdduccts2.png";
+import img1 from "../../assets/light2.jpg";
 import { FaArrowDown } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
 import { MdDownload, MdEmail } from "react-icons/md";
@@ -21,15 +21,16 @@ import { IoLogoYoutube } from "react-icons/io5";
 import { FiSearch } from "react-icons/fi";
 import { MdAccountCircle } from "react-icons/md";
 
-import product1 from "../assets/Linear Light L Series.pdf";
-import line1 from "../assets/line1.png";
+import product1 from "../../assets/Linear Light L Series.pdf";
+import line1 from "../../assets/line1.png";
 import { FaGreaterThanEqual } from "react-icons/fa6";
-import imagecontent1 from "../assets/imagecontent 1.png";
-import imagecontent2 from "../assets/imagecontent 2.png";
-import linearcontent1 from "../assets/linearcontent1.png";
-import linearcontent2 from "../assets/linearcontent2.png";
-import lightsway from "../assets/lightsway.png";
-import linearoutline from "../assets/linearouline.png";
+import imagecontent1 from "../../assets/imagecontent 1.png";
+import imagecontent2 from "../../assets/imagecontent 2.png";
+import linearcontent1 from "../../assets/linearcontent1.png";
+import linearcontent2 from "../../assets/linearcontent2.png";
+import lightsway from "../../assets/lightsway.png";
+import linearoutline from "../../assets/linearouline.png";
+import { Explore } from "./Explore";
 
 export function Linear() {
   // const [showActiveContent, setShowActiveContent] = useState("Overview");
@@ -318,7 +319,7 @@ export function Linear() {
           <h2 className="font-semibold sm:text-xl py-5 text-center">
             Outdoor waterproof LED linear lighting fixture: L8989
           </h2>
-          <div className="flex md:flex-row flex-col py-5 gap-5">
+          <div className="flex md:flex-row flex-col items-center py-5 gap-5">
             <div className="flex flex-col gap-5 md:w-[40%] items-center">
               <img src={imagecontent1} alt="" className="w-96 h-72" />
             </div>
@@ -349,7 +350,7 @@ export function Linear() {
               </ul>
             </div>
           </div>
-          <div className="flex md:flex-row flex-col py-5 gap-5">
+          <div className="flex md:flex-row flex-col items-center py-5 gap-5">
             <div className="flex flex-col gap-5 md:w-[40%] items-center">
               <img src={imagecontent2} alt="" className="w-96 h-72" />
             </div>
@@ -382,67 +383,9 @@ export function Linear() {
         </div>
       </div>
 
-      <section>
-        <div className="bg-Formbg bg-cover form flex lg:flex-row flex-col justify-center items-center lg:flex-nowrap sm:py-10 py-5 md:px-24 px-5 lg:gap-10 gap-3">
-          <div className="">
-            <p className="text-3xl sm:text-5xl font-medium">
-              Keen to explore further?
-            </p>
-            <p className="py-5 text-[13px] md:text-start text-justify">
-              If you are interested in our products and would like to receive
-              further information, please fill out the form below to send us
-              your request or mail to info@auraslighting.com directly.
-            </p>
-          </div>
-          <div className="form-content lg:w-[70%] w-full sm:p-5 p-3  rounded-3xl shadow-2xl">
-            <div className="flex flex-col items-center justify-evenly ">
-              <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Name"
-                className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
-              />
-              <input
-                type="email"
-                name="mail"
-                id="mail"
-                placeholder="E-mail"
-                className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
-              />
-              <input
-                type="text"
-                name="text"
-                id="text"
-                placeholder="Company Name"
-                className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
-              />
-              <input
-                type="text"
-                name="text"
-                id="text"
-                placeholder="Company Type"
-                className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
-              />
-              <textarea
-                name="messege"
-                id="messege"
-                rows="4"
-                className="bg-gray-200 p-2 my-1 rounded-lg w-full border border-[#0E82B4]"
-                placeholder="Message"
-              ></textarea>
-            </div>
-            <div className="flex justify-end">
-              <button
-                type="submit"
-                className=" bg-white p-3 px-8 drop-shadow-xl  rounded-lg my-2  font-medium"
-              >
-                Send
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div>
+        <Explore/>
+      </div>
 
       {/* footer */}
 
