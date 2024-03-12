@@ -216,7 +216,7 @@ export function Product() {
               <a
                 href={product1}
                 download
-                className="flex justify-center items-center  md:justify-start md:pl-10 lg:pl-[22%]"
+                className="flex  items-center justify-start md:pl-10 lg:pl-[22%]"
               >
                 <button className=" flex justify-center items-center mt-5 sm:mt-3  w-48 h-10 rounded bg-white shadow-md">
                   Specification File
@@ -324,27 +324,27 @@ export function Product() {
               <img src={imagecontent1} alt="" className="w-96 h-72" />
             </div>
             <div className="md:w-[60%] leading-loose xs:w-96 xs:px-0 px-5 mx-auto">
-              <ul className="list-disc lg:text-base text-[12px] lg:space-y-3">
-                <li>
+              <ul className="list-disc lg:text-base  lg:space-y-3">
+                <li className="text-[13px]">
                   Aluminium 6063-T5 profile, surface treatment by oxidation or
                   metal powder painting which is special for outdoor, good
                   thermostability and low temperature resistance, good
                   resistance to acids and alkalis.
                 </li>
-                <li>PC diffuser, anti-UV, fire-protection rating 94-V2.</li>
-                <li>
+                <li className="text-[13px]">PC diffuser, anti-UV, fire-protection rating 94-V2.</li>
+                <li className="text-[13px]">
                   Linkable, ladder, structure design, easy assembly and
                   disassembly.
                 </li>
-                <li>
+                <li className="text-[13px]">
                   Integrated aluminum end cap with silicone seal ring, fix by
                   screws, fashionable surface.
                 </li>
-                <li>
+                <li className="text-[13px]">
                   Support 3-in-1 (0-10V, PWM and resistor), DALI or other
                   dimming solutions.
                 </li>
-                <li className="flex items-center">
+                <li className="flex items-center text-[13px]">
                   4ft or 8ft, lifespan <FaGreaterThanEqual size={10} /> 5 years.
                 </li>
               </ul>
@@ -355,23 +355,23 @@ export function Product() {
               <img src={imagecontent2} alt="" className="w-96 h-72" />
             </div>
             <div className="md:w-[60%] leading-loose md:px-0 xs:w-96 xs:px-0 px-5 mx-auto">
-              <ul className="list-disc lg:text-base text-[12px] lg:space-y-4">
-                <li>
+              <ul className="list-disc lg:text-base  lg:space-y-4">
+                <li className="text-[12px]">
                   <span className="font-medium">CONNECTION CABLE: </span>{" "}
                   Several lighting fixtures could be connected quickly and
                   safely by cables with male and female connectors.
                 </li>
-                <li>
+                <li className="text-[12px]">
                   <span className="font-medium">STRAIGHT CONNECTION: </span>{" "}
                   Mechanical connection and electrical connection by stainless
                   steel 304 connectors and waterproof cable on the top of
                   profile.
                 </li>
-                <li>
+                <li className="text-[12px]">
                   <span className="font-medium">DIFFUSER: </span> PC frosted
                   diffuser, anti-UV, fire-protection rating 94-V2.
                 </li>
-                <li>
+                <li className="text-[12px]">
                   <span className="font-medium">MAIN PROFILE: </span> Aluminum
                   6063-T5 profile, surface treated by oxidation or metal powder
                   painting which is special for outdoor use. Good
@@ -389,7 +389,7 @@ export function Product() {
             <p className="text-3xl sm:text-5xl font-medium">
               Keen to explore further?
             </p>
-            <p className="py-5 text-xs md:text-start text-justify">
+            <p className="py-5 text-[13px] md:text-start text-justify">
               If you are interested in our products and would like to receive
               further information, please fill out the form below to send us
               your request or mail to info@auraslighting.com directly.

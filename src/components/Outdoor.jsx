@@ -134,35 +134,35 @@ const Outdoor = () => {
 
     const columns2 = [
         {
-            name: <h1 className="text-black px-6  py-1 text-sm font-medium">Item No</h1>,
+            name: <h1 className="text-black px-6  py-1 text-[13px] font-medium">Item No</h1>,
             selector: (row) => row.item,
         },
         {
-            name: <h1 className="text-black py-1 px-2 text-sm font-medium">Light Source</h1>,
+            name: <h1 className="text-black py-1 px-2 text-[13px] font-medium">Light Source</h1>,
             selector: (row) => row.light,
         },
         {
-            name: <h1 className="text-black  py-1 px-3 text-sm font-medium">Beam Angle</h1>,
+            name: <h1 className="text-black  py-1 px-3 text-[13px] font-medium">Beam Angle</h1>,
             selector: (row) => row.beam,
         },
         {
-            name: <h1 className="text-black py-1 px-2 text-sm font-medium">input Voltage</h1>,
+            name: <h1 className="text-black py-1 px-2 text-[13px] font-medium">input Voltage</h1>,
             selector: (row) => row.input,
         },
         {
-            name: <h1 className="text-black -ml-2 py-1 text-sm font-medium">Typical Operating Current(mA)</h1>,
+            name: <h1 className="text-black -ml-2 py-1 text-[13px] font-medium">Typical Operating Current(mA)</h1>,
             selector: (row) => row.typical,
         },
         {
-            name: <h1 className="text-black -ml-3 py-1 text-sm font-medium">Typical Power Consumption(W)</h1>,
+            name: <h1 className="text-black md:-ml-3 -ml-1 py-1 text-[13px] font-medium">Typical Power Consumption(W)</h1>,
             selector: (row) => row.power,
         },
         {
-            name: <h1 className="text-black py-1 -ml-2 border-gray-400 text-sm font-medium">Typical Luminance(lm)</h1>,
+            name: <h1 className="text-black py-1 md:-ml-2 border-gray-400 text-[13px] font-medium">Typical Luminance(lm)</h1>,
             selector: (row) => row.lm,
         },
         {
-            name: <h1 className=" text-black py-1 border-gray-400 text-sm ml-6 font-medium">IK Rate</h1>,
+            name: <h1 className=" text-black py-1 border-gray-400 text-[13px] ml-6 font-medium">IK Rate</h1>,
             selector: (row) => row.ik,
         },
     ];
@@ -420,10 +420,10 @@ const Outdoor = () => {
                             <tbody className="">
                                 {data.map((item, index) => (
                                     <tr key={index} className=" ">
-                                        <td className="border-r border-gray-400 text-xs  border-b text-start px-3 py-1">
+                                        <td className="border-r border-gray-400 text-[12px]  border-b text-start px-3 py-1">
                                             {item.name}
                                         </td>
-                                        <td className=" border-gray-400 text-xs  border-b text-start px-3 py-1">
+                                        <td className=" border-gray-400 text-[12px]  border-b text-start px-3 py-1">
                                             {item.datas}
                                         </td>
                                     </tr>
