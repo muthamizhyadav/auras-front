@@ -1,9 +1,9 @@
 import "./App.css";
-import { Product } from "./components/product";
+import { Product } from "./components/Products/Linear";
 import Navbar from "./components/common/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./components/common/Home";
-import Outdoor from "./components/Outdoor";
+import Outdoor from "./components/Products/Outdoor";
 
 function App() {
 
