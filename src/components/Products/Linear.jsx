@@ -31,7 +31,7 @@ import linearcontent2 from "../assets/linearcontent2.png";
 import lightsway from "../assets/lightsway.png";
 import linearoutline from "../assets/linearouline.png";
 
-export function Product() {
+export function Linear() {
   // const [showActiveContent, setShowActiveContent] = useState("Overview");
   // const toggleContent = (content) => {
   //   setShowActiveContent(content);
@@ -155,7 +155,7 @@ export function Product() {
           <div className="w-[10%]"></div>
           <div className="w-[90%]">
             <p className="flex font-medium  text-black py-5">
-              Linear Light &nbsp; <FaChevronRight className="mt-1" /> &nbsp;
+              Linear Lights &nbsp; <FaChevronRight className="mt-1" /> &nbsp;
               L8989-A45
             </p>
           </div>
@@ -167,7 +167,7 @@ export function Product() {
             <div className="w-[90%] bg-[#F3F3F3]"></div>
           </div>
           <p className="flex bg-[#F3F3F3] pt-5 px-5 md:hidden font-medium  text-black">
-            Linear Light &nbsp; <FaChevronRight className="mt-1" /> &nbsp;
+            Linear Lights &nbsp; <FaChevronRight className="mt-1" /> &nbsp;
             L8989-A45
           </p>
           <div className=" bg-[#F3F3F3] py-5 lg:py-0 md:bg-inherit w-full px-5 sm:px-14 flex md:flex-row flex-col items-center md:gap-3 gap-10 md:absolute md:-translate-x-1/2 md:-translate-y-1/2 md:top-[45%]  md:left-1/2">
@@ -205,12 +205,11 @@ export function Product() {
                   <li>Operating Term: -20°C - + 45°C. </li>
                   <li>Storage Term: -40°C - + 60°C. </li>
                   <li>Degradable packaging.</li>
-                  <li className="flex items-center">
-                    {" "}
+                  <li><p className="flex items-center">
                     PF &nbsp;
                     <FaGreaterThanEqual size={10} />
                     &nbsp; 0.9 .
-                  </li>
+                  </p></li>
                 </ul>
               </div>
               <a
