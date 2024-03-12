@@ -13,3 +13,17 @@
 .font{
     font-family: 'Inter';
 }
+
+.dropdown-animation {
+    animation: slideDown 0.5s ease forwards;
+  }
+  
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  

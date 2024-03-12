@@ -315,7 +315,7 @@ const Outdoor = () => {
                         <div className="w-[10%] bg-white"></div>
                         <div className="w-[90%] bg-[#F3F3F3]"></div>
                     </div>
-                    <div className="bg-[#F3F3F3] py-10 sm:pb-44 lg:py-0 md:bg-inherit w-full px-5 sm:px-14 flex md:flex-row flex-col items-center md:gap-3 gap-10 md:absolute md:-translate-x-1/2 md:-translate-y-1/2 md:top-[35%] lg:top-[40%] xl:top-[45%]  md:left-1/2">
+                    <div className="bg-[#F3F3F3] py-10 sm:pb-44 lg:py-0 md:bg-inherit w-full px-5 sm:px-14 flex md:flex-row flex-col items-center md:gap-3 gap-10 md:absolute md:-translate-x-1/2 md:-translate-y-1/2 md:top-[35%] lg:top-[40%] xl:top-[40%]  md:left-1/2">
                         <p className="flex md:hidden font-medium  text-black">
                             Outdoor Lights &nbsp; <FaChevronRight className="mt-1" />{" "}
                             &nbsp; B3QEB0125
