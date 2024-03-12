@@ -287,6 +287,11 @@ const Outdoor = () => {
         },
     ];
 
+
+    React.useEffect(() => {
+        window.scrollTo(0, 0); 
+      }, []); 
+
     return (
         <article className="font">
             {/* first section */}

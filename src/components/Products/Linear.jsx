@@ -24,6 +24,9 @@ export function Linear() {
   // const toggleContent = (content) => {
   //   setShowActiveContent(content);
   // };
+  React.useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []); 
   const Specification = [
     {
       title: "",

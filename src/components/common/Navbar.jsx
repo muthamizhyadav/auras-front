@@ -24,7 +24,7 @@ const Navbar = () => {
       if (
         navbarRef.current &&
         !navbarRef.current.contains(event.target) &&
-        !event.target.classList.contains('scrollbar') // Check if the click is on the scrollbar
+        !event.target.classList.contains('scrollbar')
       ) {
         setIsOpen(false);
         // setShowDropdown(!showDropdown);
@@ -36,6 +36,8 @@ const Navbar = () => {
       window.removeEventListener("click", handleClickOutside);
     };
   }, []);
+
+  
   
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
