@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import logo from "../../assets/logo.png";
-import { MdEmail } from "react-icons/md";
+import { MdArrowDropDown, MdArrowRight, MdEmail } from "react-icons/md";
 import { TiLocation } from "react-icons/ti";
 import { RiFacebookBoxFill } from "react-icons/ri";
 import { FaSquareTwitter } from "react-icons/fa6";
@@ -13,23 +13,38 @@ import { Link, useLocation } from "react-router-dom";
 const Navbar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
   const navbarRef = useRef(null);
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
+    cancelDropdown();
   };
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+      if (
+        navbarRef.current &&
+        !navbarRef.current.contains(event.target) &&
+        !event.target.classList.contains('scrollbar') // Check if the click is on the scrollbar
+      ) {
         setIsOpen(false);
+        // setShowDropdown(!showDropdown);
       }
     };
+  
     window.addEventListener("click", handleClickOutside);
     return () => {
       window.removeEventListener("click", handleClickOutside);
     };
   }, []);
+  
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
+  };
+  const cancelDropdown = () => {
+    setShowDropdown(false)
+  }
   return (
-    <section ref={navbarRef} className="bg-white fixed z-50 w-full font shadow-md shadow-gray-400">
+    <section ref={navbarRef} className="bg-white fixed z-50 w-full font shadow-md shadow-gray-400" onMouseLeave={cancelDropdown}>
       <div className="w-full">
         <div className="bg-black text-white  px-5 sm:px-10 md:px-20 flex justify-between">
           <div className="py-2 flex">
@@ -60,10 +75,18 @@ const Navbar = () => {
               className="xl:ml-16 xl:w-[140px] w-28"
             />
           </div>
-          <div className="flex ml-10 w-3/4 justify-evenly lg:text-xs xl:text-sm font-medium">
-            <Link to="/" className={`capitalize hover:text-[#F2667C] cursor-pointer ${location.pathname === "/" ? "text-[#F2667C]" : ''}`}>
-              products
+          <div className="flex ml-10 w-3/4 justify-evenly lg:text-xs xl:text-sm font-medium relative" >
+            <Link   
+            className={`capitalize hover:text-[#F2667C] cursor-pointer ${location.pathname === "/products" ? "text-[#F2667C]" : ''}`}
+             >
+              <span onMouseEnter={toggleDropdown} onClick={toggleDropdown} className="flex items-center">products <MdArrowDropDown size={15}/></span>
             </Link>
+            {showDropdown && (
+                <div className="dropdown-animation absolute w-fit -translate-x-1/2 -translate-y-1/2 top-[75px] left-[7.5%] bg-pink-100 text-[#F2667C]  py-2 shadow-md shadow-gray-400 rounded-b-lg z-10">
+                  <Link to="/linearlights" className="block px-4 py-2 text-xs  hover:bg-[#F2667C] hover:text-white">Linear Lights</Link>
+                  <Link to="/outdoorlights" className="block px-4 py-2 text-xs  hover:bg-[#F2667C] hover:text-white" >Outdoor Lights</Link>
+                </div>
+              )}
             <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
               lux edition
             </Link>
@@ -147,45 +170,53 @@ const Navbar = () => {
         className={`${isOpen ? "block transition duration-500 ease-in-out" : "hidden"
           } lg:hidden bg-pink-100 `}
       >
-        <div className="px-2 pt-2 pb-3">
+        <div className="px-2 pt-2 pb-3 relative">
           <Link
+           
             to="/"
-            className="block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
+            className="block px-3 py-2 rounded-md text-base font-medium text-[#F2667C]"
           >
-            Products
+           <span className="flex items-center" onClick={toggleDropdown} > Products <MdArrowRight size={20} /></span>
           </Link>
+          {showDropdown && (
+                <div className="dropdown-animation absolute w-fit -translate-x-1/2 -translate-y-1/2 top-[56px] left-[20%] bg-pink-100 text-[#F2667C]  py-2 shadow-md shadow-gray-400 rounded-b-lg z-10">
+                  <Link to="/linearlights" className="block px-4 py-2   hover:bg-[#F2667C] hover:text-white">Linear Lights</Link>
+                  <Link to="/outdoorlights" className="block px-4 py-2   hover:bg-[#F2667C] hover:text-white" >Outdoor Lights</Link>
+                </div>
+              )}
           <Link
-            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
+            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]" onClick={toggleNavbar}
           >
             Lux Edition
           </Link>
           <Link
-            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
+            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"  onClick={toggleNavbar}
           >
             Commercial Lights
           </Link>
           <Link
+           
             to="/outdoorlights"
-            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
+            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"  onClick={toggleNavbar}
           >
             Outdoor Lights
           </Link>
           <Link
-            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
+            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"  onClick={toggleNavbar}
           >
             Home Decor
           </Link>
           <Link
-            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
+            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"  onClick={toggleNavbar}
           >
             About Us
           </Link>
           <Link
-            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
+            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"  onClick={toggleNavbar}
           >
             Blogs
           </Link>
-          <button className="capitalize shadow-lg cursor-pointer font-medium text-[#F2667C] bg-white hover:bg-[#F2667C] hover:text-white px-4 py-1 rounded">
+          <button className="capitalize shadow-lg cursor-pointer font-medium text-[#F2667C] bg-white hover:bg-[#F2667C] hover:text-white px-4 py-1 rounded"  onClick={toggleNavbar}>
             Contact Us
           </button>
         </div>
