@@ -332,7 +332,7 @@ const Outdoor = () => {
                             }}
                         />
                         <div className="sm:h-[387px] w-full md:w-[58%] lg:w-[63%]   sm:pl-0 ">
-                            <p className="text-base xs:text-lg lg:text-2xl font-medium lg:pl-[22%] md:pl-10  border-b-[1.5px] border-[#F2667C] md:border-none mb-2">
+                            <p className="text-base xs:text-lg lg:text-2xl font-medium lg:pl-[22%] md:pl-10  border-b-[1.5px] border-[#F2667C] md:border-none mb-5">
                                 3QE LED Architectural & Landscape Spot Light
                             </p>
                             <img
