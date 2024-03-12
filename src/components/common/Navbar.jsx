@@ -82,31 +82,31 @@ const Navbar = () => {
               <span onMouseEnter={toggleDropdown} onClick={toggleDropdown} className="flex items-center">products <MdArrowDropDown size={15}/></span>
             </Link>
             {showDropdown && (
-                <div className="dropdown-animation absolute w-fit -translate-x-1/2 -translate-y-1/2 top-[75px] left-[7.5%] bg-pink-100 text-[#F2667C]  py-2 shadow-md shadow-gray-400 rounded-b-lg z-10">
-                  <Link to="/linearlights" className="block px-4 py-2 text-xs  hover:bg-[#F2667C] hover:text-white">Linear Lights</Link>
-                  <Link to="/outdoorlights" className="block px-4 py-2 text-xs  hover:bg-[#F2667C] hover:text-white" >Outdoor Lights</Link>
+                <div   onClick={cancelDropdown} className="dropdown-animation absolute w-fit -translate-x-1/2 -translate-y-1/2 top-[75px] left-[7.5%] bg-pink-100 text-[#F2667C]  py-2 shadow-md shadow-gray-400 rounded-b-lg z-10">
+                  <Link to="/products/linearlights" className="block px-4 py-2 text-xs  hover:bg-[#F2667C] hover:text-white">Linear Lights</Link>
+                  <Link to="/products/outdoorlights" className="block px-4 py-2 text-xs  hover:bg-[#F2667C] hover:text-white" >Outdoor Lights</Link>
                 </div>
               )}
-            <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
+            <Link className="capitalize hover:text-[#F2667C] cursor-pointer" onMouseOver={cancelDropdown}>
               lux edition
             </Link>
-            <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
+            <Link className="capitalize hover:text-[#F2667C] cursor-pointer" onMouseOver={cancelDropdown}>
               commercial lights
             </Link>
-            <Link to="/outdoorlights" className={`capitalize hover:text-[#F2667C] cursor-pointer ${location.pathname === "/outdoorlights" ? "text-[#F2667C]" : ''}`}>
+            <Link to="/outdoorlights" className={`capitalize hover:text-[#F2667C] cursor-pointer ${location.pathname === "/outdoorlights" ? "text-[#F2667C]" : ''}`} onMouseOver={cancelDropdown}>
               outdoor lights
             </Link>
-            <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
+            <Link className="capitalize hover:text-[#F2667C] cursor-pointer" onMouseOver={cancelDropdown}>
               home decor
             </Link>
-            <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
+            <Link className="capitalize hover:text-[#F2667C] cursor-pointer" onMouseOver={cancelDropdown}>
               about us
             </Link>
-            <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
+            <Link className="capitalize hover:text-[#F2667C] cursor-pointer" onMouseOver={cancelDropdown}>
               blogs
             </Link>
           </div>
-          <div className="w-1/4  items-center justify-around xl:px-4 flex">
+          <div className="w-1/4  items-center justify-around xl:px-4 flex" onMouseOver={cancelDropdown}>
             <div className="capitalize  shadow-lg cursor-pointer text-[#F2667C] hover:bg-[#F2667C] hover:text-white px-4 py-2 rounded">
               <p className=" lg:text-sm ">contact us</p>
             </div>
@@ -176,12 +176,12 @@ const Navbar = () => {
             to="/"
             className="block px-3 py-2 rounded-md text-base font-medium text-[#F2667C]"
           >
-           <span className="flex items-center" onClick={toggleDropdown} > Products <MdArrowRight size={20} /></span>
+           <span className="flex items-center w-fit" onClick={toggleDropdown} > Products <MdArrowRight size={20} /></span>
           </Link>
           {showDropdown && (
-                <div className="dropdown-animation absolute w-fit -translate-x-1/2 -translate-y-1/2 top-[56px] left-[20%] bg-pink-100 text-[#F2667C]  py-2 shadow-md shadow-gray-400 rounded-b-lg z-10">
-                  <Link to="/linearlights" className="block px-4 py-2   hover:bg-[#F2667C] hover:text-white">Linear Lights</Link>
-                  <Link to="/outdoorlights" className="block px-4 py-2   hover:bg-[#F2667C] hover:text-white" >Outdoor Lights</Link>
+                <div className="dropdown-animation absolute w-fit -translate-x-1/2 -translate-y-1/2 top-[50px] left-[25%] bg-pink-100 text-[#F2667C]  py-2 shadow-md shadow-gray-400 rounded-b-lg z-10">
+                  <Link to="/products/linearlights" className="block px-4 py-2   hover:bg-[#F2667C] hover:text-white">Linear Lights</Link>
+                  <Link to="/products/outdoorlights" className="block px-4 py-2   hover:bg-[#F2667C] hover:text-white" >Outdoor Lights</Link>
                 </div>
               )}
           <Link
