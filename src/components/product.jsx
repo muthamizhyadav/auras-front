@@ -21,7 +21,7 @@ import { IoLogoYoutube } from "react-icons/io5";
 import { FiSearch } from "react-icons/fi";
 import { MdAccountCircle } from "react-icons/md";
 
-import product1 from "../assets/product1.pdf";
+import product1 from "../assets/Linear Light L Series.pdf";
 import line1 from "../assets/line1.png";
 import { FaGreaterThanEqual } from "react-icons/fa6";
 import imagecontent1 from "../assets/imagecontent 1.png";

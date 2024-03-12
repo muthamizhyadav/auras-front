@@ -98,101 +98,107 @@ const Outdoor = () => {
         },
     ];
     const customStyles = {
+        headRows: {
+            style: {
+                border: "0.5px solid #787E91"
+            },
+        },
         rows: {
             style: {
-                minHeight: "45px", // override the row height
-                minWidth: "800px",
+                // override the row height
+
             },
         },
         headCells: {
             style: {
-                paddingLeft: "8px", // override the cell padding for head cells
+                paddingLeft: "20px", // override the cell padding for head cells
                 paddingRight: "8px",
+                border: "0.5px solid #787E91",
                 backgroundColor: "",
-                color: "#fff",
-                height: "30px",
+                color: "",
+
+
             },
         },
         cells: {
             style: {
-                paddingLeft: "10px", // override the cell padding for data cells
-                paddingRight: "8px",
-
-                width: "10px",
-                height: "0px",
-                color: "#364353",
+                marginTop: "-2px",
+                padding: "27px",
+                border: "0.5px solid #787E91",
+                height: "30px",
+                color: "black",
+                fontSize: "12px"
             },
         },
     };
 
     const columns2 = [
         {
-            name: <h1 className="text-black">Item No</h1>,
+            name: <h1 className="text-black px-6  py-1 text-sm font-medium">Item No</h1>,
             selector: (row) => row.item,
         },
         {
-            name: <h1 className="text-black">Light Source</h1>,
+            name: <h1 className="text-black py-1 px-2 text-sm font-medium">Light Source</h1>,
             selector: (row) => row.light,
         },
         {
-            name: <h1 className="text-black">Beam Angle</h1>,
+            name: <h1 className="text-black  py-1 px-3 text-sm font-medium">Beam Angle</h1>,
             selector: (row) => row.beam,
         },
         {
-            name: <h1 className="text-black">input Voltage</h1>,
+            name: <h1 className="text-black py-1 px-2 text-sm font-medium">input Voltage</h1>,
             selector: (row) => row.input,
         },
         {
-            name: <h1 className="text-black">Typical Operating Current(mA)</h1>,
+            name: <h1 className="text-black -ml-2 py-1 text-sm font-medium">Typical Operating Current(mA)</h1>,
             selector: (row) => row.typical,
         },
         {
-            name: <h1 className="text-black">Typical Power Consumption(W)</h1>,
+            name: <h1 className="text-black -ml-3 py-1 text-sm font-medium">Typical Power Consumption(W)</h1>,
             selector: (row) => row.power,
         },
         {
-            name: <h1 className="text-black">Typical Luminance(lm)</h1>,
+            name: <h1 className="text-black py-1 -ml-2 border-gray-400 text-sm font-medium">Typical Luminance(lm)</h1>,
             selector: (row) => row.lm,
         },
         {
-            name: <h1 className="text-black">IK Rate</h1>,
+            name: <h1 className=" text-black py-1 border-gray-400 text-sm ml-6 font-medium">IK Rate</h1>,
             selector: (row) => row.ik,
         },
     ];
     const data2 = [
         {
             item: (
-                <h1>
+                <h1 className=" py-1 ml-1">
                     B3QEM0658 <br /> B3QEB0658
                 </h1>
             ),
             light: (
-                <h1>
-                    {" "}
+                <h1 className="">
                     6×3W Single <br /> Color <br />
                     CREE LED
                 </h1>
             ),
             beam: (
-                <h1>
+                <h1 className="ml-4">
                     6°, 12°,
                     <br /> 25°, 40°, <br />
                     60°
                 </h1>
             ),
             input: (
-                <h1>
+                <h1 className="ml-3">
                     24VDC <br /> 110/120 <br />
                     220/240V
                 </h1>
             ),
             typical: (
-                <h1>
+                <h1 className="ml-2">
                     24V=758 <br /> 110V = 166 <br /> 240V = 83
                 </h1>
             ),
             power: (
-                <h1>
+                <h1 className="ml-1">
                     24V=18.2 <br /> 110V = 18.3 <br /> 240V = 18.3
                 </h1>
             ),
@@ -201,83 +207,83 @@ const Outdoor = () => {
                     Cool White=1288 <br /> Warm White=1026
                 </h1>
             ),
-            ik: "10",
+            ik: <h1 className="ml-8">10</h1>,
         },
         {
             item: (
-                <h1>
+                <h1 className=" py-1 ml-1">
                     B3QEM0618 <br />
                     B3QEB0618
                 </h1>
             ),
             light: (
-                <h1>
+                <h1 className="ml-2">
                     6×3W <br /> RGB 3-in -1 <br /> LED
                 </h1>
             ),
             beam: (
-                <h1>
+                <h1 className="ml-4">
                     15°,30°,
                     <br /> 45°, 60°
                 </h1>
             ),
-            input: <h1>24VDC</h1>,
-            typical: <h1>775</h1>,
-            power: <h1>18.6</h1>,
-            lm: <h1>369</h1>,
-            ik: "10",
+            input: <h1 className="ml-5">24VDC</h1>,
+            typical: <h1 className="ml-7">775</h1>,
+            power: <h1 className="ml-7">18.6</h1>,
+            lm: <h1 className="ml-7">369</h1>,
+            ik: <h1 className="ml-8">10</h1>,
         },
         {
             item: (
-                <h1>
+                <h1 className=" py-1 ml-1">
                     B3QEM0620 <br /> B3QEB0620
                 </h1>
             ),
             light: (
-                <h1>
+                <h1 className="ml-2">
                     6×4W <br /> RGB 4-in-1 <br /> LED
                 </h1>
             ),
             beam: (
-                <h1>
+                <h1 className="ml-4">
                     15°, 30°,
                     <br /> 45°,60°
                 </h1>
             ),
-            input: <h1>24VDC</h1>,
-            typical: "1000",
-            power: "24",
-            lm: "577",
-            ik: "10",
+            input: <h1 className="ml-5">24VDC</h1>,
+            typical: <h1 className="ml-6">1000</h1>,
+            power: <h1 className="ml-8">24</h1>,
+            lm: <h1 className="ml-7">577</h1>,
+            ik: <h1 className="ml-8">10</h1>,
         },
         {
             item: (
-                <h1>
+                <h1 className=" py-1 ml-1">
                     B3QEM0125 <br /> B3QEB0125
                 </h1>
             ),
             light: (
                 <h1>
-                    1×25W <br /> Single Color <br /> CREE COB <br /> LED
+                    1×25W  Single <br /> Color  CREE COB <br /> LED
                 </h1>
             ),
             beam: (
-                <h1>
+                <h1 className="ml-4">
                     18°, 24°, <br /> 38°,60°
                 </h1>
             ),
             input: (
-                <h1>
+                <h1 className="ml-3">
                     24VDC <br /> 110/120 <br /> 220/240V
                 </h1>
             ),
             typical: (
-                <h1>
+                <h1 className="ml-2">
                     24V=758 <br /> 110V = 169 <br /> 240V = 85
                 </h1>
             ),
             power: (
-                <h1>
+                <h1 className="ml-1">
                     24V=18.2 <br /> 110V = 18.6 <br /> 240V = 18.6
                 </h1>
             ),
@@ -286,7 +292,7 @@ const Outdoor = () => {
                     Cool White=1351 <br /> Warm White=1080
                 </h1>
             ),
-            ik: "10",
+            ik: <h1 className="ml-8">10</h1>,
         },
     ];
 
@@ -317,7 +323,7 @@ const Outdoor = () => {
                         <div
                             className="bg-cover bg-center h-[250px] sm:h-[400px] shadow-2xl drop-shadow-lg rounded-xl w-full md:w-[42%]  lg:w-[37%]"
                             style={{
-                                backgroundImage: `url(${ bgimage[index]})`,
+                                backgroundImage: `url(${bgimage[index]})`,
                                 backgroundPosition: "center",
                                 transition: "background-image 1s ease",
                             }}
@@ -433,7 +439,7 @@ const Outdoor = () => {
                         TECHNICAL SPECIFICATIONS
                     </p>
                 </div>
-                <div className=" shadow-2xl drop-shadow-2xl ">
+                {/* <div className=" shadow-2xl drop-shadow-2xl ">
                     <div className="bg-white flex flex-col justify-center items-center rounded-b-xl py-5 px-10 overflow-x-scroll ">
                         <table
                             style={customStyles}
@@ -441,28 +447,28 @@ const Outdoor = () => {
                         >
                             <thead className=" border-gray-400">
                                 <tr className="text-center">
-                                    <th className="border-r border-b px-3 py-1 border-gray-400 text-sm">
+                                    <th className=" border-r border-b px-3 py-1 border-gray-400 text-sm">
                                         Item No
                                     </th>
-                                    <th className="border-r border-b px-3 py-1 border-gray-400 text-sm">
+                                    <th className=" border-r border-b px-3 py-1 border-gray-400 text-sm">
                                         Light Source
                                     </th>
-                                    <th className="border-r border-b px-3 py-1 border-gray-400 text-sm">
+                                    <th className=" border-r border-b px-3 py-1 border-gray-400 text-sm">
                                         Beam Angle
                                     </th>
-                                    <th className="border-r border-b px-3 py-1 border-gray-400 text-sm">
+                                    <th className=" border-r border-b px-3 py-1 border-gray-400 text-sm">
                                         input Voltage
                                     </th>
-                                    <th className="border-r border-b px-3 py-1 border-gray-400 text-sm">
-                                        Typical Operating Current(mA)
+                                    <th className=" border-r border-b px-3 py-1 border-gray-400 text-sm">
+                                        Typical Operating Current (mA)
                                     </th>
-                                    <th className="border-r border-b px-3 py-1 border-gray-400 text-sm">
-                                        Typical Power Consumption(W)
+                                    <th className="overflow-x-hidden border-r border-b px-3 py-1 border-gray-400 text-sm">
+                                        Typical Power Consumption (W)
                                     </th>
-                                    <th className="border-r border-b px-3 py-1 border-gray-400 text-sm">
-                                        Typical Luminance(lm)
+                                    <th className=" border-r border-b px-3 py-1 border-gray-400 text-sm">
+                                        Typical Luminance (lm)
                                     </th>
-                                    <th className="border-r border-b px-3 py-1 border-gray-400 text-sm">
+                                    <th className=" border-r border-b px-3 py-1 border-gray-400 text-sm">
                                         IK Rate
                                     </th>
                                 </tr>
@@ -470,34 +476,39 @@ const Outdoor = () => {
                             <tbody className="">
                                 {data2.map((item, index) => (
                                     <tr key={index} className=" ">
-                                        <td className="border-r border-gray-400 text-xs  border-b text-center px-3 py-1">
+                                        <td className=" border-r border-gray-400 text-xs  border-b text-center px-3 py-1">
                                             {item.item}
                                         </td>
-                                        <td className="border-r border-gray-400 text-xs  border-b text-center px-3 py-1">
+                                        <td className=" border-r border-gray-400 text-xs  border-b text-center px-3 py-1">
                                             {item.light}
                                         </td>
-                                        <td className="border-r border-gray-400 text-xs  border-b text-center px-3 py-1">
+                                        <td className=" border-r border-gray-400 text-xs  border-b text-center px-3 py-1">
                                             {item.beam}
                                         </td>
-                                        <td className="border-r border-gray-400 text-xs  border-b text-center px-3 py-1">
+                                        <td className=" border-r border-gray-400 text-xs  border-b text-center px-3 py-1">
                                             {item.input}
                                         </td>
-                                        <td className="border-r border-gray-400 text-xs  border-b text-center px-3 py-1">
+                                        <td className="w-[15%] border-r border-gray-400 text-xs  border-b text-center px-3 py-1">
                                             {item.typical}
                                         </td>
-                                        <td className="border-r border-gray-400 text-xs  border-b text-center px-3 py-1">
+                                        <td className="w-[15%] border-r border-gray-400 text-xs  border-b text-center px-3 py-1">
                                             {item.power}
                                         </td>
-                                        <td className="border-r border-gray-400 text-xs  border-b text-center px-3 py-1">
+                                        <td className="w-[15%] border-r border-gray-400 text-xs  border-b text-center px-3 py-1">
                                             {item.lm}
                                         </td>
-                                        <td className="border-r border-gray-400 text-xs  border-b text-center px-3 py-1">
+                                        <td className=" border-r border-gray-400 text-xs  border-b text-center px-3 py-1">
                                             {item.ik}
                                         </td>
                                     </tr>
                                 ))}
                             </tbody>
                         </table>
+                    </div>
+                </div> */}
+                <div className="shadow-2xl drop-shadow-2xl">
+                    <div className="bg-white flex flex-col justify-center items-center py-5 px-10 ">
+                        <DataTable columns={columns2} data={data2} customStyles={customStyles} className="text-center " />
                     </div>
                 </div>
                 <div className="flex flex-col ">
