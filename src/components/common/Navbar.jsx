@@ -93,7 +93,7 @@ const Navbar = () => {
             <Link className="capitalize hover:text-[#F2667C] cursor-pointer" onMouseOver={cancelDropdown}>
               commercial lights
             </Link>
-            <Link to="/outdoorlights" className={`capitalize hover:text-[#F2667C] cursor-pointer ${location.pathname === "/outdoorlights" ? "text-[#F2667C]" : ''}`} onMouseOver={cancelDropdown}>
+            <Link  className={`capitalize hover:text-[#F2667C] cursor-pointer ${location.pathname === "/outdoorlights" ? "text-[#F2667C]" : ''}`} onMouseOver={cancelDropdown}>
               outdoor lights
             </Link>
             <Link className="capitalize hover:text-[#F2667C] cursor-pointer" onMouseOver={cancelDropdown}>
@@ -172,8 +172,6 @@ const Navbar = () => {
       >
         <div className="px-2 pt-2 pb-3 relative">
           <Link
-           
-            to="/"
             className="block px-3 py-2 rounded-md text-base font-medium text-[#F2667C]"
           >
            <span className="flex items-center w-fit" onClick={toggleDropdown} > Products <MdArrowRight size={20} /></span>
@@ -196,7 +194,7 @@ const Navbar = () => {
           </Link>
           <Link
            
-            to="/outdoorlights"
+            
             className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"  onClick={toggleNavbar}
           >
             Outdoor Lights
