@@ -102,8 +102,8 @@ const Outdoor = () => {
         },
         headCells: {
             style: {
-                paddingLeft: "20px", // override the cell padding for head cells
-                paddingRight: "8px",
+                // paddingLeft: "20px", // override the cell padding for head cells
+                // paddingRight: "8px",
                 border: "0.5px solid #787E91",
                 backgroundColor: "",
                 color: "",
@@ -114,11 +114,14 @@ const Outdoor = () => {
         cells: {
             style: {
                 marginTop: "-2px",
-                padding: "27px",
+                padding: "auto",
+                paddingTop:"27px",
+                paddingBottom:"27px",
                 border: "0.5px solid #787E91",
                 height: "30px",
                 color: "black",
-                fontSize: "12px"
+                fontSize: "10px",
+                textAlign:"center"
             },
         },
     };
@@ -137,15 +140,15 @@ const Outdoor = () => {
             selector: (row) => row.beam,
         },
         {
-            name: <h1 className="text-black py-1 px-2 text-[13px] font-medium">input Voltage</h1>,
+            name: <h1 className="text-black py-1 px-2 text-[13px] font-medium">Input Voltage</h1>,
             selector: (row) => row.input,
         },
         {
-            name: <h1 className="text-black -ml-2 py-1 text-[13px] font-medium">Typical Operating Current(mA)</h1>,
+            name: <h1 className="text-black  py-1 text-[13px] font-medium">Typical Operating Current(mA)</h1>,
             selector: (row) => row.typical,
         },
         {
-            name: <h1 className="text-black md:-ml-3 -ml-1 py-1 text-[13px] font-medium">Typical Power Consumption(W)</h1>,
+            name: <h1 className="text-black  py-1 text-[13px] font-medium">Typical Power Consumption (W)</h1>,
             selector: (row) => row.power,
         },
         {
@@ -160,121 +163,121 @@ const Outdoor = () => {
     const data2 = [
         {
             item: (
-                <h1 className=" py-1 ml-1">
+                <h1 className=" py-1 ml-3">
                     B3QEM0658 <br /> B3QEB0658
                 </h1>
             ),
             light: (
-                <h1 className="">
+                <h1 className="ml-4">
                     6×3W Single <br /> Color <br />
                     CREE LED
                 </h1>
             ),
             beam: (
-                <h1 className="ml-4">
+                <h1 className="ml-7">
                     6°, 12°,
                     <br /> 25°, 40°, <br />
                     60°
                 </h1>
             ),
             input: (
-                <h1 className="ml-3">
+                <h1 className="ml-6">
                     24VDC <br /> 110/120 <br />
                     220/240V
                 </h1>
             ),
             typical: (
-                <h1 className="ml-2">
+                <h1 className="ml-5">
                     24V=758 <br /> 110V = 166 <br /> 240V = 83
                 </h1>
             ),
             power: (
-                <h1 className="ml-1">
+                <h1 className="ml-4">
                     24V=18.2 <br /> 110V = 18.3 <br /> 240V = 18.3
                 </h1>
             ),
             lm: (
-                <h1>
+                <h1 className="">
                     Cool White=1288 <br /> Warm White=1026
                 </h1>
             ),
-            ik: <h1 className="ml-8">10</h1>,
+            ik: <h1 className="ml-10">10</h1>,
         },
         {
             item: (
-                <h1 className=" py-1 ml-1">
+                <h1 className=" py-1 ml-4">
                     B3QEM0618 <br />
                     B3QEB0618
                 </h1>
             ),
             light: (
-                <h1 className="ml-2">
+                <h1 className="ml-5">
                     6×3W <br /> RGB 3-in -1 <br /> LED
                 </h1>
             ),
             beam: (
-                <h1 className="ml-4">
+                <h1 className="ml-7">
                     15°,30°,
                     <br /> 45°, 60°
                 </h1>
             ),
-            input: <h1 className="ml-5">24VDC</h1>,
-            typical: <h1 className="ml-7">775</h1>,
-            power: <h1 className="ml-7">18.6</h1>,
-            lm: <h1 className="ml-7">369</h1>,
-            ik: <h1 className="ml-8">10</h1>,
+            input: <h1 className="ml-8">24VDC</h1>,
+            typical: <h1 className="ml-10">775</h1>,
+            power: <h1 className="ml-10">18.6</h1>,
+            lm: <h1 className="ml-10">369</h1>,
+            ik: <h1 className="ml-10">10</h1>,
         },
         {
             item: (
-                <h1 className=" py-1 ml-1">
+                <h1 className=" py-1 ml-4">
                     B3QEM0620 <br /> B3QEB0620
                 </h1>
             ),
             light: (
-                <h1 className="ml-2">
+                <h1 className="ml-4">
                     6×4W <br /> RGB 4-in-1 <br /> LED
                 </h1>
             ),
             beam: (
-                <h1 className="ml-4">
+                <h1 className="ml-7">
                     15°, 30°,
                     <br /> 45°,60°
                 </h1>
             ),
-            input: <h1 className="ml-5">24VDC</h1>,
-            typical: <h1 className="ml-6">1000</h1>,
-            power: <h1 className="ml-8">24</h1>,
-            lm: <h1 className="ml-7">577</h1>,
-            ik: <h1 className="ml-8">10</h1>,
+            input: <h1 className="ml-8">24VDC</h1>,
+            typical: <h1 className="ml-9">1000</h1>,
+            power: <h1 className="ml-11">24</h1>,
+            lm: <h1 className="ml-10">577</h1>,
+            ik: <h1 className="ml-10">10</h1>,
         },
         {
             item: (
-                <h1 className=" py-1 ml-1">
+                <h1 className=" py-1 ml-4">
                     B3QEM0125 <br /> B3QEB0125
                 </h1>
             ),
             light: (
-                <h1>
+                <h1 className="ml-2">
                     1×25W  Single <br /> Color  CREE COB <br /> LED
                 </h1>
             ),
             beam: (
-                <h1 className="ml-4">
+                <h1 className="ml-7">
                     18°, 24°, <br /> 38°,60°
                 </h1>
             ),
             input: (
-                <h1 className="ml-3">
+                <h1 className="ml-6">
                     24VDC <br /> 110/120 <br /> 220/240V
                 </h1>
             ),
             typical: (
-                <h1 className="ml-2">
+                <h1 className="ml-5">
                     24V=758 <br /> 110V = 169 <br /> 240V = 85
                 </h1>
             ),
             power: (
-                <h1 className="ml-1">
+                <h1 className="ml-4">
                     24V=18.2 <br /> 110V = 18.6 <br /> 240V = 18.6
                 </h1>
             ),
@@ -283,14 +286,14 @@ const Outdoor = () => {
                     Cool White=1351 <br /> Warm White=1080
                 </h1>
             ),
-            ik: <h1 className="ml-8">10</h1>,
+            ik: <h1 className="ml-10">10</h1>,
         },
     ];
 
 
-    React.useEffect(() => {
-        window.scrollTo(0, 0); 
-      }, []); 
+    // React.useEffect(() => {
+    //     window.scrollTo(0, 0); 
+    //   }, []); 
 
     return (
         <article className="font">
