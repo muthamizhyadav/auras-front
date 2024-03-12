@@ -1,26 +1,13 @@
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import linear1 from "../../assets/light.jpg";
 import linear2 from "../../assets/linearLight.jpg";
 import linear3 from "../../assets/linearLIght2.jpg";
 import linear4 from "../../assets/linearLight3.jpg";
 import linear5 from "../../assets/LinearLight4.jpg";
 import linear6 from "../../assets/linearLight5.jpg";
-import img2 from "../../assets/specification.png";
-import img5 from "../../assets/relatedProdduccts.png";
-import img4 from "../../assets/relatedProdduccts2.png";
 import img1 from "../../assets/light2.jpg";
-import { FaArrowDown } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
-import { MdDownload, MdEmail } from "react-icons/md";
-import { TiLocation } from "react-icons/ti";
-import { RiFacebookBoxFill } from "react-icons/ri";
-import { FaSquareTwitter } from "react-icons/fa6";
-import { RiInstagramFill } from "react-icons/ri";
-import { FaLinkedin } from "react-icons/fa6";
-import { IoLogoYoutube } from "react-icons/io5";
-import { FiSearch } from "react-icons/fi";
-import { MdAccountCircle } from "react-icons/md";
-
+import { MdDownload } from "react-icons/md";
 import product1 from "../../assets/Linear Light L Series.pdf";
 import line1 from "../../assets/line1.png";
 import { FaGreaterThanEqual } from "react-icons/fa6";
@@ -74,37 +61,7 @@ export function Linear() {
       datas: "Silvery (ral9006) / Black (ral9004) / White (ral9003)",
     },
   ];
-  const columns = [
-    {
-      name: <h1 className="text-black"></h1>,
-      selector: (row) => row.name,
-    },
-    {
-      name: <h1 className="text-black">L8989-A45</h1>,
-      selector: (row) => row.spec1,
-    },
-
-    {
-      name: <h1 className="text-black">L8989-A45S</h1>,
-      selector: (row) => row.spec1,
-    },
-    {
-      name: <h1 className="text-black">L8989-A68</h1>,
-      selector: (row) => row.datas,
-    },
-    {
-      name: <h1 className="text-black">L8989-A68S</h1>,
-      selector: (row) => row.datas,
-    },
-    {
-      name: <h1 className="text-black">L8989-A90</h1>,
-      selector: (row) => row.spec2,
-    },
-    {
-      name: <h1 className="text-black">L8989-A90S</h1>,
-      selector: (row) => row.spec2,
-    },
-  ];
+ 
   const customStyles = {
     th: {
       style: {},

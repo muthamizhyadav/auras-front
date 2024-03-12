@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import logo from "../../assets/logo.png";
 import { MdArrowDropDown, MdArrowRight, MdEmail } from "react-icons/md";
 import { TiLocation } from "react-icons/ti";

@@ -41,16 +41,6 @@ const Outdoor = () => {
         return () => clearInterval(interval);
     }, []);
 
-    const columns = [
-        {
-            name: <h1></h1>,
-            selector: (row) => row.name,
-        },
-        {
-            name: <h1></h1>,
-            selector: (row) => row.datas,
-        },
-    ];
 
     const data = [
         {
