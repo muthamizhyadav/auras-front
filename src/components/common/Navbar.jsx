@@ -179,7 +179,7 @@ const Navbar = () => {
            <span className="flex items-center w-fit" onClick={toggleDropdown} > Products <MdArrowRight size={20} /></span>
           </Link>
           {showDropdown && (
-                <div className="dropdown-animation absolute w-fit -translate-x-1/2 -translate-y-1/2 top-[50px] left-[25%] bg-pink-100 text-[#F2667C]  py-2 shadow-md shadow-gray-400 rounded-b-lg z-10">
+                <div onClick={cancelDropdown} className="dropdown-animation absolute w-32 xs:w-fit -translate-x-1/2 -translate-y-1/2 top-[50px] left-48 xs:text-base text-xs  bg-pink-100 text-[#F2667C]  py-2 shadow-md shadow-gray-400 rounded-b-lg z-10">
                   <Link to="/" className="block px-4 py-2   hover:bg-[#F2667C] hover:text-white">Linear Lights</Link>
                   <Link to="/products/outdoorlights" className="block px-4 py-2   hover:bg-[#F2667C] hover:text-white" >Outdoor Lights</Link>
                 </div>
