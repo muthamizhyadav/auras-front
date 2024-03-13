@@ -18,6 +18,8 @@ import linearcontent2 from "../../assets/linearcontent2.png";
 import lightsway from "../../assets/lightsway.png";
 import linearoutline from "../../assets/linearouline.png";
 import { Explore } from "./Explore";
+import { TfiClose } from "react-icons/tfi";
+import { GrNext, GrPrevious } from "react-icons/gr";
 
 export function Linear() {
   // const [showActiveContent, setShowActiveContent] = useState("Overview");
@@ -25,8 +27,8 @@ export function Linear() {
   //   setShowActiveContent(content);
   // };
   React.useEffect(() => {
-    window.scrollTo(0, 0); 
-  }, []); 
+    window.scrollTo(0, 0);
+  }, []);
   const Specification = [
     {
       title: "",
@@ -64,7 +66,7 @@ export function Linear() {
       datas: "Silvery (ral9006) / Black (ral9004) / White (ral9003)",
     },
   ];
- 
+
   const customStyles = {
     th: {
       style: {},
@@ -109,6 +111,32 @@ export function Linear() {
     return () => clearInterval(interval);
   }, []);
 
+  const [previewIndex, setPreviewIndex] = React.useState(null);
+
+  const handleThumbnailClick = (index) => {
+    setPreviewIndex(index);
+  };
+
+  const handleNextClick = () => {
+    setPreviewIndex((prevIndex) => (prevIndex + 1) % bgimage.length);
+  };
+
+  const handlePrevClick = () => {
+    setPreviewIndex(
+      (prevIndex) => (prevIndex - 1 + bgimage.length) % bgimage.length
+    );
+  };
+
+  const handleClosePreview = () => {
+    setPreviewIndex(null);
+  };
+
+  const handleCloseOutsideClick = (e) => {
+    if (e.target === e.currentTarget) {
+      handleClosePreview();
+    }
+  };
+
   return (
     <article className="font">
       <section className="">
@@ -122,7 +150,7 @@ export function Linear() {
           </div>
         </div>
 
-        <section className="md:relative ">
+        <section className="relative ">
           <div className="lg:h-[500px] md:h-[550px] w-full md:flex hidden">
             <div className="w-[10%] bg-white"></div>
             <div className="w-[90%] bg-[#F3F3F3]"></div>
@@ -131,15 +159,50 @@ export function Linear() {
             Linear Lights &nbsp; <FaChevronRight className="mt-1" /> &nbsp;
             L8989-A45
           </p>
+          {previewIndex !== null && (
+            <div onClick={handleCloseOutsideClick} className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50">
+              <button
+                className=" w-10 text-white flex justify-center items-center  text-xl"
+                onClick={handlePrevClick}
+              >
+                <GrPrevious className="" />
+              </button>
+
+              <div className="relative w-64 h-64 previewxs:w-80 previewxs:h-80 md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] xl:w-[550px] xl:h-[550px]">
+                <div className=" bg-white">
+                  <img
+                    className="w-full h-full "
+                    src={bgimage[previewIndex]}
+                    alt="preview"
+                  />
+                </div>
+                <button
+                  className="absolute right-3 top-3 cursor-pointer text-black"
+                  onClick={handleClosePreview}
+                >
+                  <TfiClose />
+                </button>
+              </div>
+              <button
+                className=" w-10 text-white flex justify-center items-center  text-xl"
+                onClick={handleNextClick}
+              >
+                <GrNext />
+              </button>
+            </div>
+          )}
           <div className=" bg-[#F3F3F3] py-5 lg:py-0 md:bg-inherit w-full px-5 sm:px-14 flex md:flex-row flex-col items-center md:gap-3 gap-10 md:absolute md:-translate-x-1/2 md:-translate-y-1/2 md:top-[45%]  md:left-1/2">
-            <div
-              className="bg-cover h-[250px] sm:h-[379px] shadow-2xl drop-shadow-lg rounded-xl w-full md:w-[42%]  lg:w-[37%]"
-              style={{
-                backgroundImage: `url(${bgimage[index]})`,
-                backgroundPosition: "center",
-                transition: "background-image 1s ease",
-              }}
-            />
+            <div className="relative w-full md:w-[42%] lg:w-[37%]">
+              <div
+                className="cursor-pointer bg-cover h-[250px] sm:h-[379px] shadow-2xl drop-shadow-lg rounded-xl w-full"
+                style={{
+                  backgroundImage: `url(${bgimage[index]})`,
+                  backgroundPosition: "center",
+                  transition: "background-image 1s ease",
+                }}
+                onClick={() => handleThumbnailClick(index)}
+              />
+            </div>
             <div className="sm:h-[387px] w-full md:w-[58%] lg:w-[63%]   sm:pl-0 capitalize">
               <p className="text-base xs:text-lg lg:text-2xl font-medium lg:pl-[22%] md:pl-10  border-b-[1.5px] border-[#F2667C] md:border-none mb-5">
                 L8989-A45 IP66 IK10 4FT linkable waterproof LED linear light
@@ -166,23 +229,25 @@ export function Linear() {
                   <li>Operating Term: -20°C - + 45°C. </li>
                   <li>Storage Term: -40°C - + 60°C. </li>
                   <li>Degradable packaging.</li>
-                  <li><p className="flex items-center">
-                    PF &nbsp;
-                    <FaGreaterThanEqual size={10} />
-                    &nbsp; 0.9 .
-                  </p></li>
+                  <li>
+                    <p className="flex items-center">
+                      PF &nbsp;
+                      <FaGreaterThanEqual size={10} />
+                      &nbsp; 0.9 .
+                    </p>
+                  </li>
                 </ul>
               </div>
-              <a
-                href={product1}
-                download
-                className="flex  items-center justify-start md:pl-10 lg:pl-[22%]"
-              >
-                <button className=" flex justify-center items-center mt-5 sm:mt-3  w-48 h-10 rounded bg-white shadow-md">
+              <div className="flex items-center justify-start md:pl-10 lg:pl-[22%]">
+                <a
+                  href={product1}
+                  download
+                  className=" flex justify-center items-center mt-5 sm:mt-3  w-48 h-10 rounded bg-white shadow-md"
+                >
                   Specification File
                   <MdDownload className="text-[#F2667C] my-1 mx-2 " />
-                </button>
-              </a>
+                </a>
+              </div>
             </div>
           </div>
         </section>
@@ -291,7 +356,9 @@ export function Linear() {
                   thermostability and low temperature resistance, good
                   resistance to acids and alkalis.
                 </li>
-                <li className="text-[13px]">PC diffuser, anti-UV, fire-protection rating 94-V2.</li>
+                <li className="text-[13px]">
+                  PC diffuser, anti-UV, fire-protection rating 94-V2.
+                </li>
                 <li className="text-[13px]">
                   Linkable, ladder, structure design, easy assembly and
                   disassembly.
@@ -344,11 +411,10 @@ export function Linear() {
       </div>
 
       <div>
-        <Explore/>
+        <Explore />
       </div>
 
       {/* footer */}
-
     </article>
   );
 }

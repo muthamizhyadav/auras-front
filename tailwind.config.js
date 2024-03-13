@@ -7,7 +7,8 @@ export default {
         Formbg: "url('/bgImage.png')",
       },
       screens:{
-        xs:"428px"
+        xs:"428px",
+        previewxs:"404px"
       },
     },
   },
