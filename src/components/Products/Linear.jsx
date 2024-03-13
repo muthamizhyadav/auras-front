@@ -151,7 +151,7 @@ export function Linear() {
         </div>
 
         <section className="relative ">
-          <div className="lg:h-[500px] md:h-[550px] w-full md:flex hidden">
+          <div className="md:h-[550px] w-full md:flex hidden">
             <div className="w-[10%] bg-white"></div>
             <div className="w-[90%] bg-[#F3F3F3]"></div>
           </div>
@@ -191,7 +191,7 @@ export function Linear() {
               </button>
             </div>
           )}
-          <div className=" bg-[#F3F3F3] py-5 lg:py-0 md:bg-inherit w-full px-5 sm:px-14 flex md:flex-row flex-col items-center md:gap-3 gap-10 md:absolute md:-translate-x-1/2 md:-translate-y-1/2 md:top-[45%]  md:left-1/2">
+          <div className=" bg-[#F3F3F3] py-5 lg:py-0 md:bg-inherit w-full px-5 sm:px-14 flex md:flex-row flex-col items-center md:gap-3 gap-10 md:absolute md:-translate-x-1/2 md:-translate-y-1/2 md:top-[42%]  md:left-1/2">
             <div className="relative w-full md:w-[42%] lg:w-[37%]">
               <div
                 className="cursor-pointer bg-cover h-[250px] sm:h-[379px] shadow-2xl drop-shadow-lg rounded-xl w-full"
