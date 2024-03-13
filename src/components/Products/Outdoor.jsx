@@ -9,7 +9,7 @@ import outdoor6 from "../../assets/outdoorImage6.jpg";
 import outdoor7 from "../../assets/outdoorImage7.jpg";
 import outdoor8 from "../../assets/outdoorImage8.jpg";
 import outdoor9 from "../../assets/outdoorImage9.jpg";
-import outdoorPdf from "../../assets/Spec sheet for B3QE Architectural and landscape Lights.pdf";
+import outdoorPdf from "../../assets/Outdoor Lights.pdf";
 import line1 from "../../assets/line1.png";
 import { FaChevronRight } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
@@ -127,7 +127,7 @@ const Outdoor = () => {
   const columns2 = [
     {
       name: (
-        <h1 className="text-black px-6  py-1 text-[13px] font-medium">
+        <h1 className="text-black px-6  py-1 text-[12px] font-medium">
           Item No
         </h1>
       ),
@@ -135,7 +135,7 @@ const Outdoor = () => {
     },
     {
       name: (
-        <h1 className="text-black py-1 px-2 text-[13px] font-medium">
+        <h1 className="text-black py-1 px-2 text-[12px] font-medium">
           Light Source
         </h1>
       ),
@@ -143,7 +143,7 @@ const Outdoor = () => {
     },
     {
       name: (
-        <h1 className="text-black  py-1 px-3 text-[13px] font-medium">
+        <h1 className="text-black  py-1 px-3 text-[12px] font-medium">
           Beam Angle
         </h1>
       ),
@@ -151,7 +151,7 @@ const Outdoor = () => {
     },
     {
       name: (
-        <h1 className="text-black py-1 px-2 text-[13px] font-medium">
+        <h1 className="text-black py-1 px-2 text-[12px] font-medium">
           Input Voltage
         </h1>
       ),
@@ -159,7 +159,7 @@ const Outdoor = () => {
     },
     {
       name: (
-        <h1 className="text-black  py-1 text-[13px] font-medium">
+        <h1 className="text-black  py-1 text-[12px] font-medium">
           Typical Operating Current(mA)
         </h1>
       ),
@@ -167,7 +167,7 @@ const Outdoor = () => {
     },
     {
       name: (
-        <h1 className="text-black  py-1 text-[13px] font-medium">
+        <h1 className="text-black  py-1 text-[12px] font-medium">
           Typical Power Consumption (W)
         </h1>
       ),
@@ -175,15 +175,15 @@ const Outdoor = () => {
     },
     {
       name: (
-        <h1 className="text-black py-1 md:-ml-2 border-gray-400 text-[13px] font-medium">
-          Typical Luminance(lm)
+        <h1 className="text-black py-1 ml-2 border-gray-400 text-[12px] font-medium">
+          Typical <br /> Luminance (lm)
         </h1>
       ),
       selector: (row) => row.lm,
     },
     {
       name: (
-        <h1 className=" text-black py-1 border-gray-400 text-[13px] ml-6 font-medium">
+        <h1 className=" text-black py-1 border-gray-400 text-[12px] ml-6 font-medium">
           IK Rate
         </h1>
       ),
@@ -321,8 +321,8 @@ const Outdoor = () => {
   ];
 
   React.useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+    window.scrollTo(0, 0);
+  }, []);
 
   const [previewIndex, setPreviewIndex] = React.useState(null);
 
