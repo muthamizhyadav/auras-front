@@ -198,7 +198,7 @@ const Outdoor = () => {
         </h1>
       ),
       light: (
-        <h1 className="ml-4">
+        <h1 className="ml-4 overflow-x-auto">
           6×3W Single <br /> Color <br />
           CREE LED
         </h1>
@@ -227,7 +227,7 @@ const Outdoor = () => {
         </h1>
       ),
       lm: (
-        <h1 className="">
+        <h1 className="overflow-x-auto">
           Cool White=1288 <br /> Warm White=1026
         </h1>
       ),
@@ -287,7 +287,7 @@ const Outdoor = () => {
         </h1>
       ),
       light: (
-        <h1 className="ml-2">
+        <h1 className="ml-2 overflow-x-auto">
           1×25W Single <br /> Color CREE COB <br /> LED
         </h1>
       ),
@@ -312,7 +312,7 @@ const Outdoor = () => {
         </h1>
       ),
       lm: (
-        <h1>
+        <h1 className="overflow-x-auto">
           Cool White=1351 <br /> Warm White=1080
         </h1>
       ),
@@ -320,9 +320,9 @@ const Outdoor = () => {
     },
   ];
 
-  React.useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+//   React.useEffect(() => {
+//     window.scrollTo(0, 0);
+//   }, []);
 
   const [previewIndex, setPreviewIndex] = React.useState(null);
 
