@@ -320,9 +320,9 @@ const Outdoor = () => {
     },
   ];
 
-//   React.useEffect(() => {
-//     window.scrollTo(0, 0);
-//   }, []);
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const [previewIndex, setPreviewIndex] = React.useState(null);
 
