@@ -357,7 +357,7 @@ const Indoorlights = () => {
                   <GrPrevious className="" />
                 </button>
 
-                <div className="relative w-64 h-64 previewxs:w-80 previewxs:h-80 md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] xl:w-[550px] xl:h-[550px]">
+                <div className="relative w-64 h-64 previewxs:w-80 previewxs:h-80 md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] xl:w-[550px] xl:h-[550px] flex flex-col justify-center items-center">
                   <div className=" bg-white">
                     <img
                       className="w-full h-full "
@@ -366,7 +366,7 @@ const Indoorlights = () => {
                     />
                   </div>
                   <button
-                    className="absolute right-3 top-3 cursor-pointer text-black"
+                    className="absolute right-3 xl:top-20 top-14 cursor-pointer text-black"
                     onClick={handleClosePreview}
                   >
                     <TfiClose />

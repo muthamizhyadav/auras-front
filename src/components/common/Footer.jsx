@@ -21,7 +21,7 @@ export const Footer = () => {
           <p className=" m-0.5 font-medium ">|</p>
           <p className=" m-0.5 font-medium cursor-pointer">Contact Us </p>
         </div>
-        <div className="text-center font-medium text-sm">
+        <div className="text-center font-medium text-sm cursor-pointer">
           <p>Powered By WHY Global Services</p>
         </div>
       </div>
