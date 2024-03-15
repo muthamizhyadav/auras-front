@@ -395,7 +395,7 @@ const Outdoor = () => {
                     />
                   </div>
                   <button
-                    className="absolute right-3 top-3 cursor-pointer text-black"
+                    className="absolute right-3 top-3 cursor-pointer text-black bg-white rounded-full p-1"
                     onClick={handleClosePreview}
                   >
                     <TfiClose />

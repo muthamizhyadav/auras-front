@@ -177,7 +177,7 @@ export function Linear() {
                   />
                 </div>
                 <button
-                  className="absolute right-3 top-3 cursor-pointer text-black"
+                  className="absolute right-3 top-3 cursor-pointer text-black bg-white rounded-full p-1"
                   onClick={handleClosePreview}
                 >
                   <TfiClose />
@@ -253,7 +253,7 @@ export function Linear() {
         </section>
       </section>
 
-      <div className="bg-slate-100 w-full  md:px-14 px-5 rounded-t-xl pt-5">
+      <div className=" w-full  md:px-14 px-5 rounded-t-xl pt-5">
         <div className=" ">
           <div className=" ">
             <p className="text-center font-semibold text-xl py-5">

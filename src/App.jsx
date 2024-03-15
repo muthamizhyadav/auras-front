@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./components/common/Home";
 import Outdoor from "./components/Products/Outdoor";
 import Indoorlights from "./components/Products/Indoorlights";
+import { Facade } from "./components/Products/Facade";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Linear />} />
           <Route path="/products/outdoorlights" element={<Outdoor />} />
           <Route path="/products/indoorlights" element={<Indoorlights/>}/>
+          <Route path="/products/facadelights" element={<Facade />} />
         </Route>
       </Routes>
     </Router>
