@@ -21,6 +21,7 @@ import linearoutline from "../../assets/linearouline.png";
 import { Explore } from "./Explore";
 import { TfiClose } from "react-icons/tfi";
 import { GrNext, GrPrevious } from "react-icons/gr";
+import Collection from "./Collection";
 
 export const Facade = () => {
   // React.useEffect(() => {
@@ -179,8 +180,9 @@ export const Facade = () => {
         </section>
       </section>
 
-
-
+        <div>
+          <Collection/>
+        </div>
       <div>
         <Explore />
       </div>
