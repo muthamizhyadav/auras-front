@@ -361,11 +361,11 @@ export const Facade = () => {
       </p>
     </div>
     <div className="bg-white flex flex-col rounded-b-xl py-5 px-10 overflow-x-scroll shadow-2xl drop-shadow-2xl">
-      <div className="overflow-x-auto w-fit">
-        <table className="border-collapse border border-black">
+      <div className="overflow-x-scroll w-fit">
+        <table className="border-collapse border border-black overflow-x-scroll">
           <thead>
             <tr>
-              <th className="bg-gray-400 border border-black text-xs px-3 py-2">Model</th>
+              <th className="border border-black text-xs px-3 py-2 text-start">Model</th>
               <th className="border border-gray-400 text-xs px-3 py-2">F21-24V-5050-72</th>
               <th className="border border-gray-400 text-xs px-3 py-2">F21-24V-5050-60</th>
               <th className="border border-gray-400 text-xs px-3 py-2">F21-24V-5050-60-U10</th>
@@ -378,7 +378,7 @@ export const Facade = () => {
           <tbody>
             {Specification.map((item, index) => (
             <tr key={index}>
-              <td className="bg-gray-400 border border-black text-xs px-3 py-2 w-40">{item.name}</td>
+              <td className="border border-black text-xs px-3 py-2 w-40 font-semibold">{item.name}</td>
               <td className="border border-gray-400 text-xs px-3 py-2">{item.spec1}</td>
               <td className="border border-gray-400 text-xs px-3 py-2">{item.datas}</td>
               <td className="border border-gray-400 text-xs px-3 py-2">{item.spec2}</td>
