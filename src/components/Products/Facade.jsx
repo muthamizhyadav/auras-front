@@ -1,10 +1,11 @@
 import React from "react";
-import linear1 from "../../assets/light.jpg";
-import linear2 from "../../assets/linearLight.jpg";
-import linear3 from "../../assets/linearLIght2.jpg";
-import linear4 from "../../assets/linearLight3.jpg";
-import linear5 from "../../assets/LinearLight4.jpg";
-import linear6 from "../../assets/linearLight5.jpg";
+import Facade1 from "../../assets/Facadelight1.png";
+import Facade2 from "../../assets/Facadelight2.png";
+// import Facade3 from "../../assets/Facadelight3.png";
+import Facade4 from "../../assets/Facadelight4.png";
+import Facade5 from "../../assets/Facadelight5.png";
+import Facade6 from "../../assets/Facadelight6.png";
+import Facade7 from "../../assets/Facadelight7.png";
 import img1 from "../../assets/light2.jpg";
 import { FaChevronRight } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
@@ -21,14 +22,12 @@ import { Explore } from "./Explore";
 import { TfiClose } from "react-icons/tfi";
 import { GrNext, GrPrevious } from "react-icons/gr";
 
-export function Linear() {
-  // const [showActiveContent, setShowActiveContent] = useState("Overview");
-  // const toggleContent = (content) => {
-  //   setShowActiveContent(content);
-  // };
-  React.useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+export const Facade = () => {
+  // React.useEffect(() => {
+  //     window.scrollTo(0, 0);
+  //   }, []);
+
+
   const Specification = [
     {
       title: "",
@@ -97,7 +96,7 @@ export function Linear() {
     },
   };
 
-  const bgimages = [linear1, linear2, linear3, linear4, linear5, linear6];
+  const bgimages = [Facade1, Facade2, Facade4, Facade5, Facade6, Facade7];
 
   const [bgimage, Setbgimage] = React.useState(bgimages);
   const [index, SetIndex] = React.useState(0);
@@ -144,8 +143,8 @@ export function Linear() {
           <div className="w-[10%]"></div>
           <div className="w-[90%]">
             <p className="flex font-medium  text-black py-5">
-              Linear Lights &nbsp; <FaChevronRight className="mt-1" /> &nbsp;
-              L8989-A45
+              Facade Lights &nbsp; <FaChevronRight className="mt-1" /> &nbsp;
+              F21-24V-5050
             </p>
           </div>
         </div>
@@ -156,11 +155,14 @@ export function Linear() {
             <div className="w-[90%] bg-[#F3F3F3]"></div>
           </div>
           <p className="flex bg-[#F3F3F3] pt-5 px-5 md:hidden font-medium  text-black">
-            Linear Lights &nbsp; <FaChevronRight className="mt-1" /> &nbsp;
-            L8989-A45
+            Facade Lights &nbsp; <FaChevronRight className="mt-1" /> &nbsp;
+            F21-24V-5050
           </p>
           {previewIndex !== null && (
-            <div onClick={handleCloseOutsideClick} className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50">
+            <div
+              onClick={handleCloseOutsideClick}
+              className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50"
+            >
               <button
                 className=" w-10 text-white flex justify-center items-center  text-xl"
                 onClick={handlePrevClick}
@@ -205,7 +207,7 @@ export function Linear() {
             </div>
             <div className="sm:h-[387px] w-full md:w-[58%] lg:w-[63%]   sm:pl-0 capitalize">
               <p className="text-base xs:text-lg lg:text-2xl font-medium lg:pl-[22%] md:pl-10  border-b-[1.5px] border-[#F2667C] md:border-none mb-5">
-                L8989-A45 IP66 IK10 4FT linkable waterproof LED linear light
+              F21 Mono color series led neon flex
               </p>
               <img
                 src={line1}
@@ -214,28 +216,18 @@ export function Linear() {
               />
               <div className="md:text-xs  lg:text-[13px]  md:leading-6 text-[#666666] lg:pl-[24%] md:pl-10 pl-4">
                 <ul className="list-disc">
-                  <li className="">IP66 protection class.</li>
+                  <li className="">Uniform and even light output.</li>
                   <li className="">
-                    Non-dim, support 0-10V, DALI, Triac dimming solutions.
+                  Dome surface with 270 degree beam angle.
                   </li>
                   <li className="">
-                    Aluminium 6063-T5, good heat radiation with long lifespan.
+                  Constant Current IC built in optional.
                   </li>
-                  <li>Light source adopts LM-80 certified LED.</li>
-                  <li>Adopt UL Class P certified power supply.</li>
-                  <li>Long lifespan, &gt;30000 hours (L70B10). </li>
-                  <li>High lighting efficiency, save energy.</li>
-                  <li>Environment humidity 40-70% RH.</li>
-                  <li>Operating Term: -20°C - + 45°C. </li>
-                  <li>Storage Term: -40°C - + 60°C. </li>
-                  <li>Degradable packaging.</li>
-                  <li>
-                    <p className="flex items-center">
-                      PF &nbsp;
-                      <FaGreaterThanEqual size={10} />
-                      &nbsp; 0.9 .
-                    </p>
-                  </li>
+                  <li> Dimmable with Dali, 0/1-10, DMX,PWM.</li>
+                  <li>High Lumen output, up to 320lm/m for 12W version.</li>
+                  <li>Full encapsulated with IP68 Level. </li>
+                  <li>High Reliability.</li>
+                  <li>3 or 5 Years warranty.</li>
                 </ul>
               </div>
               <div className="flex items-center justify-start md:pl-10 lg:pl-[22%]">
@@ -417,4 +409,4 @@ export function Linear() {
       {/* footer */}
     </article>
   );
-}
+};
