@@ -140,9 +140,9 @@ export function Linear() {
   return (
     <article className="font">
       <section className="">
-        <div className="w-full md:flex hidden">
-          <div className="w-[10%]"></div>
-          <div className="w-[90%]">
+        <div className="w-full flex pl-5 md:pl-0">
+          <div className="w-[9.5%] md:block hidden"></div>
+          <div className="w-[90.5%]">
             <p className="flex font-medium  text-black py-5">
               Linear Lights &nbsp; <FaChevronRight className="mt-1" /> &nbsp;
               L8989-A45
@@ -150,17 +150,12 @@ export function Linear() {
           </div>
         </div>
 
-        <section className="relative ">
-          <div className="md:h-[550px] w-full md:flex hidden">
-            <div className="w-[10%] bg-white"></div>
-            <div className="w-[90%] bg-[#F3F3F3]"></div>
-          </div>
-          <p className="flex bg-[#F3F3F3] pt-5 px-5 md:hidden font-medium  text-black">
-            Linear Lights &nbsp; <FaChevronRight className="mt-1" /> &nbsp;
-            L8989-A45
-          </p>
+        <section className="">
           {previewIndex !== null && (
-            <div onClick={handleCloseOutsideClick} className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50">
+            <div
+              onClick={handleCloseOutsideClick}
+              className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50"
+            >
               <button
                 className=" w-10 text-white flex justify-center items-center  text-xl"
                 onClick={handlePrevClick}
@@ -168,7 +163,7 @@ export function Linear() {
                 <GrPrevious className="" />
               </button>
 
-              <div className="relative w-64 h-64 previewxs:w-80 previewxs:h-80 md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] xl:w-[550px] xl:h-[550px]">
+              <div className="relative w-64 h-64 previewxs:w-80 previewxs:h-80 md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] xl:w-[550px] xl:h-[550px] flex flex-col justify-center items-center">
                 <div className=" bg-white">
                   <img
                     className="w-full h-full "
@@ -191,7 +186,7 @@ export function Linear() {
               </button>
             </div>
           )}
-          <div className=" bg-[#F3F3F3] py-5 lg:py-0 md:bg-inherit w-full px-5 sm:px-14 flex md:flex-row flex-col items-center md:gap-3 gap-10 md:absolute md:-translate-x-1/2 md:-translate-y-1/2 md:top-[42%]  md:left-1/2">
+          <div className=" bg-[#F3F3F3] py-5 lg:py-8 md:bg-Bannerbg bg-cover w-full px-5 sm:px-14 flex md:flex-row flex-col md:gap-3 gap-10">
             <div className="relative w-full md:w-[42%] lg:w-[37%]">
               <div
                 className="cursor-pointer bg-cover h-[250px] sm:h-[379px] shadow-2xl drop-shadow-lg rounded-xl w-full"
@@ -203,7 +198,7 @@ export function Linear() {
                 onClick={() => handleThumbnailClick(index)}
               />
             </div>
-            <div className="sm:h-[387px] w-full md:w-[58%] lg:w-[63%]   sm:pl-0 capitalize">
+            <div className=" w-full md:w-[58%] lg:w-[63%]   sm:pl-0 capitalize">
               <p className="text-base xs:text-lg lg:text-2xl font-medium lg:pl-[22%] md:pl-10  border-b-[1.5px] border-[#F2667C] md:border-none mb-5">
                 L8989-A45 IP66 IK10 4FT linkable waterproof LED linear light
               </p>
@@ -212,7 +207,7 @@ export function Linear() {
                 alt=""
                 className=" pt-1 md:block hidden xl:w-[90%] h-10"
               />
-              <div className="md:text-xs  lg:text-[13px]  md:leading-6 text-[#666666] lg:pl-[24%] md:pl-10 pl-4">
+              <div className="md:text-xs  lg:text-[13px]  md:leading-8 text-[#666666] lg:pl-[24%] md:pl-10 pl-4">
                 <ul className="list-disc">
                   <li className="">IP66 protection class.</li>
                   <li className="">
