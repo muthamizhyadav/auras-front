@@ -13,6 +13,7 @@ import line1 from "../../assets/line1.png";
 import { FaGreaterThanEqual } from "react-icons/fa6";
 import imagecontent1 from "../../assets/imagecontent 1.png";
 import imagecontent2 from "../../assets/imagecontent 2.png";
+
 import linearcontent1 from "../../assets/linearcontent1.png";
 import linearcontent2 from "../../assets/linearcontent2.png";
 import lightsway from "../../assets/lightsway.png";
@@ -160,7 +161,10 @@ export function Linear() {
             L8989-A45
           </p>
           {previewIndex !== null && (
-            <div onClick={handleCloseOutsideClick} className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50">
+            <div
+              onClick={handleCloseOutsideClick}
+              className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50"
+            >
               <button
                 className=" w-10 text-white flex justify-center items-center  text-xl"
                 onClick={handlePrevClick}
