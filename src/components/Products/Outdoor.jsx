@@ -405,7 +405,7 @@ const Outdoor = () => {
                 </button>
               </div>
             )}
-            <div className="bg-[#F3F3F3] py-10 sm:pb-44 lg:py-8 md:bg-Bannerbg bg-cover w-full px-5 sm:px-14 flex md:flex-row flex-col md:gap-3 gap-10">
+            <div className="bg-[#F3F3F3] py-10 sm:pb-44 lg:py-8 md:bg-Bannerbg bg-contain w-full px-5 sm:px-14 flex md:flex-row flex-col md:gap-3 gap-10">
               <div
                 className="cursor-pointer bg-cover bg-center h-[250px] sm:h-[400px] shadow-2xl drop-shadow-lg rounded-xl w-full md:w-[42%]  lg:w-[37%]"
                 style={{
@@ -424,7 +424,7 @@ const Outdoor = () => {
                   alt=""
                   className=" pt-1 md:block hidden xl:w-[90%] h-10"
                 />
-                <div className="md:text-xs  lg:text-[13px]  md:leading-8 space-y-0.5 text-[#666666] lg:pl-[22%] md:pl-10 ">
+                <div className="md:text-xs  lg:text-[13px] leading-8 md:leading-8 space-y-0.5 text-[#666666] lg:pl-[22%] md:pl-10 ">
                   <ul className="list-disc px-5">
                     <li className="">
                       {" "}
