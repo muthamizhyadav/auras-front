@@ -496,7 +496,7 @@ const Outdoor = () => {
       <div className="w-full md:px-14 px-5 rounded-t-xl lg:pt-5">
         <div className=" ">
           <p className="text-center font-semibold text-lg py-5">
-            MATERIAL SPECIFICATIONS
+            Material Specifications
           </p>
         </div>
         <div className=" shadow-2xl drop-shadow-2xl ">
@@ -530,7 +530,7 @@ const Outdoor = () => {
       <div className="w-full md:px-14 px-5 rounded-t-xl lg:pt-5 md:pt-20 pt-5 ">
         <div className=" ">
           <p className="text-center font-semibold text-lg py-5">
-            TECHNICAL SPECIFICATIONS
+            Technical Specifications
           </p>
         </div>
         {/* <div className=" shadow-2xl drop-shadow-2xl ">
