@@ -176,72 +176,72 @@ export const Facade = () => {
       spec5: "/",
       spec6: "30m",
     },
-    {
-      name: "Lumen maintenance",
-      spec1: "70 000 Hours L70 25°C , 50 000 Hours L70 50°C",
-      datas:"70 000 Hours L70 25°C , 50 000 Hours L70 50°C",
-      spec2:"70 000 Hours L70 25°C , 50 000 Hours L70 50°C",
-      spec3:"70 000 Hours L70 25°C , 50 000 Hours L70 50°C",
-      spec4:"70 000 Hours L70 25°C , 50 000 Hours L70 50°C",
-      spec5:"70 000 Hours L70 25°C , 50 000 Hours L70 50°C",
-      spec6:"70 000 Hours L70 25°C , 50 000 Hours L70 50°C",
+    // {
+    //   name: "Lumen maintenance",
+    //   spec1: "70 000 Hours L70 25°C , 50 000 Hours L70 50°C",
+    //   datas:"70 000 Hours L70 25°C , 50 000 Hours L70 50°C",
+    //   spec2:"70 000 Hours L70 25°C , 50 000 Hours L70 50°C",
+    //   spec3:"70 000 Hours L70 25°C , 50 000 Hours L70 50°C",
+    //   spec4:"70 000 Hours L70 25°C , 50 000 Hours L70 50°C",
+    //   spec5:"70 000 Hours L70 25°C , 50 000 Hours L70 50°C",
+    //   spec6:"70 000 Hours L70 25°C , 50 000 Hours L70 50°C",
       
-    },
-    {
-      name: "Housing material",
-      spec1: "Eco PVC or Silicone",
-      datas:"Eco PVC or Silicone",
-      spec2:"Eco PVC or Silicone",
-      spec3:"Eco PVC or Silicone",
-      spec4:"Eco PVC or Silicone",
-      spec5:"Eco PVC or Silicone",
-      spec6:"Eco PVC or Silicone",
+    // },
+    // {
+    //   name: "Housing material",
+    //   spec1: "Eco PVC or Silicone",
+    //   datas:"Eco PVC or Silicone",
+    //   spec2:"Eco PVC or Silicone",
+    //   spec3:"Eco PVC or Silicone",
+    //   spec4:"Eco PVC or Silicone",
+    //   spec5:"Eco PVC or Silicone",
+    //   spec6:"Eco PVC or Silicone",
       
-    },
-    {
-      name: "Installation temperature",
-      spec1: "0°C to -55°C",
-      datas:"0°C to -55°C",
-      spec2:"0°C to -55°C",
-      spec3:"0°C to -55°C",
-      spec4:"0°C to -55°C",
-      spec5:"0°C to -55°C",
-      spec6:"0°C to -55°C",
+    // },
+    // {
+    //   name: "Installation temperature",
+    //   spec1: "0°C to -55°C",
+    //   datas:"0°C to -55°C",
+    //   spec2:"0°C to -55°C",
+    //   spec3:"0°C to -55°C",
+    //   spec4:"0°C to -55°C",
+    //   spec5:"0°C to -55°C",
+    //   spec6:"0°C to -55°C",
       
-    },
-    {
-      name: "Ambient temperature",
-      spec1: "-25°C to +55°C",
-      datas:"-25°C to +55°C",
-      spec2:"-25°C to +55°C",
-      spec3:"-25°C to +55°C",
-      spec4:"-25°C to +55°C",
-      spec5:"-25°C to +55°C",
-      spec6:"-25°C to +55°C",
+    // },
+    // {
+    //   name: "Ambient temperature",
+    //   spec1: "-25°C to +55°C",
+    //   datas:"-25°C to +55°C",
+    //   spec2:"-25°C to +55°C",
+    //   spec3:"-25°C to +55°C",
+    //   spec4:"-25°C to +55°C",
+    //   spec5:"-25°C to +55°C",
+    //   spec6:"-25°C to +55°C",
       
-    },
-    {
-      name: "Ingress protection",
-      spec1: "IP68 wet location submersible* to 2m",
-      datas:"IP68 wet location submersible* to 2m",
-      spec2:"IP68 wet location submersible* to 2m",
-      spec3:"IP68 wet location submersible* to 2m",
-      spec4:"IP68 wet location submersible* to 2m",
-      spec5:"IP68 wet location submersible* to 2m",
-      spec6:"IP68 wet location submersible* to 2m",
+    // },
+    // {
+    //   name: "Ingress protection",
+    //   spec1: "IP68 wet location submersible* to 2m",
+    //   datas:"IP68 wet location submersible* to 2m",
+    //   spec2:"IP68 wet location submersible* to 2m",
+    //   spec3:"IP68 wet location submersible* to 2m",
+    //   spec4:"IP68 wet location submersible* to 2m",
+    //   spec5:"IP68 wet location submersible* to 2m",
+    //   spec6:"IP68 wet location submersible* to 2m",
       
-    },
-    {
-      name: "Warranty",
-      spec1: "3 years as standard, 5 years guarantee maximum",
-      datas:"3 years as standard, 5 years guarantee maximum",
-      spec2:"3 years as standard, 5 years guarantee maximum",
-      spec3:"3 years as standard, 5 years guarantee maximum",
-      spec4:"3 years as standard, 5 years guarantee maximum",
-      spec5:"3 years as standard, 5 years guarantee maximum",
-      spec6:"3 years as standard, 5 years guarantee maximum",
+    // },
+    // {
+    //   name: "Warranty",
+    //   spec1: "3 years as standard, 5 years guarantee maximum",
+    //   datas:"3 years as standard, 5 years guarantee maximum",
+    //   spec2:"3 years as standard, 5 years guarantee maximum",
+    //   spec3:"3 years as standard, 5 years guarantee maximum",
+    //   spec4:"3 years as standard, 5 years guarantee maximum",
+    //   spec5:"3 years as standard, 5 years guarantee maximum",
+    //   spec6:"3 years as standard, 5 years guarantee maximum",
       
-    },
+    // },
     
   ];
   
@@ -332,9 +332,13 @@ export const Facade = () => {
                   <li className="">Constant Current IC built in optional.</li>
                   <li> Dimmable with Dali, 0/1-10, DMX,PWM.</li>
                   <li>High Lumen output, up to 320lm/m for 12W version.</li>
-                  <li>Full encapsulated with IP68 Level. </li>
                   <li>High Reliability.</li>
-                  <li>3 or 5 Years warranty.</li>
+                  <li>Lumen maintenance - 70 000 Hours L70 25°C , 50 000 Hours L70 50°C</li>
+                  <li>Housing material - Eco PVC or Silicone</li>
+                  <li>Installation temperature - 0°C to -55°C</li>
+                  <li>Ambient temperature - -25°C to +55°C</li>
+                  <li>Ingress protection - IP68 wet location submersible* to 2m</li>
+                  <li>Warranty - 3 years as standard, 5 years garuntee maximum</li>
                 </ul>
               </div>
               <div className="flex items-center justify-start md:pl-10 lg:pl-[22%]">
@@ -360,9 +364,9 @@ export const Facade = () => {
         Technical Specification
       </p>
     </div>
-    <div className="bg-white flex flex-col rounded-b-xl py-5 px-10 overflow-x-scroll shadow-2xl drop-shadow-2xl">
-      <div className="overflow-x-scroll w-fit">
-        <table className="border-collapse border border-black overflow-x-scroll">
+    <div className="bg-white flex flex-col  py-5 px-10 shadow-2xl drop-shadow-2xl overflow-x-scroll">
+      <div className="w-fit">
+        <table className="border-collapse border border-black">
           <thead>
             <tr>
               <th className="border border-black text-xs px-3 py-2 text-start">Model</th>
