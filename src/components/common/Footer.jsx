@@ -5,24 +5,24 @@ export const Footer = () => {
     <section className="">
       <div className="bg-black text-white p-8">
         <div className="capitalize flex flex-wrap justify-center p-1 text-sm">
-          <p className=" m-0.5 font-medium  cursor-pointer ">Home </p>
+          <p className=" m-0.5 font-medium hover:text-[#F2667C] cursor-pointer ">Home </p>
           <p className=" m-0.5 font-medium ">|</p>
-          <p className=" m-0.5 font-medium  cursor-pointer">Linear Light</p>
+          <p className=" m-0.5 font-medium hover:text-[#F2667C] cursor-pointer">Linear Light</p>
           <p className=" m-0.5 font-medium ">|</p>
-          <p className=" m-0.5 font-medium  cursor-pointer">LED Strip</p>
+          <p className=" m-0.5 font-medium hover:text-[#F2667C] cursor-pointer">LED Strip</p>
           <p className=" m-0.5 font-medium ">|</p>
-          <p className=" m-0.5 font-medium  cursor-pointer">LED Neon Light </p>
+          <p className=" m-0.5 font-medium hover:text-[#F2667C] cursor-pointer">LED Neon Light </p>
           <p className=" m-0.5 font-medium ">|</p>
-          <p className=" m-0.5 font-medium  cursor-pointer">LED Sensor </p>
+          <p className=" m-0.5 font-medium hover:text-[#F2667C] cursor-pointer">LED Sensor </p>
           <p className=" m-0.5 font-medium ">|</p>
-          <p className=" m-0.5 font-medium  cursor-pointer">LED Sensor </p>
+          <p className=" m-0.5 font-medium hover:text-[#F2667C] cursor-pointer">LED Sensor </p>
           <p className=" m-0.5 font-medium ">|</p>
-          <p className=" m-0.5 font-medium  cursor-pointer">Recruit</p>
+          <p className=" m-0.5 font-medium hover:text-[#F2667C] cursor-pointer">Recruit</p>
           <p className=" m-0.5 font-medium ">|</p>
-          <p className=" m-0.5 font-medium cursor-pointer">Contact Us </p>
+          <p className=" m-0.5 font-medium hover:text-[#F2667C] cursor-pointer">Contact Us </p>
         </div>
-        <div className="text-center font-medium text-sm cursor-pointer">
-          <p>Powered By WHY Global Services</p>
+        <div className="text-center font-medium text-sm ">
+          <p>Powered By <span className="hover:text-[#FF9315] cursor-pointer"> WHY Global Services</span></p>
         </div>
       </div>
     </section>
