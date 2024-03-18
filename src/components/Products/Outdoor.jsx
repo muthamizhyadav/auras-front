@@ -361,8 +361,8 @@ const Outdoor = () => {
         <div className="w-full flex">
           <div className="w-[9.5%]"></div>
           <div className="w-[90.5%]">
-            <p className="flex font-medium text-black py-5">
-              Outdoor Lights &nbsp; <FaChevronRight className="mt-1" /> &nbsp;
+            <p className="flex  text-black py-5">
+              Home &nbsp; <FaChevronRight className="mt-[6px] size-3" /> &nbsp; Products &nbsp; <FaChevronRight className="mt-[6px] size-3" /> &nbsp; Outdoor Lights &nbsp; <FaChevronRight className="mt-[6px] size-3" /> &nbsp;
               B3QEB0125
             </p>
           </div>

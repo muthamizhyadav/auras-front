@@ -143,8 +143,8 @@ export function Linear() {
       <section className="">
         <div className="w-full flex pl-5 md:pl-[120px]">
          
-            <p className="flex font-medium  text-black py-5">
-              Linear Lights &nbsp; <FaChevronRight className="mt-1" /> &nbsp;
+            <p className="flex   text-black py-5"> 
+              Home &nbsp; <FaChevronRight className="mt-[6px] size-3" /> &nbsp; Products &nbsp; <FaChevronRight className="mt-[6px] size-3" /> &nbsp; Linear Lights &nbsp; <FaChevronRight className="mt-[6px] size-3" /> &nbsp;
               L8989-A45
             </p>
          

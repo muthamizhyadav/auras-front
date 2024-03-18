@@ -330,8 +330,8 @@ const Indoorlights = () => {
           <div className="w-full md:flex hidden">
             <div className="w-[10%]"></div>
             <div className="w-[90%]">
-              <p className="flex font-medium  text-black py-5">
-                Indoor Lights &nbsp; <FaChevronRight className="mt-1" /> &nbsp;
+              <p className="flex text-black py-5">
+                Home &nbsp; <FaChevronRight className="mt-[6px] size-3" /> &nbsp; Products &nbsp;<FaChevronRight className="mt-[6px] size-3" /> &nbsp; Indoor Lights &nbsp; <FaChevronRight className="mt-[6px] size-3" /> &nbsp;
                 DL284A IP65
               </p>
             </div>
