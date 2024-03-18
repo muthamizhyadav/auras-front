@@ -14,39 +14,72 @@ const Navbar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
+  const [showDropdownsmall, setShowDropdownsmall] = useState(false);
   const navbarRef = useRef(null);
+  const closeTimeout = useRef(null);
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
-    cancelDropdown();
+    cancelDropdownSmall();
   };
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (
-        navbarRef.current &&
-        !navbarRef.current.contains(event.target) &&
-        !event.target.classList.contains('scrollbar')
-      ) {
+      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
         setIsOpen(false);
-        // setShowDropdown(!showDropdown);
       }
     };
-  
+
     window.addEventListener("click", handleClickOutside);
     return () => {
       window.removeEventListener("click", handleClickOutside);
     };
   }, []);
 
-  
-  
+  const openDropdown = () => {
+    setShowDropdown(true);
+    clearTimeout(closeTimeout.current);
+  };
+
+  const closeDropdown = () => {
+    closeTimeout.current = setTimeout(() => {
+      setShowDropdown(false);
+    }, 300);
+  };
+
+  const handleMouseEnter = () => {
+    openDropdown();
+  };
+
+  const handleMouseLeave = () => {
+    closeDropdown();
+  };
+
+  const handleOutsideClick2 = (e) => {
+    if (!e.target.closest(".dropdown-container")) {
+      closeDropdown();
+    }
+  };
+
+  useEffect(() => {
+    document.body.addEventListener("click", handleOutsideClick2);
+    return () => {
+      document.body.removeEventListener("click", handleOutsideClick2);
+    };
+  }, []);
+
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
-  const cancelDropdown = () => {
-    setShowDropdown(false)
-  }
+  const toggleDropdownSmall = () => {
+    setShowDropdownsmall(!showDropdownsmall);
+  };
+  const cancelDropdownSmall = () => {
+    setShowDropdownsmall(false);
+  };
   return (
-    <section ref={navbarRef} className="bg-white fixed z-50 w-full font shadow-md shadow-gray-400" onMouseLeave={cancelDropdown}>
+    <section
+      ref={navbarRef}
+      className="bg-white fixed z-50 w-full font shadow-md shadow-gray-400"
+    >
       <div className="w-full">
         <div className="bg-black text-white  px-5 sm:px-10 md:px-20 flex justify-between">
           <div className="py-2 flex">
@@ -77,40 +110,82 @@ const Navbar = () => {
               className="xl:ml-16 xl:w-[140px] w-28"
             />
           </div>
-          <div className="flex ml-10 w-3/4 justify-evenly lg:text-xs xl:text-sm font-medium relative" >
-            <Link   
-            className={`capitalize hover:text-[#F2667C] cursor-pointer ${location.pathname === "/" ? "text-[#F2667C]" : ''}`}
-             >
-              <span onMouseEnter={toggleDropdown} onClick={toggleDropdown} className="flex items-center">products <MdArrowDropDown size={15}/></span>
-            </Link>
-            {showDropdown && (
-                <div onMouseLeave={cancelDropdown}   onClick={cancelDropdown} className="dropdown-animation absolute w-fit -translate-x-1/2 -translate-y-1/2 top-[95px] left-[7.5%] bg-white  py-2 shadow-md shadow-gray-400 rounded-b-lg z-10">
-                  <Link to="/" className="block px-4 py-2 text-xs  hover:text-[#F2667C] ">Linear Lights</Link>
-                  <Link to="/products/outdoorlights" className="block px-4 py-2 text-xs  hover:text-[#F2667C]" >Outdoor Lights</Link>
-                  <Link to="/products/indoorlights" className="block px-4 py-2 text-xs  hover:text-[#F2667C]" >Indoor Lights</Link>
-                  <Link to="/products/facadelights" className="block px-4 py-2 text-xs  hover:text-[#F2667C]" >Facade Lights</Link>
+          <div className="flex ml-10 w-3/4 justify-evenly lg:text-xs xl:text-sm font-medium relative">
+            <div
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              className="dropdown-container"
+            >
+              <Link
+                className={`capitalize hover:text-[#F2667C] cursor-pointer ${
+                  location.pathname === "/" ? "text-[#F2667C]" : ""
+                }`}
+              >
+                <span
+                  onMouseEnter={toggleDropdown}
+                  onClick={toggleDropdown}
+                  className="flex items-center"
+                >
+                  products <MdArrowDropDown size={15} />
+                </span>
+              </Link>
+              {showDropdown && (
+                <div className="dropdown-animation absolute w-fit -translate-x-1/2 -translate-y-1/2 lg:top-[107px] xl:top-[120px] left-[7.5%] bg-white  py-2 shadow-md shadow-gray-400 rounded-b-lg z-10">
+                  <Link
+                    onClick={() => setShowDropdown(false)}
+                    to="/"
+                    className="block px-4 py-2 text-xs  hover:text-[#F2667C] "
+                  >
+                    Linear Lights
+                  </Link>
+                  <Link
+                    onClick={() => setShowDropdown(false)}
+                    to="/products/outdoorlights"
+                    className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
+                  >
+                    Outdoor Lights
+                  </Link>
+                  <Link
+                    onClick={() => setShowDropdown(false)}
+                    to="/products/indoorlights"
+                    className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
+                  >
+                    Indoor Lights
+                  </Link>
+                  <Link
+                    onClick={() => setShowDropdown(false)}
+                    to="/products/facadelights"
+                    className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
+                  >
+                    Facade Lights
+                  </Link>
                 </div>
               )}
-            <Link className="capitalize hover:text-[#F2667C] cursor-pointer" onMouseOver={cancelDropdown}>
+            </div>
+            <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
               lux edition
             </Link>
-            <Link className="capitalize hover:text-[#F2667C] cursor-pointer" onMouseOver={cancelDropdown}>
+            <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
               commercial lights
             </Link>
-            <Link  className={`capitalize hover:text-[#F2667C] cursor-pointer ${location.pathname === "/outdoorlights" ? "text-[#F2667C]" : ''}`} onMouseOver={cancelDropdown}>
+            <Link
+              className={`capitalize hover:text-[#F2667C] cursor-pointer ${
+                location.pathname === "/outdoorlights" ? "text-[#F2667C]" : ""
+              }`}
+            >
               outdoor lights
             </Link>
-            <Link className="capitalize hover:text-[#F2667C] cursor-pointer" onMouseOver={cancelDropdown}>
+            <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
               home decor
             </Link>
-            <Link className="capitalize hover:text-[#F2667C] cursor-pointer" onMouseOver={cancelDropdown}>
+            <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
               about us
             </Link>
-            <Link className="capitalize hover:text-[#F2667C] cursor-pointer" onMouseOver={cancelDropdown}>
+            <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
               blogs
             </Link>
           </div>
-          <div className="w-1/4  items-center justify-around xl:px-4 flex" onMouseOver={cancelDropdown}>
+          <div className="w-1/4  items-center justify-around xl:px-4 flex">
             <div className="capitalize  shadow-lg cursor-pointer text-[#F2667C] hover:bg-[#F2667C] hover:text-white px-4 py-2 rounded">
               <p className=" lg:text-sm ">contact us</p>
             </div>
@@ -171,56 +246,88 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className={`${isOpen ? "block transition duration-500 ease-in-out" : "hidden"
-          } lg:hidden bg-pink-100 `}
+        className={`${
+          isOpen ? "block transition duration-500 ease-in-out" : "hidden"
+        } lg:hidden bg-white navbar-animation `}
       >
-        <div className="px-2 pt-2 pb-3 relative">
-          <Link
-            className="block px-3 py-2 rounded-md text-base font-medium text-[#F2667C]"
-          >
-           <span className="flex items-center w-fit" onClick={toggleDropdown} > Products <MdArrowRight size={20} /></span>
+        <div className="px-2 pt-2 pb-3 relative ">
+          <Link className="block px-3 py-2 rounded-md text-base font-medium text-[#F2667C]">
+            <span
+              className="flex items-center w-fit"
+              onClick={toggleDropdownSmall}
+            >
+              {" "}
+              Products <MdArrowRight size={20} />
+            </span>
           </Link>
-          {showDropdown && (
-                <div onClick={cancelDropdown} className="dropdown-animation absolute w-32 xs:w-fit -translate-x-1/2 -translate-y-1/2 top-[90px] left-48 xs:text-base text-xs  bg-pink-100 text-[#F2667C]  py-2 shadow-md shadow-gray-400 rounded-b-lg z-10">
-                  <Link to="/" className="block px-4 py-2   hover:text-[#F2667C] ">Linear Lights</Link>
-                  <Link to="/products/outdoorlights" className="block px-4 py-2   hover:text-[#F2667C]" >Outdoor Lights</Link>
-                  <Link to="/products/indoorlights" className="block px-4 py-2   hover:text-[#F2667C] " >Indoor Lights</Link>
-                  <Link to="/products/facadelights" className="block px-4 py-2   hover:text-[#F2667C] " >Facade Lights</Link>
-                </div>
-              )}
+          {showDropdownsmall && (
+            <div
+              onClick={cancelDropdownSmall}
+              className="dropdown-animation absolute w-36 xs:w-fit -translate-x-1/2 -translate-y-1/2 top-[83px] left-48  text-sm  bg-white text-[#F2667C]  py-2 shadow-md shadow-gray-400 rounded-b-lg z-10"
+            >
+              <Link to="/" className="block px-4 py-2   hover:text-[#F2667C] ">
+                Linear Lights
+              </Link>
+              <Link
+                to="/products/outdoorlights"
+                className="block px-4 py-2   hover:text-[#F2667C]"
+              >
+                Outdoor Lights
+              </Link>
+              <Link
+                to="/products/indoorlights"
+                className="block px-4 py-2   hover:text-[#F2667C] "
+              >
+                Indoor Lights
+              </Link>
+              <Link
+                to="/products/facadelights"
+                className="block px-4 py-2   hover:text-[#F2667C] "
+              >
+                Facade Lights
+              </Link>
+            </div>
+          )}
           <Link
-            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]" onClick={toggleNavbar}
+            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
+            onClick={toggleNavbar}
           >
             Lux Edition
           </Link>
           <Link
-            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"  onClick={toggleNavbar}
+            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
+            onClick={toggleNavbar}
           >
             Commercial Lights
           </Link>
           <Link
-           
-            
-            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"  onClick={toggleNavbar}
+            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
+            onClick={toggleNavbar}
           >
             Outdoor Lights
           </Link>
           <Link
-            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"  onClick={toggleNavbar}
+            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
+            onClick={toggleNavbar}
           >
             Home Decor
           </Link>
           <Link
-            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"  onClick={toggleNavbar}
+            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
+            onClick={toggleNavbar}
           >
             About Us
           </Link>
           <Link
-            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"  onClick={toggleNavbar}
+            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
+            onClick={toggleNavbar}
           >
             Blogs
           </Link>
-          <button className="capitalize shadow-lg cursor-pointer font-medium text-[#F2667C] bg-white hover:bg-[#F2667C] hover:text-white px-4 py-1 rounded"  onClick={toggleNavbar}>
+          <button
+            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
+            onClick={toggleNavbar}
+          >
             Contact Us
           </button>
         </div>
@@ -228,4 +335,4 @@ const Navbar = () => {
     </section>
   );
 };
-export default Navbar; 
+export default Navbar;
