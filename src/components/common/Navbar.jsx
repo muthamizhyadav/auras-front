@@ -42,7 +42,7 @@ const Navbar = () => {
   const closeDropdown = () => {
     closeTimeout.current = setTimeout(() => {
       setShowDropdown(false);
-    }, 300);
+    }, 350);
   };
 
   const handleMouseEnter = () => {
@@ -130,11 +130,11 @@ const Navbar = () => {
                 </span>
               </Link>
               {showDropdown && (
-                <div className="dropdown-animation absolute w-fit -translate-x-1/2 -translate-y-1/2 lg:top-[107px] xl:top-[120px] left-[7.5%] bg-white  py-2 shadow-md shadow-gray-400 rounded-b-lg z-10">
+                <div className="dropdown-animation absolute w-fit -translate-x-1/2 -translate-y-1/2 lg:top-[107px] xl:top-[122px] left-[7.5%] bg-white  py-2 shadow-md shadow-gray-400 rounded-b-lg z-10">
                   <Link
                     onClick={() => setShowDropdown(false)}
                     to="/"
-                    className="block px-4 py-2 text-xs  hover:text-[#F2667C] "
+                    className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
                   >
                     Linear Lights
                   </Link>
