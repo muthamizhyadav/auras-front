@@ -15,6 +15,7 @@ import spec1 from "../../assets/Indoor Spec.jpg";
 import spec2 from "../../assets/overview.jpeg";
 import DataTable from "react-data-table-component";
 import overview from "../../assets/indoor light.png";
+import overview1 from "../../assets/overview (2).jpeg";
 
 
 const Indoorlights = () => {
@@ -23,7 +24,7 @@ const Indoorlights = () => {
   //   }, []);
   const Specification = [
     {
-      name:"DL284A-3- 10W",
+      name:"DL284A-3-10W",
       watt: "10w",
       size: "Ø110*51",
       cutout: "Ø90-Ø95",
@@ -32,7 +33,7 @@ const Indoorlights = () => {
       qty: "30pcs",
     },
     {
-      name: "DL284A-3- 13W",
+      name: "DL284A-3-13W",
       watt: "13w",
       cutout: "Ø90-Ø95",
       size: "Ø110*51",
@@ -41,7 +42,7 @@ const Indoorlights = () => {
       qty: "30pcs",
     },
     {
-      name: "DL284A-4- 18W",
+      name: "DL284A-4-18W",
       watt: "18w",
       size: "Ø150*64/Ø145*82",
       cutout: "Ø125-140/Ø125-135",
@@ -50,7 +51,7 @@ const Indoorlights = () => {
       qty: "12pcs",
     },
     {
-      name: "DL284A-4- 25W",
+      name: "DL284A-4-25W",
       watt: "25w",
       cutout: "Ø125-140/Ø125-135",
       size: "Ø150*64/Ø145*82",
@@ -59,7 +60,7 @@ const Indoorlights = () => {
       qty: "12pcs",
     },
     {
-      name: "DL284A-6- 18W",
+      name: "DL284A-6-18W",
       watt: "18w",
       size: "Ø172*69/Ø172*69",
       cutout: "Ø150-165/Ø150-160",
@@ -68,7 +69,7 @@ const Indoorlights = () => {
       qty: "12pcs",
     },
     {
-      name: "DL284A-6- 25W",
+      name: "DL284A-6-25W",
       watt: "25w",
       size: "Ø172*69/Ø172*69",
       cutout: "Ø150-165/Ø150-160",
@@ -77,7 +78,7 @@ const Indoorlights = () => {
       qty: "12pcs",
     },
     {
-      name: "DL284A-6- 30W",
+      name: "DL284A-6-30W",
       watt: "30w",
       size: "Ø172*69/Ø172*69",
       lumen: "3500lm",
@@ -86,7 +87,7 @@ const Indoorlights = () => {
       qty: "12pcs",
     },
     {
-      name: "DL284A-8- 18W",
+      name: "DL284A-8-18W",
       watt: "18w",
       size: "Ø235*81/Ø220*104",
       cutout: "Ø200-220/Ø200-210",
@@ -95,7 +96,7 @@ const Indoorlights = () => {
       qty: "6pcs",
     },
     {
-      name: "DL284A-8- 25W",
+      name: "DL284A-8-25W",
       watt: "25w",
       cutout:"Ø200-220/Ø200-210",
       size: "Ø235*81/Ø220*104",
@@ -104,7 +105,7 @@ const Indoorlights = () => {
       qty: "6pcs",
     },
     {
-      name: "DL284A-8- 35W",
+      name: "DL284A-8-35W",
       watt: "35w",
       cutout: "Ø200-220/Ø200-210",
       size: "Ø235*81/Ø220*104",
@@ -115,7 +116,7 @@ const Indoorlights = () => {
   ];
   const Specification2 = [
     {
-      name:"DL284A-3- 10W",
+      name:"DL284A-3-10W",
       watt: "10w",
       size: "Ø110*51",
       cutout: "Ø90-Ø95",
@@ -124,7 +125,7 @@ const Indoorlights = () => {
       qty: "30pcs",
     },
     {
-      name: "DL284A-3- 13W",
+      name: "DL284A-3-13W",
       watt: "13w",
       cutout: "Ø90-Ø95",
       size: "Ø110*51",
@@ -133,7 +134,7 @@ const Indoorlights = () => {
       qty: "30pcs",
     },
     {
-      name: "DL284A-4- 18W",
+      name: "DL284A-4-18W",
       watt: "18w",
       size: "Ø150*64",
       cutout: "Ø125-140",
@@ -142,7 +143,7 @@ const Indoorlights = () => {
       qty: "12pcs",
     },
     {
-      name: "DL284A-4- 25W",
+      name: "DL284A-4-25W",
       watt: "25w",
       cutout: "Ø125-140",
       size: "Ø150*64",
@@ -151,7 +152,7 @@ const Indoorlights = () => {
       qty: "12pcs",
     },
     {
-      name: "DL284A-6- 18W",
+      name: "DL284A-6-18W",
       watt: "18w",
       size: "Ø172*69",
       cutout: "Ø150-165",
@@ -160,7 +161,7 @@ const Indoorlights = () => {
       qty: "12pcs",
     },
     {
-      name: "DL284A-6- 25W",
+      name: "DL284A-6-25W",
       watt: "25w",
       size: "Ø172*69",
       cutout: "Ø150-165",
@@ -169,7 +170,7 @@ const Indoorlights = () => {
       qty: "12pcs",
     },
     {
-      name: "DL284A-6- 30W",
+      name: "DL284A-6-30W",
       watt: "30w",
       size: "Ø172*69",
       lumen: "3500lm",
@@ -178,7 +179,7 @@ const Indoorlights = () => {
       qty: "12pcs",
     },
     {
-      name: "DL284A-8- 18W",
+      name: "DL284A-8-18W",
       watt: "18w",
       size: "Ø235*81",
       cutout: "Ø200-220",
@@ -187,7 +188,7 @@ const Indoorlights = () => {
       qty: "6pcs",
     },
     {
-      name: "DL284A-8- 25W",
+      name: "DL284A-8-25W",
       watt: "25w",
       cutout: "Ø200-220",
       size: "Ø235*81",
@@ -196,7 +197,7 @@ const Indoorlights = () => {
       qty: "6pcs",
     },
     {
-      name: "DL284A-8- 35W",
+      name: "DL284A-8-35W",
       watt: "35w",
       cutout: "Ø200-220",
       size: "Ø235*81",
@@ -208,34 +209,34 @@ const Indoorlights = () => {
   const columns = [
     {
       name: (
-        <h1 className="text-black  lg:pl-10   py-1 text-[12px] font-medium">code</h1>
+        <h1 className="text-black  lg:pl-10   py-1 text-[12px] font-medium">Code</h1>
       ),
       selector: (row) => row.name,
     },
     {
       name: (
-        <h1 className="text-black  py-1 text-[12px] font-medium">watt</h1>
+        <h1 className="text-black  py-1 text-[12px] font-medium">Watt</h1>
       ),
       selector: (row) => row.watt,
     },
     {
-      name:(<h1 className="text-black py-1 text-[12px] font-medium">size(A*Blm)</h1>),
+      name:(<h1 className="text-black py-1 text-[12px] font-medium">Size(A*Blm)</h1>),
       selector: (row) => row.size,
     },
     {
-      name:(<h1 className="text-black   py-1 text-[12px] font-medium">Cut-Out(mm)</h1>),
+      name:(<h1 className="text-black  py-1 text-[12px] font-medium">Cut-Out(mm)</h1>),
       selector: (row) => row.cutout,
     },
     {
-      name:(<h1 className="text-black   py-1 text-[12px] font-medium">Lumens(±5%)</h1>),
+      name:(<h1 className="text-black  py-1 text-[12px] font-medium">Lumens(±5%)</h1>),
       selector: (row) => row.lumen,
     },
     {
-      name:(<h1 className="text-black   py-1 text-[12px] font-medium">N.W/pc(kgs)</h1>),
+      name:(<h1 className="text-black  py-1 text-[12px] font-medium">N.W/pc(kgs)</h1>),
       selector: (row) => row.nw,
     },
     {
-      name:(<h1 className="text-black    py-1 text-[12px] font-medium">Q'ty/CTN</h1>),
+      name:(<h1 className="text-black  py-1 text-[12px] font-medium">Q'ty/CTN</h1>),
       selector: (row) => row.qty,
       
     },
@@ -401,7 +402,7 @@ const Indoorlights = () => {
                   alt=""
                   className=" pt-1 md:block hidden xl:w-[90%] h-10"
                 />
-                <div className="text-xs  lg:text-[13px]  leading-6 text-[#666666] lg:pl-[24%] md:pl-10 pl-4 space-y-3">
+                <div className="text-xs  lg:text-[13px]  leading-7 text-[#666666] lg:pl-[24%] md:pl-10 pl-4 space-y-3">
                   <ul className="list-disc">
                     <li>Tempered glass cover with high transmittance rate.</li>
                     <li>
@@ -535,15 +536,19 @@ const Indoorlights = () => {
               />
             </div>
           </div>
-          <div className="flex  flex-col items-center justify-between py-10 ">
-            <div className=" bg-white drop-shadow-xl rounded-lg">
-              <img src={spec1} alt="" className="w-full h-full border-none" />
+          <div className=" py-10 ">
+            <p className="font-bold py-5 text-lg ">IP65 WATERPROOF</p>
+            <div className=" bg-white drop-shadow-xl rounded-lg flex  flex-col items-center justify-between gap-5">
+              <img src={overview1} alt="" className="w-full h-full border-none" />
             </div>
           </div>
-          <div className="flex flex-col ">
-            <img src={spec2} alt="" className="pt-5 py-10" />
+          <div className=" bg-white drop-shadow-xl rounded-lg flex  flex-col items-center justify-between">
+              <img src={spec1} alt="" className="w-full h-full border-none" />
+            </div>
+          <div className="flex flex-col justify-between">
+            <img src={spec2} alt="" className="pt-5 py-10"/>
           </div>
-          <div className="flex flex-col ">
+          <div className="flex flex-col justify-between">
             <img src={overview} alt="" className="pt-5 py-10" />
           </div>
         </div>
