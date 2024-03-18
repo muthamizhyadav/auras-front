@@ -361,7 +361,7 @@ export const Facade = () => {
   <div className="">
     <div className="">
       <p className="text-center font-semibold text-xl py-5">
-        Technical Specification
+        Technical Specifications
       </p>
     </div>
     <div className="bg-white flex flex-col  py-5 px-10 shadow-2xl drop-shadow-2xl overflow-x-scroll">

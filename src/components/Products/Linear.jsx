@@ -257,7 +257,7 @@ export function Linear() {
         <div className=" ">
           <div className=" ">
             <p className="text-center font-semibold text-xl py-5">
-              Specification
+              Specifications
             </p>
           </div>
           <div className="bg-white flex flex-col justify-center items-center rounded-b-xl py-5 px-10 overflow-x-scroll shadow-2xl drop-shadow-2xl ">

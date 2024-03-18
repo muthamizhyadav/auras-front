@@ -440,7 +440,7 @@ const Indoorlights = () => {
           <div className=" ">
             <div className=" ">
               <p className="text-center font-semibold text-xl py-5">
-                Specification
+                Specifications
               </p>
               <p className="text-black font-medium py-5">DL284A/B Download COB & Download SMD</p>
             </div>
