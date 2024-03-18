@@ -251,8 +251,8 @@ export const Facade = () => {
   return (
     <article className="font">
       <section className="">
-        <div className="w-full md:flex hidden">
-          <div className="w-[10%]"></div>
+        <div className="w-full md:flex">
+          <div className="w-[10%] md:block hidden"></div>
           <div className="w-[90%]">
             <p className="flex font-medium  text-black py-5">
               Facade Lights &nbsp; <FaChevronRight className="mt-1" /> &nbsp;
@@ -262,14 +262,7 @@ export const Facade = () => {
         </div>
 
         <section className="relative ">
-          <div className="md:h-[500px] w-full md:flex hidden">
-            <div className="w-[10%] bg-white"></div>
-            <div className="w-[90%] bg-[#F3F3F3]"></div>
-          </div>
-          <p className="flex bg-[#F3F3F3] pt-5 px-5 md:hidden font-medium  text-black">
-            Facade Lights &nbsp; <FaChevronRight className="mt-1" /> &nbsp;
-            F21-24V-5050
-          </p>
+
           {previewIndex !== null && (
             <div
               onClick={handleCloseOutsideClick}
@@ -305,7 +298,7 @@ export const Facade = () => {
               </button>
             </div>
           )}
-          <div className=" bg-[#F3F3F3] py-5 lg:py-0 md:bg-inherit w-full px-5 sm:px-14 flex md:flex-row flex-col items-center md:gap-3 gap-10 md:absolute md:-translate-x-1/2 md:-translate-y-1/2 md:top-[46%]  md:left-1/2">
+          <div className=" bg-[#F3F3F3] py-5 lg:py-8 md:bg-Bannerbg bg-contain w-full px-5 sm:px-14 flex md:flex-row flex-col md:gap-3 gap-10">
             <div className="relative w-full md:w-[42%] lg:w-[37%]">
               <div
                 className="cursor-pointer bg-cover h-[250px] sm:h-[379px] shadow-2xl drop-shadow-lg rounded-xl w-full"
@@ -317,7 +310,7 @@ export const Facade = () => {
                 onClick={() => handleThumbnailClick(index)}
               />
             </div>
-            <div className="sm:h-[387px] w-full md:w-[58%] lg:w-[63%]   sm:pl-0 capitalize">
+            <div className=" w-full md:w-[58%] lg:w-[63%]   sm:pl-0 capitalize">
               <p className="text-base xs:text-lg lg:text-2xl font-medium lg:pl-[22%] md:pl-10  border-b-[1.5px] border-[#F2667C] md:border-none mb-5">
                 F21 Mono color series led neon flex
               </p>
@@ -326,7 +319,7 @@ export const Facade = () => {
                 alt=""
                 className=" pt-1 md:block hidden xl:w-[90%] h-10"
               />
-              <div className="md:text-xs  lg:text-[13px]  md:leading-6 text-[#666666] lg:pl-[24%] md:pl-10 pl-4">
+              <div className="md:text-xs  lg:text-[13px] leading-8 md:leading-8 text-[#666666] lg:pl-[24%] md:pl-10 pl-4">
                 <ul className="list-disc">
                   <li className="">Uniform and even light output.</li>
                   <li className="">Dome surface with 270 degree beam angle.</li>
