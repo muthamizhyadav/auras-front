@@ -21,8 +21,8 @@ export const Footer = () => {
           <p className=" m-0.5 font-medium ">|</p>
           <p className=" m-0.5 font-medium hover:text-[#F2667C] cursor-pointer">Contact Us </p>
         </div>
-        <div className="text-center font-medium hover:text-[#F2667C] text-sm cursor-pointer">
-          <p>Powered By WHY Global Services</p>
+        <div className="text-center font-medium text-sm ">
+          <p>Powered By <span className="hover:text-[#FF9315] cursor-pointer"> WHY Global Services</span></p>
         </div>
       </div>
     </section>
