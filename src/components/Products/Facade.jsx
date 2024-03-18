@@ -254,10 +254,10 @@ export const Facade = () => {
         <div className="w-full md:flex">
           <div className="w-[10%] md:block hidden"></div>
           <div className="w-[90%]">
-            <p className="flex font-medium  text-black py-5">
-              Home &nbsp; <FaChevronRight className="mt-[6px] size-3" /> &nbsp; Products &nbsp; <FaChevronRight className="mt-[6px] size-3" /> &nbsp; Facade Lights &nbsp; <FaChevronRight className="mt-[6px] size-3" /> &nbsp;
+            <p className="flex items-center font-medium sm:text-base xs:text-xs text-[10px] text-black py-5">
+              Home &nbsp; <FaChevronRight className=" sm:size-3 size-2" /> &nbsp; Products &nbsp; <FaChevronRight className=" sm:size-3 size-2" /> &nbsp; Facade Lights &nbsp; <FaChevronRight className=" sm:size-3 size-2" /> &nbsp;
               F21-24V-5050
-            </p>
+            </p>  
           </div>
         </div>
 

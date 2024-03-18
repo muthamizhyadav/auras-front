@@ -143,8 +143,8 @@ export function Linear() {
         <div className="w-full flex pl-5 md:pl-0">
           <div className="w-[9.5%] md:block hidden"></div>
           <div className="w-[90.5%]">
-            <p className="flex font-medium  text-black py-5">
-              Home &nbsp; <FaChevronRight className="mt-[6px] size-3" /> &nbsp; Products &nbsp; <FaChevronRight className="mt-[6px] size-3" /> &nbsp; Linear Lights &nbsp; <FaChevronRight className="mt-[6px] size-3" /> &nbsp;
+            <p className="flex items-center font-medium sm:text-base xs:text-xs text-[10px] text-black py-5">
+              Home &nbsp; <FaChevronRight className=" sm:size-3 size-2" /> &nbsp; Products &nbsp; <FaChevronRight className=" sm:size-3 size-2" /> &nbsp; Linear Lights &nbsp; <FaChevronRight className=" sm:size-3 size-2" /> &nbsp;
               L8989-A45
             </p>
           </div>
