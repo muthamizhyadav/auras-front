@@ -140,14 +140,13 @@ export function Linear() {
   return (
     <article className="font">
       <section className="">
-        <div className="w-full flex pl-5 md:pl-0">
-          <div className="w-[9.5%] md:block hidden"></div>
-          <div className="w-[90.5%]">
+        <div className="w-full flex pl-5 md:pl-[120px]">
+         
             <p className="flex font-medium  text-black py-5">
               Linear Lights &nbsp; <FaChevronRight className="mt-1" /> &nbsp;
               L8989-A45
             </p>
-          </div>
+         
         </div>
 
         <section className="">
