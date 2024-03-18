@@ -187,7 +187,7 @@ const Navbar = () => {
           </div>
           <div className="w-1/4  items-center justify-around xl:px-4 flex">
             <div className="capitalize  shadow-lg cursor-pointer text-[#F2667C] hover:bg-[#F2667C] hover:text-white px-4 py-2 rounded">
-              <p className=" lg:text-sm ">contact us</p>
+              <p className=" lg:text-sm font-medium">contact us</p>
             </div>
             <div>
               <FiSearch className="text-[#F2667C] lg:text-xl xl:text-2xl" />
