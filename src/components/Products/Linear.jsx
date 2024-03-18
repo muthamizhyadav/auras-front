@@ -13,6 +13,7 @@ import line1 from "../../assets/line1.png";
 import { FaGreaterThanEqual } from "react-icons/fa6";
 import imagecontent1 from "../../assets/imagecontent 1.png";
 import imagecontent2 from "../../assets/imagecontent 2.png";
+
 import linearcontent1 from "../../assets/linearcontent1.png";
 import linearcontent2 from "../../assets/linearcontent2.png";
 import lightsway from "../../assets/lightsway.png";
@@ -140,14 +141,13 @@ export function Linear() {
   return (
     <article className="font">
       <section className="">
-        <div className="w-full flex pl-5 md:pl-0">
-          <div className="w-[9.5%] md:block hidden"></div>
-          <div className="w-[90.5%]">
+        <div className="w-full flex pl-5 md:pl-[120px]">
+         
             <p className="flex font-medium  text-black py-5">
               Linear Lights &nbsp; <FaChevronRight className="mt-1" /> &nbsp;
               L8989-A45
             </p>
-          </div>
+         
         </div>
 
         <section className="">

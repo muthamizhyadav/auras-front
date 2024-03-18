@@ -15,6 +15,10 @@ import { FaChevronRight } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import overview1 from "../../assets/overviewOutdoor.jpeg";
 import overview2 from "../../assets/overviewOutdoor1.jpeg";
+import imagecontent3 from "../../assets/imagecontent 3.png";
+import imagecontent4 from "../../assets/imagecontent 4.png";
+import imagecontent5 from "../../assets/imagecontent 5.png";
+import imagecontent6 from "../../assets/imagecontent 6.png";
 import { Explore } from "./Explore";
 import { TfiClose } from "react-icons/tfi";
 import { GrNext, GrPrevious } from "react-icons/gr";
@@ -604,6 +608,107 @@ const Outdoor = () => {
         </div>
         <div className="flex flex-col ">
           <img src={overview1} alt="" className="pt-10 pb-5" />
+        </div>
+
+        <div>
+          <h2 className="font-semibold sm:text-xl py-5 text-center">
+            3QE PROJECTOR, FLOODLIGHTS, WALL WASHER – Luminaire Arrangement
+          </h2>
+          <div className="flex md:flex-row flex-col items-center py-5 gap-5">
+            <div className="flex flex-col gap-5 md:w-[40%] items-center">
+              <img src={imagecontent3} alt="" className="w-96 h-60" />
+            </div>
+            <div className="md:w-[60%] leading-loose xs:w-96 xs:px-0 px-5 mx-auto">
+              <ul className="list-disc lg:text-base  lg:space-y-3">
+                <li className="text-[13px]">
+                  <span className="font-medium">Projectors: </span> Narrow spot,
+                  Spot, Flood.
+                </li>
+                <li className="text-[13px]">
+                  <span className="font-medium">Accentuation: </span> The ideal
+                  angle of tilt (α) for accent lighting with 3QA projectors is
+                  around 30°.
+                </li>
+                <li className="text-[13px]">
+                  This emphasizes the three-dimensionality of architectural
+                  details, sculptures or trees, without distorting the spatial
+                  impression with excessive shadowing.
+                </li>
+                <li className="text-[13px]">
+                  <span className="font-medium">Arrangement: </span> α= 30°.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="flex md:flex-row flex-col items-center py-5 gap-5">
+            <div className="flex flex-col gap-5 md:w-[40%] items-center">
+              <img src={imagecontent4} alt="" className="w-96 h-60" />
+            </div>
+            <div className="md:w-[60%] leading-loose md:px-0 xs:w-96 xs:px-0 px-5 mx-auto">
+              <ul className="list-disc lg:text-base  lg:space-y-4">
+                <li className="text-[12px]">
+                  <span className="font-medium">Wash lighting: </span> 3QA
+                  projectors ensure uniform floodlighting of walls surfaces or
+                  trees.
+                </li>
+                <li className="text-[12px]">
+                  The ideal angle of tilt (y) for this is around 30°.
+                </li>
+                <li className="text-[12px]">
+                  <span className="font-medium">Arrangement:</span> PC frosted
+                  α= 30°.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="flex md:flex-row flex-col items-center py-5 gap-5">
+            <div className="flex flex-col gap-5 md:w-[40%] items-center">
+              <img src={imagecontent5} alt="" className="w-96 h-60" />
+            </div>
+            <div className="md:w-[60%] leading-loose xs:w-96 xs:px-0 px-5 mx-auto">
+              <ul className="list-disc lg:text-base  lg:space-y-3">
+                <li className="text-[13px]">
+                  <span className="font-medium">Lens wall washers: </span> Wall
+                  wash.
+                </li>
+                <li className="text-[13px]">
+                  <span className="font-medium">Wallwashing: </span> Uniform
+                  vertical illuminance in the outdoor area defines spatial
+                  borders.
+                </li>
+                <li className="text-[13px]">
+                  Here, the distance (a) of 3QA lens wallwashers from the wall
+                  should be around one third of the room height (h).
+                </li>
+                <li className="text-[13px]">
+                  This results in an angle of tilt (a) of approx. 55°.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="flex md:flex-row flex-col items-center py-5 gap-5">
+            <div className="flex flex-col gap-5 md:w-[40%] items-center">
+              <img src={imagecontent6} alt="" className="w-96 h-60" />
+            </div>
+            <div className="md:w-[60%] leading-loose md:px-0 xs:w-96 xs:px-0 px-5 mx-auto">
+              <ul className="list-disc lg:text-base  lg:space-y-4">
+                <li className="text-[12px]">
+                  For good longitudinal uniformity, the spacing (d) of 3QA lens
+                  wallwashers may be up to 1.
+                </li>
+                <li className="text-[12px]">
+                  2 times the offset from the wall (a).
+                </li>
+                <li className="text-[12px]">
+                  <span className="font-medium">Arrangement:</span> PC
+                  d ≤ 1.2×a.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col ">
           <img src={overview2} alt="" className="pt-10 pb-5" />
         </div>
       </div>
