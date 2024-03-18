@@ -476,7 +476,7 @@ const Outdoor = () => {
                   <a
                     href={outdoorPdf}
                     download
-                    className=" flex justify-center items-center mt-5 sm:mt-3  w-48 h-10 rounded bg-white shadow-md"
+                    className="hover:bg-pink-100 flex justify-center items-center mt-5 sm:mt-3  w-48 h-10 rounded bg-white shadow-md"
                   >
                     Specification File
                     <MdDownload className="text-[#F2667C] my-1 mx-2 " />

@@ -237,10 +237,10 @@ export function Linear() {
                 <a
                   href={product1}
                   download
-                  className=" flex justify-center items-center mt-5 sm:mt-3  w-48 h-10 rounded bg-white shadow-md"
+                  className=" flex justify-center items-center mt-5 sm:mt-3  w-48 h-10 rounded bg-white hover:bg-pink-100 shadow-md"
                 >
                   Specification File
-                  <MdDownload className="text-[#F2667C] my-1 mx-2 " />
+                  <MdDownload className="text-[#F2667C]  my-1 mx-2 " />
                 </a>
               </div>
             </div>

@@ -24,9 +24,9 @@ import dimming2 from "../../assets/dimming2.png";
 import dimming3 from "../../assets/dimming3.png";
 
 export const Facade = () => {
-  // React.useEffect(() => {
-  //     window.scrollTo(0, 0);
-  //   }, []);
+  React.useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
   const bgimages = [Facade1, Facade2, Facade4, Facade5, Facade6];
 
@@ -251,9 +251,9 @@ export const Facade = () => {
   return (
     <article className="font">
       <section className="">
-        <div className="w-full md:flex">
-          <div className="w-[10%] md:block hidden"></div>
-          <div className="w-[90%]">
+        <div className="w-full flex justify-center">
+          <div className="w-[9.5%] md:block hidden"></div>
+          <div className="w-[90.5%]">
             <p className="flex items-center font-medium sm:text-base xs:text-xs text-[10px] text-black py-5">
               Home &nbsp; <FaChevronRight className=" sm:size-3 size-2" /> &nbsp; Products &nbsp; <FaChevronRight className=" sm:size-3 size-2" /> &nbsp; Facade Lights &nbsp; <FaChevronRight className=" sm:size-3 size-2" /> &nbsp;
               F21-24V-5050
@@ -346,7 +346,7 @@ export const Facade = () => {
                 <a
                   href={product1}
                   download
-                  className=" flex justify-center items-center mt-5 sm:mt-3  w-48 h-10 rounded bg-white shadow-md"
+                  className="hover:bg-pink-100 flex justify-center items-center mt-5 sm:mt-3  w-48 h-10 rounded bg-white shadow-md"
                 >
                   Specification File
                   <MdDownload className="text-[#F2667C] my-1 mx-2 " />

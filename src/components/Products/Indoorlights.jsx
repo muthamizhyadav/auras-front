@@ -19,9 +19,9 @@ import overview1 from "../../assets/overview (2).jpeg";
 
 
 const Indoorlights = () => {
-  // React.useEffect(() => {
-  //     window.scrollTo(0, 0);
-  //   }, []);
+  React.useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   const Specification = [
     {
       name:"DL284A-3-10W",
@@ -327,9 +327,9 @@ const Indoorlights = () => {
     <>
       <article className="font">
         <section className="">
-          <div className="w-full md:flex hidden">
-            <div className="w-[10%]"></div>
-            <div className="w-[90%]">
+          <div className="w-full flex">
+            <div className="w-[9.5%] md:block hidden"></div>
+            <div className="w-[90.5%]">
               <p className="flex items-center font-medium sm:text-base xs:text-xs text-[10px] text-black py-5">
               Home &nbsp; <FaChevronRight className=" sm:size-3 size-2" /> &nbsp; Products &nbsp; <FaChevronRight className=" sm:size-3 size-2" /> &nbsp; Indoor Lights &nbsp; <FaChevronRight className=" sm:size-3 size-2" /> &nbsp;
               DL284A IP65
@@ -339,10 +339,6 @@ const Indoorlights = () => {
 
           <section className="">
            
-            <p className="flex bg-[#F3F3F3] pt-5 px-5 md:hidden font-medium  text-black">
-              Indoor Lights &nbsp; <FaChevronRight className="mt-1" /> &nbsp;
-              DL284A IP65
-            </p>
             {previewIndex !== null && (
               <div
                 onClick={handleCloseOutsideClick}
@@ -423,7 +419,7 @@ const Indoorlights = () => {
                   <a
                     href={IndoorPdf}
                     download
-                    className=" flex justify-center items-center mt-5 sm:mt-3  w-48 h-10 rounded bg-white shadow-md"
+                    className="hover:bg-pink-100 flex justify-center items-center mt-5 sm:mt-3  w-48 h-10 rounded bg-white shadow-md"
                   >
                     Specification File
                     <MdDownload className="text-[#F2667C] my-1 mx-2 " />
