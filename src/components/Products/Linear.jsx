@@ -144,7 +144,7 @@ export function Linear() {
           <div className="w-[9.5%] md:block hidden"></div>
           <div className="w-[90.5%]">
             <p className="flex font-medium  text-black py-5">
-              Linear Lights &nbsp; <FaChevronRight className="mt-1" /> &nbsp;
+              Home &nbsp; <FaChevronRight className="mt-[6px] size-3" /> &nbsp; Products &nbsp; <FaChevronRight className="mt-[6px] size-3" /> &nbsp; Linear Lights &nbsp; <FaChevronRight className="mt-[6px] size-3" /> &nbsp;
               L8989-A45
             </p>
           </div>
