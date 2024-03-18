@@ -5,6 +5,7 @@ export default {
     extend: {
       backgroundImage: {
         Formbg: "url('/bgImage.png')",
+        Bannerbg: "url('/bannerbg.png')",
       },
       screens:{
         xs:"428px",

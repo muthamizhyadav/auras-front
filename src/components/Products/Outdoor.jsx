@@ -358,9 +358,9 @@ const Outdoor = () => {
     <article className="font">
       {/* first section */}
       <section className="">
-        <div className="w-full md:flex hidden">
-          <div className="w-[10%]"></div>
-          <div className="w-[90%]">
+        <div className="w-full flex">
+          <div className="w-[9.5%]"></div>
+          <div className="w-[90.5%]">
             <p className="flex font-medium text-black py-5">
               Outdoor Lights &nbsp; <FaChevronRight className="mt-1" /> &nbsp;
               B3QEB0125
@@ -368,16 +368,8 @@ const Outdoor = () => {
           </div>
         </div>
 
-        <section className="md:relative ">
-          <div className="xl:h-[600px] md:h-[800px]   w-full md:flex hidden">
-            <div className="w-[10%] bg-white"></div>
-            <div className="w-[90%] bg-[#F3F3F3]"></div>
-          </div>
+        <section>
           <div className="bg-[#F3F3F3] md:bg-transparent">
-            <p className="flex px-5 pt-5 md:hidden font-medium  text-black">
-              Outdoor Lights &nbsp; <FaChevronRight className="mt-1" /> &nbsp;
-              B3QEB0125
-            </p>
             {previewIndex !== null && (
               <div
                 onClick={handleCloseOutsideClick}
@@ -413,7 +405,7 @@ const Outdoor = () => {
                 </button>
               </div>
             )}
-            <div className="bg-[#F3F3F3] py-10 sm:pb-44 lg:py-0 md:bg-inherit w-full px-5 sm:px-14 flex md:flex-row flex-col items-center md:gap-3 gap-10 md:absolute md:-translate-x-1/2 md:-translate-y-1/2 md:top-[35%] lg:top-[40%] xl:top-[40%]  md:left-1/2">
+            <div className="bg-[#F3F3F3] py-10 sm:pb-44 lg:py-8 md:bg-Bannerbg bg-cover w-full px-5 sm:px-14 flex md:flex-row flex-col md:gap-3 gap-10">
               <div
                 className="cursor-pointer bg-cover bg-center h-[250px] sm:h-[400px] shadow-2xl drop-shadow-lg rounded-xl w-full md:w-[42%]  lg:w-[37%]"
                 style={{
@@ -423,7 +415,7 @@ const Outdoor = () => {
                 }}
                 onClick={() => handleThumbnailClick(index)}
               />
-              <div className="sm:h-[387px] w-full md:w-[58%] lg:w-[63%]   sm:pl-0 ">
+              <div className=" w-full md:w-[58%] lg:w-[63%]   sm:pl-0 ">
                 <p className="text-base xs:text-lg lg:text-2xl font-medium lg:pl-[22%] md:pl-10  border-b-[1.5px] border-[#F2667C] md:border-none mb-5">
                   3QE LED Architectural & Landscape Spot Light
                 </p>
@@ -432,7 +424,7 @@ const Outdoor = () => {
                   alt=""
                   className=" pt-1 md:block hidden xl:w-[90%] h-10"
                 />
-                <div className="md:text-xs  lg:text-[13px]  md:leading-6 space-y-0.5 text-[#666666] lg:pl-[22%] md:pl-10 ">
+                <div className="md:text-xs  lg:text-[13px]  md:leading-8 space-y-0.5 text-[#666666] lg:pl-[22%] md:pl-10 ">
                   <ul className="list-disc px-5">
                     <li className="">
                       {" "}
@@ -500,7 +492,7 @@ const Outdoor = () => {
       <div className="w-full md:px-14 px-5 rounded-t-xl lg:pt-5">
         <div className=" ">
           <p className="text-center font-semibold text-lg py-5">
-            MATERIAL SPECIFICATIONS
+            Material Specifications
           </p>
         </div>
         <div className=" shadow-2xl drop-shadow-2xl ">
@@ -534,7 +526,7 @@ const Outdoor = () => {
       <div className="w-full md:px-14 px-5 rounded-t-xl lg:pt-5 md:pt-20 pt-5 ">
         <div className=" ">
           <p className="text-center font-semibold text-lg py-5">
-            TECHNICAL SPECIFICATIONS
+            Technical Specifications
           </p>
         </div>
         {/* <div className=" shadow-2xl drop-shadow-2xl ">
