@@ -17,6 +17,11 @@ import { Explore } from "./Explore";
 import { TfiClose } from "react-icons/tfi";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import Collection from "./Collection";
+import whiteChart from "../../assets/white chart.png";
+import whiteChart1 from "../../assets/black chart.png";
+import dimming1 from "../../assets/dimming1.png";
+import dimming2 from "../../assets/dimming2.png";
+import dimming3 from "../../assets/dimming3.png";
 
 export const Facade = () => {
   // React.useEffect(() => {
@@ -63,8 +68,7 @@ export const Facade = () => {
     }
   };
 
-
- //DataTable
+  //DataTable
   const Specification = [
     {
       name: "Operating voltage",
@@ -185,7 +189,7 @@ export const Facade = () => {
     //   spec4:"70 000 Hours L70 25°C , 50 000 Hours L70 50°C",
     //   spec5:"70 000 Hours L70 25°C , 50 000 Hours L70 50°C",
     //   spec6:"70 000 Hours L70 25°C , 50 000 Hours L70 50°C",
-      
+
     // },
     // {
     //   name: "Housing material",
@@ -196,7 +200,7 @@ export const Facade = () => {
     //   spec4:"Eco PVC or Silicone",
     //   spec5:"Eco PVC or Silicone",
     //   spec6:"Eco PVC or Silicone",
-      
+
     // },
     // {
     //   name: "Installation temperature",
@@ -207,7 +211,7 @@ export const Facade = () => {
     //   spec4:"0°C to -55°C",
     //   spec5:"0°C to -55°C",
     //   spec6:"0°C to -55°C",
-      
+
     // },
     // {
     //   name: "Ambient temperature",
@@ -218,7 +222,7 @@ export const Facade = () => {
     //   spec4:"-25°C to +55°C",
     //   spec5:"-25°C to +55°C",
     //   spec6:"-25°C to +55°C",
-      
+
     // },
     // {
     //   name: "Ingress protection",
@@ -229,7 +233,7 @@ export const Facade = () => {
     //   spec4:"IP68 wet location submersible* to 2m",
     //   spec5:"IP68 wet location submersible* to 2m",
     //   spec6:"IP68 wet location submersible* to 2m",
-      
+
     // },
     // {
     //   name: "Warranty",
@@ -240,12 +244,9 @@ export const Facade = () => {
     //   spec4:"3 years as standard, 5 years guarantee maximum",
     //   spec5:"3 years as standard, 5 years guarantee maximum",
     //   spec6:"3 years as standard, 5 years guarantee maximum",
-      
+
     // },
-    
   ];
-  
-  
 
   return (
     <article className="font">
@@ -333,12 +334,19 @@ export const Facade = () => {
                   <li> Dimmable with Dali, 0/1-10, DMX,PWM.</li>
                   <li>High Lumen output, up to 320lm/m for 12W version.</li>
                   <li>High Reliability.</li>
-                  <li>Lumen maintenance - 70 000 Hours L70 25°C , 50 000 Hours L70 50°C</li>
+                  <li>
+                    Lumen maintenance - 70 000 Hours L70 25°C , 50 000 Hours L70
+                    50°C
+                  </li>
                   <li>Housing material - Eco PVC or Silicone</li>
                   <li>Installation temperature - 0°C to -55°C</li>
                   <li>Ambient temperature - -25°C to +55°C</li>
-                  <li>Ingress protection - IP68 wet location submersible* to 2m</li>
-                  <li>Warranty - 3 years as standard, 5 years garuntee maximum</li>
+                  <li>
+                    Ingress protection - IP68 wet location submersible* to 2m
+                  </li>
+                  <li>
+                    Warranty - 3 years as standard, 5 years garuntee maximum
+                  </li>
                 </ul>
               </div>
               <div className="flex items-center justify-start md:pl-10 lg:pl-[22%]">
@@ -357,44 +365,76 @@ export const Facade = () => {
       </section>
 
       <div>
-      <div className="w-full md:px-14 px-5 rounded-t-xl pt-5">
-  <div className="">
-    <div className="">
-      <p className="text-center font-semibold text-xl py-5">
-        Technical Specification
-      </p>
-    </div>
-    <div className="bg-white flex flex-col  py-5 px-10 shadow-2xl drop-shadow-2xl overflow-x-scroll">
-      <div className="w-fit">
-        <table className="border-collapse border border-black">
-          <thead>
-            <tr>
-              <th className="border border-black text-xs px-3 py-2 text-start">Model</th>
-              <th className="border border-gray-400 text-xs px-3 py-2">F21-24V-5050-72</th>
-              <th className="border border-gray-400 text-xs px-3 py-2">F21-24V-5050-60</th>
-              <th className="border border-gray-400 text-xs px-3 py-2">F21-24V-5050-60-U10</th>
-              <th className="border border-gray-400 text-xs px-3 py-2">F21-36V-5050-60</th>
-              <th className="border border-gray-400 text-xs px-3 py-2">F21-24V-3528-72</th>
-              <th className="border border-gray-400 text-xs px-3 py-2">F21-12V-3528-72</th>
-              <th className="border border-gray-400 text-xs px-3 py-2">F21-24V-2835-72-CC</th>
-            </tr>
-          </thead>
-          <tbody>
-            {Specification.map((item, index) => (
-            <tr key={index}>
-              <td className="border border-black text-xs px-3 py-2 w-40 font-semibold">{item.name}</td>
-              <td className="border border-gray-400 text-xs px-3 py-2">{item.spec1}</td>
-              <td className="border border-gray-400 text-xs px-3 py-2">{item.datas}</td>
-              <td className="border border-gray-400 text-xs px-3 py-2">{item.spec2}</td>
-              <td className="border border-gray-400 text-xs px-3 py-2">{item.spec3}</td>
-              <td className="border border-gray-400 text-xs px-3 py-2">{item.spec4}</td>
-              <td className="border border-gray-400 text-xs px-3 py-2">{item.spec5}</td>
-              <td className="border border-gray-400 text-xs px-3 py-2">{item.spec6}</td>
-            </tr>
-            ))}
-          </tbody>
-        </table>
-        {/* <table className="border-collapse border border-black">
+        <div className="w-full md:px-14 px-5 rounded-t-xl pt-5">
+          <div className="">
+            <div className="">
+              <p className="text-center font-semibold text-xl py-5">
+                Technical Specification
+              </p>
+            </div>
+            <div className="bg-white flex flex-col  py-5 px-10 shadow-2xl drop-shadow-2xl overflow-x-scroll">
+              <div className="w-fit">
+                <table className="border-collapse border border-black">
+                  <thead>
+                    <tr>
+                      <th className="border border-black text-xs px-3 py-2 text-start">
+                        Model
+                      </th>
+                      <th className="border border-gray-400 text-xs px-3 py-2">
+                        F21-24V-5050-72
+                      </th>
+                      <th className="border border-gray-400 text-xs px-3 py-2">
+                        F21-24V-5050-60
+                      </th>
+                      <th className="border border-gray-400 text-xs px-3 py-2">
+                        F21-24V-5050-60-U10
+                      </th>
+                      <th className="border border-gray-400 text-xs px-3 py-2">
+                        F21-36V-5050-60
+                      </th>
+                      <th className="border border-gray-400 text-xs px-3 py-2">
+                        F21-24V-3528-72
+                      </th>
+                      <th className="border border-gray-400 text-xs px-3 py-2">
+                        F21-12V-3528-72
+                      </th>
+                      <th className="border border-gray-400 text-xs px-3 py-2">
+                        F21-24V-2835-72-CC
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {Specification.map((item, index) => (
+                      <tr key={index}>
+                        <td className="border border-black text-xs px-3 py-2 w-40 font-semibold">
+                          {item.name}
+                        </td>
+                        <td className="border border-gray-400 text-xs px-3 py-2">
+                          {item.spec1}
+                        </td>
+                        <td className="border border-gray-400 text-xs px-3 py-2">
+                          {item.datas}
+                        </td>
+                        <td className="border border-gray-400 text-xs px-3 py-2">
+                          {item.spec2}
+                        </td>
+                        <td className="border border-gray-400 text-xs px-3 py-2">
+                          {item.spec3}
+                        </td>
+                        <td className="border border-gray-400 text-xs px-3 py-2">
+                          {item.spec4}
+                        </td>
+                        <td className="border border-gray-400 text-xs px-3 py-2">
+                          {item.spec5}
+                        </td>
+                        <td className="border border-gray-400 text-xs px-3 py-2">
+                          {item.spec6}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+                {/* <table className="border-collapse border border-black">
           <tbody>
             {Specification2.map((item, index) => (
             <tr key={index}>
@@ -404,36 +444,109 @@ export const Facade = () => {
             ))}
           </tbody>
         </table> */}
-      </div>
-      
-      {/* <div className="overflow-x-auto mt-5">
+              </div>
+
+              {/* <div className="overflow-x-auto mt-5">
         
       </div> */}
-    </div>
-  </div>
-</div>
-
+            </div>
+          </div>
+        </div>
       </div>
       <div className="flex flex-col gap-10 py-10">
-        <h2 className="text-center text-xl font-semibold">Physical Specifications</h2>
-        <div className="flex justify-center">
-          <img src={phySpec1} alt="" className="w-44 sm:w-96 lg:w-[800px] mb-5 lg:mb-0" />
+        <h2 className="text-center text-xl font-semibold">
+          Physical Specifications
+        </h2>
+        <div className="flex justify-center px-5 gap-5">
+          <img
+            src={phySpec1}
+            alt=""
+            className="sm:w-96 lg:w-[800px] mb-5 lg:mb-0"
+          />
         </div>
-        <div className="flex lg:flex-row flex-col justify-evenly items-center">
-          <img src={physpec2} alt="" className="w-44 sm:w-96 lg:w-[300px] mb-5 lg:mb-0" />
-          <img src={physpec3} alt="" className="w-44 sm:w-96 lg:w-[300px] mb-5 lg:mb-0" />
+        <div className="flex lg:flex-row flex-col justify-evenly items-center px-10 gap-5">
+          <img
+            src={physpec2}
+            alt=""
+            className=" sm:w-96 lg:w-[300px] mb-5 lg:mb-0"
+          />
+          <img
+            src={physpec3}
+            alt=""
+            className=" sm:w-96 lg:w-[300px] mb-5 lg:mb-0"
+          />
         </div>
-        <div className="flex lg:flex-row flex-col justify-evenly items-center">
-          <img src={physpec4} alt="" className="w-44 sm:w-96 lg:w-[300px] mb-5 lg:mb-0" />  
-          <img src={physpec5} alt="" className="w-44 sm:w-96 lg:w-[300px] mb-5 lg:mb-0" />
+        <div className="flex lg:flex-row flex-col justify-evenly items-center px-10 gap-5">
+          <img
+            src={physpec4}
+            alt=""
+            className=" sm:w-96 lg:w-[300px] mb-5 lg:mb-0"
+          />
+          <img
+            src={physpec5}
+            alt=""
+            className=" sm:w-96 lg:w-[300px] mb-5 lg:mb-0"
+          />
+        </div>
+        <div className="flex  flex-col  py-10 space-y-5">
+          <h2 className="text-center text-xl font-semibold">
+            White Color Charts
+          </h2>{" "}
+          <div className="px-5">
+          <p className="md:px-32 px-5">White Color Charts</p>
+            <div className="flex flex-col justify-between items-center">
+              <img
+                src={whiteChart}
+                alt=""
+                className="md:w-[80%] px-5 mb-5 lg:mb-0"
+              />
+            </div>
+            <p className="md:px-32 px-5">Photometric <br/> F21-24V-5050-60-12W-3000K</p>
+            <div className="flex flex-col justify-between items-center">
+              <img
+                src={whiteChart1}
+                alt=""
+                className="md:w-[80%] px-5 mb-5 lg:mb-0"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="flex  flex-col space-y-5">
+          <h2 className="text-center text-xl font-semibold">
+              Dimming system Connection
+          </h2>
+          <div className=" space-y-10">
+            <p className="md:px-32 px-5">0-10V dimming system</p>
+            <div className="flex flex-col justify-between items-center">
+              <img
+                src={dimming2}
+                alt=""
+                className="md:w-[80%] px-5 mb-5 lg:mb-0"
+              />
+            </div>
+            <p className="md:px-32 px-5">DMX512 dimming system</p>
+            <div className="flex flex-col justify-between items-center">
+              <img
+                src={dimming1}
+                alt=""
+                className="md:w-[80%] px-5 mb-5 lg:mb-0"
+              />
+            </div>
+            <p className="md:px-32 px-5">DALI dimming system</p>
+            <div className="flex flex-col justify-between items-center">
+              <img
+                src={dimming3}
+                alt=""
+                className="md:w-[80%] px-5 mb-5 lg:mb-0"
+              />
+            </div>
+          </div>
         </div>
       </div>
 
       <div>
         <Explore />
       </div>
-
-      
     </article>
   );
 };
