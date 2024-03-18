@@ -13,6 +13,7 @@ import line1 from "../../assets/line1.png";
 import { FaGreaterThanEqual } from "react-icons/fa6";
 import imagecontent1 from "../../assets/imagecontent 1.png";
 import imagecontent2 from "../../assets/imagecontent 2.png";
+
 import linearcontent1 from "../../assets/linearcontent1.png";
 import linearcontent2 from "../../assets/linearcontent2.png";
 import lightsway from "../../assets/lightsway.png";
