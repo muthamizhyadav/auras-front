@@ -510,7 +510,7 @@ const Outdoor = () => {
               <tbody className="">
                 {data.map((item, index) => (
                   <tr key={index} className=" ">
-                    <td className="border-r border-gray-400 text-[12px]  border-b text-start px-3 py-1">
+                    <td className="border-r border-gray-400 text-[12px]  border-b text-start font-semibold px-3 py-1">
                       {item.name}
                     </td>
                     <td className=" border-gray-400 text-[12px]  border-b text-start px-3 py-1">
