@@ -536,7 +536,7 @@ const Indoorlights = () => {
                 &nbsp; Products &nbsp;{" "}
                 <FaChevronRight className=" sm:size-3 size-2" /> &nbsp; Indoor
                 Lights &nbsp; <FaChevronRight className=" sm:size-3 size-2" />{" "}
-                &nbsp; DL284A IP65
+                &nbsp; DL284A 
               </p>
             </div>
           </div>

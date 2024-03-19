@@ -15,6 +15,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
   const [showDropdownsmall, setShowDropdownsmall] = useState(false);
+  const [linearDropdown, setLinearDropdown] = useState(false);
   const navbarRef = useRef(null);
   const closeTimeout = useRef(null);
   const toggleNavbar = () => {
@@ -71,6 +72,7 @@ const Navbar = () => {
   };
   const toggleDropdownSmall = () => {
     setShowDropdownsmall(!showDropdownsmall);
+    setLinearDropdown(false)
   };
   const cancelDropdownSmall = () => {
     setShowDropdownsmall(false);
@@ -146,11 +148,52 @@ const Navbar = () => {
                     Outdoor Lights
                   </Link>
                   <Link
-                    onClick={() => setShowDropdown(false)}
-                    to="home/products/indoorlights"
-                    className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
+                    onClick={() =>{
+                      setShowDropdown(false)
+                      setLinearDropdown(!linearDropdown)
+                    } }
+                    onMouseEnter={()=>setLinearDropdown(true)}
+                    onMouseLeave={()=>setLinearDropdown(false)}
+                    // to="home/products/indoorlights"
+                    className="block px-4 py-2 text-xs  "
                   >
-                    Indoor Lights
+                    <div className="relative">
+                      <p className="hover:text-[#F2667C]">Indoor Lights</p>
+                      {linearDropdown && (
+                        <div className="absolute bg-white ml-[103px] -mt-6  rounded-md  shadow-md shadow-gray-400">
+                          <div className="w-28 flex flex-col justify-center">
+                          <Link
+                            to="/home/products/indoorlights/338-series"
+                            className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
+                            onClick={()=>setLinearDropdown(false)}
+                          >
+                            338 Series
+                          </Link>
+                          <Link
+                            to="/home/products/indoorlights/pd228"
+                            className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
+                            onClick={()=>setLinearDropdown(false)}
+                          >
+                            PD228
+                          </Link>
+                          <Link
+                            to="/home/products/indoorlights/dl228a"
+                            className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
+                            onClick={()=>setLinearDropdown(false)}  
+                          >
+                            DL228A
+                          </Link>
+                          <Link
+                            to="/home/products/indoorlights/dl284a"
+                            className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
+                            onClick={()=>setLinearDropdown(false)}  
+                          >
+                            DL284A
+                          </Link>
+                          </div>
+                        </div>
+                      )}
+                    </div>
                   </Link>
                   <Link
                     onClick={() => setShowDropdown(false)}
@@ -262,27 +305,71 @@ const Navbar = () => {
           </Link>
           {showDropdownsmall && (
             <div
-              onClick={cancelDropdownSmall}
+              
               className="dropdown-animation absolute w-36 xs:w-fit -translate-x-1/2 -translate-y-1/2 top-[83px] left-48  text-sm  bg-white text-[#F2667C]  py-2 shadow-md shadow-gray-400 rounded-b-lg z-10"
             >
-              <Link to="/" className="block px-4 py-2   hover:text-[#F2667C] ">
+              <Link to="/" onClick={cancelDropdownSmall} className="block px-4 py-2   hover:text-[#F2667C] ">
                 Linear Lights
               </Link>
               <Link
                 to="/products/outdoorlights"
                 className="block px-4 py-2   hover:text-[#F2667C]"
+                onClick={cancelDropdownSmall}
               >
                 Outdoor Lights
               </Link>
               <Link
-                to="/products/indoorlights"
-                className="block px-4 py-2   hover:text-[#F2667C] "
-              >
-                Indoor Lights
-              </Link>
+                    onClick={() =>{
+                      // setShowDropdown(false)
+                      setLinearDropdown(!linearDropdown)
+                    } }
+                    onMouseEnter={()=>setLinearDropdown(true)}
+                    onMouseLeave={()=>setLinearDropdown(false)}
+                    // to="home/products/indoorlights"
+                    className="block px-4 py-2 text-xs  "
+                  >
+                    <div className="relative">
+                      <p className="hover:text-[#F2667C] text-sm">Indoor Lights</p>
+                      {linearDropdown && (
+                        <div className="absolute bg-white ml-[135px] rounded-md  shadow-md shadow-gray-400 -mt-6">
+                          <div className="w-28 flex flex-col justify-center">
+                          <Link
+                            to="/home/products/indoorlights/338-series"
+                            className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
+                            onClick={()=>setLinearDropdown(false)}
+                          >
+                            338 Series
+                          </Link>
+                          <Link
+                            to="/home/products/indoorlights/pd228"
+                            className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
+                            onClick={()=>setLinearDropdown(false)}
+                          >
+                            PD228
+                          </Link>
+                          <Link
+                            to="/home/products/indoorlights/dl228a"
+                            className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
+                            onClick={()=>setLinearDropdown(false)}  
+                          >
+                            DL228A
+                          </Link>
+                          <Link
+                            to="/home/products/indoorlights/dl284a"
+                            className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
+                            onClick={()=>setLinearDropdown(false)}  
+                          >
+                            DL284A
+                          </Link>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </Link>
               <Link
                 to="/products/facadelights"
                 className="block px-4 py-2   hover:text-[#F2667C] "
+                onClick={cancelDropdownSmall}
               >
                 Facade Lights
               </Link>
