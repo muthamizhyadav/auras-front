@@ -286,7 +286,7 @@ export function Linear() {
                 {Specification.map((item, index) => (
                   <tr key={index} className=" ">
                     <td
-                      className={` border-r border-gray-400 text-xs  border-b text-start px-3 py-2`}
+                      className={` border-r border-gray-400 text-xs border-b text-start font-semibold px-3 py-2`}
                     >
                       {item.name}
                     </td>
