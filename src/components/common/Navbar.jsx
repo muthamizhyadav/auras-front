@@ -140,21 +140,21 @@ const Navbar = () => {
                   </Link>
                   <Link
                     onClick={() => setShowDropdown(false)}
-                    to="/products/outdoorlights"
+                    to="/home/products/outdoorlights"
                     className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
                   >
                     Outdoor Lights
                   </Link>
                   <Link
                     onClick={() => setShowDropdown(false)}
-                    to="/products/indoorlights"
+                    to="home/products/indoorlights"
                     className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
                   >
                     Indoor Lights
                   </Link>
                   <Link
                     onClick={() => setShowDropdown(false)}
-                    to="/products/facadelights"
+                    to="home/products/facadelights"
                     className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
                   >
                     Facade Lights
@@ -190,10 +190,10 @@ const Navbar = () => {
               <p className=" lg:text-sm font-medium">contact us</p>
             </div>
             <div>
-              <FiSearch className="text-[#F2667C] lg:text-xl xl:text-2xl" />
+              <FiSearch className="text-[#F2667C] lg:text-xl xl:text-2xl cursor-pointer" />
             </div>
             <div>
-              <MdAccountCircle className="text-[#F2667C] lg:text-xl xl:text-3xl" />
+              <MdAccountCircle className="text-[#F2667C] lg:text-xl xl:text-3xl cursor-pointer" />
             </div>
           </div>
         </div>

@@ -207,7 +207,7 @@ export function Linear() {
                 alt=""
                 className=" pt-1 md:block hidden xl:w-[90%] h-10"
               />
-              <div className="md:text-xs  lg:text-[13px]  leading-8 md:leading-8 text-[#666666] lg:pl-[24%] md:pl-10 pl-4">
+              <div className="md:text-xs  lg:text-[13px]  leading-7  md:leading-7 text-[#666666] lg:pl-[24%] md:pl-10 pl-4">
                 <ul className="list-disc">
                   <li className="">IP66 protection class.</li>
                   <li className="">

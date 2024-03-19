@@ -424,7 +424,7 @@ const Outdoor = () => {
                   alt=""
                   className=" pt-1 md:block hidden xl:w-[90%] h-10"
                 />
-                <div className="md:text-xs  lg:text-[13px] leading-8 md:leading-8 space-y-0.5 text-[#666666] lg:pl-[22%] md:pl-10 ">
+                <div className="md:text-xs  lg:text-[13px] leading-7 md:leading-7 space-y-0.5 text-[#666666] lg:pl-[22%] md:pl-10 ">
                   <ul className="list-disc px-5">
                     <li className="">
                       {" "}

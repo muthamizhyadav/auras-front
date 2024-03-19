@@ -598,7 +598,7 @@ const Indoorlights = () => {
                   alt=""
                   className=" pt-1 md:block hidden xl:w-[90%] h-10"
                 />
-                <div className="text-xs  lg:text-[13px]  leading-loose md:leading-5 text-[#666666] lg:pl-[21%] md:pl-10 p-4">
+                <div className="text-xs  lg:text-[13px]  leading-7 md:leading-7 text-[#666666] lg:pl-[21%] md:pl-10 p-4">
                   <p>
                     This downlight with traditional deep reflector which
                     provides a perfect combination of high lighting efficiency,
@@ -615,7 +615,7 @@ const Indoorlights = () => {
                   Features
                 </h3>
 
-                <div className="text-xs  lg:text-[13px]  leading-8 md:leading-5 text-[#666666] lg:pl-[24%] md:pl-10 pl-4 space-y-3">
+                <div className="text-xs  lg:text-[13px]  leading-7 md:leading-7 text-[#666666] lg:pl-[24%] md:pl-10 pl-4 space-y-3">
                   <ul className="list-disc">
                     <li>Tempered glass cover with high transmittance rate.</li>
                     <li>
