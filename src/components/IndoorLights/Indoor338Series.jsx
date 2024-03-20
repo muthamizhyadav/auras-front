@@ -101,7 +101,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Rated Input Voltage(V)",
-      spec1: "AC230V",
+      spec1: <p className="w-[1400px]">AC230V</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -115,7 +115,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Input Voltage(V)",
-      spec1: "AC220-240V",
+      spec1: <p className="w-[1400px]">AC220-240V</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -157,7 +157,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "CCT(K)",
-      spec1: "1-CCT: 2700K/3000K/4000K/5000K//3-CCT: 3000K + 4000K + 5000K",
+      spec1: <p className="w-[1400px]">1-CCT: 2700K/3000K/4000K/5000K//3-CCT: 3000K + 4000K + 5000K</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -227,7 +227,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "CRI",
-      spec1: "80/90/97(1-CCT) /90(3-CCT)",
+      spec1:<p className="w-[1400px]"> 80/90/97(1-CCT) /90(3-CCT) </p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -241,7 +241,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Beam Angle (°)",
-      spec1: "24° / 36° / 60°",
+      spec1:<p className="w-[1400px]">24° / 36° / 60 </p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -255,7 +255,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "UGR",
-      spec1: "<19 / <22",
+      spec1: <p className="w-[1400px]"> &lt; 19 / &lt; 22 </p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -607,7 +607,7 @@ export const Indoor338Series = () => {
           </div>
 
           <div className="w-full p-5 overflow-x-scroll drop-shadow-2xl">
-            <table className=" border border-black w-full" style={{tableLayout:"fixed"}}>
+            <table className=" border border-black xl:w-full w-[1400px]" style={{tableLayout:"fixed"}}>
               <thead className="border-b border-gray-400">
                 <tr>
                   <th className="border-r border-black text-xs px-3 py-2 text-start ">
@@ -652,40 +652,40 @@ export const Indoor338Series = () => {
               <tbody>
                 {Specification.map((item, index) => (
                   <tr key={index}>
-                    <td className="border-r border-b border-black text-xs px-3 py-2 font-semibold overflow-x-auto">
+                    <td className="border-r border-b border-black text-xs px-3 py-2 font-semibold ">
                       {item.name}
                     </td>
-                    <td className={` border-b border-gray-400 text-xs px-3 py-2 overflow-x-auto  ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}> 
+                    <td className={` border-b border-gray-400 text-xs px-3 py-2   ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}> 
                       {item.spec1}
                     </td>
-                    <td className={` border-b border-gray-400 text-xs px-3 py-2 overflow-x-auto  ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
+                    <td className={` border-b border-gray-400 text-xs px-3 py-2   ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
                       {item.spec2}
                     </td>
-                    <td className={` border-b border-gray-400 text-xs px-3 py-2 overflow-x-auto  ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
+                    <td className={` border-b border-gray-400 text-xs px-3 py-2   ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
                       {item.spec3}
                     </td>
-                    <td className={` border-b border-gray-400 text-xs px-3 py-2 overflow-x-auto  ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
+                    <td className={` border-b border-gray-400 text-xs px-3 py-2   ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
                       {item.spec4}
                     </td>
-                    <td className={` border-b border-gray-400 text-xs px-3 py-2 overflow-x-auto  ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
+                    <td className={` border-b border-gray-400 text-xs px-3 py-2   ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
                       {item.spec5}
                     </td>
-                    <td className={` border-b border-gray-400 text-xs px-3 py-2 overflow-x-auto  ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
+                    <td className={` border-b border-gray-400 text-xs px-3 py-2   ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
                       {item.spec6}
                     </td>
-                    <td className={` border-b border-gray-400 text-xs px-3 py-2 overflow-x-auto  ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
+                    <td className={` border-b border-gray-400 text-xs px-3 py-2   ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
                       {item.spec7}
                     </td>
-                    <td className={` border-b border-gray-400 text-xs px-3 py-2 overflow-x-auto  ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
+                    <td className={` border-b border-gray-400 text-xs px-3 py-2   ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
                       {item.spec8}
                     </td>
-                    <td className={` border-b border-gray-400 text-xs px-3 py-2 overflow-x-auto  ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
+                    <td className={` border-b border-gray-400 text-xs px-3 py-2   ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
                       {item.spec9}
                     </td>
-                    <td className={` border-b border-gray-400 text-xs px-3 py-2 overflow-x-auto  ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
+                    <td className={` border-b border-gray-400 text-xs px-3 py-2   ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
                       {item.spec10}
                     </td>
-                    <td className={` border-b border-gray-400 text-xs px-3 py-2 overflow-x-auto  ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
+                    <td className={` border-b border-gray-400 text-xs px-3 py-2   ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
                       {item.spec11}
                     </td>
                     
