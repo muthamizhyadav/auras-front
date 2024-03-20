@@ -16,7 +16,6 @@ import physpec5 from "../../assets/phy-spc5.png";
 import { Explore } from "./Explore";
 import { TfiClose } from "react-icons/tfi";
 import { GrNext, GrPrevious } from "react-icons/gr";
-import Collection from "./Collection";
 import whiteChart from "../../assets/white chart.png";
 import whiteChart1 from "../../assets/black chart.png";
 import dimming1 from "../../assets/dimming1.png";
