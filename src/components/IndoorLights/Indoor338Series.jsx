@@ -6,7 +6,7 @@ import Indoorlights338series4 from "../../assets/Indoor338-series4.jpg";
 import img1 from "../../assets/light2.jpg";
 import { FaChevronRight } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
-import product1 from "../../assets/Linear Light L Series.pdf";
+import product1 from "../../assets/338Series.pdf";
 import line1 from "../../assets/line1.png";
 import { FaGreaterThanEqual } from "react-icons/fa6";
 import imagecontent1 from "../../assets/imagecontent 1.png";
@@ -18,6 +18,14 @@ import linearoutline from "../../assets/linearouline.png";
 import { Explore } from "../Products/Explore";
 import { TfiClose } from "react-icons/tfi";
 import { GrNext, GrPrevious } from "react-icons/gr";
+import changable from "../../assets/changable.png";
+import seriespic from "../../assets/338seriespic1.png";
+import dl338 from "../../assets/dl338.png";
+import dl338ab from "../../assets/dl338ab.png";
+import pd338 from "../../assets/pd338.png";
+import tl338 from "../../assets/tl338.png";
+import sizeoptions from "../../assets/foursizeoptions.png";
+import reflector from '../../assets/338pic2.png'
 
 export const Indoor338Series = () => {
   //   React.useEffect(() => {
@@ -72,7 +80,7 @@ export const Indoor338Series = () => {
   //DataTable
   const Specification = [
     {
-      name: "Dimension(mm)",
+      name: "Dimension (mm)",
       spec1: "55*160",
       spec2: "55*160",
       spec3: "65*180",
@@ -91,17 +99,17 @@ export const Indoor338Series = () => {
       spec2: "10W",
       spec3: "10W",
       spec4: "15W",
-      spec5: "10W/12W/15W",
+      spec5: "10W / 12W / 15W",
       spec6: "20W",
       spec7: "25W",
-      spec8: "15W/20W/25W",
+      spec8: "15W / 20W / 25W",
       spec9: "30W",
       spec10: "35W",
-      spec11: "25W/30W/35W",
+      spec11: "25W / 30W / 35W",
     },
     {
       name: "Rated Input Voltage(V)",
-      spec1: <p className="w-[1400px]">AC230V</p>,
+      spec1: <p className="w-[1000px]">AC230V</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -115,7 +123,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Input Voltage(V)",
-      spec1: <p className="w-[1400px]">AC220-240V</p>,
+      spec1: <p className="w-[1000px]">AC220-240V</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -129,7 +137,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Light Source",
-      spec1: "COB",
+      spec1: <p className="w-[1000px]">COB</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -143,7 +151,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "SDCM",
-      spec1: "<5",
+      spec1: <p className="w-[1000px]">&lt;5</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -157,7 +165,11 @@ export const Indoor338Series = () => {
     },
     {
       name: "CCT(K)",
-      spec1: <p className="w-[1400px]">1-CCT: 2700K/3000K/4000K/5000K//3-CCT: 3000K + 4000K + 5000K</p>,
+      spec1: (
+        <p className="w-[1000px]">
+          1-CCT: 2700K/3000K/4000K/5000K//3-CCT: 3000K + 4000K + 5000K
+        </p>
+      ),
       spec2: "",
       spec3: "",
       spec4: "",
@@ -227,7 +239,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "CRI",
-      spec1:<p className="w-[1400px]"> 80/90/97(1-CCT) /90(3-CCT) </p>,
+      spec1: <p className="w-[1000px]"> 80/90/97(1-CCT) /90(3-CCT) </p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -241,7 +253,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Beam Angle (°)",
-      spec1:<p className="w-[1400px]">24° / 36° / 60 </p>,
+      spec1: <p className="w-[1000px]">24° / 36° / 60 </p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -255,7 +267,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "UGR",
-      spec1: <p className="w-[1400px]"> &lt; 19 / &lt; 22 </p>,
+      spec1: <p className="w-[1000px]"> &lt; 19 / &lt; 22 </p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -269,7 +281,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "LED Driver",
-      spec1: "Built-in",
+      spec1: <p className="w-[1000px]">Built-in</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -283,7 +295,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Dimming  Option",
-      spec1: "Triac",
+      spec1: <p className="w-[1000px]">Triac</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -297,7 +309,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Electrical Class",
-      spec1: "ClassI",
+      spec1: <p className="w-[1000px]">Class I</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -311,7 +323,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Ingress Protection (IP Rating)",
-      spec1: "IP20",
+      spec1: <p className="w-[1000px]">IP20</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -324,8 +336,8 @@ export const Indoor338Series = () => {
       spec11: "",
     },
     {
-      name: "Product Finishing(Base)",
-      spec1: "Black RAL9005/White RAL9016",
+      name: "Product Finishing (Base)",
+      spec1: <p className="w-[1000px]">Black RAL9005/White RAL9016</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -339,7 +351,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Materials of Optics",
-      spec1: "Aluminum+transparent tempered glass",
+      spec1: <p className="w-[1000px]">Aluminum+transparent tempered glass</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -353,7 +365,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Materials of Housing",
-      spec1: "Aluminum",
+      spec1: <p className="w-[1000px]">Aluminum</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -367,7 +379,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Lifetime (hr)",
-      spec1: "50,000h",
+      spec1: <p className="w-[1000px]">50,000h</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -381,7 +393,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Glow wire test (C )",
-      spec1: "650°C",
+      spec1: <p className="w-[1000px]">650°C</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -395,7 +407,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Operating Temp. (C )",
-      spec1: "-20°C~40°C",
+      spec1: <p className="w-[1000px]">-20°C~40°C</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -409,7 +421,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Storage Temp. (C )	",
-      spec1: "-20°C~60°C",
+      spec1: <p className="w-[1000px]">-20°C~60°C</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -423,7 +435,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Installation",
-      spec1: "Surface mount/Pendant/Recessed/Track",
+      spec1: <p className="w-[1000px]">Surface mount/Pendant/Recessed/Track</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -484,41 +496,41 @@ export const Indoor338Series = () => {
         </div>
 
         <section className="">
-        {previewIndex !== null && (
-              <div
-                onClick={handleCloseOutsideClick}
-                className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50"
+          {previewIndex !== null && (
+            <div
+              onClick={handleCloseOutsideClick}
+              className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50"
+            >
+              <button
+                className=" w-10 text-white flex justify-center items-center  text-xl"
+                onClick={handlePrevClick}
               >
-                <button
-                  className=" w-10 text-white flex justify-center items-center  text-xl"
-                  onClick={handlePrevClick}
-                >
-                  <GrPrevious className="" />
-                </button>
+                <GrPrevious className="" />
+              </button>
 
-                <div className="relative w-64 h-64 previewxs:w-80 previewxs:h-80 md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] xl:w-[550px] xl:h-[550px] flex flex-col justify-center items-center">
-                  <div className=" bg-white">
-                    <img
-                      className="w-full h-full "
-                      src={bgimage[previewIndex]}
-                      alt="preview"
-                    />
-                  </div>
-                  <button
-                    className="absolute right-3 xl:top-20 top-14 cursor-pointer text-black bg-white rounded-full p-1"
-                    onClick={handleClosePreview}
-                  >
-                    <TfiClose />
-                  </button>
+              <div className="relative w-64 h-64 previewxs:w-80 previewxs:h-80 md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] xl:w-[550px] xl:h-[550px] flex flex-col justify-center items-center">
+                <div className=" bg-white">
+                  <img
+                    className="w-full h-full "
+                    src={bgimage[previewIndex]}
+                    alt="preview"
+                  />
                 </div>
                 <button
-                  className=" w-10 text-white flex justify-center items-center  text-xl"
-                  onClick={handleNextClick}
+                  className="absolute right-3 xl:top-20 top-14 cursor-pointer text-black bg-white rounded-full p-1"
+                  onClick={handleClosePreview}
                 >
-                  <GrNext />
+                  <TfiClose />
                 </button>
               </div>
-            )}
+              <button
+                className=" w-10 text-white flex justify-center items-center  text-xl"
+                onClick={handleNextClick}
+              >
+                <GrNext />
+              </button>
+            </div>
+          )}
           <div className=" bg-[#F3F3F3] py-5 lg:py-8 md:bg-Bannerbg bg-contain w-full px-5 sm:px-14 flex md:flex-row flex-col md:gap-3 gap-10">
             <div className="relative w-full md:w-[42%] lg:w-[37%]">
               <div
@@ -607,7 +619,10 @@ export const Indoor338Series = () => {
           </div>
 
           <div className="w-full p-5 overflow-x-scroll drop-shadow-2xl">
-            <table className=" border border-black xl:w-full w-[1400px]" style={{tableLayout:"fixed"}}>
+            <table
+              className=" border border-black xl:w-full w-[1400px]"
+              style={{ tableLayout: "fixed" }}
+            >
               <thead className="border-b border-gray-400">
                 <tr>
                   <th className="border-r border-black text-xs px-3 py-2 text-start ">
@@ -655,44 +670,384 @@ export const Indoor338Series = () => {
                     <td className="border-r border-b border-black text-xs px-3 py-2 font-semibold ">
                       {item.name}
                     </td>
-                    <td className={` border-b border-gray-400 text-xs px-3 py-2   ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}> 
+                    <td
+                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
+                        item.name === "Dimension (mm)"
+                          ? "border-r"
+                          : item.name === "Watt(W)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "DIM  1-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "DIM  3-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : ""
+                      }`}
+                    >
                       {item.spec1}
                     </td>
-                    <td className={` border-b border-gray-400 text-xs px-3 py-2   ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
+                    <td
+                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
+                        item.name === "Dimension (mm)"
+                          ? "border-r"
+                          : item.name === "Watt(W)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "DIM  1-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "DIM  3-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : ""
+                      }`}
+                    >
                       {item.spec2}
                     </td>
-                    <td className={` border-b border-gray-400 text-xs px-3 py-2   ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
+                    <td
+                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
+                        item.name === "Dimension (mm)"
+                          ? "border-r"
+                          : item.name === "Watt(W)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "DIM  1-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "DIM  3-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : ""
+                      }`}
+                    >
                       {item.spec3}
                     </td>
-                    <td className={` border-b border-gray-400 text-xs px-3 py-2   ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
+                    <td
+                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
+                        item.name === "Dimension (mm)"
+                          ? "border-r"
+                          : item.name === "Watt(W)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "DIM  1-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "DIM  3-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : ""
+                      }`}
+                    >
                       {item.spec4}
                     </td>
-                    <td className={` border-b border-gray-400 text-xs px-3 py-2   ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
+                    <td
+                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
+                        item.name === "Dimension (mm)"
+                          ? "border-r"
+                          : item.name === "Watt(W)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "DIM  1-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "DIM  3-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : ""
+                      }`}
+                    >
                       {item.spec5}
                     </td>
-                    <td className={` border-b border-gray-400 text-xs px-3 py-2   ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
+                    <td
+                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
+                        item.name === "Dimension (mm)"
+                          ? "border-r"
+                          : item.name === "Watt(W)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "DIM  1-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "DIM  3-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : ""
+                      }`}
+                    >
                       {item.spec6}
                     </td>
-                    <td className={` border-b border-gray-400 text-xs px-3 py-2   ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
+                    <td
+                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
+                        item.name === "Dimension (mm)"
+                          ? "border-r"
+                          : item.name === "Watt(W)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "DIM  1-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "DIM  3-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : ""
+                      }`}
+                    >
                       {item.spec7}
                     </td>
-                    <td className={` border-b border-gray-400 text-xs px-3 py-2   ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
+                    <td
+                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
+                        item.name === "Dimension (mm)"
+                          ? "border-r"
+                          : item.name === "Watt(W)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "DIM  1-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "DIM  3-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : ""
+                      }`}
+                    >
                       {item.spec8}
                     </td>
-                    <td className={` border-b border-gray-400 text-xs px-3 py-2   ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
+                    <td
+                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
+                        item.name === "Dimension (mm)"
+                          ? "border-r"
+                          : item.name === "Watt(W)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "DIM  1-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "DIM  3-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : ""
+                      }`}
+                    >
                       {item.spec9}
                     </td>
-                    <td className={` border-b border-gray-400 text-xs px-3 py-2   ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
+                    <td
+                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
+                        item.name === "Dimension (mm)"
+                          ? "border-r"
+                          : item.name === "Watt(W)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "DIM  1-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "DIM  3-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : ""
+                      }`}
+                    >
                       {item.spec10}
                     </td>
-                    <td className={` border-b border-gray-400 text-xs px-3 py-2   ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r'  : item.name === 'Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'DIM  1-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' :  item.name === 'Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : item.name === 'DIM  3-CCT Luminous Flux (lm) ±5%(White)' ? 'border-r' : ''}`}>
+                    <td
+                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
+                        item.name === "Dimension (mm)"
+                          ? "border-r"
+                          : item.name === "Watt(W)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "DIM  1-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  3-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : item.name ===
+                            "DIM  3-CCT Luminous Flux (lm) ±5%(White)"
+                          ? "border-r"
+                          : ""
+                      }`}
+                    >
                       {item.spec11}
                     </td>
-                    
                   </tr>
                 ))}
               </tbody>
             </table>
+          </div>
+        </div>
+      </div>
+      <div className="flex justify-evenly items-center py-10">
+        <img src={seriespic} alt="" className="w-96"/>
+        <section className="flex flex-col gap-10">
+          <div>
+            <div className="flex gap-8">
+              <div>
+                <h2 className="font-medium text-sm pl-3">Four size options :</h2>
+                <img src={sizeoptions} alt="" className="w-52" />
+              </div>
+              <div>
+                <h2 className="font-medium text-sm pl-3">3-CCT changeable :</h2>
+                <img src={changable} alt="" className="w-52 mt-4" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className="flex gap-8">
+              <div>
+                <h2 className="font-medium text-sm pl-3">Replaceable reflector :</h2>
+                <img src={reflector} alt="" className="w-52" />
+              </div>
+              <div className="space-y-3">
+                <h2 className="font-medium text-sm pl-3">Power adjustable :</h2>
+                <div className="pl-3 space-y-1 mt-4">
+                <p className="text-xs">Ø65mm :10W/12W/15W</p>
+                <p className="text-xs">Ø85mm :15W/20W/25W</p>
+                <p className="text-xs">Ø100mm :25W/30W/35W</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div className="py-5 p-5 ">
+        <h2 className="font-semibold sm:text-xl py-5 text-center">
+          338 SERIES
+        </h2>
+
+        <div className="flex flex-col gap-10 py-5">
+          <div className="flex sm:flex-row flex-col gap-5">
+            <div className="sm:w-[30%] flex justify-center items-center">
+              <img src={dl338} alt="" className="w-24 h-24" />
+            </div>
+            <div className="sm:w-[70%]">
+              <ul className="flex flex-col justify-center items-center sm:justify-start sm:items-start gap-2">
+                <p className="font-medium">DL338</p>
+                <li className="text-[12px] w-[90%]">
+                  DL338 is a DIY modular series with an exquisite appearance and
+                  anti-glare UGR19 design, 6 kinds of installation ways, 3
+                  reflectors and 3 front ring colors can be exchangeable. It
+                  adopts brand Bridgelux COB led chip with 120lm/W light
+                  efficiency, AL6063 Aluminum profile provides excellent thermal
+                  dissipation. Four size options : Ø55mm, Ø65mm, Ø85mm, Ø100mm.
+                  It can do triac dim, DALI dim, CCT interchangeable and wattage
+                  adjustable.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="flex sm:flex-row flex-col gap-5 ">
+            <div className="sm:w-[30%] flex justify-center items-center">
+              <img src={dl338ab} alt="" className="w-24 h-24" />
+            </div>
+            <div className="sm:w-[70%]">
+              <ul className=" flex flex-col justify-center items-center sm:justify-start sm:items-start gap-2">
+                <p className="font-medium">DL338A/B</p>
+                <li className="text-[12px] w-[90%]">
+                  DL338A/B is a DIY modular series with an exquisite appearance
+                  and anti-glare UGR19 design, 6 kinds of installation ways, 3
+                  reflectors and 3 front ring colors can be exchangeable. It
+                  adopts brand Bridgelux COB led chip with 120lm/W light
+                  efficiency, AL6063 Aluminum profile provides excellent thermal
+                  dissipation. Four size options : Ø55mm, Ø65mm, Ø85mm, Ø100mm.
+                  It can do triac dim, DALI dim, CCT interchangeable and wattage
+                  adjustable.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="flex sm:flex-row flex-col gap-5">
+            <div className="sm:w-[30%] flex justify-center items-center">
+              <img src={pd338} alt="" className="w-24 h-24" />
+            </div>
+            <div className="sm:w-[70%]">
+              <ul className="  flex flex-col justify-center items-center sm:justify-start sm:items-start gap-2">
+                <p className="font-medium">PD338A/B</p>
+                <li className="text-[12px] w-[90%]">
+                  PD338A/B is a DIY modular series with an exquisite appearance
+                  and anti-glare UGR19 design, 6 kinds of installation ways, 3
+                  reflectors and 3 front ring colors can be exchangeable. It
+                  adopts brand Bridgelux COB led chip with 120lm/W light
+                  efficiency, AL6063 Aluminum profile provides excellent thermal
+                  dissipation. Four size options : Ø55mm, Ø65mm, Ø85mm, Ø100mm.
+                  It can do triac dim, DALI dim, CCT interchangeable and wattage
+                  adjustable
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="flex sm:flex-row flex-col gap-5">
+            <div className="sm:w-[30%] flex justify-center items-center">
+              <img src={tl338} alt="" className="w-24 h-24 " />
+            </div>
+            <div className="sm:w-[70%]">
+              <ul className="flex flex-col justify-center items-center sm:justify-start sm:items-start gap-2">
+                <p className="font-medium">TL338</p>
+                <li className="text-[12px] w-[90%]">
+                  TL338 is a DIY modular series with an exquisite appearance and
+                  anti-glare UGR19 design, 6 kinds of installation ways, 3
+                  reflectors and 3 front ring colors can be exchangeable. It
+                  adopts brand Bridgelux COB led chip with 120lm/W light
+                  efficiency, AL6063 Aluminum profile provides excellent thermal
+                  dissipation. Four size options : Ø55mm, Ø65mm, Ø85mm, Ø100mm.
+                  It can do triac dim, DALI dim, CCT interchangeable and wattage
+                  adjustable.
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
