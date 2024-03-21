@@ -168,7 +168,6 @@ const Indoorlights = () => {
       name:"Non-DIM 1-CCT Luminous Flux (lm) ±5%（COB）",
       spec1:"950-1050",
       spec2:"1200-1350",
-      spec2:  <p className="w-[1000px]"></p>,
       spec3: "",
       spec4: "",
       spec5: "",
@@ -679,47 +678,50 @@ const Indoorlights = () => {
               <p className="text-center font-semibold text-xl py-5">
                 Specifications
               </p>
-              <p className="text-black font-medium py-5">
+
+              <div>
+              
+            </div>
+            <div className="w-full p-5 overflow-x-scroll drop-shadow-2xl">
+            <p className="text-sm font-semibold pt-5 pb-2">
                 DL284A/B Download COB & Download SMD
               </p>
-            </div>
-            <div className="bg-white overflow-x-scroll flex flex-col justify-center items-center rounded-md py-10 px-10 shadow-2xl drop-shadow-2xl ">
               <table
                 style={{tableLayout:"fixed"}}
-                className="border border-black w-full  ml-auto p-32 "
+                className="border border-black xl:w-full w-[1400px] "
               >
                 <thead className="border-b border-gray-400">
-                  <tr className="text-center ">
-                    <th className="border-r border-gray-400">Code No.</th>
-                    <th className="border-r px-3 py-1 border-gray-400 text-sm">
+                  <tr className="">
+                    <th className="border-r border-black text-xs px-3 py-2 text-start  ">Code No.</th>
+                    <th className="border-r px-3 py-2 border-gray-400 text-xs">
                       DL284A-3- 10W
                     </th>
-                    <th className="border-r px-3 py-1 border-gray-400 text-sm">
+                    <th className="border-r px-3 py-2 border-gray-400 text-xs">
                       DL284A-3- 13W
                     </th>
-                    <th className="border-r px-3 py-1 border-gray-400 text-sm">
+                    <th className="border-r px-3 py-2 border-gray-400 text-xs">
                       DL284A-4- 18W
                     </th>
-                    <th className="border-r px-3 py-1 border-gray-400 text-sm">
+                    <th className="border-r px-3 py-2 border-gray-400 text-xs">
                       DL284A-4- 25W
                     </th>
-                    <th className="border-r border-gray-400 text-sm ">
+                    <th className="border-r px-3 py-2 border-gray-400 text-xs">
                       DL284A-6- 18W
                     </th>
-                    <th className="border-r border-gray-400 text-sm">
+                    <th className="border-r px-3 py-2 border-gray-400 text-xs">
                       DL284A-6- 25W
                     </th>
-                    <th className="border-r border-gray-400 text-sm">
+                    <th className="border-r px-3 py-2 border-gray-400 text-xs">
                       DL284A-6- 30W
                     </th>
 
-                    <th className="border-r border-gray-400 text-sm ">
+                    <th className="border-r px-3 py-2 border-gray-400 text-xs">
                       DL284A-6- 18W
                     </th>
-                    <th className="border-r border-gray-400 text-sm">
+                    <th className="border-r px-3 py-2 border-gray-400 text-xs">
                       DL284A-6- 25W
                     </th>
-                    <th className="border-gray-400 text-sm">DL284A-6- 30W</th>
+                    <th className="border-r px-3 py-2 border-gray-400 text-xs">DL284A-6- 30W</th>
                   </tr>
                 </thead>
 
@@ -727,61 +729,59 @@ const Indoorlights = () => {
                 {Specification.map((item, index) => (
                   <tr key={index} className=" ">
                     <td
-                      className={` border-r border-gray-400 text-xs border-b text-start font-semibold px-3 py-2`}
-                      
+                      className={` border-r border-black text-xs text-start font-semibold px-3 py-2 ${item.name === 'UGR (COB)' ? '' : 'border-b'} ${item.name === '' ? '' : 'border-t'}`}
                     >
                       {item.name}
                     </td>
                     <td
-                      className={`border-r border-gray-400 text-xs border-b text-center px-3 py-2`}
+                      className={` border-gray-400 text-xs border-b px-3 py-2 
+                      ${item.name === 'Dimension(mm)' ? '' : item.name === 'Cutout (mm)' ? '' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  '' : item.name === 'UGR (COB)' ? ''  : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5%（COB）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（COB）' ? 'border-r' :''} `}
                     >
                       {item.spec1}
                     </td>
                     <td
-                      className={` border-r border-gray-400 text-xs border-b text-center px-3 py-2 `}
+                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Cutout (mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5%（COB）' ? 'border-r': item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（COB）' ? 'border-r' :  item.name === '' ? 'border-r' :  item.name === 'Impact Resistance (IK Rating)' ? 'border-r' : ''} `}
                     >
                       {item.spec2}
                     </td>
                     
                     <td
-                      className={` border-r border-gray-400 text-xs border-b text-center px-3 py-2 `}
+                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension(mm)' ? '' : item.name === 'Cutout (mm)' ? '' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  :  item.name === '' ? 'border-r' : ''} `}
                     >
                       {item.spec3}
                     </td>
                     <td
-                      className={` border-r border-gray-400 text-xs border-b text-center px-3 py-2 `}
+                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Cutout (mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  : ''} `}
                     >
                       {item.spec4}
                     </td>
                     <td
-                      className={`border-r border-gray-400 text-xs border-b text-center px-3 py-2 `}
+                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension(mm)' ? '' : item.name === 'Cutout (mm)' ? '' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  :  item.name === '' ? 'border-r' : ''} `}
                     >
                       {item.spec5}
                     </td>
                     <td
-                      className={` border-r border-gray-400 text-xs border-b text-center px-3 py-2 `}
+                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension(mm)' ? '' : item.name === 'Cutout (mm)' ? '' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  :  item.name === '' ? 'border-r' : ''} `}
                     >
                       {item.spec6}
                     </td>
                     <td
-                      className={` border-r border-gray-400 text-xs border-b text-center px-3 py-2 `}
+                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Cutout (mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  :  item.name === '' ? 'border-r' : ''} `}
                     >
                       {item.spec7}
                     </td>
                     <td
-                      className={`border-r border-gray-400 text-xs border-b text-center px-3 py-2`}
-
+                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension(mm)' ? '' : item.name === 'Cutout (mm)' ? '' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  : ''} `}
                     >
                       {item.spec8}
                     </td>
                     <td
-                      className={`border-r border-gray-400 text-xs border-b text-center px-3 py-2`}
-
+                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension(mm)' ? '' : item.name === 'Cutout (mm)' ? '' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  :  item.name === '' ? 'border-r' : ''} `}
                     >
                       {item.spec9}
                     </td>
                     <td
-                      className={`border-r border-gray-400 text-xs border-b text-center px-3 py-2`}
+                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Cutout (mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  : ''} `}
                     >
                       {item.spec10}
                     </td>
@@ -789,6 +789,7 @@ const Indoorlights = () => {
                 ))}
               </tbody>
               </table>
+              </div>
               {/* <table
                 style={customStyles}
                 className="border border-black sm:ml-0 ml-auto w-full"
