@@ -75,11 +75,11 @@ export const IndoorDL228 = () => {
     {
       name: "Dimension(mm)",
       spec1: "Ø65*157",
-      spec2: "Ø65*157",
+      spec2: "",
       spec3: "Ø85*178",
-      spec4: "Ø85*178",
+      spec4: "",
       spec5: "Ø100*211",
-      spec6: "Ø100*211",
+      spec6: "",
     },
     {
       name: "Watt(W)",
@@ -92,61 +92,61 @@ export const IndoorDL228 = () => {
     },
     {
       name: "Rated Input Voltage(V)",
-      spec1: "AC230V",
-      spec2: "AC230V",
-      spec3: "AC230V",
-      spec4: "AC230V",
-      spec5: "AC230V",
-      spec6: "AC230V",
+      spec1: <p className="w-[500px]">AC230V</p> ,
+      spec2: "",
+      spec3: "",
+      spec4: "",
+      spec5: "",
+      spec6: "",
      
     },
     {
       name: "Input Voltage(V)",
-      spec1: "AC200-240V",
-      spec2: "AC200-240V",
-      spec3: "AC200-240V",
-      spec4: "AC200-240V",
-      spec5: "AC200-240V",
-      spec6: "AC200-240V",
+      spec1: <p className="w-[500px]">AC200-240V</p>,
+      spec2: "",
+      spec3: "",
+      spec4: "",
+      spec5: "",
+      spec6: "",
      
     },
     {
       name: "Light Source",
-      spec1: "COB",
-      spec2: "COB",
-      spec3: "COB",
-      spec4: "COB",
-      spec5: "COB",
-      spec6: "COB",
+      spec1: <p className="w-[500px]">COB</p>,
+      spec2: "",
+      spec3: "",
+      spec4: "",
+      spec5: "",
+      spec6: "",
      
     },
     {
       name: "SDCM",
-      spec1: "<6",
-      spec2: "<6",
-      spec3: "<6",
-      spec4: "<6",
-      spec5: "<6",
-      spec6: "<6",
+      spec1: <p className="w-[500px]">&lt;6</p>,
+      spec2: "",
+      spec3: "",
+      spec4: "",
+      spec5: "",
+      spec6: "",
 
     },
     {
       name: "CCT(K)",
-      spec1: "1-CCT: 2700K/3000K/4000K/5000K",
-      spec2: "1-CCT: 2700K/3000K/4000K/5000K",
-      spec3: "1-CCT: 2700K/3000K/4000K/5000K",
-      spec4: "1-CCT: 2700K/3000K/4000K/5000K",
-      spec5: "1-CCT: 2700K/3000K/4000K/5000K",
-      spec6: "1-CCT: 2700K/3000K/4000K/5000K",
+      spec1: <p className="w-[500px]">1-CCT: 2700K/3000K/4000K/5000K</p>,
+      spec2: "",
+      spec3: "",
+      spec4: "",
+      spec5: "",
+      spec6: "",
     },
     {
       name: "CCT Selection DIP Switch",
-      spec1: "NO",
-      spec2: "NO",
-      spec3: "NO",
-      spec4: "NO",
-      spec5: "NO",
-      spec6: "NO",
+      spec1: <p className="w-[500px]">NO</p>,
+      spec2: "",
+      spec3: "",
+      spec4: "",
+      spec5: "",
+      spec6: "",
     },
     {
       name: "Non-DIM  1-CCT Luminous Flux (lm) ±5%",
@@ -160,131 +160,131 @@ export const IndoorDL228 = () => {
     
     {
       name: "CRI",
-      spec1: "80(90/97 optional)",
-      spec2: "80(90/97 optional)",
-      spec3: "80(90/97 optional)",
-      spec4: "80(90/97 optional)",
-      spec5: "80(90/97 optional)",
-      spec6: "80(90/97 optional)",
+      spec1: <p className="w-[500px]">80(90/97 optional)</p>,
+      spec2: "",
+      spec3: "",
+      spec4: "",
+      spec5: "",
+      spec6: "",
      
     },
     {
       name: "Beam Angle (°)",
       spec1: "24° / 30° / 45°",
-      spec2: "24° / 30° / 45°",
-      spec3: "24° / 36° / 60°",
-      spec4: "24° / 36° / 60°",
-      spec5: "24° / 36° / 60°",
-      spec6: "24° / 36° / 60°",
+      spec2: "",
+      spec3: "24°/36°/60°",
+      spec4: "",
+      spec5: "",
+      spec6: "",
     },
     {
       name: "LED Driver",
-      spec1: "Built-in",
-      spec2: "Built-in",
-      spec3: "Built-in",
-      spec4: "Built-in",
-      spec5: "Built-in",
-      spec6: "Built-in",
+      spec1: <p className="w-[500px]">Built-in</p>,
+      spec2: "",
+      spec3: "",
+      spec4: "",
+      spec5: "",
+      spec6: "",
       
     },
     {
       name: "Electrical Class",
-      spec1: "Class I",
-      spec2: "Class I",
-      spec3: "Class I",
-      spec4: "Class I",
-      spec5: "Class I",
-      spec6: "Class I",
+      spec1: <p className="w-[500px]">Class I</p>,
+      spec2: "",
+      spec3: "",
+      spec4: "",
+      spec5: "",
+      spec6: "",
       
     },
     {
       name: "Ingress Protection (IP Rating)",
-      spec1: "IP20",
-      spec2: "IP20",
-      spec3: "IP20",
-      spec4: "IP20",
-      spec5: "IP20",
-      spec6: "IP20",
+      spec1: <p className="w-[500px]">IP20</p>,
+      spec2: "",
+      spec3: "",
+      spec4: "",
+      spec5: "",
+      spec6: "",
      
     },
     {
       name: "Product Finishing(Base)",
-      spec1: "White RAL 9016/Black RAL9005",
-      spec2: "White RAL 9016/Black RAL9005",
-      spec3: "White RAL 9016/Black RAL9005",
-      spec4: "White RAL 9016/Black RAL9005",
-      spec5: "White RAL 9016/Black RAL9005",
-      spec6: "White RAL 9016/Black RAL9005",
+      spec1: <p className="w-[500px]">White RAL 9016/Black RAL9005</p>,
+      spec2: "",
+      spec3: "",
+      spec4: "",
+      spec5: "",
+      spec6: "",
       
     },
     {
       name: "Materials of Optics",
-      spec1: "PMMA",
-      spec2: "PMMA",
-      spec3: "PMMA",
-      spec4: "PMMA",
-      spec5: "PMMA",
-      spec6: "PMMA",
+      spec1: <p className="w-[500px]">PMMA</p>,
+      spec2: "",
+      spec3: "",
+      spec4: "",
+      spec5: "",
+      spec6: "",
       
     },
     {
       name: "Materials of Housing",
-      spec1: "PC/Aluminum",
-      spec2: "PC/Aluminum",
-      spec3: "PC/Aluminum",
-      spec4: "PC/Aluminum",
-      spec5: "PC/Aluminum",
-      spec6: "PC/Aluminum",
+      spec1: <p className="w-[500px]">PC/Aluminum</p>,
+      spec2: "",
+      spec3: "",
+      spec4: "",
+      spec5: "",
+      spec6: "",
     
     },
     {
       name: "Lifetime (hr)",
-      spec1: "50,000h",
-      spec2: "50,000h",
-      spec3: "50,000h",
-      spec4: "50,000h",
-      spec5: "50,000h",
-      spec6: "50,000h",
+      spec1: <p className="w-[500px]">50,000h</p>,
+      spec2: "",
+      spec3: "",
+      spec4: "",
+      spec5: "",
+      spec6: "",
       
     },
     {
       name: "Glow wire test (C )",
-      spec1: "650°C",
-      spec2: "650°C",
-      spec3: "650°C",
-      spec4: "650°C",
-      spec5: "650°C",
-      spec6: "650°C",
-      
+      spec1: <p className="w-[500px]">650°C</p>,
+      spec2: "",
+      spec3: "",
+      spec4: "",
+      spec5: "",
+      spec6: "",
+    
     },
     {
       name: "Operating Temp. (C )",
-      spec1: "-20°C~40°C",
-      spec2: "-20°C~40°C",
-      spec3: "-20°C~40°C",
-      spec4: "-20°C~40°C",
-      spec5: "-20°C~40°C",
-      spec6: "-20°C~40°C",
+      spec1: <p className="w-[500px]">-20°C~40°C</p>,
+      spec2: "",
+      spec3: "",
+      spec4: "",
+      spec5: "",
+      spec6: "",
      
     },
     {
       name: "Storage Temp. (C )	",
-      spec1: "-20°C~65°C",
-      spec2: "-20°C~65°C",
-      spec3: "-20°C~65°C",
-      spec4: "-20°C~65°C",
-      spec5: "-20°C~65°C",
-      spec6: "-20°C~65°C",
+      spec1: <p className="w-[500px]">-20°C~65°C</p>,
+      spec2: "",
+      spec3: "",
+      spec4: "",
+      spec5: "",
+      spec6: "",
      
     },
     {
       name: "Installation",
-      spec1: "Surface mount",
-      spec2: "Surface mount",
-      spec3: "Surface mount",
-      spec4: "Surface mount",
-      spec5: "Surface mount",
-      spec6: "Surface mount",
+      spec1: <p className="w-[500px]">Surface mount</p>,
+      spec2: "",
+      spec3: "",
+      spec4: "",
+      spec5: "",
+      spec6: "",
      
     },
 
@@ -407,28 +407,28 @@ export const IndoorDL228 = () => {
           </div>
 
           <div className="w-full p-5 overflow-x-scroll drop-shadow-2xl">
-            <table className="border-collapse border border-black w-full" style={{tableLayout:"fixed"}}>
-              <thead>
+            <table className="border border-black xl:w-full w-[1400px]" style={{tableLayout:"fixed"}}>
+              <thead className="border-b border-gray-400">
                 <tr>
-                  <th className="border border-black text-xs px-3 py-2 text-start ">
+                  <th className="border-r border-black text-xs px-3 py-2 text-start ">
                     Model
                   </th>
-                  <th className="border border-gray-400 text-xs px-3 py-2">
+                  <th className="border-r border-gray-400 text-xs px-3 py-2">
                   DL228A-10W
                   </th>
-                  <th className="border border-gray-400 text-xs px-3 py-2">
+                  <th className="border-r border-gray-400 text-xs px-3 py-2">
                   DL228A-15W
                   </th>
-                  <th className="border border-gray-400 text-xs px-3 py-2">
+                  <th className="border-r border-gray-400 text-xs px-3 py-2">
                   DL228A-20W
                   </th>
-                  <th className="border border-gray-400 text-xs px-3 py-2">
+                  <th className="border-r border-gray-400 text-xs px-3 py-2">
                   DL228A-25W
                   </th>
-                  <th className="border border-gray-400 text-xs px-3 py-2">
+                  <th className="border-r border-gray-400 text-xs px-3 py-2">
                   DL228A-30W
                   </th>
-                  <th className="border border-gray-400 text-xs px-3 py-2">
+                  <th className="border-r border-gray-400 text-xs px-3 py-2">
                   DL228A-40W
                   </th>
                  
@@ -437,25 +437,85 @@ export const IndoorDL228 = () => {
               <tbody>
                 {Specification.map((item, index) => (
                   <tr key={index}>
-                    <td className="border border-black text-xs px-3 py-2 font-semibold overflow-x-auto">
+                    <td className="border-b border-t border-r border-black text-xs px-3 py-2 font-semibold ">
                       {item.name}
                     </td>
-                    <td className="border border-gray-400 text-xs px-3 py-2 overflow-x-auto">
+                    <td
+                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
+                        item.name === "Dimension(mm)"
+                          ? ""
+                          : item.name === "Watt(W)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  1-CCT Luminous Flux (lm) ±5%"
+                          ? "border-r" : ""
+                      }`}
+                    >
                       {item.spec1}
                     </td>
-                    <td className="border border-gray-400 text-xs px-3 py-2 overflow-x-auto">
+                    <td
+                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
+                        item.name === "Dimension(mm)"
+                          ? "border-r"
+                          : item.name === "Watt(W)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  1-CCT Luminous Flux (lm) ±5%"
+                          ? "border-r" : item.name === "Beam Angle (°)" ? "border-r" : ""
+                      }`}
+                    >
                       {item.spec2}
                     </td>
-                    <td className="border border-gray-400 text-xs px-3 py-2 overflow-x-auto">
+                    <td
+                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
+                        item.name === "Dimension(mm)"
+                          ? ""
+                          : item.name === "Watt(W)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  1-CCT Luminous Flux (lm) ±5%"
+                          ? "border-r" :  ""
+                      }`}
+                    >
                       {item.spec3}
                     </td>
-                    <td className="border border-gray-400 text-xs px-3 py-2 overflow-x-auto">
+                    <td
+                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
+                        item.name === "Dimension(mm)"
+                          ? "border-r"
+                          : item.name === "Watt(W)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  1-CCT Luminous Flux (lm) ±5%"
+                          ? "border-r" : ""
+                      }`}
+                    >
                       {item.spec4}
                     </td>
-                    <td className="border border-gray-400 text-xs px-3 py-2 overflow-x-auto">
+                    <td
+                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
+                        item.name === "Dimension(mm)"
+                          ? ""
+                          : item.name === "Watt(W)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  1-CCT Luminous Flux (lm) ±5%"
+                          ? "border-r" : ""
+                      }`}
+                    >
                       {item.spec5}
                     </td>
-                    <td className="border border-gray-400 text-xs px-3 py-2 overflow-x-auto">
+                    <td
+                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
+                        item.name === "Dimension(mm)"
+                          ? "border-r"
+                          : item.name === "Watt(W)"
+                          ? "border-r"
+                          : item.name ===
+                            "Non-DIM  1-CCT Luminous Flux (lm) ±5%"
+                          ? "border-r" : ""
+                      }`}
+                    >
                       {item.spec6}
                     </td>
                   
