@@ -27,9 +27,9 @@ import series228pic2 from "../../assets/228seriespic2.png";
 import series228pic3 from "../../assets/228seriespic3.png";
 
 export const IndoorDL228 = () => {
-  //   React.useEffect(() => {
-  //     window.scrollTo(0, 0);
-  //   }, []);
+    React.useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
   const bgimages = [dl228light1, dl228light2, dl228light3, dl228light4];
 

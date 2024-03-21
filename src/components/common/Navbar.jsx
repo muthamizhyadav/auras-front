@@ -312,7 +312,7 @@ const Navbar = () => {
                 Linear Lights
               </Link>
               <Link
-                to="/products/outdoorlights"
+                to="/home/products/outdoorlights"
                 className="block px-4 py-2   hover:text-[#F2667C]"
                 onClick={cancelDropdownSmall}
               >

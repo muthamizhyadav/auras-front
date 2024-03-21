@@ -27,9 +27,9 @@ import series228pic2 from "../../assets/228seriespic2.png";
 import series228pic3 from "../../assets/228seriespic3.png";
 
 export const IndoorPD228 = () => {
-  //   React.useEffect(() => {
-  //     window.scrollTo(0, 0);
-  //   }, []);
+    React.useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
   const bgimages = [dl228light1, dl228light2, dl228light3, dl228light4];
 
@@ -953,6 +953,8 @@ export const IndoorPD228 = () => {
                           ? "border-r"
                           : item.name === "Non-DIM 3-CCT Luminous Flux (lm) ±5%"
                           ? "border-r"
+                          : item.name === "CCT Selection DIP Switch"
+                          ? "border-r"
                           : ""
                       }`}
                     >
@@ -968,6 +970,7 @@ export const IndoorPD228 = () => {
                           ? "border-r"
                           : item.name === "Non-DIM 3-CCT Luminous Flux (lm) ±5%"
                           ? "border-r"
+                          
                           : ""
                       }`}
                     >

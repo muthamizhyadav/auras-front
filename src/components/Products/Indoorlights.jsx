@@ -18,13 +18,13 @@ import overview from "../../assets/indoor light.png";
 import overview1 from "../../assets/overview (2).jpeg";
 
 const Indoorlights = () => {
-  // React.useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const Specification = [
     {
       title: "",
-      name: "Dimension(mm)",
+      name: "Dimension (mm)",
       spec1: "Ø110*51",
       spec2:"",
       spec3: "Ø150x64",
@@ -168,7 +168,7 @@ const Indoorlights = () => {
       name:"Non-DIM 1-CCT Luminous Flux (lm) ±5%（COB）",
       spec1:"950-1050",
       spec2:"1200-1350",
-      spec3: "",
+      spec3: "-",
       spec4: "",
       spec5: "",
       spec6: "",
@@ -195,7 +195,7 @@ const Indoorlights = () => {
       name:"DIM 1-CCT Luminous Flux (lm) ±5%（COB）",
       spec1:"850-960",
       spec2:"1080-1250",
-      spec3: "",
+      spec3: "-",
       spec4:"",
       spec5:"",
       spec6:"",

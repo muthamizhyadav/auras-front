@@ -28,9 +28,9 @@ import sizeoptions from "../../assets/foursizeoptions.png";
 import reflector from '../../assets/338pic2.png'
 
 export const Indoor338Series = () => {
-  //   React.useEffect(() => {
-  //     window.scrollTo(0, 0);
-  //   }, []);
+    React.useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
   const bgimages = [
     Indoorlights338series2,
