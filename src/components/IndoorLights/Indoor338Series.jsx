@@ -123,7 +123,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Input Voltage(V)",
-      spec1: <p className="w-[1000px]">AC220-240V</p>,
+      spec1: <p className="w-[500px]">AC220-240V</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -137,7 +137,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Light Source",
-      spec1: <p className="w-[1000px]">COB</p>,
+      spec1: <p className="w-[500px]">COB</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -151,7 +151,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "SDCM",
-      spec1: <p className="w-[1000px]">&lt;5</p>,
+      spec1: <p className="w-[500px]">&lt;5</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -166,7 +166,7 @@ export const Indoor338Series = () => {
     {
       name: "CCT(K)",
       spec1: (
-        <p className="w-[1000px]">
+        <p className="w-[500px]">
           1-CCT: 2700K/3000K/4000K/5000K//3-CCT: 3000K + 4000K + 5000K
         </p>
       ),
@@ -239,7 +239,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "CRI",
-      spec1: <p className="w-[1000px]"> 80/90/97(1-CCT) /90(3-CCT) </p>,
+      spec1: <p className="w-[500px]"> 80/90/97(1-CCT) /90(3-CCT) </p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -253,7 +253,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Beam Angle (°)",
-      spec1: <p className="w-[1000px]">24° / 36° / 60 </p>,
+      spec1: <p className="w-[500px]">24° / 36° / 60 </p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -267,7 +267,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "UGR",
-      spec1: <p className="w-[1000px]"> &lt; 19 / &lt; 22 </p>,
+      spec1: <p className="w-[500px]"> &lt; 19 / &lt; 22 </p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -281,7 +281,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "LED Driver",
-      spec1: <p className="w-[1000px]">Built-in</p>,
+      spec1: <p className="w-[500px]">Built-in</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -295,7 +295,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Dimming  Option",
-      spec1: <p className="w-[1000px]">Triac</p>,
+      spec1: <p className="w-[500px]">Triac</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -309,7 +309,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Electrical Class",
-      spec1: <p className="w-[1000px]">Class I</p>,
+      spec1: <p className="w-[500px]">Class I</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -323,7 +323,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Ingress Protection (IP Rating)",
-      spec1: <p className="w-[1000px]">IP20</p>,
+      spec1: <p className="w-[500px]">IP20</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -337,7 +337,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Product Finishing (Base)",
-      spec1: <p className="w-[1000px]">Black RAL9005/White RAL9016</p>,
+      spec1: <p className="w-[500px]">Black RAL9005/White RAL9016</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -351,7 +351,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Materials of Optics",
-      spec1: <p className="w-[1000px]">Aluminum+transparent tempered glass</p>,
+      spec1: <p className="w-[500px]">Aluminum+transparent tempered glass</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -365,7 +365,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Materials of Housing",
-      spec1: <p className="w-[1000px]">Aluminum</p>,
+      spec1: <p className="w-[500px]">Aluminum</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -379,7 +379,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Lifetime (hr)",
-      spec1: <p className="w-[1000px]">50,000h</p>,
+      spec1: <p className="w-[500px]">50,000h</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -393,7 +393,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Glow wire test (C )",
-      spec1: <p className="w-[1000px]">650°C</p>,
+      spec1: <p className="w-[500px]">650°C</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -407,7 +407,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Operating Temp. (C )",
-      spec1: <p className="w-[1000px]">-20°C~40°C</p>,
+      spec1: <p className="w-[500px]">-20°C~40°C</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -421,7 +421,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Storage Temp. (C )	",
-      spec1: <p className="w-[1000px]">-20°C~60°C</p>,
+      spec1: <p className="w-[500px]">-20°C~60°C</p>,
       spec2: "",
       spec3: "",
       spec4: "",
@@ -435,7 +435,7 @@ export const Indoor338Series = () => {
     },
     {
       name: "Installation",
-      spec1: <p className="w-[1000px]">Surface mount/Pendant/Recessed/Track</p>,
+      spec1: <p className="w-[500px]">Surface mount/Pendant/Recessed/Track</p>,
       spec2: "",
       spec3: "",
       spec4: "",

@@ -6,7 +6,7 @@ import dl228light4 from "../../assets/DL228A-4.jpg";
 import img1 from "../../assets/light2.jpg";
 import { FaChevronRight } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
-import product1 from "../../assets/Linear Light L Series.pdf";
+import product1 from "../../assets/228Series.pdf";
 import line1 from "../../assets/line1.png";
 import { FaGreaterThanEqual } from "react-icons/fa6";
 import imagecontent1 from "../../assets/imagecontent 1.png";
@@ -18,19 +18,20 @@ import linearoutline from "../../assets/linearouline.png";
 import { Explore } from "../Products/Explore";
 import { TfiClose } from "react-icons/tfi";
 import { GrNext, GrPrevious } from "react-icons/gr";
+import dl228a from "../../assets/dl228a.png";
+import dl228b from "../../assets/dl228b.png";
+import pd228 from "../../assets/pd228.png";
+import tl228 from "../../assets/tl228.png";
+import series228pic1 from "../../assets/228seriespic1.png";
+import series228pic2 from "../../assets/228seriespic2.png";
+import series228pic3 from "../../assets/228seriespic3.png";
 
 export const IndoorDL228 = () => {
   //   React.useEffect(() => {
   //     window.scrollTo(0, 0);
   //   }, []);
 
-  const bgimages = [
-    dl228light1,
-    dl228light2,
-    dl228light3,
-    dl228light4,
-
-  ];
+  const bgimages = [dl228light1, dl228light2, dl228light3, dl228light4];
 
   const [bgimage, Setbgimage] = React.useState(bgimages);
   const [index, SetIndex] = React.useState(0);
@@ -98,7 +99,6 @@ export const IndoorDL228 = () => {
       spec4: "AC230V",
       spec5: "AC230V",
       spec6: "AC230V",
-     
     },
     {
       name: "Input Voltage(V)",
@@ -108,7 +108,6 @@ export const IndoorDL228 = () => {
       spec4: "AC200-240V",
       spec5: "AC200-240V",
       spec6: "AC200-240V",
-     
     },
     {
       name: "Light Source",
@@ -118,7 +117,6 @@ export const IndoorDL228 = () => {
       spec4: "COB",
       spec5: "COB",
       spec6: "COB",
-     
     },
     {
       name: "SDCM",
@@ -128,7 +126,6 @@ export const IndoorDL228 = () => {
       spec4: "<6",
       spec5: "<6",
       spec6: "<6",
-
     },
     {
       name: "CCT(K)",
@@ -157,7 +154,7 @@ export const IndoorDL228 = () => {
       spec5: "2650-3050",
       spec6: "3550-4200",
     },
-    
+
     {
       name: "CRI",
       spec1: "80(90/97 optional)",
@@ -166,7 +163,6 @@ export const IndoorDL228 = () => {
       spec4: "80(90/97 optional)",
       spec5: "80(90/97 optional)",
       spec6: "80(90/97 optional)",
-     
     },
     {
       name: "Beam Angle (°)",
@@ -185,7 +181,6 @@ export const IndoorDL228 = () => {
       spec4: "Built-in",
       spec5: "Built-in",
       spec6: "Built-in",
-      
     },
     {
       name: "Electrical Class",
@@ -195,7 +190,6 @@ export const IndoorDL228 = () => {
       spec4: "Class I",
       spec5: "Class I",
       spec6: "Class I",
-      
     },
     {
       name: "Ingress Protection (IP Rating)",
@@ -205,7 +199,6 @@ export const IndoorDL228 = () => {
       spec4: "IP20",
       spec5: "IP20",
       spec6: "IP20",
-     
     },
     {
       name: "Product Finishing(Base)",
@@ -215,7 +208,6 @@ export const IndoorDL228 = () => {
       spec4: "White RAL 9016/Black RAL9005",
       spec5: "White RAL 9016/Black RAL9005",
       spec6: "White RAL 9016/Black RAL9005",
-      
     },
     {
       name: "Materials of Optics",
@@ -225,7 +217,6 @@ export const IndoorDL228 = () => {
       spec4: "PMMA",
       spec5: "PMMA",
       spec6: "PMMA",
-      
     },
     {
       name: "Materials of Housing",
@@ -235,7 +226,6 @@ export const IndoorDL228 = () => {
       spec4: "PC/Aluminum",
       spec5: "PC/Aluminum",
       spec6: "PC/Aluminum",
-    
     },
     {
       name: "Lifetime (hr)",
@@ -245,7 +235,6 @@ export const IndoorDL228 = () => {
       spec4: "50,000h",
       spec5: "50,000h",
       spec6: "50,000h",
-      
     },
     {
       name: "Glow wire test (C )",
@@ -255,7 +244,6 @@ export const IndoorDL228 = () => {
       spec4: "650°C",
       spec5: "650°C",
       spec6: "650°C",
-      
     },
     {
       name: "Operating Temp. (C )",
@@ -265,7 +253,6 @@ export const IndoorDL228 = () => {
       spec4: "-20°C~40°C",
       spec5: "-20°C~40°C",
       spec6: "-20°C~40°C",
-     
     },
     {
       name: "Storage Temp. (C )	",
@@ -275,7 +262,6 @@ export const IndoorDL228 = () => {
       spec4: "-20°C~65°C",
       spec5: "-20°C~65°C",
       spec6: "-20°C~65°C",
-     
     },
     {
       name: "Installation",
@@ -285,10 +271,7 @@ export const IndoorDL228 = () => {
       spec4: "Surface mount",
       spec5: "Surface mount",
       spec6: "Surface mount",
-     
     },
-
-   
   ];
 
   return (
@@ -308,41 +291,41 @@ export const IndoorDL228 = () => {
         </div>
 
         <section className="">
-        {previewIndex !== null && (
-              <div
-                onClick={handleCloseOutsideClick}
-                className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50"
+          {previewIndex !== null && (
+            <div
+              onClick={handleCloseOutsideClick}
+              className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50"
+            >
+              <button
+                className=" w-10 text-white flex justify-center items-center  text-xl"
+                onClick={handlePrevClick}
               >
-                <button
-                  className=" w-10 text-white flex justify-center items-center  text-xl"
-                  onClick={handlePrevClick}
-                >
-                  <GrPrevious className="" />
-                </button>
+                <GrPrevious className="" />
+              </button>
 
-                <div className="relative w-64 h-64 previewxs:w-80 previewxs:h-80 md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] xl:w-[550px] xl:h-[550px] flex flex-col justify-center items-center">
-                  <div className=" bg-white">
-                    <img
-                      className="w-full h-full "
-                      src={bgimage[previewIndex]}
-                      alt="preview"
-                    />
-                  </div>
-                  <button
-                    className="absolute right-3 xl:top-20 top-14 cursor-pointer text-black bg-white rounded-full p-1"
-                    onClick={handleClosePreview}
-                  >
-                    <TfiClose />
-                  </button>
+              <div className="relative w-64 h-64 previewxs:w-80 previewxs:h-80 md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] xl:w-[550px] xl:h-[550px] flex flex-col justify-center items-center">
+                <div className=" bg-white">
+                  <img
+                    className="w-full h-full "
+                    src={bgimage[previewIndex]}
+                    alt="preview"
+                  />
                 </div>
                 <button
-                  className=" w-10 text-white flex justify-center items-center  text-xl"
-                  onClick={handleNextClick}
+                  className="absolute right-3 xl:top-20 top-14 cursor-pointer text-black bg-white rounded-full p-1"
+                  onClick={handleClosePreview}
                 >
-                  <GrNext />
+                  <TfiClose />
                 </button>
               </div>
-            )}
+              <button
+                className=" w-10 text-white flex justify-center items-center  text-xl"
+                onClick={handleNextClick}
+              >
+                <GrNext />
+              </button>
+            </div>
+          )}
           <div className=" bg-[#F3F3F3] py-5 lg:py-8 md:bg-Bannerbg bg-contain w-full px-5 sm:px-14 flex md:flex-row flex-col md:gap-3 gap-10">
             <div className="relative w-full md:w-[42%] lg:w-[37%]">
               <div
@@ -357,7 +340,7 @@ export const IndoorDL228 = () => {
             </div>
             <div className=" w-full md:w-[58%] lg:w-[63%]   sm:pl-0 capitalize">
               <p className="text-base xs:text-lg lg:text-2xl font-medium lg:pl-[22%] md:pl-10  border-b-[1.5px] border-[#F2667C] md:border-none mb-5">
-              DL228A Anti-glare Lens Design Surface Mounted Spotlight
+                DL228A Anti-glare Lens Design Surface Mounted Spotlight
               </p>
               <img
                 src={line1}
@@ -367,19 +350,26 @@ export const IndoorDL228 = () => {
               <div className="md:text-xs  lg:text-[13px]  leading-7  md:leading-7 text-[#666666] lg:pl-[24%] md:pl-10 pl-4">
                 <ul className="list-disc">
                   <p className="-ml-4 pb-5">
-                   DL228A Anti-glare Lens Design Surface Mounted SpotlightThis downlight is an anti-glare design. High lumen COB chip and PMMA lens offer a uniform lighting output. AL6063 aluminum lamp body provides excellent heat dissipation. Special lens design reaches anti-glare effect and creates a comfortable visual experience. Multiple beam angle lens optional, modular lens design make a convenient maintenance. Easy installation, recreational for various application.
+                    DL228A Anti-glare Lens Design Surface Mounted SpotlightThis
+                    downlight is an anti-glare design. High lumen COB chip and
+                    PMMA lens offer a uniform lighting output. AL6063 aluminum
+                    lamp body provides excellent heat dissipation. Special lens
+                    design reaches anti-glare effect and creates a comfortable
+                    visual experience. Multiple beam angle lens optional,
+                    modular lens design make a convenient maintenance. Easy
+                    installation, recreational for various application.
                   </p>
-                  <p className="-ml-4">Integrated COB spot downlight features:</p>
+                  <p className="-ml-4">
+                    Integrated COB spot downlight features:
+                  </p>
+                  <li className="">Anti-glare design.</li>
+                  <li className="">CRI80/90/97 available.</li>
                   <li className="">
-                  Anti-glare design.
+                    {" "}
+                    Modular lens design: 30°/45°for 10W, 36°/60°for 20W and
+                    above.
                   </li>
-                  <li className="">
-                  CRI80/90/97 available.
-                  </li>
-                  <li className="">  Modular lens design: 30°/45°for 10W, 36°/60°for 20W and above.</li>
-                  <li>
-                  SDCM &lt; 6.
-                  </li>
+                  <li>SDCM &lt; 6.</li>
                   <li>Flicker free internal driver.</li>
                 </ul>
               </div>
@@ -407,31 +397,33 @@ export const IndoorDL228 = () => {
           </div>
 
           <div className="w-full p-5 overflow-x-scroll drop-shadow-2xl">
-            <table className="border-collapse border border-black w-full" style={{tableLayout:"fixed"}}>
+            <table
+              className="border-collapse border border-black w-full"
+              style={{ tableLayout: "fixed" }}
+            >
               <thead>
                 <tr>
                   <th className="border border-black text-xs px-3 py-2 text-start ">
                     Model
                   </th>
                   <th className="border border-gray-400 text-xs px-3 py-2">
-                  DL228A-10W
+                    DL228A-10W
                   </th>
                   <th className="border border-gray-400 text-xs px-3 py-2">
-                  DL228A-15W
+                    DL228A-15W
                   </th>
                   <th className="border border-gray-400 text-xs px-3 py-2">
-                  DL228A-20W
+                    DL228A-20W
                   </th>
                   <th className="border border-gray-400 text-xs px-3 py-2">
-                  DL228A-25W
+                    DL228A-25W
                   </th>
                   <th className="border border-gray-400 text-xs px-3 py-2">
-                  DL228A-30W
+                    DL228A-30W
                   </th>
                   <th className="border border-gray-400 text-xs px-3 py-2">
-                  DL228A-40W
+                    DL228A-40W
                   </th>
-                 
                 </tr>
               </thead>
               <tbody>
@@ -458,11 +450,32 @@ export const IndoorDL228 = () => {
                     <td className="border border-gray-400 text-xs px-3 py-2 overflow-x-auto">
                       {item.spec6}
                     </td>
-                  
                   </tr>
                 ))}
               </tbody>
             </table>
+          </div>
+        </div>
+      </div>
+      <div className="flex lg:flex-row flex-col justify-center gap-10 lg:gap-0 lg:justify-evenly items-center pt-10">
+        <img src={series228pic1} alt="" className="w-96 lg:px-0 px-10" />
+        <section className="flex flex-col gap-10 p-4">
+          <img src={series228pic2} className="w-80" alt="" />
+          <img src={series228pic3} className="w-80" alt="" />
+        </section>
+      </div>
+      <div className=" p-5 ">
+        <div className="flex sm:px-14 px-4 sm:flex-row flex-col gap-10 items-center justify-center">
+          <img src={dl228a} alt="" className="w-24 h-24" />
+
+          <div className="sm:w-[90%]">
+            <p className="font-medium pb-2">DL228A</p>
+            <p className="text-[12px]">
+              DL228A adopt high lumen COB chip and PMMA lens for uniform light
+              effect and enhanced glare control. Aluminum profile with
+              sufficient heat dissipation guarantee long lifespan. It offers a
+              wide choice of beam angles 24°/30°/36°/45°/60° for optional.
+            </p>
           </div>
         </div>
       </div>
