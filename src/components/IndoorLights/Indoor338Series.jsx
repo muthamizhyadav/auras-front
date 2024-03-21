@@ -930,11 +930,11 @@ export const Indoor338Series = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-evenly items-center py-10">
-        <img src={seriespic} alt="" className="w-96"/>
+      <div className="flex lg:flex-row flex-col justify-center gap-10 lg:gap-0 lg:justify-evenly items-center py-10">
+        <img src={seriespic} alt="" className="w-96 lg:px-0 px-10"/>
         <section className="flex flex-col gap-10">
           <div>
-            <div className="flex gap-8">
+            <div className="flex sm:flex-row flex-col items-center sm:items-start gap-8">
               <div>
                 <h2 className="font-medium text-sm pl-3">Four size options :</h2>
                 <img src={sizeoptions} alt="" className="w-52" />
@@ -946,10 +946,10 @@ export const Indoor338Series = () => {
             </div>
           </div>
           <div>
-            <div className="flex gap-8">
+            <div className="flex  sm:flex-row flex-col items-center sm:items-start  gap-8">
               <div>
                 <h2 className="font-medium text-sm pl-3">Replaceable reflector :</h2>
-                <img src={reflector} alt="" className="w-52" />
+                <img src={reflector} alt="" className="w-52 mt-4" />
               </div>
               <div className="space-y-3">
                 <h2 className="font-medium text-sm pl-3">Power adjustable :</h2>

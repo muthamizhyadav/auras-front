@@ -897,7 +897,7 @@ export const IndoorPD228 = () => {
                   <li className=""> Modular lens design: 24°/36°/60°.</li>
                   <li>Flicker free internal driver.</li>
                   <li>Dimming way: Non-dim, triac dim, DALI dim.</li>
-                  <p className="pt-5">
+                  <p className="pt-5 -ml-4">
                   Application Areas: Applicable for residential lighting in bedrooms, living rooms, corridor etc, also suitable for commercial lighting in office, hotel, restaurant etc.
                   </p>
                 </ul>
