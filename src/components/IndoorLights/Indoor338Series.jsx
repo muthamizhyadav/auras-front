@@ -82,16 +82,16 @@ export const Indoor338Series = () => {
     {
       name: "Dimension (mm)",
       spec1: "55*160",
-      spec2: "55*160",
+      spec2: "",
       spec3: "65*180",
-      spec4: "65*180",
-      spec5: "65*180",
+      spec4: "",
+      spec5: "",
       spec6: "85*206",
-      spec7: "85*206",
-      spec8: "85*206",
+      spec7: "",
+      spec8: "",
       spec9: "100*220",
-      spec10: "100*220",
-      spec11: "100*220",
+      spec10: "",
+      spec11: "",
     },
     {
       name: "Watt(W)",
@@ -672,9 +672,8 @@ export const Indoor338Series = () => {
                     </td>
                     <td
                       className={` border-b border-gray-400 text-xs px-3 py-2   ${
-                        item.name === "Dimension (mm)"
-                          ? "border-r"
-                          : item.name === "Watt(W)"
+                       
+                           item.name === "Watt(W)"
                           ? "border-r"
                           : item.name ===
                             "Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)"
@@ -719,7 +718,7 @@ export const Indoor338Series = () => {
                     <td
                       className={` border-b border-gray-400 text-xs px-3 py-2   ${
                         item.name === "Dimension (mm)"
-                          ? "border-r"
+                          ? ""
                           : item.name === "Watt(W)"
                           ? "border-r"
                           : item.name ===
@@ -741,9 +740,7 @@ export const Indoor338Series = () => {
                     </td>
                     <td
                       className={` border-b border-gray-400 text-xs px-3 py-2   ${
-                        item.name === "Dimension (mm)"
-                          ? "border-r"
-                          : item.name === "Watt(W)"
+                         item.name === "Watt(W)"
                           ? "border-r"
                           : item.name ===
                             "Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)"
@@ -788,7 +785,7 @@ export const Indoor338Series = () => {
                     <td
                       className={` border-b border-gray-400 text-xs px-3 py-2   ${
                         item.name === "Dimension (mm)"
-                          ? "border-r"
+                          ? ""
                           : item.name === "Watt(W)"
                           ? "border-r"
                           : item.name ===
@@ -811,7 +808,7 @@ export const Indoor338Series = () => {
                     <td
                       className={` border-b border-gray-400 text-xs px-3 py-2   ${
                         item.name === "Dimension (mm)"
-                          ? "border-r"
+                          ? ""
                           : item.name === "Watt(W)"
                           ? "border-r"
                           : item.name ===
@@ -857,7 +854,7 @@ export const Indoor338Series = () => {
                     <td
                       className={` border-b border-gray-400 text-xs px-3 py-2   ${
                         item.name === "Dimension (mm)"
-                          ? "border-r"
+                          ? ""
                           : item.name === "Watt(W)"
                           ? "border-r"
                           : item.name ===
@@ -880,7 +877,7 @@ export const Indoor338Series = () => {
                     <td
                       className={` border-b border-gray-400 text-xs px-3 py-2   ${
                         item.name === "Dimension (mm)"
-                          ? "border-r"
+                          ? ""
                           : item.name === "Watt(W)"
                           ? "border-r"
                           : item.name ===
