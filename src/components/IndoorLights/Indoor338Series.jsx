@@ -490,7 +490,7 @@ export const Indoor338Series = () => {
               &nbsp; Products &nbsp;{" "}
               <FaChevronRight className=" sm:size-3 size-2" /> &nbsp; Indoor
               Lights &nbsp; <FaChevronRight className=" sm:size-3 size-2" />{" "}
-              &nbsp; 338-series
+              &nbsp; 338 Series
             </p>
           </div>
         </div>
@@ -543,9 +543,9 @@ export const Indoor338Series = () => {
                 onClick={() => handleThumbnailClick(index)}
               />
             </div>
-            <div className=" w-full md:w-[58%] lg:w-[63%]   sm:pl-0 capitalize">
+            <div className=" w-full md:w-[58%] lg:w-[63%]   sm:pl-0 ">
               <p className="text-base xs:text-lg lg:text-2xl font-medium lg:pl-[22%] md:pl-10  border-b-[1.5px] border-[#F2667C] md:border-none mb-5">
-                338 Series Pandent light/Track lighti/ Downlight
+                338 Series Pandent light/Track lights/ Downlight
               </p>
               <img
                 src={line1}
@@ -554,7 +554,7 @@ export const Indoor338Series = () => {
               />
               <div className="md:text-xs  lg:text-[13px]  leading-7  md:leading-7 text-[#666666] lg:pl-[24%] md:pl-10 pl-4">
                 <ul className="list-disc">
-                  <p className="-ml-4 pb-5">
+                  <p className="-ml-4 pb-5 text-justify">
                     This is a DIY modular series with an exquisite appearance
                     and anti-glare UGR19 design. It shares one module lamp body
                     but compatible with 6 kinds of installation
@@ -587,7 +587,7 @@ export const Indoor338Series = () => {
                     Internal flicker free driver for on/off, Triac dim and DALI
                     dim (except Ø55mm module).
                   </li>
-                  <p className="-ml-4 pt-5">
+                  <p className="-ml-4 pt-5 text-justify">
                     Application Areas：Applicable for commercial lighting in
                     office, hotel, restaurant, shops, supermarket, art-gallery,
                     museum, etc; Also suitable for residential lighting for
@@ -618,7 +618,7 @@ export const Indoor338Series = () => {
             </p>
           </div>
 
-          <div className="w-full p-5 overflow-x-scroll drop-shadow-2xl">
+          <div className="w-full  overflow-x-scroll drop-shadow-2xl">
             <table
               className=" border border-black xl:w-full w-[1400px]"
               style={{ tableLayout: "fixed" }}
@@ -928,28 +928,28 @@ export const Indoor338Series = () => {
         </div>
       </div>
       <div className="flex lg:flex-row flex-col justify-center gap-10 lg:gap-0 lg:justify-evenly items-center py-10">
-        <img src={seriespic} alt="" className="w-96 lg:px-0 px-10"/>
+        <img src={seriespic} alt="" className="w-96 lg:px-0 px-5"/>
         <section className="flex flex-col gap-10">
           <div>
             <div className="flex sm:flex-row flex-col items-center sm:items-start gap-8">
               <div>
-                <h2 className="font-medium text-sm pl-3">Four size options :</h2>
-                <img src={sizeoptions} alt="" className="w-52" />
+                <h2 className="font-medium text-sm sm:pl-3">Four size options :</h2>
+                <img src={sizeoptions} alt="" className="sm:w-52 w-64" />
               </div>
               <div>
-                <h2 className="font-medium text-sm pl-3">3-CCT changeable :</h2>
-                <img src={changable} alt="" className="w-52 mt-4" />
+                <h2 className="font-medium text-sm sm:pl-3">3-CCT changeable :</h2>
+                <img src={changable} alt="" className="sm:w-52 w-64 mt-4" />
               </div>
             </div>
           </div>
           <div>
             <div className="flex  sm:flex-row flex-col items-center sm:items-start  gap-8">
               <div>
-                <h2 className="font-medium text-sm pl-3">Replaceable reflector :</h2>
-                <img src={reflector} alt="" className="w-52 mt-4" />
+                <h2 className="font-medium text-sm sm:pl-3">Replaceable reflector :</h2>
+                <img src={reflector} alt="" className="sm:w-52 w-64 mt-4" />
               </div>
               <div className="space-y-3">
-                <h2 className="font-medium text-sm pl-3">Power adjustable :</h2>
+                <h2 className="font-medium text-sm sm:pl-3 text-center">Power adjustable :</h2>
                 <div className="pl-3 space-y-1 mt-4">
                 <p className="text-xs">Ø65mm :10W/12W/15W</p>
                 <p className="text-xs">Ø85mm :15W/20W/25W</p>
@@ -961,7 +961,7 @@ export const Indoor338Series = () => {
         </section>
       </div>
       <div className="py-5 p-5 ">
-        <h2 className="font-semibold sm:text-xl py-5 text-center">
+        <h2 className="font-bold sm:text-xl py-5 text-center">
           338 SERIES
         </h2>
 
@@ -971,9 +971,9 @@ export const Indoor338Series = () => {
               <img src={dl338} alt="" className="w-24 h-24" />
             </div>
             <div className="sm:w-[70%]">
-              <ul className="flex flex-col justify-center items-center sm:justify-start sm:items-start gap-2">
+              <ul className="flex flex-col text-justify justify-center items-center sm:justify-start sm:items-start gap-2">
                 <p className="font-medium">DL338</p>
-                <li className="text-[12px] w-[90%]">
+                <li className="text-[12px] w-[95%]">
                   DL338 is a DIY modular series with an exquisite appearance and
                   anti-glare UGR19 design, 6 kinds of installation ways, 3
                   reflectors and 3 front ring colors can be exchangeable. It
@@ -991,9 +991,9 @@ export const Indoor338Series = () => {
               <img src={dl338ab} alt="" className="w-24 h-24" />
             </div>
             <div className="sm:w-[70%]">
-              <ul className=" flex flex-col justify-center items-center sm:justify-start sm:items-start gap-2">
+              <ul className=" flex flex-col text-justify justify-center items-center sm:justify-start sm:items-start gap-2">
                 <p className="font-medium">DL338A/B</p>
-                <li className="text-[12px] w-[90%]">
+                <li className="text-[12px] w-[95%]">
                   DL338A/B is a DIY modular series with an exquisite appearance
                   and anti-glare UGR19 design, 6 kinds of installation ways, 3
                   reflectors and 3 front ring colors can be exchangeable. It
@@ -1011,9 +1011,9 @@ export const Indoor338Series = () => {
               <img src={pd338} alt="" className="w-24 h-24" />
             </div>
             <div className="sm:w-[70%]">
-              <ul className="  flex flex-col justify-center items-center sm:justify-start sm:items-start gap-2">
+              <ul className="  flex flex-col text-justify justify-center items-center sm:justify-start sm:items-start gap-2">
                 <p className="font-medium">PD338A/B</p>
-                <li className="text-[12px] w-[90%]">
+                <li className="text-[12px] w-[95%]">
                   PD338A/B is a DIY modular series with an exquisite appearance
                   and anti-glare UGR19 design, 6 kinds of installation ways, 3
                   reflectors and 3 front ring colors can be exchangeable. It
@@ -1031,9 +1031,9 @@ export const Indoor338Series = () => {
               <img src={tl338} alt="" className="w-24 h-24 " />
             </div>
             <div className="sm:w-[70%]">
-              <ul className="flex flex-col justify-center items-center sm:justify-start sm:items-start gap-2">
+              <ul className="flex flex-col text-justify justify-center items-center sm:justify-start sm:items-start gap-2">
                 <p className="font-medium">TL338</p>
-                <li className="text-[12px] w-[90%]">
+                <li className="text-[12px] w-[95%]">
                   TL338 is a DIY modular series with an exquisite appearance and
                   anti-glare UGR19 design, 6 kinds of installation ways, 3
                   reflectors and 3 front ring colors can be exchangeable. It

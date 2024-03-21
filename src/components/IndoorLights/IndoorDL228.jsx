@@ -354,7 +354,7 @@ export const IndoorDL228 = () => {
                 onClick={() => handleThumbnailClick(index)}
               />
             </div>
-            <div className=" w-full md:w-[58%] lg:w-[63%]   sm:pl-0 capitalize">
+            <div className=" w-full md:w-[58%] lg:w-[63%]   sm:pl-0 ">
               <p className="text-base xs:text-lg lg:text-2xl font-medium lg:pl-[22%] md:pl-10  border-b-[1.5px] border-[#F2667C] md:border-none mb-5">
                 DL228A Anti-glare Lens Design Surface Mounted Spotlight
               </p>
@@ -365,7 +365,7 @@ export const IndoorDL228 = () => {
               />
               <div className="md:text-xs  lg:text-[13px]  leading-7  md:leading-7 text-[#666666] lg:pl-[24%] md:pl-10 pl-4">
                 <ul className="list-disc">
-                  <p className="-ml-4 pb-5">
+                  <p className="-ml-4 pb-5 text-justify">
                     DL228A Anti-glare Lens Design Surface Mounted SpotlightThis
                     downlight is an anti-glare design. High lumen COB chip and
                     PMMA lens offer a uniform lighting output. AL6063 aluminum
@@ -404,7 +404,7 @@ export const IndoorDL228 = () => {
         </section>
       </section>
 
-      <div className="w-full md:px-14 px-5 rounded-t-xl py-5">
+      <div className="w-full md:px-14  rounded-t-xl py-5">
         <div className="">
           <div className="">
             <p className="text-center font-semibold text-xl py-5">
@@ -531,19 +531,19 @@ export const IndoorDL228 = () => {
         </div>
       </div>
       <div className="flex lg:flex-row flex-col justify-center gap-10 lg:gap-0 lg:justify-evenly items-center pt-10">
-        <img src={series228pic1} alt="" className="w-96 lg:px-0 px-10" />
+        <img src={series228pic1} alt="" className="w-96 lg:px-0 px-5" />
         <section className="flex flex-col gap-10 p-4">
           <img src={series228pic2} className="w-80" alt="" />
           <img src={series228pic3} className="w-80" alt="" />
         </section>
       </div>
       <div className=" p-5 ">
-        <div className="flex sm:px-14 px-4 sm:flex-row flex-col gap-10 items-center justify-center">
+        <div className="flex sm:px-14 sm:flex-row flex-col gap-10 items-center justify-center">
           <img src={dl228a} alt="" className="w-24 h-24" />
 
           <div className="sm:w-[90%]">
-            <p className="font-medium pb-2">DL228A</p>
-            <p className="text-[12px]">
+            <p className="font-medium pb-2 text-center">DL228A</p>
+            <p className="text-[12px] text-justify">
               DL228A adopt high lumen COB chip and PMMA lens for uniform light
               effect and enhanced glare control. Aluminum profile with
               sufficient heat dissipation guarantee long lifespan. It offers a

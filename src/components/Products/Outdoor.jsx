@@ -489,14 +489,14 @@ const Outdoor = () => {
       </section>
 
       {/* second section */}
-      <div className="w-full md:px-14 px-5 rounded-t-xl lg:pt-5">
+      <div className="w-full md:px-14 rounded-t-xl px-5 lg:pt-5">
         <div className=" ">
           <p className="text-center font-semibold text-lg py-5">
             Material Specifications
           </p>
         </div>
         <div className=" shadow-2xl drop-shadow-2xl ">
-          <div className="bg-white flex flex-col justify-center items-center rounded-b-xl py-5 px-10 overflow-x-scroll ">
+          <div className="bg-white flex flex-col justify-center items-center rounded-b-xl py-5 px-5 overflow-x-scroll ">
             <table
               style={customStyles}
               className="border border-black  ml-auto"
@@ -597,7 +597,7 @@ const Outdoor = () => {
                     </div>
                 </div> */}
         <div className="shadow-2xl drop-shadow-2xl">
-          <div className="bg-white flex flex-col justify-center items-center py-5 px-10 ">
+          <div className="bg-white flex flex-col justify-center items-center py-5 px-5 ">
             <DataTable
               columns={columns2}
               data={data2}

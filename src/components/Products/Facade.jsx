@@ -309,7 +309,7 @@ export const Facade = () => {
                 onClick={() => handleThumbnailClick(index)}
               />
             </div>
-            <div className=" w-full md:w-[58%] lg:w-[63%]   sm:pl-0 capitalize">
+            <div className=" w-full md:w-[58%] lg:w-[63%]   sm:pl-0 ">
               <p className="text-base xs:text-lg lg:text-2xl font-medium lg:pl-[22%] md:pl-10  border-b-[1.5px] border-[#F2667C] md:border-none mb-5">
                 F21 Mono color series led neon flex
               </p>
@@ -364,7 +364,7 @@ export const Facade = () => {
                 Technical Specification
               </p>
             </div>
-            <div className="bg-white flex flex-col  py-5 px-10 shadow-2xl drop-shadow-2xl overflow-x-scroll">
+            <div className="bg-white flex flex-col  py-5 px-5 shadow-2xl drop-shadow-2xl overflow-x-scroll">
               <div className="w-fit">
                 <table className="border-collapse border border-black">
                   <thead>
@@ -484,9 +484,9 @@ export const Facade = () => {
           <h2 className="text-center text-xl font-semibold">
             White Color Charts
           </h2>{" "}
-          <div className="flex md:flex-row flex-col px-5">
+          <div className="flex md:flex-row flex-col ">
             <div>
-              <p className="md:px-32 px-5">White Color Charts</p>
+              <p className="md:px-32 md:text-start text-center">White Color Charts</p>
               <div className="flex flex-col justify-between items-center">
                 <img
                   src={whiteChart}
@@ -496,7 +496,7 @@ export const Facade = () => {
               </div>
             </div>
             <div>
-              <p className="md:px-32 px-5">Photometric <br/> F21-24V-5050-60-12W-3000K</p>
+              <p className="md:px-32 md:text-start text-center">Photometric <br/> F21-24V-5050-60-12W-3000K</p>
               <div className="flex flex-col justify-between items-center">
                 <img
                   src={whiteChart1}

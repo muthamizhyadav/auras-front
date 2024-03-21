@@ -603,7 +603,7 @@ const Indoorlights = () => {
                   onClick={() => handleThumbnailClick(index)}
                 />
               </div>
-              <div className=" w-full md:w-[58%] lg:w-[63%]   sm:pl-0 capitalize">
+              <div className=" w-full md:w-[58%] lg:w-[63%]   sm:pl-0 ">
                 <p className="text-base xs:text-lg lg:text-2xl font-medium lg:pl-[22%] md:pl-10  border-b-[1.5px] border-[#F2667C] md:border-none mb-5">
                   DL284A IP65 COB Downlight
                 </p>
@@ -612,8 +612,8 @@ const Indoorlights = () => {
                   alt=""
                   className=" pt-1 md:block hidden xl:w-[90%] h-10"
                 />
-                <div className="text-xs  lg:text-[13px]  leading-7 md:leading-7 text-[#666666] lg:pl-[21%] md:pl-10 p-4">
-                  <p>
+                <div className="text-xs  lg:text-[13px]  leading-7 md:leading-7 text-[#666666] lg:pl-[21%] md:pl-10 ">
+                  <p className="text-justify">
                     This downlight with traditional deep reflector which
                     provides a perfect combination of high lighting efficiency,
                     comfortable lighting and low glare design, without
@@ -649,7 +649,7 @@ const Indoorlights = () => {
                   </ul>
                 </div>
                 <div>
-                  <p className="text-xs lg:text-[13px] leading-8 md:leading-5 text-[#666666] lg:pl-[22%] md:pl-10 p-4">
+                  <p className="text-xs lg:text-[13px] leading-8 md:leading-5 text-[#666666] lg:pl-[22%] md:pl-10 ">
                     <span className="font-semibold text-black">
                       Application Areas:
                     </span>{" "}
@@ -682,10 +682,7 @@ const Indoorlights = () => {
               <div>
               
             </div>
-            <div className="w-full p-5 overflow-x-scroll drop-shadow-2xl">
-            <p className="text-sm font-semibold pt-5 pb-2">
-                DL284A/B Download COB & Download SMD
-              </p>
+            <div className="w-full  overflow-x-scroll drop-shadow-2xl">
               <table
                 style={{tableLayout:"fixed"}}
                 className="border border-black xl:w-full w-[1400px] "

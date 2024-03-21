@@ -198,14 +198,14 @@ export function Linear() {
                 onClick={() => handleThumbnailClick(index)}
               />
             </div>
-            <div className=" w-full md:w-[58%] lg:w-[63%]   sm:pl-0 capitalize">
+            <div className=" w-full md:w-[58%] lg:w-[63%] sm:pl-0 ">
               <p className="text-base xs:text-lg lg:text-2xl font-medium lg:pl-[22%] md:pl-10  border-b-[1.5px] border-[#F2667C] md:border-none mb-5">
                 L8989-A45 IP66 IK10 4FT linkable waterproof LED linear light
               </p>
               <img
                 src={line1}
                 alt=""
-                className=" pt-1 md:block hidden xl:w-[90%] h-10"
+                className="pt-1 md:block hidden xl:w-[90%] h-10 "
               />
               <div className="md:text-xs  lg:text-[13px]  leading-7  md:leading-7 text-[#666666] lg:pl-[24%] md:pl-10 pl-4">
                 <ul className="list-disc">
@@ -255,7 +255,7 @@ export function Linear() {
               Specifications
             </p>
           </div>
-          <div className="bg-white flex flex-col justify-center items-center rounded-b-xl py-5 px-10 overflow-x-scroll shadow-2xl drop-shadow-2xl ">
+          <div className="bg-white flex flex-col justify-center items-center rounded-b-xl py-5 px-5 overflow-x-scroll shadow-2xl drop-shadow-2xl ">
             <table
               style={customStyles}
               className="border border-black sm:ml-0 ml-auto"
@@ -314,18 +314,18 @@ export function Linear() {
             </table>
           </div>
         </div>
-        <div className="flex md:flex-row flex-col items-center justify-between py-10 gap-5">
-          <div className="w-72 h-72 bg-white drop-shadow-xl p-5 rounded-lg">
+        <div className="flex md:flex-row flex-col items-center justify-between py-10  gap-5">
+          <div className="sm:w-72 w-64 h-72 bg-white drop-shadow-xl p-5 rounded-lg">
             <img
               src={linearcontent1}
               alt=""
-              className="w-full h-full border p-2 border-gray-500"
+              className="w-full h-full border p-2  border-gray-500"
             />
           </div>
-          <div className="w-72 h-72 bg-white drop-shadow-xl p-5 rounded-lg">
+          <div className="sm:w-72 w-64 h-72 bg-white drop-shadow-xl p-5 rounded-lg">
             <img src={linearcontent2} alt="" className="w-full h-full" />
           </div>
-          <div className="w-72 h-72  bg-white drop-shadow-xl p-5 rounded-lg">
+          <div className="sm:w-72 w-64 h-72  bg-white drop-shadow-xl p-5 rounded-lg">
             <img src={lightsway} alt="" className="w-full" />
             <div className="w-full  p-3   pb-7 bg-white">
               <img src={linearoutline} alt="" className="w-full" />
@@ -344,7 +344,7 @@ export function Linear() {
               <img src={imagecontent1} alt="" className="w-96 h-72" />
             </div>
             <div className="md:w-[60%] leading-loose xs:w-96 xs:px-0 px-5 mx-auto">
-              <ul className="list-disc lg:text-base  lg:space-y-3">
+              <ul className="list-disc lg:text-base sm:text-start text-justify lg:space-y-3">
                 <li className="text-[13px]">
                   Aluminium 6063-T5 profile, surface treatment by oxidation or
                   metal powder painting which is special for outdoor, good
@@ -377,7 +377,7 @@ export function Linear() {
               <img src={imagecontent2} alt="" className="w-96 h-72" />
             </div>
             <div className="md:w-[60%] leading-loose md:px-0 xs:w-96 xs:px-0 px-5 mx-auto">
-              <ul className="list-disc lg:text-base  lg:space-y-4">
+              <ul className="list-disc lg:text-base sm:text-start text-justify lg:space-y-4">
                 <li className="text-[12px]">
                   <span className="font-medium">CONNECTION CABLE: </span>{" "}
                   Several lighting fixtures could be connected quickly and
