@@ -10,6 +10,7 @@ import { IoLogoYoutube } from "react-icons/io5";
 import { FiSearch } from "react-icons/fi";
 import { MdAccountCircle } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
+import { IoMdArrowDropright } from "react-icons/io";
 const Navbar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
@@ -158,7 +159,7 @@ const Navbar = () => {
                     className="block px-4 py-2 text-xs  "
                   >
                     <div className="relative">
-                      <p className="hover:text-[#F2667C]">Indoor Lights</p>
+                      <p className="hover:text-[#F2667C] flex items-center">Indoor Lights <IoMdArrowDropright /></p>
                       {linearDropdown && (
                         <div className="absolute bg-white ml-[103px] -mt-6  rounded-md  shadow-md shadow-gray-400">
                           <div className="w-28 flex flex-col justify-center">
@@ -329,7 +330,7 @@ const Navbar = () => {
                     className="block px-4 py-2 text-xs  "
                   >
                     <div className="relative">
-                      <p className="hover:text-[#F2667C] text-sm">Indoor Lights</p>
+                      <p className="hover:text-[#F2667C] text-sm flex items-center">Indoor Lights <IoMdArrowDropright /></p>
                       {linearDropdown && (
                         <div className="absolute bg-white ml-[135px] rounded-md  shadow-md shadow-gray-400 -mt-6">
                           <div className="w-28 flex flex-col justify-center">
