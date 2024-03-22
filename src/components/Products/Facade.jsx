@@ -364,7 +364,7 @@ export const Facade = () => {
                 Technical Specification
               </p>
             </div>
-            <div className="bg-white flex flex-col  py-5 px-5 shadow-2xl drop-shadow-2xl overflow-x-scroll">
+            <div className="bg-white flex flex-col  py-5 px-5 shadow-2xl drop-shadow-2xl lg:overflow-auto overflow-x-scroll">
               <div className="w-fit">
                 <table className="border-collapse border border-black">
                   <thead>

@@ -84,7 +84,7 @@ const Collection = () => {
               Technical Specification
             </p>
           </div>
-          <div className="bg-white flex flex-col justify-center items-center rounded-b-xl py-5 px-10 overflow-x-scroll shadow-2xl drop-shadow-2xl ">
+          <div className="bg-white flex flex-col justify-center items-center rounded-b-xl py-5 px-10 lg:overflow-auto overflow-x-scroll shadow-2xl drop-shadow-2xl ">
             <table
               style={customStyles}
               className="border border-black sm:ml-0 ml-auto"

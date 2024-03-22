@@ -545,7 +545,7 @@ export const Indoor338Series = () => {
             </div>
             <div className=" w-full md:w-[58%] lg:w-[63%]   sm:pl-0 ">
               <p className="text-base xs:text-lg lg:text-2xl font-medium lg:pl-[22%] md:pl-10  border-b-[1.5px] border-[#F2667C] md:border-none mb-5">
-                338 Series Pandent light/Track lights/ Downlight
+                338 Series Pandent light/Track lighti/ Downlight
               </p>
               <img
                 src={line1}
@@ -618,7 +618,7 @@ export const Indoor338Series = () => {
             </p>
           </div>
 
-          <div className="w-full  overflow-x-scroll drop-shadow-2xl">
+          <div className="w-full lg:overflow-auto overflow-x-scroll drop-shadow-2xl">
             <table
               className=" border border-black xl:w-full w-[1400px]"
               style={{ tableLayout: "fixed" }}
@@ -933,12 +933,12 @@ export const Indoor338Series = () => {
           <div>
             <div className="flex sm:flex-row flex-col items-center sm:items-start gap-8">
               <div>
-                <h2 className="font-medium text-sm sm:pl-3">Four size options :</h2>
-                <img src={sizeoptions} alt="" className="sm:w-52 w-64" />
+                <h2 className="font-medium text-sm sm:pl-3 sm:text-start text-center">Four size options :</h2>
+                <img src={sizeoptions} alt="" className="sm:w-52 w-72" />
               </div>
               <div>
-                <h2 className="font-medium text-sm sm:pl-3">3-CCT changeable :</h2>
-                <img src={changable} alt="" className="sm:w-52 w-64 mt-4" />
+                <h2 className="font-medium text-sm sm:pl-3 sm:text-start text-center">3-CCT changeable :</h2>
+                <img src={changable} alt="" className="sm:w-52 w-72 mt-4" />
               </div>
             </div>
           </div>

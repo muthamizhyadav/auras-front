@@ -255,7 +255,7 @@ export function Linear() {
               Specifications
             </p>
           </div>
-          <div className="bg-white flex flex-col justify-center items-center rounded-b-xl py-5 px-5 overflow-x-scroll shadow-2xl drop-shadow-2xl ">
+          <div className="bg-white flex flex-col justify-center items-center rounded-b-xl py-5 px-5 lg:overflow-auto overflow-x-scroll shadow-2xl drop-shadow-2xl ">
             <table
               style={customStyles}
               className="border border-black sm:ml-0 ml-auto"
@@ -314,18 +314,18 @@ export function Linear() {
             </table>
           </div>
         </div>
-        <div className="flex md:flex-row flex-col items-center justify-between py-10  gap-5">
-          <div className="sm:w-72 w-64 h-72 bg-white drop-shadow-xl p-5 rounded-lg">
+        <div className="flex md:flex-row flex-col items-center justify-between py-10 px-5 gap-5">
+          <div className="w-72  h-72 bg-white drop-shadow-xl p-5 rounded-lg">
             <img
               src={linearcontent1}
               alt=""
               className="w-full h-full border p-2  border-gray-500"
             />
           </div>
-          <div className="sm:w-72 w-64 h-72 bg-white drop-shadow-xl p-5 rounded-lg">
+          <div className="w-72  h-72 bg-white drop-shadow-xl p-5 rounded-lg">
             <img src={linearcontent2} alt="" className="w-full h-full" />
           </div>
-          <div className="sm:w-72 w-64 h-72  bg-white drop-shadow-xl p-5 rounded-lg">
+          <div className="w-72  h-72  bg-white drop-shadow-xl p-5 rounded-lg">
             <img src={lightsway} alt="" className="w-full" />
             <div className="w-full  p-3   pb-7 bg-white">
               <img src={linearoutline} alt="" className="w-full" />

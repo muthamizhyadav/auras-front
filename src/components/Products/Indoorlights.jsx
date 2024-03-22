@@ -682,7 +682,7 @@ const Indoorlights = () => {
               <div>
               
             </div>
-            <div className="w-full  overflow-x-scroll drop-shadow-2xl">
+            <div className="w-full lg:overflow-auto overflow-x-scroll drop-shadow-2xl">
               <table
                 style={{tableLayout:"fixed"}}
                 className="border border-black xl:w-full w-[1400px] "
@@ -732,53 +732,53 @@ const Indoorlights = () => {
                     </td>
                     <td
                       className={` border-gray-400 text-xs border-b px-3 py-2 
-                      ${item.name === 'Dimension(mm)' ? '' : item.name === 'Cutout (mm)' ? '' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  '' : item.name === 'UGR (COB)' ? ''  : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5%（COB）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（COB）' ? 'border-r' :''} `}
+                      ${item.name === 'Dimension (mm)' ? '' : item.name === 'Cutout (mm)' ? '' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  '' : item.name === 'UGR (COB)' ? ''  : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5%（COB）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（COB）' ? 'border-r' :''} `}
                     >
                       {item.spec1}
                     </td>
                     <td
-                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Cutout (mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5%（COB）' ? 'border-r': item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（COB）' ? 'border-r' :  item.name === '' ? 'border-r' :  item.name === 'Impact Resistance (IK Rating)' ? 'border-r' : ''} `}
+                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension (mm)' ? 'border-r' : item.name === 'Cutout (mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5%（COB）' ? 'border-r': item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（COB）' ? 'border-r' :  item.name === '' ? 'border-r' :  item.name === 'Impact Resistance (IK Rating)' ? 'border-r' : ''} `}
                     >
                       {item.spec2}
                     </td>
                     
                     <td
-                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension(mm)' ? '' : item.name === 'Cutout (mm)' ? '' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  :  item.name === '' ? 'border-r' : ''} `}
+                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension (mm)' ? '' : item.name === 'Cutout (mm)' ? '' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  :  item.name === '' ? 'border-r' : ''} `}
                     >
                       {item.spec3}
                     </td>
                     <td
-                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Cutout (mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  : ''} `}
+                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension (mm)' ? 'border-r' : item.name === 'Cutout (mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  : ''} `}
                     >
                       {item.spec4}
                     </td>
                     <td
-                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension(mm)' ? '' : item.name === 'Cutout (mm)' ? '' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  :  item.name === '' ? 'border-r' : ''} `}
+                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension (mm)' ? '' : item.name === 'Cutout (mm)' ? '' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  :  item.name === '' ? 'border-r' : ''} `}
                     >
                       {item.spec5}
                     </td>
                     <td
-                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension(mm)' ? '' : item.name === 'Cutout (mm)' ? '' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  :  item.name === '' ? 'border-r' : ''} `}
+                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension (mm)' ? '' : item.name === 'Cutout (mm)' ? '' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  :  item.name === '' ? 'border-r' : ''} `}
                     >
                       {item.spec6}
                     </td>
                     <td
-                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Cutout (mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  :  item.name === '' ? 'border-r' : ''} `}
+                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension (mm)' ? 'border-r' : item.name === 'Cutout (mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  :  item.name === '' ? 'border-r' : ''} `}
                     >
                       {item.spec7}
                     </td>
                     <td
-                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension(mm)' ? '' : item.name === 'Cutout (mm)' ? '' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  : ''} `}
+                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension (mm)' ? '' : item.name === 'Cutout (mm)' ? '' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  : ''} `}
                     >
                       {item.spec8}
                     </td>
                     <td
-                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension(mm)' ? '' : item.name === 'Cutout (mm)' ? '' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  :  item.name === '' ? 'border-r' : ''} `}
+                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension (mm)' ? '' : item.name === 'Cutout (mm)' ? '' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  :  item.name === '' ? 'border-r' : ''} `}
                     >
                       {item.spec9}
                     </td>
                     <td
-                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension(mm)' ? 'border-r' : item.name === 'Cutout (mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  : ''} `}
+                      className={` border-gray-400 text-xs border-b text-center px-3 py-2 ${item.name === 'Dimension (mm)' ? 'border-r' : item.name === 'Cutout (mm)' ? 'border-r' : item.name === 'Watt(W)' ? 'border-r' : item.name === 'Non-DIM 1-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'DIM 1-CCT Luminous Flux (lm) ±5%（SMD）' ? 'border-r' : item.name === 'Non-DIM 3-CCT Luminous Flux (lm) ±5%(SMD)' ? 'border-r'  : item.name === 'DIM 3-CCT Luminous Flux (lm) ±5% （SMD）' ? 'border-r' : item.name === 'Beam Angle (°)' ?  'border-r' : item.name === 'UGR (COB)' ? 'border-r'  : ''} `}
                     >
                       {item.spec10}
                     </td>

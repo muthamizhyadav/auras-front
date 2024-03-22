@@ -412,7 +412,7 @@ export const IndoorDL228 = () => {
             </p>
           </div>
 
-          <div className="w-full p-5 overflow-x-scroll drop-shadow-2xl">
+          <div className="w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl">
             <table className="border border-black xl:w-full w-[1400px]" style={{tableLayout:"fixed"}}>
               <thead className="border-b border-gray-400">
                 <tr>
@@ -538,11 +538,12 @@ export const IndoorDL228 = () => {
         </section>
       </div>
       <div className=" p-5 ">
+        <h1 className="text-center text-xl font-bold">DL228A</h1>
         <div className="flex sm:px-14 sm:flex-row flex-col gap-10 items-center justify-center">
           <img src={dl228a} alt="" className="w-24 h-24" />
 
           <div className="sm:w-[90%]">
-            <p className="font-medium pb-2 text-center">DL228A</p>
+            <p className="font-medium pb-2 sm:text-start text-center">DL228A</p>
             <p className="text-[12px] text-justify">
               DL228A adopt high lumen COB chip and PMMA lens for uniform light
               effect and enhanced glare control. Aluminum profile with

@@ -837,7 +837,7 @@ export const IndoorPD228 = () => {
             </p>
           </div>
 
-          <div className="w-full p-5 overflow-x-scroll drop-shadow-2xl">
+          <div className="w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl">
             <h2 className="font-semibold text-sm pt-5 pb-2">
               Technical Data Sheet (Non-Dimmable) :
             </h2>
@@ -981,7 +981,7 @@ export const IndoorPD228 = () => {
               </tbody>
             </table>
           </div>
-          <div className="w-full p-5 overflow-x-scroll drop-shadow-2xl">
+          <div className="w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl">
             <h2 className="font-semibold text-sm pt-5 pb-2">
               Technical Data Sheet (Triac Dimmable) :
             </h2>
@@ -1099,7 +1099,7 @@ export const IndoorPD228 = () => {
               </tbody>
             </table>
           </div>
-          <div className="w-full p-5 overflow-x-scroll drop-shadow-2xl">
+          <div className="w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl">
             <h2 className="font-semibold text-sm pt-5 pb-2">
               Technical Data Sheet (DALI Dimmable) :
             </h2>
@@ -1219,12 +1219,12 @@ export const IndoorPD228 = () => {
       <div className=" sm:p-5 ">
         
 
-        
+          <h1 className="text-center font-bold text-xl">PD 228</h1>
           <div className="flex sm:px-14 px-5 sm:flex-row flex-col gap-10 items-center justify-center">
             <img src={pd228} alt="" className="w-24 h-24" />
 
             <div className="sm:w-[90%]">
-              <p className="font-medium pb-2 text-center">PD228</p>
+              <p className="font-medium pb-2 sm:text-start text-center">PD228</p>
               <p className="text-[12px] sm:text-start text-justify">
                 PD228 pendant spot light is a high-performance LED luminaire
                 that is ideal for commercial or residential applications. It
