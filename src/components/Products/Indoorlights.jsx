@@ -19,7 +19,10 @@ import overview1 from "../../assets/overview (2).jpeg";
 
 const Indoorlights = () => {
   React.useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    });
   }, []);
   const Specification = [
     {

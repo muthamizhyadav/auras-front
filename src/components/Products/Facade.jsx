@@ -24,8 +24,11 @@ import dimming3 from "../../assets/dimming3.png";
 
 export const Facade = () => {
   React.useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    });
+  }, []);
 
   const bgimages = [Facade1, Facade2, Facade4, Facade5, Facade6];
 

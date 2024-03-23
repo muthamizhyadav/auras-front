@@ -325,7 +325,10 @@ const Outdoor = () => {
   ];
 
   React.useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    });
   }, []);
 
   const [previewIndex, setPreviewIndex] = React.useState(null);

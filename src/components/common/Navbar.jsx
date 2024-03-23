@@ -368,7 +368,7 @@ const Navbar = () => {
                     </div>
                   </Link>
               <Link
-                to="/products/facadelights"
+                to="home/products/facadelights"
                 className="block px-4 py-2   hover:text-[#F2667C] "
                 onClick={cancelDropdownSmall}
               >

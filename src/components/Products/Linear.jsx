@@ -22,12 +22,11 @@ import { TfiClose } from "react-icons/tfi";
 import { GrNext, GrPrevious } from "react-icons/gr";
 
 export function Linear() {
-  // const [showActiveContent, setShowActiveContent] = useState("Overview");
-  // const toggleContent = (content) => {
-  //   setShowActiveContent(content);
-  // };
   React.useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    });
   }, []);
   const Specification = [
     {
