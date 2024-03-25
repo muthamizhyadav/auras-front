@@ -25,13 +25,13 @@ import dl338ab from "../../assets/dl338ab.png";
 import pd338 from "../../assets/pd338.png";
 import tl338 from "../../assets/tl338.png";
 import sizeoptions from "../../assets/foursizeoptions.png";
-import reflector from '../../assets/338pic2.png'
+import reflector from "../../assets/338pic2.png";
 
 export const Indoor338Series = () => {
   React.useEffect(() => {
     window.scrollTo({
-      top:0,
-      behavior:"smooth"
+      top: 0,
+      behavior: "smooth",
     });
   }, []);
 
@@ -675,8 +675,7 @@ export const Indoor338Series = () => {
                     </td>
                     <td
                       className={` border-b border-gray-400 text-xs px-3 py-2   ${
-                       
-                           item.name === "Watt(W)"
+                        item.name === "Watt(W)"
                           ? "border-r"
                           : item.name ===
                             "Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)"
@@ -743,7 +742,7 @@ export const Indoor338Series = () => {
                     </td>
                     <td
                       className={` border-b border-gray-400 text-xs px-3 py-2   ${
-                         item.name === "Watt(W)"
+                        item.name === "Watt(W)"
                           ? "border-r"
                           : item.name ===
                             "Non-DIM  1-CCT Luminous Flux (lm) ±5%(White)"
@@ -931,32 +930,44 @@ export const Indoor338Series = () => {
         </div>
       </div>
       <div className="flex lg:flex-row flex-col justify-center gap-10 lg:gap-0 lg:justify-evenly items-center py-10">
-        <img src={seriespic} alt="" className="w-96 lg:px-0 px-5"/>
+        <img src={seriespic} alt="" className="w-96 lg:px-0 px-5" />
         <section className="flex flex-col gap-10">
           <div>
             <div className="flex sm:flex-row flex-col items-center sm:items-start gap-8">
               <div>
-                <h2 className="font-medium text-sm pl-3 text-start">Four size options :</h2>
+                <h2 className="font-medium text-sm pl-3 text-start">
+                  Four size options :
+                </h2>
                 <img src={sizeoptions} alt="" className="sm:w-52 w-72" />
               </div>
               <div>
-                <h2 className="font-medium text-sm pl-5 text-start">3-CCT changeable :</h2>
-                <img src={changable} alt="" className="sm:w-52 w-72 mt-4 ml-3" />
+                <h2 className="font-medium text-sm pl-5 text-start">
+                  3-CCT changeable :
+                </h2>
+                <img
+                  src={changable}
+                  alt=""
+                  className="sm:w-52 w-72 mt-4 ml-3"
+                />
               </div>
             </div>
           </div>
           <div>
             <div className="flex  sm:flex-row flex-col items-center sm:items-start  gap-8">
               <div>
-                <h2 className="font-medium text-sm text-start sm:pl-3">Replaceable reflector :</h2>
+                <h2 className="font-medium text-sm text-start sm:pl-3">
+                  Replaceable reflector :
+                </h2>
                 <img src={reflector} alt="" className="sm:w-52 w-64 mt-4" />
               </div>
               <div className="space-y-3 mr-32 sm:mr-0">
-                <h2 className="font-medium text-sm text-center">Power adjustable :</h2>
+                <h2 className="font-medium text-sm text-center">
+                  Power adjustable :
+                </h2>
                 <div className="pl-5 space-y-1 mt-4">
-                <p className="text-xs">Ø65mm :10W/12W/15W</p>
-                <p className="text-xs">Ø85mm :15W/20W/25W</p>
-                <p className="text-xs">Ø100mm :25W/30W/35W</p>
+                  <p className="text-xs">Ø65mm :10W/12W/15W</p>
+                  <p className="text-xs">Ø85mm :15W/20W/25W</p>
+                  <p className="text-xs">Ø100mm :25W/30W/35W</p>
                 </div>
               </div>
             </div>
@@ -964,9 +975,7 @@ export const Indoor338Series = () => {
         </section>
       </div>
       <div className="py-5 p-5 ">
-        <h2 className="font-bold sm:text-xl py-5 text-center">
-          338 SERIES
-        </h2>
+        <h2 className="font-bold sm:text-xl py-5 text-center">338 SERIES</h2>
 
         <div className="flex flex-col gap-10 py-5">
           <div className="flex sm:flex-row flex-col gap-5">
@@ -974,9 +983,9 @@ export const Indoor338Series = () => {
               <img src={dl338} alt="" className="w-24 h-24" />
             </div>
             <div className="sm:w-[70%]">
-              <ul className="flex flex-col text-justify justify-center items-center sm:justify-start sm:items-start gap-2">
-                <p className="font-medium">DL338</p>
-                <li className="text-[12px] w-[95%]">
+              <ul className="flex flex-col  gap-2">
+                <p className="font-medium text-start">DL338</p>
+                <li className="text-[12px] sm:w-[95%] w-full text-justify">
                   DL338 is a DIY modular series with an exquisite appearance and
                   anti-glare UGR19 design, 6 kinds of installation ways, 3
                   reflectors and 3 front ring colors can be exchangeable. It
@@ -994,9 +1003,9 @@ export const Indoor338Series = () => {
               <img src={dl338ab} alt="" className="w-24 h-24" />
             </div>
             <div className="sm:w-[70%]">
-              <ul className=" flex flex-col text-justify justify-center items-center sm:justify-start sm:items-start gap-2">
-                <p className="font-medium ">DL338A/B</p>
-                <li className="text-[12px] w-[95%]">
+              <ul className=" flex flex-col  gap-2">
+                <p className="font-medium text-start">DL338A/B</p>
+                <li className="text-[12px] sm:w-[95%] w-full text-justify">
                   DL338A/B is a DIY modular series with an exquisite appearance
                   and anti-glare UGR19 design, 6 kinds of installation ways, 3
                   reflectors and 3 front ring colors can be exchangeable. It
@@ -1014,9 +1023,9 @@ export const Indoor338Series = () => {
               <img src={pd338} alt="" className="w-24 h-24" />
             </div>
             <div className="sm:w-[70%]">
-              <ul className="  flex flex-col text-justify justify-center items-center sm:justify-start sm:items-start gap-2">
-                <p className="font-medium">PD338A/B</p>
-                <li className="text-[12px] w-[95%]">
+              <ul className="  flex flex-col gap-2">
+                <p className="font-medium text-start">PD338A/B</p>
+                <li className="text-[12px] w-[95%] text-justify">
                   PD338A/B is a DIY modular series with an exquisite appearance
                   and anti-glare UGR19 design, 6 kinds of installation ways, 3
                   reflectors and 3 front ring colors can be exchangeable. It
@@ -1034,9 +1043,9 @@ export const Indoor338Series = () => {
               <img src={tl338} alt="" className="w-24 h-24 " />
             </div>
             <div className="sm:w-[70%]">
-              <ul className="flex flex-col text-justify justify-center items-center sm:justify-start sm:items-start gap-2">
-                <p className="font-medium">TL338</p>
-                <li className="text-[12px] w-[95%]">
+              <ul className="flex flex-col  gap-2">
+                <p className="font-medium text-start">TL338</p>
+                <li className="text-[12px] sm:w-[95%] w-full text-justify">
                   TL338 is a DIY modular series with an exquisite appearance and
                   anti-glare UGR19 design, 6 kinds of installation ways, 3
                   reflectors and 3 front ring colors can be exchangeable. It
