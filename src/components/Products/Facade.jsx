@@ -182,72 +182,7 @@ export const Facade = () => {
       spec5: "/",
       spec6: "30m",
     },
-    // {
-    //   name: "Lumen maintenance",
-    //   spec1: "70 000 Hours L70 25°C , 50 000 Hours L70 50°C",
-    //   datas:"70 000 Hours L70 25°C , 50 000 Hours L70 50°C",
-    //   spec2:"70 000 Hours L70 25°C , 50 000 Hours L70 50°C",
-    //   spec3:"70 000 Hours L70 25°C , 50 000 Hours L70 50°C",
-    //   spec4:"70 000 Hours L70 25°C , 50 000 Hours L70 50°C",
-    //   spec5:"70 000 Hours L70 25°C , 50 000 Hours L70 50°C",
-    //   spec6:"70 000 Hours L70 25°C , 50 000 Hours L70 50°C",
-
-    // },
-    // {
-    //   name: "Housing material",
-    //   spec1: "Eco PVC or Silicone",
-    //   datas:"Eco PVC or Silicone",
-    //   spec2:"Eco PVC or Silicone",
-    //   spec3:"Eco PVC or Silicone",
-    //   spec4:"Eco PVC or Silicone",
-    //   spec5:"Eco PVC or Silicone",
-    //   spec6:"Eco PVC or Silicone",
-
-    // },
-    // {
-    //   name: "Installation temperature",
-    //   spec1: "0°C to -55°C",
-    //   datas:"0°C to -55°C",
-    //   spec2:"0°C to -55°C",
-    //   spec3:"0°C to -55°C",
-    //   spec4:"0°C to -55°C",
-    //   spec5:"0°C to -55°C",
-    //   spec6:"0°C to -55°C",
-
-    // },
-    // {
-    //   name: "Ambient temperature",
-    //   spec1: "-25°C to +55°C",
-    //   datas:"-25°C to +55°C",
-    //   spec2:"-25°C to +55°C",
-    //   spec3:"-25°C to +55°C",
-    //   spec4:"-25°C to +55°C",
-    //   spec5:"-25°C to +55°C",
-    //   spec6:"-25°C to +55°C",
-
-    // },
-    // {
-    //   name: "Ingress protection",
-    //   spec1: "IP68 wet location submersible* to 2m",
-    //   datas:"IP68 wet location submersible* to 2m",
-    //   spec2:"IP68 wet location submersible* to 2m",
-    //   spec3:"IP68 wet location submersible* to 2m",
-    //   spec4:"IP68 wet location submersible* to 2m",
-    //   spec5:"IP68 wet location submersible* to 2m",
-    //   spec6:"IP68 wet location submersible* to 2m",
-
-    // },
-    // {
-    //   name: "Warranty",
-    //   spec1: "3 years as standard, 5 years guarantee maximum",
-    //   datas:"3 years as standard, 5 years guarantee maximum",
-    //   spec2:"3 years as standard, 5 years guarantee maximum",
-    //   spec3:"3 years as standard, 5 years guarantee maximum",
-    //   spec4:"3 years as standard, 5 years guarantee maximum",
-    //   spec5:"3 years as standard, 5 years guarantee maximum",
-    //   spec6:"3 years as standard, 5 years guarantee maximum",
-
-    // },
+    
   ];
 
   return (
@@ -429,21 +364,7 @@ export const Facade = () => {
                     ))}
                   </tbody>
                 </table>
-                {/* <table className="border-collapse border border-black">
-          <tbody>
-            {Specification2.map((item, index) => (
-            <tr key={index}>
-              <td className="bg-gray-400 border border-black text-xs px-[43px] py-2 ">{item.name}</td>
-              <td className="border border-gray-400 text-xs px-3 py-2 w-full">{item.spec1}</td>
-            </tr>
-            ))}
-          </tbody>
-        </table> */}
               </div>
-
-              {/* <div className="overflow-x-auto mt-5">
-        
-      </div> */}
             </div>
           </div>
         </div>

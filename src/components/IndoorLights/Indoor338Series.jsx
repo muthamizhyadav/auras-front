@@ -451,35 +451,7 @@ export const Indoor338Series = () => {
       spec11: "",
     },
 
-    // {
-    //   name:"",
-    //   dimension:"55*160",
-    //   watt:"12",
-    //   ratedInput:"",
-    //   inputVoltage:"",
-    //   lightSource:"",
-    //   sdcm:"",
-    //   cct:"",
-    //   nondim1:"",
-    //   dim1:"",
-    //   nondim3:"",
-    //   dim3:"",
-    //   cri:"",
-    //   beamAngle:"",
-    //   ugr:"",
-    //   ledDriver:"",
-    //   dimmingOption:"",
-    //   electricalClass:"",
-    //   ingressProtection:"",
-    //   productFinishing:"",
-    //   materialsofOptics:"",
-    //   materialsofHousing:"",
-    //   lifetime:"",
-    //   glowwiretest:"",
-    //   operatingTemp:"",
-    //   storageTemp:"",
-    //   installation:"",
-    // },
+    
   ];
 
   return (

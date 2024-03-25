@@ -72,13 +72,13 @@ export function Linear() {
     },
     rows: {
       style: {
-        minHeight: "25px", // override the row height
+        minHeight: "25px",
         minWidth: "800px",
       },
     },
     headCells: {
       style: {
-        paddingLeft: "8px", // override the cell padding for head cells
+        paddingLeft: "8px", 
         paddingRight: "8px",
         backgroundColor: "",
         color: "#fff",
@@ -86,7 +86,7 @@ export function Linear() {
     },
     cells: {
       style: {
-        paddingLeft: "8px", // override the cell padding for data cells
+        paddingLeft: "8px",
         paddingRight: "8px",
         paddingTop: "10px",
         width: "10px",
