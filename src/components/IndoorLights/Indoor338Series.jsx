@@ -974,9 +974,9 @@ export const Indoor338Series = () => {
               <img src={dl338} alt="" className="w-24 h-24" />
             </div>
             <div className="sm:w-[70%]">
-              <ul className="flex flex-col text-justify justify-center items-center sm:justify-start sm:items-start gap-2">
-                <p className="font-medium">DL338</p>
-                <li className="text-[12px] w-[95%]">
+              <ul className="flex flex-col  gap-2">
+                <p className="font-medium text-start">DL338</p>
+                <li className="text-[12px] sm:w-[95%] w-full text-justify">
                   DL338 is a DIY modular series with an exquisite appearance and
                   anti-glare UGR19 design, 6 kinds of installation ways, 3
                   reflectors and 3 front ring colors can be exchangeable. It
@@ -994,9 +994,9 @@ export const Indoor338Series = () => {
               <img src={dl338ab} alt="" className="w-24 h-24" />
             </div>
             <div className="sm:w-[70%]">
-              <ul className=" flex flex-col text-justify justify-center items-center sm:justify-start sm:items-start gap-2">
-                <p className="font-medium ">DL338A/B</p>
-                <li className="text-[12px] w-[95%]">
+              <ul className=" flex flex-col  gap-2">
+                <p className="font-medium text-start">DL338A/B</p>
+                <li className="text-[12px] sm:w-[95%] w-full text-justify">
                   DL338A/B is a DIY modular series with an exquisite appearance
                   and anti-glare UGR19 design, 6 kinds of installation ways, 3
                   reflectors and 3 front ring colors can be exchangeable. It
@@ -1014,9 +1014,9 @@ export const Indoor338Series = () => {
               <img src={pd338} alt="" className="w-24 h-24" />
             </div>
             <div className="sm:w-[70%]">
-              <ul className="  flex flex-col text-justify justify-center items-center sm:justify-start sm:items-start gap-2">
-                <p className="font-medium">PD338A/B</p>
-                <li className="text-[12px] w-[95%]">
+              <ul className="  flex flex-col gap-2">
+                <p className="font-medium text-start">PD338A/B</p>
+                <li className="text-[12px] w-[95%] text-justify">
                   PD338A/B is a DIY modular series with an exquisite appearance
                   and anti-glare UGR19 design, 6 kinds of installation ways, 3
                   reflectors and 3 front ring colors can be exchangeable. It
@@ -1034,9 +1034,9 @@ export const Indoor338Series = () => {
               <img src={tl338} alt="" className="w-24 h-24 " />
             </div>
             <div className="sm:w-[70%]">
-              <ul className="flex flex-col text-justify justify-center items-center sm:justify-start sm:items-start gap-2">
-                <p className="font-medium">TL338</p>
-                <li className="text-[12px] w-[95%]">
+              <ul className="flex flex-col  gap-2">
+                <p className="font-medium text-start">TL338</p>
+                <li className="text-[12px] sm:w-[95%] w-full text-justify">
                   TL338 is a DIY modular series with an exquisite appearance and
                   anti-glare UGR19 design, 6 kinds of installation ways, 3
                   reflectors and 3 front ring colors can be exchangeable. It
