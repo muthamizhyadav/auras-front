@@ -498,7 +498,7 @@ const Outdoor = () => {
             Material Specifications
           </p>
         </div>
-        <div className=" shadow-2xl drop-shadow-2xl ">
+        <div className="rounded-b-xl shadow-2xl drop-shadow-2xl ">
           <div className="bg-white flex flex-col justify-center items-center rounded-b-xl py-5 px-5 lg:overflow-auto overflow-x-scroll ">
             <table
               style={customStyles}

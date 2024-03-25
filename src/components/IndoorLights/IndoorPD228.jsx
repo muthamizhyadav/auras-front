@@ -29,8 +29,8 @@ import series228pic3 from "../../assets/228seriespic3.png";
 export const IndoorPD228 = () => {
   React.useEffect(() => {
     window.scrollTo({
-      top:0,
-      behavior:"smooth"
+      top: 0,
+      behavior: "smooth",
     });
   }, []);
 
@@ -973,7 +973,6 @@ export const IndoorPD228 = () => {
                           ? "border-r"
                           : item.name === "Non-DIM 3-CCT Luminous Flux (lm) ±5%"
                           ? "border-r"
-                          
                           : ""
                       }`}
                     >
@@ -1220,23 +1219,20 @@ export const IndoorPD228 = () => {
         </section>
       </div>
       <div className=" sm:p-5 ">
-        
+        <h1 className="text-center font-bold text-xl">PD 228</h1>
+        <div className="flex sm:px-14 px-5 sm:flex-row flex-col gap-10 items-center justify-center">
+          <img src={pd228} alt="" className="w-24 h-24" />
 
-          <h1 className="text-center font-bold text-xl">PD 228</h1>
-          <div className="flex sm:px-14 px-5 sm:flex-row flex-col gap-10 items-center justify-center">
-            <img src={pd228} alt="" className="w-24 h-24" />
-
-            <div className="sm:w-[90%]">
-              <p className="font-medium pb-2 text-start">PD228</p>
-              <p className="text-[12px] sm:text-start text-justify">
-                PD228 pendant spot light is a high-performance LED luminaire
-                that is ideal for commercial or residential applications. It
-                adopts high lumen COB chip and PMMA lens for uniform light
-                effect and enhanced glare control. AL6063 Aluminum profile with
-                sufficient heat dissipation guarantee long lifespan.
-              </p>
-            </div>
-         
+          <div className="sm:w-[90%]">
+            <p className="font-medium pb-2 text-start">PD228</p>
+            <p className="text-[12px] sm:text-start text-justify">
+              PD228 pendant spot light is a high-performance LED luminaire that
+              is ideal for commercial or residential applications. It adopts
+              high lumen COB chip and PMMA lens for uniform light effect and
+              enhanced glare control. AL6063 Aluminum profile with sufficient
+              heat dissipation guarantee long lifespan.
+            </p>
+          </div>
         </div>
       </div>
       <div>
