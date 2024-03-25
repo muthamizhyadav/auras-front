@@ -605,7 +605,7 @@ const Outdoor = () => {
               columns={columns2}
               data={data2}
               customStyles={customStyles}
-              className="text-center "
+              className="text-center"
             />
           </div>
         </div>
