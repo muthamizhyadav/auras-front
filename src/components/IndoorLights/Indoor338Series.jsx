@@ -936,24 +936,24 @@ export const Indoor338Series = () => {
           <div>
             <div className="flex sm:flex-row flex-col items-center sm:items-start gap-8">
               <div>
-                <h2 className="font-medium text-sm sm:pl-3 sm:text-start text-center">Four size options :</h2>
+                <h2 className="font-medium text-sm pl-3 text-start">Four size options :</h2>
                 <img src={sizeoptions} alt="" className="sm:w-52 w-72" />
               </div>
               <div>
-                <h2 className="font-medium text-sm sm:pl-3 sm:text-start text-center">3-CCT changeable :</h2>
-                <img src={changable} alt="" className="sm:w-52 w-72 mt-4" />
+                <h2 className="font-medium text-sm pl-5 text-start">3-CCT changeable :</h2>
+                <img src={changable} alt="" className="sm:w-52 w-72 mt-4 ml-3" />
               </div>
             </div>
           </div>
           <div>
             <div className="flex  sm:flex-row flex-col items-center sm:items-start  gap-8">
               <div>
-                <h2 className="font-medium text-sm sm:pl-3">Replaceable reflector :</h2>
+                <h2 className="font-medium text-sm text-start sm:pl-3">Replaceable reflector :</h2>
                 <img src={reflector} alt="" className="sm:w-52 w-64 mt-4" />
               </div>
-              <div className="space-y-3">
-                <h2 className="font-medium text-sm sm:pl-3 text-center">Power adjustable :</h2>
-                <div className="pl-3 space-y-1 mt-4">
+              <div className="space-y-3 mr-32 sm:mr-0">
+                <h2 className="font-medium text-sm text-center">Power adjustable :</h2>
+                <div className="pl-5 space-y-1 mt-4">
                 <p className="text-xs">Ø65mm :10W/12W/15W</p>
                 <p className="text-xs">Ø85mm :15W/20W/25W</p>
                 <p className="text-xs">Ø100mm :25W/30W/35W</p>
@@ -995,7 +995,7 @@ export const Indoor338Series = () => {
             </div>
             <div className="sm:w-[70%]">
               <ul className=" flex flex-col text-justify justify-center items-center sm:justify-start sm:items-start gap-2">
-                <p className="font-medium">DL338A/B</p>
+                <p className="font-medium ">DL338A/B</p>
                 <li className="text-[12px] w-[95%]">
                   DL338A/B is a DIY modular series with an exquisite appearance
                   and anti-glare UGR19 design, 6 kinds of installation ways, 3

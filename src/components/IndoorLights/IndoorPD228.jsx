@@ -1227,7 +1227,7 @@ export const IndoorPD228 = () => {
             <img src={pd228} alt="" className="w-24 h-24" />
 
             <div className="sm:w-[90%]">
-              <p className="font-medium pb-2 sm:text-start text-center">PD228</p>
+              <p className="font-medium pb-2 text-start">PD228</p>
               <p className="text-[12px] sm:text-start text-justify">
                 PD228 pendant spot light is a high-performance LED luminaire
                 that is ideal for commercial or residential applications. It

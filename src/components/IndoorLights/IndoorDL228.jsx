@@ -546,7 +546,7 @@ export const IndoorDL228 = () => {
           <img src={dl228a} alt="" className="w-24 h-24" />
 
           <div className="sm:w-[90%]">
-            <p className="font-medium pb-2 sm:text-start text-center">DL228A</p>
+            <p className="font-medium pb-2 text-start ">DL228A</p>
             <p className="text-[12px] text-justify">
               DL228A adopt high lumen COB chip and PMMA lens for uniform light
               effect and enhanced glare control. Aluminum profile with
