@@ -3,13 +3,13 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./components/common/Home";
 import Outdoor from "./components/Products/Outdoor";
-import Indoorlights from "./components/Products/Indoorlights";
+import Indoorlights from "./components/IndoorLights/Indoorlights";
 import { Facade } from "./components/Products/Facade";
 import { Indoor338Series } from "./components/IndoorLights/Indoor338Series";
 import { IndoorDL228 } from "./components/IndoorLights/IndoorDL228";
 import { IndoorPD228 } from "./components/IndoorLights/IndoorPD228";
 import { Linear } from "./components/Products/Linear";
-// import Collection from "./components/IndoorLights/Datatable1";
+
 
 
 function App() {

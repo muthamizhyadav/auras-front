@@ -1,17 +1,32 @@
+import { useState, useEffect } from "react";
+import Sanityclient from "../common/Sanityclient";
 
 
 export const Explore = () => {
+  const [contactTitle, setcontactTitle] = useState('');
+  const [contactContent, setcontactContent] = useState('');
+
+  useEffect(() => {
+    Sanityclient.fetch(
+      `*[_type == "product"]{contacttitle,  contactcontent }`
+    )
+      .then((data) => {
+        setcontactTitle(data[0].contacttitle)
+        setcontactContent(data[0].contactcontent)
+      })
+      .catch((error) => {
+        console.error("Error fetching content:", error);
+      });
+  }, []);
   return (
     <section>
       <div className="bg-Formbg bg-cover form flex lg:flex-row flex-col justify-center items-center lg:flex-nowrap sm:py-10 py-5 md:px-24 px-5 lg:gap-10 gap-3">
         <div className="">
           <p className="text-3xl sm:text-5xl font-medium">
-            Keen to explore further?
+            {contactTitle ? contactTitle : 'Loading...'}
           </p>
           <p className="py-5 text-[13px] md:text-start text-justify">
-            If you are interested in our products and would like to receive
-            further information, please fill out the form below to send us your
-            request or mail to info@auraslighting.com directly.
+            {contactContent ? contactContent : 'Loading...'}
           </p>
         </div>
         <div className="form-content lg:w-[70%] w-full sm:p-5 p-3  rounded-3xl shadow-2xl">
@@ -45,8 +60,8 @@ export const Explore = () => {
               className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
             />
             <textarea
-              name="messege"
-              id="messege"
+              name="message"
+              id="message"
               rows="4"
               className="bg-gray-200 p-2 my-1 rounded-lg w-full border border-[#0E82B4]"
               placeholder="Message"

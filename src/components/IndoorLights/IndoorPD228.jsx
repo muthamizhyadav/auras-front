@@ -1,32 +1,61 @@
-import React from "react";
-import dl228light1 from "../../assets/DL228A-1.jpg";
-import dl228light2 from "../../assets/DL228A-2.jpg";
-import dl228light3 from "../../assets/DL228A-3.jpg";
-import dl228light4 from "../../assets/DL228A-4.jpg";
-import img1 from "../../assets/light2.jpg";
+import React, { useEffect, useState } from "react";
 import { FaChevronRight } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import product1 from "../../assets/228Series.pdf";
 import line1 from "../../assets/line1.png";
-import { FaGreaterThanEqual } from "react-icons/fa6";
-import imagecontent1 from "../../assets/imagecontent 1.png";
-import imagecontent2 from "../../assets/imagecontent 2.png";
-import linearcontent1 from "../../assets/linearcontent1.png";
-import linearcontent2 from "../../assets/linearcontent2.png";
-import lightsway from "../../assets/lightsway.png";
-import linearoutline from "../../assets/linearouline.png";
 import { Explore } from "../Products/Explore";
 import { TfiClose } from "react-icons/tfi";
 import { GrNext, GrPrevious } from "react-icons/gr";
-import dl228a from "../../assets/dl228a.png";
-import dl228b from "../../assets/dl228b.png";
 import pd228 from "../../assets/pd228.png";
-import tl228 from "../../assets/tl228.png";
-import series228pic1 from "../../assets/228seriespic1.png";
-import series228pic2 from "../../assets/228seriespic2.png";
-import series228pic3 from "../../assets/228seriespic3.png";
+import Sanityclient from "../common/Sanityclient";
 
 export const IndoorPD228 = () => {
+  const [bgimage, Setbgimage] = useState([]);
+  const [modalname, setModalName] = useState("");
+  const [addFeature, setaddFeature] = useState("");
+  const [addfeaturepoints, setaddfeaturepoints] = useState([]);
+  const [addapplicationareas, setaddapplicationareas] = useState("");
+  const [productpdf, setproductpdf] = useState("");
+  const [specificationHeading, setSpecificationHeading] = useState("");
+  const [specificationTableHeading1, setSpecificationTableHeading1] = useState("");
+  const [specificationTableHeading2, setSpecificationTableHeading2] = useState("");
+  const [specificationTableHeading3, setSpecificationTableHeading3] = useState("");
+  const [leftSideImage, setleftSideImage] = useState("");
+  const [rightSideImage1, setrightSideImage1] = useState("");
+  const [rightSideImage2, setrightSideImage2] = useState("");
+  const [title, setTitle] = useState("");
+  const [modelImage, setmodelImage] = useState("");
+  const [content, setContent] = useState("");
+
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [previewIndex, setPreviewIndex] = useState(null);
+
+  // useEffect(() => {
+  //   Sanityclient.fetch(
+  //     `*[_type == "pd228indoorlights"]{indoorlightsmodalname, indoorlightsfeature, indoorlightsapplicationareas}`
+  //   )
+  //     .then((data) => {
+  //       setModalName(data[0].indoorlightsmodalname);
+  //       setaddFeature(data[0].indoorlightsfeature);
+  //       setaddapplicationareas(data[0].indoorlightsapplicationareas);
+  //       console.log(data);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching content:", error);
+  //     });
+  // }, []);
+
+  // useEffect(() => {
+  //   Sanityclient.fetch(
+  //     `*[_type == "pd228indoorlightsfeaturespoints"]{indoorlightsfeatures}`
+  //   ).then((data) => {
+  //     setaddfeaturepoints(data);
+  //     console.log(data);
+  //   });
+  // }, []);
+
   React.useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -34,45 +63,132 @@ export const IndoorPD228 = () => {
     });
   }, []);
 
-  const bgimages = [dl228light1, dl228light2, dl228light3, dl228light4];
+  // useEffect(() => {
+  //   Sanityclient.fetch(
+  //     `*[_type == "pd228bannerimages"]{pd228bannerimage{
+  //           asset->{
+  //             url,
+  //             id
+  //           }
+  //         }}`
+  //   )
+  //     .then((data) => {
+  //       Setbgimage(data);
+  //       setLoading(false);
+  //       console.log(data);
+  //     })
+  //     .catch((error) => {
+  //       setError(error);
+  //       setLoading(false);
+  //     });
 
-  const [bgimage, Setbgimage] = React.useState(bgimages);
-  const [index, SetIndex] = React.useState(0);
+  //   const interval = setInterval(() => {
+  //     setSelectedImageIndex((prevIndex) => (prevIndex + 1) % bgimage.length);
+  //   }, 2000);
 
-  const changeBgimages = () => {
-    SetIndex((prev) => (prev + 1) % bgimage.length);
-  };
+  //   return () => clearInterval(interval);
+  // }, [bgimage.length]);
 
-  React.useEffect(() => {
-    const interval = setInterval(changeBgimages, 2000);
-    return () => clearInterval(interval);
+  // useEffect(() => {
+  //   Sanityclient.fetch(
+  //     `*[_type == "pd228specifications"]{technicalspecificationheading, specificationsubheading1, specificationsubheading2, specificationsubheading3,
+  //   }`
+  //   )
+  //     .then((data) => {
+  //       setSpecificationHeading(data[0].technicalspecificationheading)
+  //       setSpecificationSubHeading1(data[0].specificationsubheading1)
+  //       setSpecificationSubHeading2(data[0].specificationsubheading2)
+  //       setSpecificationSubHeading3(data[0].specificationsubheading3)
+  //       console.log(data);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching content:", error);
+  //     });
+  // }, []);
+
+  // useEffect(() => {
+  //   Sanityclient.fetch(
+  //     `*[_type == "pd228imagesection"]{leftsideimage{asset->{ url, id }}, rightsideimage1{asset->{ url, id }}, rightsideimage2{asset->{ url, id }},}`
+  //   )
+  //     .then((data) => {
+  //       setleftSideImage(data[0].leftsideimage)
+  //       setrightSideImage1(data[0].rightsideimage1)
+  //       setrightSideImage2(data[0].rightsideimage2)
+  //       console.log(data);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching content:", error);
+  //     });
+  // }, []);
+
+  // useEffect(() => {
+  //   Sanityclient.fetch(
+  //     `*[_type == "pd228content"]{pd228title, pd228contents, pd228image{asset->{url, id }}}`
+  //   )
+  //     .then((data) => {
+  //       setContent(data[0].pd228contents)
+  //       setTitle(data[0].pd228title)
+  //       setmodelImage(data[0].pd228image)
+  //       console.log(data);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching content:", error);
+  //     });
+  // }, []);
+
+  useEffect(() => {
+    Sanityclient.fetch(
+      `*[_type == "product"]{bannerimage{asset->{ url, id }}, modalname, features, featurepoints, applicationareas, productPdf, specificationheading, datatable1heading, datatable2heading, datatable3heading, leftsideimage{asset->{ url, id }}, rightsideimage1{asset->{ url, id }}, rightsideimage2{asset->{ url, id }}, modeltitle, modelcontents, modelimage{asset->{ url, id }}, contacttitle,  contactcontent }`
+    )
+      .then((data) => {
+        console.log(data);
+        Setbgimage(data[0].bannerimage); //progress
+        setModalName(data[0].modalname);
+        setaddFeature(data[0].features);
+        setaddfeaturepoints(data[0].featurepoints); //progress
+        setaddapplicationareas(data[0].applicationareas);
+        setproductpdf(data[0].productPdf); //progress
+        setSpecificationHeading(data[0].specificationheading);
+        setSpecificationTableHeading1(data[0].datatable1heading);
+        setSpecificationTableHeading2(data[0].datatable2heading);
+        setSpecificationTableHeading3(data[0].datatable3heading);
+        setleftSideImage(data[0].leftsideimage);
+        setrightSideImage1(data[0].rightsideimage1);
+        setrightSideImage2(data[0].rightsideimage2);
+        setTitle(data[0].modeltitle);
+        setContent(data[0].modelcontents);
+        setmodelImage(data[0].modelimage);
+      })
+      .catch((error) => {
+        console.error("Error fetching content:", error);
+      });
   }, []);
 
-  const [previewIndex, setPreviewIndex] = React.useState(null);
+  // const handleThumbnailClick = (index) => {
+  //   setPreviewIndex(index);
+  // };
 
-  const handleThumbnailClick = (index) => {
-    setPreviewIndex(index);
-  };
+  // const handleCloseOutsideClick = () => {
+  //   setPreviewIndex(null);
+  // };
 
-  const handleNextClick = () => {
-    setPreviewIndex((prevIndex) => (prevIndex + 1) % bgimage.length);
-  };
+  // const handlePrevClick = (event) => {
+  //   event.stopPropagation();
+  //   setPreviewIndex((prevIndex) =>
+  //     prevIndex === 0 ? bgimage.length - 1 : prevIndex - 1
+  //   );
+  // };
 
-  const handlePrevClick = () => {
-    setPreviewIndex(
-      (prevIndex) => (prevIndex - 1 + bgimage.length) % bgimage.length
-    );
-  };
+  // const handleNextClick = (event) => {
+  //   event.stopPropagation();
+  //   setPreviewIndex((prevIndex) => (prevIndex + 1) % bgimage.length);
+  // };
 
-  const handleClosePreview = () => {
-    setPreviewIndex(null);
-  };
+  // if (loading) return <div>Loading...</div>;
+  // if (error) return <div>Error: {error.message}</div>;
 
-  const handleCloseOutsideClick = (e) => {
-    if (e.target === e.currentTarget) {
-      handleClosePreview();
-    }
-  };
+  // const selectedImageUrl =
+  //   bgimage[selectedImageIndex % bgimage.length].pd228bannerimage.asset.url;
 
   //DataTable
   const Specification1 = [
@@ -738,13 +854,13 @@ export const IndoorPD228 = () => {
         </div>
 
         <section className="">
-          {previewIndex !== null && (
+          {/* {previewIndex !== null && (
             <div
               onClick={handleCloseOutsideClick}
               className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50"
             >
               <button
-                className=" w-10 text-white flex justify-center items-center  text-xl"
+                className="w-10 text-white flex justify-center items-center text-xl"
                 onClick={handlePrevClick}
               >
                 <GrPrevious className="" />
@@ -752,42 +868,48 @@ export const IndoorPD228 = () => {
 
               <div className="relative w-64 h-64 previewxs:w-80 previewxs:h-80 md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] xl:w-[550px] xl:h-[550px] flex flex-col justify-center items-center">
                 <div className=" bg-white">
-                  <img
-                    className="w-full h-full "
-                    src={bgimage[previewIndex]}
-                    alt="preview"
-                  />
+                  {bgimage[previewIndex % bgimage.length].pd228bannerimage && (
+                    <img
+                      className="w-full h-full"
+                      src={
+                        bgimage[previewIndex % bgimage.length].pd228bannerimage
+                          .asset.url
+                      }
+                      alt="preview"
+                    />
+                  )}
                 </div>
                 <button
                   className="absolute right-3 xl:top-20 top-14 cursor-pointer text-black bg-white rounded-full p-1"
-                  onClick={handleClosePreview}
+                  onClick={handleCloseOutsideClick}
                 >
                   <TfiClose />
                 </button>
               </div>
               <button
-                className=" w-10 text-white flex justify-center items-center  text-xl"
+                className="w-10 text-white flex justify-center items-center text-xl"
                 onClick={handleNextClick}
               >
                 <GrNext />
               </button>
             </div>
-          )}
+          )} */}
+
           <div className=" bg-[#F3F3F3] py-5 lg:py-8 md:bg-Bannerbg bg-contain w-full px-5 sm:px-14 flex md:flex-row flex-col md:gap-3 gap-10">
             <div className="relative w-full md:w-[42%] lg:w-[37%]">
-              <div
+              {/* <div
                 className="cursor-pointer bg-cover h-[250px] sm:h-[379px] shadow-2xl drop-shadow-lg rounded-xl w-full"
                 style={{
-                  backgroundImage: `url(${bgimage[index]})`,
+                  backgroundImage: `url(${selectedImageUrl})`,
                   backgroundPosition: "center",
                   transition: "background-image 1s ease",
                 }}
-                onClick={() => handleThumbnailClick(index)}
-              />
+                onClick={() => handleThumbnailClick(selectedImageIndex)}
+              /> */}
             </div>
             <div className=" w-full md:w-[58%] lg:w-[63%]   sm:pl-0 ">
               <p className="text-base xs:text-lg lg:text-2xl font-medium lg:pl-[22%] md:pl-10  border-b-[1.5px] border-[#F2667C] md:border-none mb-5">
-                PD228 interchangeable beam angle led pendant light
+                {modalname ? modalname : "Loading..."}
               </p>
               <img
                 src={line1}
@@ -797,29 +919,19 @@ export const IndoorPD228 = () => {
               <div className="md:text-xs  lg:text-[13px]  leading-7  md:leading-7 text-[#666666] lg:pl-[24%] md:pl-10 pl-4">
                 <ul className="list-disc">
                   <p className="-ml-4 pb-5 text-justify">
-                    This pendant light is an anti-glare design. High-lumen COB
-                    chip and PMMA lens offer a uniform lighting output. AL6063
-                    aluminum lamp body provides excellent heat dissipation.
-                    Special lens design reaches an anti-glare effect and creates
-                    a comfortable visual experience. Multiple beam angle lens
-                    optional, modular lens design make a convenient maintenance.
-                    Easy installation, recreational for various applications.
+                    {addFeature ? addFeature : "Loading..."}
                   </p>
-                  <li className="">Anti-glare design.</li>
-                  <li className="">CRI80/90/97 available.</li>
-                  <li className=""> Modular lens design: 24°/36°/60°.</li>
-                  <li>Flicker free internal driver.</li>
-                  <li>Dimming way: Non-dim, triac dim, DALI dim.</li>
+                  {/* {addfeaturepoints.map((features) => (
+                    <li>{features.features}</li>
+                  ))} */}
                   <p className="pt-5 -ml-4 text-justify">
-                    Application Areas: Applicable for residential lighting in
-                    bedrooms, living rooms, corridor etc, also suitable for
-                    commercial lighting in office, hotel, restaurant etc.
+                    {addapplicationareas ? addapplicationareas : "Loading..."}
                   </p>
                 </ul>
               </div>
               <div className="flex items-center justify-start md:pl-10 lg:pl-[22%]">
                 <a
-                  href={product1}
+                  href={productpdf}
                   download
                   className=" flex justify-center items-center mt-5 sm:mt-3  w-48 h-10 rounded bg-white hover:bg-pink-100 shadow-md"
                 >
@@ -836,13 +948,15 @@ export const IndoorPD228 = () => {
         <div className="">
           <div className="">
             <p className="text-center font-semibold text-xl py-5">
-              Technical Specification
+              {specificationHeading ? specificationHeading : "Loading..."}
             </p>
           </div>
 
           <div className="w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl">
             <h2 className="font-semibold text-sm pt-5 pb-2">
-              Technical Data Sheet (Non-Dimmable) :
+              {specificationTableHeading1
+                ? specificationTableHeading1
+                : "Loading..."}
             </h2>
             <table
               className="border border-black xl:w-full w-[1400px]"
@@ -985,7 +1099,9 @@ export const IndoorPD228 = () => {
           </div>
           <div className="w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl">
             <h2 className="font-semibold text-sm pt-5 pb-2">
-              Technical Data Sheet (Triac Dimmable) :
+              {specificationTableHeading2
+                ? specificationTableHeading2
+                : "Loading..."}
             </h2>
             <table
               className="border border-black xl:w-full w-[1400px]"
@@ -1103,7 +1219,9 @@ export const IndoorPD228 = () => {
           </div>
           <div className="w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl">
             <h2 className="font-semibold text-sm pt-5 pb-2">
-              Technical Data Sheet (DALI Dimmable) :
+              {specificationTableHeading3
+                ? specificationTableHeading3
+                : "Loading..."}
             </h2>
             <table
               className="border border-black xl:w-full w-[1400px]"
@@ -1212,25 +1330,28 @@ export const IndoorPD228 = () => {
         </div>
       </div>
       <div className="flex md:flex-row flex-col justify-center gap-10 lg:gap-0 lg:justify-evenly items-center pt-10">
-        <img src={series228pic1} alt="" className="w-96 lg:px-0 px-5" />
+        <img
+          src={leftSideImage.asset.url}
+          alt=""
+          className="w-96 lg:px-0 px-5"
+        />
         <section className="flex flex-col gap-10 p-4">
-          <img src={series228pic2} className="w-80" alt="" />
-          <img src={series228pic3} className="w-80" alt="" />
+          <img src={rightSideImage1.asset.url} className="w-80" alt="" />
+          <img src={rightSideImage2.asset.url} className="w-80" alt="" />
         </section>
       </div>
       <div className=" sm:p-5 ">
-        <h1 className="text-center font-bold text-xl">PD 228</h1>
+        <h1 className="text-center font-bold text-xl">
+          {title ? title : "Loading..."}
+        </h1>
         <div className="flex sm:px-14 px-5 sm:flex-row flex-col gap-10 items-center justify-center">
-          <img src={pd228} alt="" className="w-24 h-24" />
-
+          <img src={modelImage.asset.url} alt="" className="w-24 h-24" />
           <div className="sm:w-[90%]">
-            <p className="font-medium pb-2 text-start">PD228</p>
+            <p className="font-medium pb-2 text-start">
+              {title ? title : "Loading..."}
+            </p>
             <p className="text-[12px] sm:text-start text-justify">
-              PD228 pendant spot light is a high-performance LED luminaire that
-              is ideal for commercial or residential applications. It adopts
-              high lumen COB chip and PMMA lens for uniform light effect and
-              enhanced glare control. AL6063 Aluminum profile with sufficient
-              heat dissipation guarantee long lifespan.
+              {content ? content : "Loading..."}
             </p>
           </div>
         </div>
@@ -1238,8 +1359,6 @@ export const IndoorPD228 = () => {
       <div>
         <Explore />
       </div>
-
-      {/* footer */}
     </article>
   );
 };

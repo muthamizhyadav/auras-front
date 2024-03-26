@@ -5,7 +5,7 @@ import indoor3 from "../../assets/indoorLight3.jpg";
 import indoor4 from "../../assets/indoorLight4.jpg";
 import { FaChevronRight } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
-import { Explore } from "./Explore";
+import { Explore } from "../Products/Explore";
 import { TfiClose } from "react-icons/tfi";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import IndoorPdf from "../../assets/Indoor DL284.pdf";
