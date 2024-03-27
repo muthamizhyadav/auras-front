@@ -17,9 +17,12 @@ export const IndoorPD228 = () => {
   const [addapplicationareas, setaddapplicationareas] = useState("");
   const [productpdf, setproductpdf] = useState("");
   const [specificationHeading, setSpecificationHeading] = useState("");
-  const [specificationTableHeading1, setSpecificationTableHeading1] = useState("");
-  const [specificationTableHeading2, setSpecificationTableHeading2] = useState("");
-  const [specificationTableHeading3, setSpecificationTableHeading3] = useState("");
+  const [specificationTableHeading1, setSpecificationTableHeading1] =
+    useState("");
+  const [specificationTableHeading2, setSpecificationTableHeading2] =
+    useState("");
+  const [specificationTableHeading3, setSpecificationTableHeading3] =
+    useState("");
   const [leftSideImage, setleftSideImage] = useState("");
   const [rightSideImage1, setrightSideImage1] = useState("");
   const [rightSideImage2, setrightSideImage2] = useState("");
@@ -32,30 +35,6 @@ export const IndoorPD228 = () => {
   const [error, setError] = useState(null);
   const [previewIndex, setPreviewIndex] = useState(null);
 
-  // useEffect(() => {
-  //   Sanityclient.fetch(
-  //     `*[_type == "pd228indoorlights"]{indoorlightsmodalname, indoorlightsfeature, indoorlightsapplicationareas}`
-  //   )
-  //     .then((data) => {
-  //       setModalName(data[0].indoorlightsmodalname);
-  //       setaddFeature(data[0].indoorlightsfeature);
-  //       setaddapplicationareas(data[0].indoorlightsapplicationareas);
-  //       console.log(data);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error fetching content:", error);
-  //     });
-  // }, []);
-
-  // useEffect(() => {
-  //   Sanityclient.fetch(
-  //     `*[_type == "pd228indoorlightsfeaturespoints"]{indoorlightsfeatures}`
-  //   ).then((data) => {
-  //     setaddfeaturepoints(data);
-  //     console.log(data);
-  //   });
-  // }, []);
-
   React.useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -63,91 +42,28 @@ export const IndoorPD228 = () => {
     });
   }, []);
 
-  // useEffect(() => {
-  //   Sanityclient.fetch(
-  //     `*[_type == "pd228bannerimages"]{pd228bannerimage{
-  //           asset->{
-  //             url,
-  //             id
-  //           }
-  //         }}`
-  //   )
-  //     .then((data) => {
-  //       Setbgimage(data);
-  //       setLoading(false);
-  //       console.log(data);
-  //     })
-  //     .catch((error) => {
-  //       setError(error);
-  //       setLoading(false);
-  //     });
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setSelectedImageIndex((prevIndex) => (prevIndex + 1) % bgimage.length);
+    }, 2000);
 
-  //   const interval = setInterval(() => {
-  //     setSelectedImageIndex((prevIndex) => (prevIndex + 1) % bgimage.length);
-  //   }, 2000);
-
-  //   return () => clearInterval(interval);
-  // }, [bgimage.length]);
-
-  // useEffect(() => {
-  //   Sanityclient.fetch(
-  //     `*[_type == "pd228specifications"]{technicalspecificationheading, specificationsubheading1, specificationsubheading2, specificationsubheading3,
-  //   }`
-  //   )
-  //     .then((data) => {
-  //       setSpecificationHeading(data[0].technicalspecificationheading)
-  //       setSpecificationSubHeading1(data[0].specificationsubheading1)
-  //       setSpecificationSubHeading2(data[0].specificationsubheading2)
-  //       setSpecificationSubHeading3(data[0].specificationsubheading3)
-  //       console.log(data);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error fetching content:", error);
-  //     });
-  // }, []);
-
-  // useEffect(() => {
-  //   Sanityclient.fetch(
-  //     `*[_type == "pd228imagesection"]{leftsideimage{asset->{ url, id }}, rightsideimage1{asset->{ url, id }}, rightsideimage2{asset->{ url, id }},}`
-  //   )
-  //     .then((data) => {
-  //       setleftSideImage(data[0].leftsideimage)
-  //       setrightSideImage1(data[0].rightsideimage1)
-  //       setrightSideImage2(data[0].rightsideimage2)
-  //       console.log(data);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error fetching content:", error);
-  //     });
-  // }, []);
-
-  // useEffect(() => {
-  //   Sanityclient.fetch(
-  //     `*[_type == "pd228content"]{pd228title, pd228contents, pd228image{asset->{url, id }}}`
-  //   )
-  //     .then((data) => {
-  //       setContent(data[0].pd228contents)
-  //       setTitle(data[0].pd228title)
-  //       setmodelImage(data[0].pd228image)
-  //       console.log(data);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error fetching content:", error);
-  //     });
-  // }, []);
+    return () => clearInterval(intervalId);
+  }, [bgimage]);
 
   useEffect(() => {
     Sanityclient.fetch(
-      `*[_type == "product"]{bannerimage{asset->{ url, id }}, modalname, features, featurepoints, applicationareas, productPdf, specificationheading, datatable1heading, datatable2heading, datatable3heading, leftsideimage{asset->{ url, id }}, rightsideimage1{asset->{ url, id }}, rightsideimage2{asset->{ url, id }}, modeltitle, modelcontents, modelimage{asset->{ url, id }}, contacttitle,  contactcontent }`
+      `*[_type == "product"]{bannerimages[]{bannerimage{ asset->{ url, id }}}, modalname, features, featurepoints, applicationareas, productPdf{ asset->{ url, id }}, specificationheading, datatable1heading, datatable2heading, datatable3heading, leftsideimage{asset->{ url, id }}, rightsideimage1{asset->{ url, id }}, rightsideimage2{asset->{ url, id }}, modeltitle, modelcontents, modelimage{asset->{ url, id }}, contacttitle,  contactcontent }`
     )
       .then((data) => {
         console.log(data);
-        Setbgimage(data[0].bannerimage); //progress
+        Setbgimage(
+          data[0].bannerimages.map((item) => item.bannerimage.asset.url)
+        );
         setModalName(data[0].modalname);
         setaddFeature(data[0].features);
         setaddfeaturepoints(data[0].featurepoints); //progress
         setaddapplicationareas(data[0].applicationareas);
-        setproductpdf(data[0].productPdf); //progress
+        setproductpdf(data[0].productPdf.asset.url); //progress
         setSpecificationHeading(data[0].specificationheading);
         setSpecificationTableHeading1(data[0].datatable1heading);
         setSpecificationTableHeading2(data[0].datatable2heading);
@@ -164,31 +80,27 @@ export const IndoorPD228 = () => {
       });
   }, []);
 
-  // const handleThumbnailClick = (index) => {
-  //   setPreviewIndex(index);
-  // };
+  const handleThumbnailClick = (index) => {
+    setPreviewIndex(index);
+  };
 
-  // const handleCloseOutsideClick = () => {
-  //   setPreviewIndex(null);
-  // };
+  const handleCloseOutsideClick = () => {
+    setPreviewIndex(null);
+  };
 
-  // const handlePrevClick = (event) => {
-  //   event.stopPropagation();
-  //   setPreviewIndex((prevIndex) =>
-  //     prevIndex === 0 ? bgimage.length - 1 : prevIndex - 1
-  //   );
-  // };
+  const handlePrevClick = (event) => {
+    event.stopPropagation();
+    setPreviewIndex((prevIndex) =>
+      prevIndex === 0 ? bgimage.length - 1 : prevIndex - 1
+    );
+  };
 
-  // const handleNextClick = (event) => {
-  //   event.stopPropagation();
-  //   setPreviewIndex((prevIndex) => (prevIndex + 1) % bgimage.length);
-  // };
-
-  // if (loading) return <div>Loading...</div>;
-  // if (error) return <div>Error: {error.message}</div>;
-
-  // const selectedImageUrl =
-  //   bgimage[selectedImageIndex % bgimage.length].pd228bannerimage.asset.url;
+  const handleNextClick = (event) => {
+    event.stopPropagation();
+    setPreviewIndex((prevIndex) =>
+      prevIndex === bgimage.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
   //DataTable
   const Specification1 = [
@@ -854,7 +766,7 @@ export const IndoorPD228 = () => {
         </div>
 
         <section className="">
-          {/* {previewIndex !== null && (
+          {previewIndex !== null && (
             <div
               onClick={handleCloseOutsideClick}
               className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50"
@@ -863,21 +775,16 @@ export const IndoorPD228 = () => {
                 className="w-10 text-white flex justify-center items-center text-xl"
                 onClick={handlePrevClick}
               >
-                <GrPrevious className="" />
+                <GrPrevious />
               </button>
 
               <div className="relative w-64 h-64 previewxs:w-80 previewxs:h-80 md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] xl:w-[550px] xl:h-[550px] flex flex-col justify-center items-center">
                 <div className=" bg-white">
-                  {bgimage[previewIndex % bgimage.length].pd228bannerimage && (
-                    <img
-                      className="w-full h-full"
-                      src={
-                        bgimage[previewIndex % bgimage.length].pd228bannerimage
-                          .asset.url
-                      }
-                      alt="preview"
-                    />
-                  )}
+                  <img
+                    className="w-full h-full"
+                    src={bgimage[previewIndex]}
+                    alt="preview"
+                  />
                 </div>
                 <button
                   className="absolute right-3 xl:top-20 top-14 cursor-pointer text-black bg-white rounded-full p-1"
@@ -893,19 +800,19 @@ export const IndoorPD228 = () => {
                 <GrNext />
               </button>
             </div>
-          )} */}
+          )}
 
           <div className=" bg-[#F3F3F3] py-5 lg:py-8 md:bg-Bannerbg bg-contain w-full px-5 sm:px-14 flex md:flex-row flex-col md:gap-3 gap-10">
             <div className="relative w-full md:w-[42%] lg:w-[37%]">
-              {/* <div
+              <div
                 className="cursor-pointer bg-cover h-[250px] sm:h-[379px] shadow-2xl drop-shadow-lg rounded-xl w-full"
                 style={{
-                  backgroundImage: `url(${selectedImageUrl})`,
+                  backgroundImage: `url(${bgimage[selectedImageIndex]})`,
                   backgroundPosition: "center",
                   transition: "background-image 1s ease",
                 }}
                 onClick={() => handleThumbnailClick(selectedImageIndex)}
-              /> */}
+              />
             </div>
             <div className=" w-full md:w-[58%] lg:w-[63%]   sm:pl-0 ">
               <p className="text-base xs:text-lg lg:text-2xl font-medium lg:pl-[22%] md:pl-10  border-b-[1.5px] border-[#F2667C] md:border-none mb-5">
@@ -921,9 +828,9 @@ export const IndoorPD228 = () => {
                   <p className="-ml-4 pb-5 text-justify">
                     {addFeature ? addFeature : "Loading..."}
                   </p>
-                  {/* {addfeaturepoints.map((features) => (
-                    <li>{features.features}</li>
-                  ))} */}
+                  {addfeaturepoints && addfeaturepoints.map((point) => (
+                    <li key={point._key}>{point.featurepoint}</li>
+                  ))}
                   <p className="pt-5 -ml-4 text-justify">
                     {addapplicationareas ? addapplicationareas : "Loading..."}
                   </p>
@@ -1331,13 +1238,21 @@ export const IndoorPD228 = () => {
       </div>
       <div className="flex md:flex-row flex-col justify-center gap-10 lg:gap-0 lg:justify-evenly items-center pt-10">
         <img
-          src={leftSideImage.asset.url}
+          src={leftSideImage && leftSideImage.asset.url}
           alt=""
           className="w-96 lg:px-0 px-5"
         />
         <section className="flex flex-col gap-10 p-4">
-          <img src={rightSideImage1.asset.url} className="w-80" alt="" />
-          <img src={rightSideImage2.asset.url} className="w-80" alt="" />
+          <img
+            src={rightSideImage1 && rightSideImage1.asset.url}
+            className="w-80"
+            alt=""
+          />
+          <img
+            src={rightSideImage2 && rightSideImage2.asset.url}
+            className="w-80"
+            alt=""
+          />
         </section>
       </div>
       <div className=" sm:p-5 ">
@@ -1345,7 +1260,11 @@ export const IndoorPD228 = () => {
           {title ? title : "Loading..."}
         </h1>
         <div className="flex sm:px-14 px-5 sm:flex-row flex-col gap-10 items-center justify-center">
-          <img src={modelImage.asset.url} alt="" className="w-24 h-24" />
+          <img
+            src={modelImage && modelImage.asset.url}
+            alt=""
+            className="w-24 h-24"
+          />
           <div className="sm:w-[90%]">
             <p className="font-medium pb-2 text-start">
               {title ? title : "Loading..."}
