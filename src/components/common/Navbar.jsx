@@ -352,7 +352,8 @@ const Navbar = () => {
       {showDropdown && (
                 <div className="dropdown-container dropdown-animation absolute w-full   bg-white  py-2 shadow-md shadow-gray-400 z-10"
                 onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}>
+                // onMouseLeave={handleMouseLeave}
+                >
                   <div className="flex justify-center w-full">
                   <Link
                     onClick={() => setShowDropdown(false)}
@@ -374,7 +375,7 @@ const Navbar = () => {
                       setLinearDropdown(!linearDropdown)
                     } }
                     onMouseEnter={()=>setLinearDropdown(true)}
-                    onMouseLeave={()=>setLinearDropdown(false)}
+                    // onMouseLeave={()=>setLinearDropdown(false)}
                     // to="home/products/indoorlights"
                     className="block px-4 py-2 text-xs  "
                   >
@@ -394,7 +395,8 @@ const Navbar = () => {
                 </div>
               )}
               {linearDropdown && (
-                        <div className="absolute w-full bg-white mt-12 z-20 py-2 shadow-md shadow-gray-400">
+                        <div className="absolute w-full bg-white mt-12 z-20 py-2 shadow-md shadow-gray-400" onMouseLeave={()=>{setLinearDropdown(false) 
+                         setShowDropdown(false)}}>
                           <div className="w-full flex  justify-center">
                           <Link
                             to="/home/products/indoorlights/338-series"
