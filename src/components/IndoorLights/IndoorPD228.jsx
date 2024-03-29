@@ -8,8 +8,10 @@ import { TfiClose } from "react-icons/tfi";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import pd228 from "../../assets/pd228.png";
 import Sanityclient from "../common/Sanityclient";
+import { useParams } from "react-router-dom";
 
 export const IndoorPD228 = () => {
+  const {id}=useParams()
   const [bgimage, Setbgimage] = useState([]);
   const [modalname, setModalName] = useState("");
   const [addFeature, setaddFeature] = useState("");
@@ -29,11 +31,18 @@ export const IndoorPD228 = () => {
   const [title, setTitle] = useState("");
   const [modelImage, setmodelImage] = useState("");
   const [content, setContent] = useState("");
-
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [previewIndex, setPreviewIndex] = useState(null);
+  const [tableHeader, setTableHeader] = useState([]);
+  const [tableColumn, setTableColumn] = useState([]);
+  const [table1Column, setTable1Column] = useState([]);
+  const [table2Column, setTable2Column] = useState([]);
+  const [table3Column, setTable3Column] = useState([]);
+  const [table1Header, setTable1Header] = useState([]);
+  const [table2Header, setTable2Header] = useState([]);
+  const [table3Header, setTable3Header] = useState([]);
 
   React.useEffect(() => {
     window.scrollTo({
@@ -44,7 +53,7 @@ export const IndoorPD228 = () => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setSelectedImageIndex((prevIndex) => (prevIndex + 1) % bgimage.length);
+      setSelectedImageIndex((prevIndex) => (prevIndex + 3) % bgimage.length);
     }, 2000);
 
     return () => clearInterval(intervalId);
@@ -52,33 +61,48 @@ export const IndoorPD228 = () => {
 
   useEffect(() => {
     Sanityclient.fetch(
-      `*[_type == "product"]{bannerimages[]{bannerimage{ asset->{ url, id }}}, modalname, features, featurepoints, applicationareas, productPdf{ asset->{ url, id }}, specificationheading, datatable1heading, datatable2heading, datatable3heading, leftsideimage{asset->{ url, id }}, rightsideimage1{asset->{ url, id }}, rightsideimage2{asset->{ url, id }}, modeltitle, modelcontents, modelimage{asset->{ url, id }}, contacttitle,  contactcontent }`
+      `*[_type == "product"]{bannerimages[]{bannerimage{ asset->{ url, id }}}, modalname, features, featurepoints, applicationareas, productPdf{ asset->{ url, id }}, specificationheading, datatable1heading, datatable2heading, datatable3heading, leftsideimage{asset->{ url, id }}, rightsideimage1{asset->{ url, id }}, rightsideimage2{asset->{ url, id }}, modeltitle, modelcontents, modelimage{asset->{ url, id }}, contacttitle,  contactcontent, tableheader, tablecolumns, table1headers, table1columns, table2headers, table2columns, table3headers, table3columns,  }`
     )
       .then((data) => {
         console.log(data);
         Setbgimage(
           data[0].bannerimages.map((item) => item.bannerimage.asset.url)
         );
-        setModalName(data[0].modalname);
-        setaddFeature(data[0].features);
-        setaddfeaturepoints(data[0].featurepoints); //progress
-        setaddapplicationareas(data[0].applicationareas);
-        setproductpdf(data[0].productPdf.asset.url); //progress
-        setSpecificationHeading(data[0].specificationheading);
-        setSpecificationTableHeading1(data[0].datatable1heading);
-        setSpecificationTableHeading2(data[0].datatable2heading);
-        setSpecificationTableHeading3(data[0].datatable3heading);
-        setleftSideImage(data[0].leftsideimage);
-        setrightSideImage1(data[0].rightsideimage1);
-        setrightSideImage2(data[0].rightsideimage2);
-        setTitle(data[0].modeltitle);
-        setContent(data[0].modelcontents);
-        setmodelImage(data[0].modelimage);
+       for(let i=0;i<data.length;i++){
+        console.log(data);
+        if(id.toLowerCase() === data[i].modeltitle.toLowerCase()){
+          console.log(data[i] ,'hii nigga am here');
+          setModalName(data[i].modalname);
+          setaddFeature(data[i].features);
+          setaddfeaturepoints(data[i].featurepoints);
+          setaddapplicationareas(data[i].applicationareas);
+          setproductpdf(data[i].productPdf.asset.url);
+          setSpecificationHeading(data[i].specificationheading);
+          setSpecificationTableHeading1(data[i].datatable1heading);
+          setSpecificationTableHeading2(data[i].datatable2heading);
+          setSpecificationTableHeading3(data[i].datatable3heading);
+          setleftSideImage(data[i].leftsideimage);
+          setrightSideImage1(data[i].rightsideimage1);
+          setrightSideImage2(data[i].rightsideimage2);
+          setTitle(data[i].modeltitle);
+          setContent(data[i].modelcontents);
+          setmodelImage(data[i].modelimage);
+          setTableHeader(data[i].tableheader);
+          setTableColumn(data[i].tablecolumns);
+          setTable1Header(data[i].table1headers);
+          setTable2Header(data[i].table2headers)
+          setTable3Header(data[i].table3headers)
+          setTable1Column(data[i].table1columns)
+          setTable2Column(data[i].table2columns)
+          setTable3Column(data[i].table3columns)
+        }
+       }
+        
       })
       .catch((error) => {
         console.error("Error fetching content:", error);
       });
-  }, []);
+  }, [id]);
 
   const handleThumbnailClick = (index) => {
     setPreviewIndex(index);
@@ -101,653 +125,6 @@ export const IndoorPD228 = () => {
       prevIndex === bgimage.length - 1 ? 0 : prevIndex + 1
     );
   };
-
-  //DataTable
-  const Specification1 = [
-    {
-      name: "Dimension(mm)",
-      spec1: "Ø65*1265",
-      spec2: "",
-      spec3: "Ø85*1285",
-      spec4: "",
-      spec5: "Ø100*1320",
-      spec6: "",
-    },
-    {
-      name: "Watt(W)",
-      spec1: "10W	",
-      spec2: "15W",
-      spec3: "20W",
-      spec4: "25W",
-      spec5: "30W",
-      spec6: "40W",
-    },
-    {
-      name: "Rated Input Voltage(V)",
-      spec1: <p className="w-[500px]">AC230V </p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-      spec6: "",
-    },
-    {
-      name: "Input Voltage(V)",
-      spec1: <p className="w-[500px]">AC200-240V</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-      spec6: "",
-    },
-    {
-      name: "Light Source",
-      spec1: <p className="w-[500px]">COB</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-      spec6: "",
-    },
-    {
-      name: "SDCM",
-      spec1: <p className="w-[500px]"> &lt; 6</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-      spec6: "",
-    },
-    {
-      name: "CCT(K)",
-      spec1: (
-        <p className="w-[500px]">
-          1-CCT: 2700K/3000K/4000K/5000K|| 3-CCT: 3000K + 4000K + 5000K
-        </p>
-      ),
-      spec2: <h2 className=""></h2>,
-      spec3: <h2 className=""></h2>,
-      spec4: <h2 className=""></h2>,
-      spec5: <h2 className=""></h2>,
-      spec6: <h2 className=""></h2>,
-    },
-    {
-      name: "CCT Selection DIP Switch",
-      spec1: <p className="w-[500px]">Yes</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-      spec6: <p className="">No</p>,
-    },
-    {
-      name: "Non-DIM  1-CCT Luminous Flux (lm) ±5%",
-      spec1: "900-1100",
-      spec2: "1350-1650",
-      spec3: "1800-2250",
-      spec4: "2150-2700",
-      spec5: "2650-3050",
-      spec6: "3550-4200",
-    },
-    {
-      name: "DIM 1-CCT Luminous Flux (lm) ±5%",
-      spec1: <p className="w-[500px]">-</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-      spec6: "",
-    },
-    {
-      name: "Non-DIM 3-CCT Luminous Flux (lm) ±5%",
-      spec1: "750-950",
-      spec2: "1050-1400",
-      spec3: "1750-2100",
-      spec4: "2150-2600",
-      spec5: "2300-2850",
-      spec6: "-",
-    },
-
-    {
-      name: "DIM 3-CCT Luminous Flux (lm) ±5%",
-      spec1: <p className="w-[500px]">-</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-      spec6: "",
-    },
-
-    {
-      name: "CRI",
-      spec1: <p className="w-[500px]">80/90/97（ 1-CCT) /90（3-CCT)</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-      spec6: "",
-    },
-    {
-      name: "Beam Angle (°)",
-      spec1: <p className="w-[500px]">24° / 36° / 60°</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-      spec6: "",
-    },
-    {
-      name: "LED Driver",
-      spec1: <p className="w-[500px]">Built-in</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-      spec6: "",
-    },
-    {
-      name: "Electrical Class",
-      spec1: <p className="w-[500px]">Class I</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-      spec6: "",
-    },
-    {
-      name: "Ingress Protection (IP Rating)",
-      spec1: <p className="w-[500px]">IP20</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-      spec6: "",
-    },
-    {
-      name: "Product Finishing(Base)",
-      spec1: <p className="w-[500px]">White RAL 9016/Black RAL9005</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-      spec6: "",
-    },
-    {
-      name: "Materials of Optics",
-      spec1: <p className="w-[500px]">PMMA</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-      spec6: "",
-    },
-    {
-      name: "Materials of Housing",
-      spec1: <p className="w-[500px]">Aluminum</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-      spec6: "",
-    },
-    {
-      name: "Lifetime (hr)",
-      spec1: <p className="w-[500px]">50,000h</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-      spec6: "",
-    },
-    {
-      name: "Glow wire test (C )",
-      spec1: <p className="w-[500px]">650°C</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-      spec6: "",
-    },
-    {
-      name: "Operating Temp. (C )",
-      spec1: <p className="w-[500px]">-20°C~40°C</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-      spec6: "",
-    },
-    {
-      name: "Storage Temp. (C )	",
-      spec1: <p className="w-[500px]">-20°C~65°C</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-      spec6: "",
-    },
-    {
-      name: "Installation",
-      spec1: <p className="w-[500px]">Pendant</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-      spec6: "",
-    },
-  ];
-  const Specification2 = [
-    {
-      name: "Dimension(mm)",
-      spec1: "Ø65*1265",
-      spec2: <p className="">Ø85*1285</p>,
-      spec3: "",
-      spec4: "",
-      spec5: "Ø100*1320",
-    },
-    {
-      name: "Watt(W)",
-      spec1: "10W	",
-      spec2: "15W",
-      spec3: "20W",
-      spec4: "25W",
-      spec5: "30W",
-    },
-    {
-      name: "Rated Input Voltage(V)",
-      spec1: <p className="w-[500px]">AC230V</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Input Voltage(V)",
-      spec1: <p className="w-[500px]">AC200-240V</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Light Source",
-      spec1: <p className="w-[500px]">COB</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "SDCM",
-      spec1: <p className="w-[500px]">&lt;6</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "CCT(K)",
-      spec1: (
-        <h2 className="w-[500px]">
-          1-CCT: 2700K/3000K/ 4000K/5000K || 3-CCT: 3000K + 4000K + 5000K
-        </h2>
-      ),
-      spec2: <h2 className=""></h2>,
-      spec3: <h2 className=""></h2>,
-      spec4: <h2 className=""></h2>,
-      spec5: <h2 className=""></h2>,
-    },
-    {
-      name: "CCT Selection DIP Switch",
-      spec1: <p className="">Yes</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Non-DIM  1-CCT Luminous Flux (lm) ±5%",
-      spec1: <p className="w-[500px]">-</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "DIM 1-CCT Luminous Flux (lm) ±5%",
-      spec1: "850-1050",
-      spec2: "1350-1650 ",
-      spec3: "1750-2150",
-      spec4: "1950-2450",
-      spec5: "2450-2800",
-    },
-    {
-      name: "Non-DIM 3-CCT Luminous Flux (lm) ±5%",
-      spec1: <p className="w-[500px]">-</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-
-    {
-      name: "DIM 3-CCT Luminous Flux (lm) ±5%",
-      spec1: "700-890",
-      spec2: "1050-1400",
-      spec3: "1700-2050",
-      spec4: "1950-2350",
-      spec5: "2100-2650",
-    },
-
-    {
-      name: "CRI",
-      spec1: <p className="w-[500px]">80/90/97（ 1-CCT) /90（3-CCT)</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Beam Angle (°)",
-      spec1: <p className="w-[500px]">24° / 36° / 60°</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "LED Driver",
-      spec1: <p className="w-[500px]">Built-in</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Electrical Class",
-      spec1: <p className="w-[500px]">Class I</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Ingress Protection (IP Rating)",
-      spec1: <p className="w-[500px]">IP20</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Product Finishing(Base)",
-      spec1: <p className="w-[500px]">White RAL 9016/Black RAL9005</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Materials of Optics",
-      spec1: <p className="w-[500px]">PMMA</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Materials of Housing",
-      spec1: <p className="w-[500px]">Aluminum</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Lifetime (hr)",
-      spec1: <p className="w-[500px]">50,000h</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Glow wire test (C )",
-      spec1: <p className="w-[500px]">650°C</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Operating Temp. (C )",
-      spec1: <p className="w-[500px]">-20°C~40°C</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Storage Temp. (C )	",
-      spec1: <p className="w-[500px]">-20°C~65°C</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Installation",
-      spec1: <p className="w-[500px]">Pendant</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-  ];
-  const Specification3 = [
-    {
-      name: "Dimension(mm)",
-      spec1: "Ø65*1265",
-      spec2: "",
-      spec3: "Ø85*1285",
-      spec4: "Ø100*1320",
-      spec5: "",
-    },
-    {
-      name: "Watt(W)",
-      spec1: "10W	",
-      spec2: "15W",
-      spec3: "20W",
-      spec4: "25W",
-      spec5: "30W",
-    },
-    {
-      name: "Rated Input Voltage(V)",
-      spec1: <p className="w-[500px]">AC230V</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Input Voltage(V)",
-      spec1: <p className="w-[500px]">AC200-240V</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Light Source",
-      spec1: <p className="w-[500px]">COB</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "SDCM",
-      spec1: <p className="w-[500px]">&lt;6</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "CCT(K)",
-      spec1: <h2 className="w-[500px]">1-CCT: 2700K/3000K /4000K/5000K</h2>,
-      spec2: <h2></h2>,
-      spec3: <h2></h2>,
-      spec4: <h2></h2>,
-      spec5: <h2></h2>,
-    },
-    {
-      name: "CCT Selection DIP Switch",
-      spec1: <p className="w-[500px]">No</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Non-DIM  1-CCT Luminous Flux (lm) ±5%",
-      spec1: <p className="w-[500px]">-</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "DIM 1-CCT Luminous Flux (lm) ±5%",
-      spec1: "900-1200",
-      spec2: "1350-1650",
-      spec3: "1800-2250",
-      spec4: "2150-2700",
-      spec5: "2500-3250",
-    },
-    {
-      name: "Non-DIM 3-CCT Luminous Flux (lm) ±5%",
-      spec1: <p className="w-[500px]">-</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-
-    {
-      name: "DIM 3-CCT Luminous Flux (lm) ±5%",
-      spec1: <p className="w-[500px]">-</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-
-    {
-      name: "CRI",
-      spec1: <p className="w-[500px]">80(90/97 optional)</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Beam Angle (°)",
-      spec1: <p className="w-[500px]">24° / 36° / 60°</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "LED Driver",
-      spec1: <p className="w-[500px]">Built-in</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Electrical Class",
-      spec1: <p className="w-[500px]">Class I</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Ingress Protection (IP Rating)",
-      spec1: <p className="w-[500px]">-</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Product Finishing(Base)",
-      spec1: <p className="w-[500px]">White RAL 9016/Black RAL9005</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Materials of Optics",
-      spec1: <p className="w-[500px]">PMMA</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Materials of Housing",
-      spec1: <p className="w-[500px]">Aluminum</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Lifetime (hr)",
-      spec1: <p className="w-[500px]">50,000h</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Glow wire test (C )",
-      spec1: <p className="w-[500px]">650°C</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Operating Temp. (C )",
-      spec1: <p className="w-[500px]">-20°C~40°C</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Storage Temp. (C )	",
-      spec1: <p className="w-[500px]">-20°C~65°C</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-    {
-      name: "Installation",
-      spec1: <p className="w-[500px]">Pendant</p>,
-      spec2: "",
-      spec3: "",
-      spec4: "",
-      spec5: "",
-    },
-  ];
 
   return (
     <article className="font">
@@ -816,7 +193,7 @@ export const IndoorPD228 = () => {
             </div>
             <div className=" w-full md:w-[58%] lg:w-[63%]   sm:pl-0 ">
               <p className="text-base xs:text-lg lg:text-2xl font-medium lg:pl-[22%] md:pl-10  border-b-[1.5px] border-[#F2667C] md:border-none mb-5">
-                {modalname ? modalname : "Loading..."}
+                {modalname ? modalname : ""}
               </p>
               <img
                 src={line1}
@@ -826,13 +203,14 @@ export const IndoorPD228 = () => {
               <div className="md:text-xs  lg:text-[13px]  leading-7  md:leading-7 text-[#666666] lg:pl-[24%] md:pl-10 pl-4">
                 <ul className="list-disc">
                   <p className="-ml-4 pb-5 text-justify">
-                    {addFeature ? addFeature : "Loading..."}
+                    {addFeature ? addFeature : ""}
                   </p>
-                  {addfeaturepoints && addfeaturepoints.map((point) => (
-                    <li key={point._key}>{point.featurepoint}</li>
-                  ))}
+                  {addfeaturepoints &&
+                    addfeaturepoints.map((point) => (
+                      <li key={point._key}>{point.featurepoint}</li>
+                    ))}
                   <p className="pt-5 -ml-4 text-justify">
-                    {addapplicationareas ? addapplicationareas : "Loading..."}
+                    {addapplicationareas ? addapplicationareas : ""}
                   </p>
                 </ul>
               </div>
@@ -855,7 +233,7 @@ export const IndoorPD228 = () => {
         <div className="">
           <div className="">
             <p className="text-center font-semibold text-xl py-5">
-              {specificationHeading ? specificationHeading : "Loading..."}
+              {specificationHeading ? specificationHeading : ""}
             </p>
           </div>
 
@@ -863,376 +241,99 @@ export const IndoorPD228 = () => {
             <h2 className="font-semibold text-sm pt-5 pb-2">
               {specificationTableHeading1
                 ? specificationTableHeading1
-                : "Loading..."}
+                : ""}
             </h2>
             <table
-              className="border border-black xl:w-full w-[1400px]"
+              className=" xl:w-full w-[1400px] text-xs border border-gray-400"
               style={{ tableLayout: "fixed" }}
             >
-              <thead className="border-b border-gray-400">
+              <thead className="">
                 <tr>
-                  <th className="border-r border-black text-xs px-3 py-2 text-start ">
-                    Model
-                  </th>
-                  <th className="border-r border-gray-400 text-xs px-3 py-2">
-                    PD228-10W
-                  </th>
-                  <th className="border-r border-gray-400 text-xs px-3 py-2">
-                    PD228-15W
-                  </th>
-                  <th className="border-r border-gray-400 text-xs px-3 py-2">
-                    PD228-20W
-                  </th>
-                  <th className="border-r border-gray-400 text-xs px-3 py-2">
-                    PD228-25W
-                  </th>
-                  <th className="border-r border-gray-400 text-xs px-3 py-2">
-                    PD228-30W
-                  </th>
-                  <th className="border-r border-gray-400 text-xs px-3 py-2">
-                    PD228-40W
-                  </th>
+                {table1Header &&
+                    table1Header.map((header) => (
+                      <th className="border-r border-b border-gray-400 text-xs px-3 py-2" key={header._key}>{header.addtableheaders}</th>
+                    ))}
                 </tr>
               </thead>
               <tbody>
-                {Specification1.map((item, index) => (
-                  <tr key={index}>
-                    <td
-                      className={`border-r border-b border-black text-xs px-3 py-2 font-semibold `}
-                    >
-                      {item.name}
-                    </td>
-                    <td
-                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
-                        item.name === "Dimension(mm)"
-                          ? ""
-                          : item.name === "Watt(W)"
-                          ? "border-r"
-                          : item.name ===
-                            "Non-DIM  1-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : item.name === "Non-DIM 3-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : ""
-                      }`}
-                    >
-                      {item.spec1}
-                    </td>
-                    <td
-                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
-                        item.name === "Dimension(mm)"
-                          ? "border-r"
-                          : item.name === "Watt(W)"
-                          ? "border-r"
-                          : item.name ===
-                            "Non-DIM  1-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : item.name === "Non-DIM 3-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : ""
-                      }`}
-                    >
-                      {item.spec2}
-                    </td>
-                    <td
-                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
-                        item.name === "Dimension(mm)"
-                          ? ""
-                          : item.name === "Watt(W)"
-                          ? "border-r"
-                          : item.name ===
-                            "Non-DIM  1-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : item.name === "Non-DIM 3-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : ""
-                      }`}
-                    >
-                      {item.spec3}
-                    </td>
-                    <td
-                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
-                        item.name === "Dimension(mm)"
-                          ? "border-r"
-                          : item.name === "Watt(W)"
-                          ? "border-r"
-                          : item.name ===
-                            "Non-DIM  1-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : item.name === "Non-DIM 3-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : ""
-                      }`}
-                    >
-                      {item.spec4}
-                    </td>
-                    <td
-                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
-                        item.name === "Dimension(mm)"
-                          ? ""
-                          : item.name === "Watt(W)"
-                          ? "border-r"
-                          : item.name ===
-                            "Non-DIM  1-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : item.name === "Non-DIM 3-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : item.name === "CCT Selection DIP Switch"
-                          ? "border-r"
-                          : ""
-                      }`}
-                    >
-                      {item.spec5}
-                    </td>
-                    <td
-                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
-                        item.name === "Dimension(mm)"
-                          ? "border-r"
-                          : item.name === "Watt(W)"
-                          ? "border-r"
-                          : item.name === "Non-DIM 1-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : item.name === "Non-DIM 3-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : ""
-                      }`}
-                    >
-                      {item.spec6}
-                    </td>
-                  </tr>
-                ))}
+                {table1Column &&
+                  table1Column.map((columnarray, index) => (
+                    <tr>
+                      {columnarray &&
+                        columnarray.addtablecolumns.map((item, ind) => (
+                          <td className={`border-r border-b border-gray-400  px-3 py-2 `}>{item.column}</td>
+                        ))}
+                    </tr>
+                  ))}
               </tbody>
             </table>
+           
+           
+           
           </div>
           <div className="w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl">
             <h2 className="font-semibold text-sm pt-5 pb-2">
               {specificationTableHeading2
                 ? specificationTableHeading2
-                : "Loading..."}
+                : ""}
             </h2>
             <table
-              className="border border-black xl:w-full w-[1400px]"
+              className=" xl:w-full w-[1400px] text-xs border border-gray-400"
               style={{ tableLayout: "fixed" }}
             >
-              <thead className="border-b border-gray-400">
+              <thead className="">
                 <tr>
-                  <th className="border-r border-black text-xs px-3 py-2 text-start ">
-                    Model
-                  </th>
-                  <th className="border-r border-gray-400 text-xs px-3 py-2">
-                    PD228-10W
-                  </th>
-                  <th className="border-r border-gray-400 text-xs px-3 py-2">
-                    PD228-15W
-                  </th>
-                  <th className="border-r border-gray-400 text-xs px-3 py-2">
-                    PD228-20W
-                  </th>
-                  <th className="border-r border-gray-400 text-xs px-3 py-2">
-                    PD228-25W
-                  </th>
-                  <th className="border-r border-gray-400 text-xs px-3 py-2">
-                    PD228-30W
-                  </th>
+                {table2Header &&
+                    table2Header.map((header) => (
+                      <th className="border-r border-b border-gray-400 text-xs px-3 py-2" key={header._key}>{header.addtableheaders}</th>
+                    ))}
                 </tr>
               </thead>
               <tbody>
-                {Specification2.map((item, index) => (
-                  <tr key={index}>
-                    <td
-                      className={`border-r border-b border-black text-xs px-3 py-2 font-semibold`}
-                    >
-                      {item.name}
-                    </td>
-                    <td
-                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
-                        item.name === "Dimension(mm)"
-                          ? "border-r"
-                          : item.name === "Watt(W)"
-                          ? "border-r"
-                          : item.name === "DIM 1-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : item.name === "DIM 3-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : ""
-                      }`}
-                    >
-                      {item.spec1}
-                    </td>
-                    <td
-                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
-                        item.name === "Dimension(mm)"
-                          ? ""
-                          : item.name === "Watt(W)"
-                          ? "border-r"
-                          : item.name === "DIM 1-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : item.name === "DIM 3-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : ""
-                      }`}
-                    >
-                      {item.spec2}
-                    </td>
-                    <td
-                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
-                        item.name === "Dimension(mm)"
-                          ? ""
-                          : item.name === "Watt(W)"
-                          ? "border-r"
-                          : item.name === "DIM 1-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : item.name === "DIM 3-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : ""
-                      }`}
-                    >
-                      {item.spec3}
-                    </td>
-                    <td
-                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
-                        item.name === "Dimension(mm)"
-                          ? "border-r"
-                          : item.name === "Watt(W)"
-                          ? "border-r"
-                          : item.name === "DIM 1-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : item.name === "DIM 3-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : ""
-                      }`}
-                    >
-                      {item.spec4}
-                    </td>
-                    <td
-                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
-                        item.name === "Dimension(mm)"
-                          ? "border-r"
-                          : item.name === "Watt(W)"
-                          ? "border-r"
-                          : item.name === "DIM 1-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : item.name === "DIM 3-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : ""
-                      }`}
-                    >
-                      {item.spec5}
-                    </td>
-                  </tr>
-                ))}
+                {table2Column &&
+                  table2Column.map((columnarray, index) => (
+                    <tr>
+                      {columnarray &&
+                        columnarray.addtablecolumns.map((item, ind) => (
+                          <td className={`border-r border-b border-gray-400  px-3 py-2 `}>{item.column}</td>
+                        ))}
+                    </tr>
+                  ))}
               </tbody>
             </table>
+            
           </div>
           <div className="w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl">
             <h2 className="font-semibold text-sm pt-5 pb-2">
               {specificationTableHeading3
                 ? specificationTableHeading3
-                : "Loading..."}
+                : ""}
             </h2>
             <table
-              className="border border-black xl:w-full w-[1400px]"
+              className=" xl:w-full w-[1400px] text-xs border border-gray-400"
               style={{ tableLayout: "fixed" }}
             >
-              <thead className="border-b border-gray-400">
+              <thead className="">
                 <tr>
-                  <th className="border-r border-black text-xs px-3 py-2 text-start ">
-                    Model
-                  </th>
-                  <th className="border-r border-gray-400 text-xs px-3 py-2">
-                    PD228-10W
-                  </th>
-                  <th className="border-r border-gray-400 text-xs px-3 py-2">
-                    PD228-15W
-                  </th>
-                  <th className="border-r border-gray-400 text-xs px-3 py-2">
-                    PD228-20W
-                  </th>
-                  <th className="border-r border-gray-400 text-xs px-3 py-2">
-                    PD228-25W
-                  </th>
-                  <th className="border-r border-gray-400 text-xs px-3 py-2">
-                    PD228-30W
-                  </th>
+                {table3Header &&
+                    table3Header.map((header) => (
+                      <th className="border-r border-b border-gray-400 text-xs px-3 py-2" key={header._key}>{header.addtableheaders}</th>
+                    ))}
                 </tr>
               </thead>
               <tbody>
-                {Specification3.map((item, index) => (
-                  <tr key={index}>
-                    <td
-                      className={`border-r border-b border-black text-xs px-3 py-2 font-semibold`}
-                    >
-                      {item.name}
-                    </td>
-                    <td
-                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
-                        item.name === "Dimension(mm)"
-                          ? ""
-                          : item.name === "Watt(W)"
-                          ? "border-r"
-                          : item.name === "DIM 1-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : ""
-                      }`}
-                    >
-                      {item.spec1}
-                    </td>
-                    <td
-                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
-                        item.name === "Dimension(mm)"
-                          ? "border-r"
-                          : item.name === "Watt(W)"
-                          ? "border-r"
-                          : item.name === "DIM 1-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : ""
-                      }`}
-                    >
-                      {item.spec2}
-                    </td>
-                    <td
-                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
-                        item.name === "Dimension(mm)"
-                          ? "border-r"
-                          : item.name === "Watt(W)"
-                          ? "border-r"
-                          : item.name === "DIM 1-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : ""
-                      }`}
-                    >
-                      {item.spec3}
-                    </td>
-                    <td
-                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
-                        item.name === "Dimension(mm)"
-                          ? ""
-                          : item.name === "Watt(W)"
-                          ? "border-r"
-                          : item.name === "DIM 1-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : ""
-                      }`}
-                    >
-                      {item.spec4}
-                    </td>
-                    <td
-                      className={` border-b border-gray-400 text-xs px-3 py-2   ${
-                        item.name === "Dimension(mm)"
-                          ? "border-r"
-                          : item.name === "Watt(W)"
-                          ? "border-r"
-                          : item.name === "DIM 1-CCT Luminous Flux (lm) ±5%"
-                          ? "border-r"
-                          : ""
-                      }`}
-                    >
-                      {item.spec5}
-                    </td>
-                  </tr>
-                ))}
+                {table3Column &&
+                  table3Column.map((columnarray, index) => (
+                    <tr>
+                      {columnarray &&
+                        columnarray.addtablecolumns.map((item, ind) => (
+                          <td className={`border-r border-b border-gray-400  px-3 py-2 `}>{item.column}</td>
+                        ))}
+                    </tr>
+                  ))}
               </tbody>
             </table>
+           
           </div>
         </div>
       </div>
@@ -1257,7 +358,7 @@ export const IndoorPD228 = () => {
       </div>
       <div className=" sm:p-5 ">
         <h1 className="text-center font-bold text-xl">
-          {title ? title : "Loading..."}
+          {title ? title : ""}
         </h1>
         <div className="flex sm:px-14 px-5 sm:flex-row flex-col gap-10 items-center justify-center">
           <img
@@ -1267,14 +368,15 @@ export const IndoorPD228 = () => {
           />
           <div className="sm:w-[90%]">
             <p className="font-medium pb-2 text-start">
-              {title ? title : "Loading..."}
+              {title ? title : ""}
             </p>
             <p className="text-[12px] sm:text-start text-justify">
-              {content ? content : "Loading..."}
+              {content ? content : ""}
             </p>
           </div>
         </div>
       </div>
+
       <div>
         <Explore />
       </div>

@@ -21,12 +21,12 @@ function App() {
       <Routes>
         <Route element={<Home />}>
           <Route path="/" element={<Linear />} />
-          <Route path="home/products/outdoorlights" element={<Outdoor />} />
+          {/* <Route path="home/products/outdoorlights" element={<Outdoor />} />
           <Route path="home/products/facadelights" element={<Facade />} />
           <Route path="home/products/indoorlights/dl284a" element={<Indoorlights/>}/>
           <Route path="home/products/indoorlights/338-series" element={<Indoor338Series />} />
-          <Route path="home/products/indoorlights/dl228a" element={<IndoorDL228 />} />
-          <Route path="home/products/indoorlights/pd228" element={<IndoorPD228 />} />
+          <Route path="home/products/indoorlights/dl228a" element={<IndoorDL228 />} /> */}
+          <Route path="home/products/indoorlights/:id" element={<IndoorPD228 />} />
 
         </Route>
       </Routes>
