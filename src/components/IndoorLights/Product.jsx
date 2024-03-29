@@ -80,7 +80,7 @@ export const Product = () => {
         for (let i = 0; i < data.length; i++) {
           console.log(data);
           if (id.toLowerCase() === data[i].modelid.toLowerCase()) {
-            console.log(data[i], "hii nigga am here");
+            console.log(data[i], "console data");
             setModalName(data[i].modalname);
             setaddFeature(data[i].features);
             setaddfeaturepoints(data[i].featurepoints);
