@@ -7,7 +7,7 @@ import Indoorlights from "./components/IndoorLights/Indoorlights";
 import { Facade } from "./components/Products/Facade";
 import { Indoor338Series } from "./components/IndoorLights/Indoor338Series";
 import { IndoorDL228 } from "./components/IndoorLights/IndoorDL228";
-import { IndoorPD228 } from "./components/IndoorLights/IndoorPD228";
+import {  Product } from "./components/IndoorLights/Product";
 import { Linear } from "./components/Products/Linear";
 
 
@@ -26,7 +26,7 @@ function App() {
           <Route path="home/products/indoorlights/dl284a" element={<Indoorlights/>}/>
           <Route path="home/products/indoorlights/338-series" element={<Indoor338Series />} />
           <Route path="home/products/indoorlights/dl228a" element={<IndoorDL228 />} /> */}
-          <Route path="home/products/indoorlights/:id" element={<IndoorPD228 />} />
+          <Route path="home/products/indoorlights/:id" element={<Product/>} />
 
         </Route>
       </Routes>

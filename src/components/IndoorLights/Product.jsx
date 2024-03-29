@@ -10,7 +10,7 @@ import pd228 from "../../assets/pd228.png";
 import Sanityclient from "../common/Sanityclient";
 import { useLocation, useParams } from "react-router-dom";
 
-export const IndoorPD228 = () => {
+export const Product = () => {
   const location = useLocation();
   const { id } = useParams();
   const [bgimage, Setbgimage] = useState([]);
@@ -53,6 +53,7 @@ export const IndoorPD228 = () => {
   const [table1Header, setTable1Header] = useState([]);
   const [table2Header, setTable2Header] = useState([]);
   const [table3Header, setTable3Header] = useState([]);
+  const [modelId, setModelId ] = useState('')
 
   React.useEffect(() => {
     window.scrollTo({
@@ -114,6 +115,7 @@ export const IndoorPD228 = () => {
             setTable1Column(data[i].table1columns);
             setTable2Column(data[i].table2columns);
             setTable3Column(data[i].table3columns);
+            setModelId(data[i].modelid)
           }
         }
       })
@@ -155,7 +157,7 @@ export const IndoorPD228 = () => {
               &nbsp; Products &nbsp;{" "}
               <FaChevronRight className=" sm:size-3 size-2" /> &nbsp; Indoor
               Lights &nbsp; <FaChevronRight className=" sm:size-3 size-2" />{" "}
-              &nbsp; PD228
+              &nbsp; {modelId ? modelId : ''} 
             </p>
           </div>
         </div>
@@ -397,7 +399,7 @@ export const IndoorPD228 = () => {
       </div>
       <div>
       <div className=" sm:p-5 ">
-        <h1 className="text-center font-bold text-xl">{title1 ? title1 : ""}</h1>
+        <h1 className="text-center font-bold text-xl">{modelId ? modelId : ""}</h1>
         <div className="flex sm:px-14 px-5 sm:flex-row flex-col gap-10 items-center justify-center">
           <img
             src={modelImage1 && modelImage1.asset.url}
@@ -411,9 +413,6 @@ export const IndoorPD228 = () => {
             </p>
           </div>
         </div>
-      </div>
-      <div className=" sm:p-5 ">
-        <h1 className="text-center font-bold text-xl">{title2 ? title2 : ""}</h1>
         <div className="flex sm:px-14 px-5 sm:flex-row flex-col gap-10 items-center justify-center">
           <img
             src={modelImage2 && modelImage2.asset.url}
@@ -427,9 +426,6 @@ export const IndoorPD228 = () => {
             </p>
           </div>
         </div>
-      </div>
-      <div className=" sm:p-5 ">
-        <h1 className="text-center font-bold text-xl">{title3 ? title3 : ""}</h1>
         <div className="flex sm:px-14 px-5 sm:flex-row flex-col gap-10 items-center justify-center">
           <img
             src={modelImage3 && modelImage3.asset.url}
@@ -440,22 +436,6 @@ export const IndoorPD228 = () => {
             <p className="font-medium pb-2 text-start">{title3 ? title3 : ""}</p>
             <p className="text-[12px] sm:text-start text-justify">
               {content3 ? content3 : ""}
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className=" sm:p-5 ">
-        <h1 className="text-center font-bold text-xl">{title4 ? title4 : ""}</h1>
-        <div className="flex sm:px-14 px-5 sm:flex-row flex-col gap-10 items-center justify-center">
-          <img
-            src={modelImage4 && modelImage4.asset.url}
-            alt=""
-            className="w-24 h-24"
-          />
-          <div className="sm:w-[90%]">
-            <p className="font-medium pb-2 text-start">{title4 ? title4 : ""}</p>
-            <p className="text-[12px] sm:text-start text-justify">
-              {content4 ? content4 : ""}
             </p>
           </div>
         </div>

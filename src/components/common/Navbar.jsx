@@ -132,79 +132,6 @@ const Navbar = () => {
                   products <MdArrowDropDown size={15} />
                 </span>
               </Link>
-              {showDropdown && (
-                <div className="dropdown-animation absolute w-fit -translate-x-1/2 -translate-y-1/2 lg:top-[107px] xl:top-[122px] left-[7.5%] bg-white  py-2 shadow-md shadow-gray-400 rounded-b-lg z-10">
-                  <Link
-                    onClick={() => setShowDropdown(false)}
-                    to="/"
-                    className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
-                  >
-                    Linear Lights
-                  </Link>
-                  <Link
-                    onClick={() => setShowDropdown(false)}
-                    to="/home/products/outdoorlights"
-                    className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
-                  >
-                    Outdoor Lights
-                  </Link>
-                  <Link
-                    onClick={() =>{
-                      setShowDropdown(false)
-                      setLinearDropdown(!linearDropdown)
-                    } }
-                    onMouseEnter={()=>setLinearDropdown(true)}
-                    onMouseLeave={()=>setLinearDropdown(false)}
-                    // to="home/products/indoorlights"
-                    className="block px-4 py-2 text-xs  "
-                  >
-                    <div className="relative">
-                      <p className="hover:text-[#F2667C] flex items-center">Indoor Lights <IoMdArrowDropright /></p>
-                      {linearDropdown && (
-                        <div className="absolute bg-white ml-[103px] -mt-6  rounded-md  shadow-md shadow-gray-400">
-                          <div className="w-28 flex flex-col justify-center">
-                          <Link
-                            to="/home/products/indoorlights/338-series"
-                            className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
-                            onClick={()=>setLinearDropdown(false)}
-                          >
-                            338 Series
-                          </Link>
-                          <Link
-                            to="/home/products/indoorlights/pd228"
-                            className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
-                            onClick={()=>setLinearDropdown(false)}
-                          >
-                            PD228
-                          </Link>
-                          <Link
-                            to="/home/products/indoorlights/dl228a"
-                            className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
-                            onClick={()=>setLinearDropdown(false)}  
-                          >
-                            DL228A
-                          </Link>
-                          <Link
-                            to="/home/products/indoorlights/dl284a"
-                            className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
-                            onClick={()=>setLinearDropdown(false)}  
-                          >
-                            DL284A
-                          </Link>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  </Link>
-                  <Link
-                    onClick={() => setShowDropdown(false)}
-                    to="home/products/facadelights"
-                    className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
-                  >
-                    Facade Lights
-                  </Link>
-                </div>
-              )}
             </div>
             <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
               lux edition
@@ -228,7 +155,9 @@ const Navbar = () => {
             <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
               blogs
             </Link>
+           
           </div>
+          
           <div className="w-1/4  items-center justify-around xl:px-4 flex">
             <div className="capitalize  shadow-lg cursor-pointer text-[#F2667C] hover:bg-[#F2667C] hover:text-white px-4 py-2 rounded">
               <p className=" lg:text-sm font-medium">Contact us</p>
@@ -420,6 +349,84 @@ const Navbar = () => {
           </button>
         </div>
       </div>
+      {showDropdown && (
+                <div className="dropdown-container dropdown-animation absolute w-full   bg-white  py-2 shadow-md shadow-gray-400 z-10"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}>
+                  <div className="flex justify-center w-full">
+                  <Link
+                    onClick={() => setShowDropdown(false)}
+                    to="/"
+                    className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
+                  >
+                    Linear Lights
+                  </Link>
+                  <Link
+                    onClick={() => setShowDropdown(false)}
+                    to="/home/products/outdoorlights"
+                    className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
+                  >
+                    Outdoor Lights
+                  </Link>
+                  <Link
+                    onClick={() =>{
+                      setShowDropdown(false)
+                      setLinearDropdown(!linearDropdown)
+                    } }
+                    onMouseEnter={()=>setLinearDropdown(true)}
+                    onMouseLeave={()=>setLinearDropdown(false)}
+                    // to="home/products/indoorlights"
+                    className="block px-4 py-2 text-xs  "
+                  >
+                    <div className="relative">
+                      <p className="hover:text-[#F2667C] flex items-center">Indoor Lights <MdArrowDropDown /></p>
+                      
+                    </div>
+                  </Link>
+                  <Link
+                    onClick={() => setShowDropdown(false)}
+                    to="home/products/facadelights"
+                    className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
+                  >
+                    Facade Lights
+                  </Link>
+                  </div>
+                </div>
+              )}
+              {linearDropdown && (
+                        <div className="absolute w-full bg-white mt-12 z-20 py-2 shadow-md shadow-gray-400">
+                          <div className="w-full flex  justify-center">
+                          <Link
+                            to="/home/products/indoorlights/338-series"
+                            className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
+                            onClick={()=>setLinearDropdown(false)}
+                          >
+                            338 Series
+                          </Link>
+                          <Link
+                            to="/home/products/indoorlights/pd228"
+                            className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
+                            onClick={()=>setLinearDropdown(false)}
+                          >
+                            PD228
+                          </Link>
+                          <Link
+                            to="/home/products/indoorlights/dl228a"
+                            className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
+                            onClick={()=>setLinearDropdown(false)}  
+                          >
+                            DL228A
+                          </Link>
+                          <Link
+                            to="/home/products/indoorlights/dl284a"
+                            className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
+                            onClick={()=>setLinearDropdown(false)}  
+                          >
+                            DL284A
+                          </Link>
+                          </div>
+                        </div>
+                      )}
     </section>
   );
 };
