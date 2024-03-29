@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { FaChevronRight } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
-import product1 from "../../assets/228Series.pdf";
 import line1 from "../../assets/line1.png";
 import { Explore } from "../Products/Explore";
 import { TfiClose } from "react-icons/tfi";
 import { GrNext, GrPrevious } from "react-icons/gr";
-import pd228 from "../../assets/pd228.png";
 import Sanityclient from "../common/Sanityclient";
 import { useLocation, useParams } from "react-router-dom";
 
@@ -53,14 +51,14 @@ export const Product = () => {
   const [table1Header, setTable1Header] = useState([]);
   const [table2Header, setTable2Header] = useState([]);
   const [table3Header, setTable3Header] = useState([]);
-  const [modelId, setModelId ] = useState('')
+  const [modelId, setModelId] = useState("");
 
-  React.useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }, []);
+  // React.useEffect(() => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: "smooth",
+  //   });
+  // }, []);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -115,7 +113,7 @@ export const Product = () => {
             setTable1Column(data[i].table1columns);
             setTable2Column(data[i].table2columns);
             setTable3Column(data[i].table3columns);
-            setModelId(data[i].modelid)
+            setModelId(data[i].modelid);
           }
         }
       })
@@ -157,7 +155,7 @@ export const Product = () => {
               &nbsp; Products &nbsp;{" "}
               <FaChevronRight className=" sm:size-3 size-2" /> &nbsp; Indoor
               Lights &nbsp; <FaChevronRight className=" sm:size-3 size-2" />{" "}
-              &nbsp; {modelId ? modelId : ''} 
+              &nbsp; {modelId ? modelId : ""}
             </p>
           </div>
         </div>
@@ -398,66 +396,89 @@ export const Product = () => {
         </section>
       </div>
       <div>
-      <div className=" sm:p-5 ">
-        <h1 className="text-center font-bold text-xl">{modelId ? modelId : ""}</h1>
-        <div className="flex sm:px-14 px-5 sm:flex-row flex-col gap-10 items-center justify-center">
-          <img
-            src={modelImage1 && modelImage1.asset.url}
-            alt=""
-            className="w-24 h-24"
-          />
-          <div className="sm:w-[90%]">
-            <p className="font-medium pb-2 text-start">{title1 ? title1 : ""}</p>
-            <p className="text-[12px] sm:text-start text-justify">
-              {content1 ? content1 : ""}
-            </p>
+        <div className=" sm:p-5 flex flex-col gap-5">
+          <h1 className="text-center font-bold text-xl">
+            {modelId ? modelId : ""}
+          </h1>
+          <div
+            className={`flex sm:px-14 px-5 sm:flex-row flex-col gap-10 items-center justify-center ${
+              title1 === null ? "hidden" : ""
+            }`}
+          >
+            <img
+              src={modelImage1 && modelImage1.asset.url}
+              alt=""
+              className="w-24 h-24"
+            />
+            <div className="sm:w-[90%]">
+              <p className="font-medium pb-2 text-start">
+                {title1 ? title1 : ""}
+              </p>
+              <p className="text-[12px] sm:text-start text-justify">
+                {content1 ? content1 : ""}
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="flex sm:px-14 px-5 sm:flex-row flex-col gap-10 items-center justify-center">
-          <img
-            src={modelImage2 && modelImage2.asset.url}
-            alt=""
-            className="w-24 h-24"
-          />
-          <div className="sm:w-[90%]">
-            <p className="font-medium pb-2 text-start">{title2 ? title2 : ""}</p>
-            <p className="text-[12px] sm:text-start text-justify">
-              {content2 ? content2 : ""}
-            </p>
+          <div
+            className={`flex sm:px-14 px-5 sm:flex-row flex-col gap-10 items-center justify-center ${
+              title2 === null ? "hidden" : ""
+            }`}
+          >
+            <img
+              src={modelImage2 && modelImage2.asset.url}
+              alt=""
+              className="w-24 h-24"
+            />
+            <div className="sm:w-[90%]">
+              <p className="font-medium pb-2 text-start">
+                {title2 ? title2 : ""}
+              </p>
+              <p className="text-[12px] sm:text-start text-justify">
+                {content2 ? content2 : ""}
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="flex sm:px-14 px-5 sm:flex-row flex-col gap-10 items-center justify-center">
-          <img
-            src={modelImage3 && modelImage3.asset.url}
-            alt=""
-            className="w-24 h-24"
-          />
-          <div className="sm:w-[90%]">
-            <p className="font-medium pb-2 text-start">{title3 ? title3 : ""}</p>
-            <p className="text-[12px] sm:text-start text-justify">
-              {content3 ? content3 : ""}
-            </p>
+          <div
+            className={`flex sm:px-14 px-5 sm:flex-row flex-col gap-10 items-center justify-center ${
+              title3 === null ? "hidden" : ""
+            }`}
+          >
+            <img
+              src={modelImage3 && modelImage3.asset.url}
+              alt=""
+              className="w-24 h-24"
+            />
+            <div className="sm:w-[90%]">
+              <p className="font-medium pb-2 text-start">
+                {title3 ? title3 : ""}
+              </p>
+              <p className="text-[12px] sm:text-start text-justify">
+                {content3 ? content3 : ""}
+              </p>
+            </div>
+          </div>
+          <div
+            className={`flex sm:px-14 px-5 sm:flex-row flex-col gap-10 items-center justify-center ${
+              title4 === null ? "hidden" : ""
+            }`}
+          >
+            <img
+              src={modelImage4 && modelImage4.asset.url}
+              alt=""
+              className="w-24 h-24"
+            />
+            <div className="sm:w-[90%]">
+              <p className="font-medium pb-2 text-start">
+                {title4 ? title4 : ""}
+              </p>
+              <p className="text-[12px] sm:text-start text-justify">
+                {content4 ? content4 : ""}
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      <div className=" sm:p-5 ">
-        <h1 className="text-center font-bold text-xl">{title1 ? title1 : ""}</h1>
-        <div className="flex sm:px-14 px-5 sm:flex-row flex-col gap-10 items-center justify-center">
-          <img
-            src={modelImage1 && modelImage1.asset.url}
-            alt=""
-            className="w-24 h-24"
-          />
-          <div className="sm:w-[90%]">
-            <p className="font-medium pb-2 text-start">{title1 ? title1 : ""}</p>
-            <p className="text-[12px] sm:text-start text-justify">
-              {content1 ? content1 : ""}
-            </p>
-          </div>
-        </div>
-      </div>
-      </div>
-     
+
       <div>
         <Explore />
       </div>
