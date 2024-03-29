@@ -74,13 +74,11 @@ export const Product = () => {
     )
       .then((data) => {
         console.log(data);
-        Setbgimage(
-          data[0].bannerimages.map((item) => item.bannerimage.asset.url)
-        );
         for (let i = 0; i < data.length; i++) {
           console.log(data);
           if (id.toLowerCase() === data[i].modelid.toLowerCase()) {
             console.log(data[i], "console data");
+            Setbgimage( data[i].bannerimages.map((item) => item.bannerimage.asset.url))
             setModalName(data[i].modalname);
             setaddFeature(data[i].features);
             setaddfeaturepoints(data[i].featurepoints);
