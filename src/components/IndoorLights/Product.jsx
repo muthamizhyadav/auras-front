@@ -53,12 +53,12 @@ export const Product = () => {
   const [table3Header, setTable3Header] = useState([]);
   const [modelId, setModelId] = useState("");
 
-  // React.useEffect(() => {
-  //   window.scrollTo({
-  //     top: 0,
-  //     behavior: "smooth",
-  //   });
-  // }, []);
+  React.useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
