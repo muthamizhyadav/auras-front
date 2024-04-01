@@ -46,7 +46,7 @@ const Navbar = () => {
   const closeDropdown = () => {
     closeTimeout.current = setTimeout(() => {
       setShowDropdown(false);
-      setLinearDropdown(false)
+      setLinearDropdown(false);
     }, 500);
   };
 
@@ -82,24 +82,20 @@ const Navbar = () => {
     setShowDropdownsmall(false);
   };
 
-
-
   //dynamic navbar
   const { id } = useParams();
-  const [modelId,setModelId] = useState([])
+  const [modelId, setModelId] = useState([]);
   useEffect(() => {
-    Sanityclient.fetch(
-      `*[_type == "product"]{ modelid }`
-    )
+    Sanityclient.fetch(`*[_type == "product"]{ modelid }`)
       .then((data) => {
         console.log(data);
-        setModelId(data.modelid);
+        setModelId(data);
         // for (let i = 0; i < data.length; i++) {
         //   console.log(data);
         //   console.log(data[i], "console data");
-          
+
         //   if (id.toLowerCase() === data[i].modelid.toLowerCase()) {
-           
+
         //   }
         // }
       })
@@ -380,12 +376,11 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-      <div  onMouseLeave={handleMouseLeave}>
+      <div onMouseLeave={handleMouseLeave}>
         {showDropdown && (
           <div
             className="dropdown-container dropdown-animation absolute w-full   bg-white  py-2 shadow-md shadow-gray-400 z-10"
             onMouseEnter={handleMouseEnter}
-            
           >
             <div className="flex justify-center w-full">
               <Link
@@ -428,7 +423,7 @@ const Navbar = () => {
         )}
         {linearDropdown && (
           <div
-            className="dropdown-animation absolute w-full bg-white mt-12 z-20 py-2 shadow-md shadow-gray-400"
+            className="dropdown-animation absolute w-full bg-white mt-12 z-20 py-2 shadow-md shadow-gray-400 "
             onMouseLeave={() => {
               setLinearDropdown(false);
               setShowDropdown(false);
@@ -496,21 +491,21 @@ const Navbar = () => {
                 DL332
               </Link>
             </div> */}
-            <div className="w-full flex  justify-center">
-            {modelId &&
-                    modelId.map((id) => (
-                      <p>{id}</p>
-                    ))}
-              <Link
-                to="/home/products/indoorlights/dl332"
-                className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
-                onClick={() => {
-                  setLinearDropdown(false);
-                  setShowDropdown(false);
-                }}
-              >
-                DL332
-              </Link>
+            <div className="w-full grid grid-cols-12">
+              {modelId &&
+                modelId.map((id) => (
+                  <Link
+                    to="/home/products/indoorlights/:id"
+                    onClick={() => {
+                      setLinearDropdown(false);
+                      setShowDropdown(false);
+                    }}
+                    className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
+                  >
+                    {id ? id.modelid : ""}
+                  </Link>
+                ))}
+             
             </div>
           </div>
         )}
