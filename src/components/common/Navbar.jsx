@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { MdArrowDropDown, MdArrowRight, MdEmail } from "react-icons/md";
 import { TiLocation } from "react-icons/ti";
@@ -11,6 +12,7 @@ import { FiSearch } from "react-icons/fi";
 import { MdAccountCircle } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
 import { IoMdArrowDropright } from "react-icons/io";
+import Sanityclient from "./Sanityclient";
 const Navbar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
@@ -79,6 +81,32 @@ const Navbar = () => {
   const cancelDropdownSmall = () => {
     setShowDropdownsmall(false);
   };
+
+
+
+  //dynamic navbar
+  const { id } = useParams();
+  const [modelId,setModelId] = useState([])
+  useEffect(() => {
+    Sanityclient.fetch(
+      `*[_type == "product"]{ modelid }`
+    )
+      .then((data) => {
+        console.log(data);
+        setModelId(data.modelid);
+        // for (let i = 0; i < data.length; i++) {
+        //   console.log(data);
+        //   console.log(data[i], "console data");
+          
+        //   if (id.toLowerCase() === data[i].modelid.toLowerCase()) {
+           
+        //   }
+        // }
+      })
+      .catch((error) => {
+        console.error("Error fetching content:", error);
+      });
+  }, [id]);
   return (
     <section
       ref={navbarRef}
@@ -406,7 +434,7 @@ const Navbar = () => {
               setShowDropdown(false);
             }}
           >
-            <div className="w-full flex  justify-center">
+            {/* <div className="w-full flex  justify-center">
               <Link
                 to="/home/products/indoorlights/338-series"
                 className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
@@ -457,6 +485,22 @@ const Navbar = () => {
               >
                 DL284B
               </Link>
+              <Link
+                to="/home/products/indoorlights/dl332"
+                className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
+                onClick={() => {
+                  setLinearDropdown(false);
+                  setShowDropdown(false);
+                }}
+              >
+                DL332
+              </Link>
+            </div> */}
+            <div className="w-full flex  justify-center">
+            {modelId &&
+                    modelId.map((id) => (
+                      <p>{id}</p>
+                    ))}
               <Link
                 to="/home/products/indoorlights/dl332"
                 className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
