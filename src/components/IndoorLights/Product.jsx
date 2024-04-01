@@ -83,7 +83,7 @@ export const Product = () => {
             setaddFeature(data[i].features);
             setaddfeaturepoints(data[i].featurepoints);
             setaddapplicationareas(data[i].applicationareas);
-            setproductpdf(data[i].productPdf.asset.url);
+            setproductpdf(data[i]?.productPdf?.asset?.url);
             setSpecificationHeading(data[i].specificationheading);
             setSpecificationTableHeading1(data[i].datatable1heading);
             setSpecificationTableHeading2(data[i].datatable2heading);
