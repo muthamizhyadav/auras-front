@@ -252,7 +252,7 @@ export const Product = () => {
               {specificationHeading ? specificationHeading : ""}
             </p>
           </div>
-          <div className="w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl">
+          <div className={`w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl ${table1Header === null ? 'hidden' : ''}`}>
             <h2 className="font-semibold text-sm pt-5 pb-2">
               {specificationTableHeading1 ? specificationTableHeading1 : ""}
             </h2>
@@ -290,9 +290,7 @@ export const Product = () => {
               </tbody>
             </table>
           </div>
-          {location.pathname === "/home/products/indoorlights/pd228" ? (
-            <div>
-              <div className="w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl">
+          <div className={`w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl ${table2Header === null ? 'hidden' : ''}`}>
                 <h2 className="font-semibold text-sm pt-5 pb-2">
                   {specificationTableHeading2 ? specificationTableHeading2 : ""}
                 </h2>
@@ -330,7 +328,7 @@ export const Product = () => {
                   </tbody>
                 </table>
               </div>
-              <div className="w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl">
+              <div className={`w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl ${table3Header === null ? 'hidden' : ''}`}>
                 <h2 className="font-semibold text-sm pt-5 pb-2">
                   {specificationTableHeading3 ? specificationTableHeading3 : ""}
                 </h2>
@@ -368,13 +366,9 @@ export const Product = () => {
                   </tbody>
                 </table>
               </div>
-            </div>
-          ) : (
-            <div></div>
-          )}
         </div>
       </div>
-      <div className="flex md:flex-row flex-col justify-center gap-10 lg:gap-0 lg:justify-evenly items-center pt-10">
+      <div className={`flex md:flex-row flex-col justify-center gap-10 lg:gap-0 lg:justify-evenly items-center pt-10 ${leftSideImage === null ? 'hidden' : ''}`}>
         <img
           src={leftSideImage && leftSideImage.asset.url}
           alt=""
