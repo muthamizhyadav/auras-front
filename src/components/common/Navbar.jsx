@@ -495,7 +495,7 @@ const Navbar = () => {
               {modelId &&
                 modelId.map((id) => (
                   <Link
-                    to="/home/products/indoorlights/:id"
+                    to={`/home/products/indoorlights/${id.modelid}`}
                     onClick={() => {
                       setLinearDropdown(false);
                       setShowDropdown(false);
@@ -505,7 +505,6 @@ const Navbar = () => {
                     {id ? id.modelid : ""}
                   </Link>
                 ))}
-             
             </div>
           </div>
         )}
