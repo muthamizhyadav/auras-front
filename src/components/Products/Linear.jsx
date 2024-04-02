@@ -17,7 +17,7 @@ import linearcontent1 from "../../assets/linearcontent1.png";
 import linearcontent2 from "../../assets/linearcontent2.png";
 import lightsway from "../../assets/lightsway.png";
 import linearoutline from "../../assets/linearouline.png";
-import { Explore } from "./Explore";
+// import { Explore } from "./Explore";
 import { TfiClose } from "react-icons/tfi";
 import { GrNext, GrPrevious } from "react-icons/gr";
 
@@ -405,7 +405,7 @@ export function Linear() {
       </div>
 
       <div>
-        <Explore />
+        {/* <Explore /> */}
       </div>
 
       {/* footer */}

@@ -2,11 +2,11 @@ import "./App.css";
 // import { Linear } from "./components/Products/Linear";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./components/common/Home";
-import Outdoor from "./components/Products/Outdoor";
-import Indoorlights from "./components/IndoorLights/Indoorlights";
-import { Facade } from "./components/Products/Facade";
-import { Indoor338Series } from "./components/IndoorLights/Indoor338Series";
-import { IndoorDL228 } from "./components/IndoorLights/IndoorDL228";
+// import Outdoor from "./components/Products/Outdoor";
+// import Indoorlights from "./components/IndoorLights/Indoorlights";
+// import { Facade } from "./components/Products/Facade";
+// import { Indoor338Series } from "./components/IndoorLights/Indoor338Series";
+// import { IndoorDL228 } from "./components/IndoorLights/IndoorDL228";
 import {  Product } from "./components/IndoorLights/Product";
 import { Linear } from "./components/Products/Linear";
 

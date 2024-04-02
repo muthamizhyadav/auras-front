@@ -2,14 +2,12 @@ import React, { useEffect, useState } from "react";
 import { FaChevronRight } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import line1 from "../../assets/line1.png";
-import { Explore } from "../Products/Explore";
 import { TfiClose } from "react-icons/tfi";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import Sanityclient from "../common/Sanityclient";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 export const Product = () => {
-  const location = useLocation();
   const { id } = useParams();
   const [bgimage, Setbgimage] = useState([]);
   const [modalname, setModalName] = useState("");
@@ -40,11 +38,7 @@ export const Product = () => {
   const [modelImage4, setmodelImage4] = useState("");
   const [content4, setContent4] = useState("");
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [previewIndex, setPreviewIndex] = useState(null);
-  const [tableHeader, setTableHeader] = useState([]);
-  const [tableColumn, setTableColumn] = useState([]);
   const [table1Column, setTable1Column] = useState([]);
   const [table2Column, setTable2Column] = useState([]);
   const [table3Column, setTable3Column] = useState([]);
@@ -52,6 +46,8 @@ export const Product = () => {
   const [table2Header, setTable2Header] = useState([]);
   const [table3Header, setTable3Header] = useState([]);
   const [modelId, setModelId] = useState("");
+  const [contactTitle, setcontactTitle] = useState('');
+  const [contactContent, setcontactContent] = useState('');
 
   React.useEffect(() => {
     window.scrollTo({
@@ -70,7 +66,7 @@ export const Product = () => {
 
   useEffect(() => {
     Sanityclient.fetch(
-      `*[_type == "product"]{modelid, bannerimages[]{ bannerimage{ asset->{ url, id }}}, modalname, features, featurepoints, applicationareas, productPdf{ asset->{ url, id }}, specificationheading, datatable1heading, datatable2heading, datatable3heading, leftsideimage{asset->{ url, id }}, rightsideimage1{asset->{ url, id }}, rightsideimage2{asset->{ url, id }}, model1title, model1contents, model1image{asset->{ url, id }}, model2title, model2contents, model2image{asset->{ url, id }}, model3title, model3contents, model3image{asset->{ url, id }}, model4title, model4contents, model4image{asset->{ url, id }}, contacttitle,  contactcontent, tableheader, tablecolumns, table1headers, table1columns, table2headers, table2columns, table3headers, table3columns,  }`
+      `*[_type == "product"]{modelid, bannerimages[]{ bannerimage{ asset->{ url, id }}}, modalname, features, featurepoints, applicationareas, productPdf{ asset->{ url, id }}, specificationheading, datatable1heading, datatable2heading, datatable3heading, leftsideimage{asset->{ url, id }}, rightsideimage1{asset->{ url, id }}, rightsideimage2{asset->{ url, id }}, model1title, model1contents, model1image{asset->{ url, id }}, model2title, model2contents, model2image{asset->{ url, id }}, model3title, model3contents, model3image{asset->{ url, id }}, model4title, model4contents, model4image{asset->{ url, id }}, contacttitle,  contactcontent, table1headers, table1columns, table2headers, table2columns, table3headers, table3columns,  }`
     )
       .then((data) => {
         console.log(data);
@@ -78,7 +74,9 @@ export const Product = () => {
           console.log(data);
           if (id.toLowerCase() === data[i].modelid.toLowerCase()) {
             console.log(data[i], "console data");
-            Setbgimage( data[i].bannerimages.map((item) => item.bannerimage.asset.url))
+            Setbgimage(
+              data[i].bannerimages.map((item) => item.bannerimage.asset.url)
+            );
             setModalName(data[i].modalname);
             setaddFeature(data[i].features);
             setaddfeaturepoints(data[i].featurepoints);
@@ -103,8 +101,6 @@ export const Product = () => {
             setTitle4(data[i].model4title);
             setContent4(data[i].model4contents);
             setmodelImage4(data[i].model4image);
-            setTableHeader(data[i].tableheader);
-            setTableColumn(data[i].tablecolumns);
             setTable1Header(data[i].table1headers);
             setTable2Header(data[i].table2headers);
             setTable3Header(data[i].table3headers);
@@ -112,6 +108,8 @@ export const Product = () => {
             setTable2Column(data[i].table2columns);
             setTable3Column(data[i].table3columns);
             setModelId(data[i].modelid);
+            setcontactTitle(data[i].contacttitle)
+            setcontactContent(data[i].contactcontent)
           }
         }
       })
@@ -252,7 +250,11 @@ export const Product = () => {
               {specificationHeading ? specificationHeading : ""}
             </p>
           </div>
-          <div className={`w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl ${table1Header === null ? 'hidden' : ''}`}>
+          <div
+            className={`w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl ${
+              table1Header === null ? "hidden" : ""
+            }`}
+          >
             <h2 className="font-semibold text-sm pt-5 pb-2">
               {specificationTableHeading1 ? specificationTableHeading1 : ""}
             </h2>
@@ -290,85 +292,97 @@ export const Product = () => {
               </tbody>
             </table>
           </div>
-          <div className={`w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl ${table2Header === null ? 'hidden' : ''}`}>
-                <h2 className="font-semibold text-sm pt-5 pb-2">
-                  {specificationTableHeading2 ? specificationTableHeading2 : ""}
-                </h2>
-                <table
-                  className=" xl:w-full w-[1400px] text-xs border border-gray-400"
-                  style={{ tableLayout: "fixed" }}
-                >
-                  <thead className="">
+          <div
+            className={`w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl ${
+              table2Header === null ? "hidden" : ""
+            }`}
+          >
+            <h2 className="font-semibold text-sm pt-5 pb-2">
+              {specificationTableHeading2 ? specificationTableHeading2 : ""}
+            </h2>
+            <table
+              className=" xl:w-full w-[1400px] text-xs border border-gray-400"
+              style={{ tableLayout: "fixed" }}
+            >
+              <thead className="">
+                <tr>
+                  {table2Header &&
+                    table2Header.map((header) => (
+                      <th
+                        className="border-r border-b border-gray-400 text-xs px-3 py-2"
+                        key={header._key}
+                      >
+                        {header.addtableheaders}
+                      </th>
+                    ))}
+                </tr>
+              </thead>
+              <tbody>
+                {table2Column &&
+                  table2Column.map((columnarray, index) => (
                     <tr>
-                      {table2Header &&
-                        table2Header.map((header) => (
-                          <th
-                            className="border-r border-b border-gray-400 text-xs px-3 py-2"
-                            key={header._key}
+                      {columnarray &&
+                        columnarray.addtablecolumns.map((item, ind) => (
+                          <td
+                            className={`border-r border-b border-gray-400  px-3 py-2 `}
                           >
-                            {header.addtableheaders}
-                          </th>
+                            {item.column}
+                          </td>
                         ))}
                     </tr>
-                  </thead>
-                  <tbody>
-                    {table2Column &&
-                      table2Column.map((columnarray, index) => (
-                        <tr>
-                          {columnarray &&
-                            columnarray.addtablecolumns.map((item, ind) => (
-                              <td
-                                className={`border-r border-b border-gray-400  px-3 py-2 `}
-                              >
-                                {item.column}
-                              </td>
-                            ))}
-                        </tr>
-                      ))}
-                  </tbody>
-                </table>
-              </div>
-              <div className={`w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl ${table3Header === null ? 'hidden' : ''}`}>
-                <h2 className="font-semibold text-sm pt-5 pb-2">
-                  {specificationTableHeading3 ? specificationTableHeading3 : ""}
-                </h2>
-                <table
-                  className=" xl:w-full w-[1400px] text-xs border border-gray-400"
-                  style={{ tableLayout: "fixed" }}
-                >
-                  <thead className="">
+                  ))}
+              </tbody>
+            </table>
+          </div>
+          <div
+            className={`w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl ${
+              table3Header === null ? "hidden" : ""
+            }`}
+          >
+            <h2 className="font-semibold text-sm pt-5 pb-2">
+              {specificationTableHeading3 ? specificationTableHeading3 : ""}
+            </h2>
+            <table
+              className=" xl:w-full w-[1400px] text-xs border border-gray-400"
+              style={{ tableLayout: "fixed" }}
+            >
+              <thead className="">
+                <tr>
+                  {table3Header &&
+                    table3Header.map((header) => (
+                      <th
+                        className="border-r border-b border-gray-400 text-xs px-3 py-2"
+                        key={header._key}
+                      >
+                        {header.addtableheaders}
+                      </th>
+                    ))}
+                </tr>
+              </thead>
+              <tbody>
+                {table3Column &&
+                  table3Column.map((columnarray, index) => (
                     <tr>
-                      {table3Header &&
-                        table3Header.map((header) => (
-                          <th
-                            className="border-r border-b border-gray-400 text-xs px-3 py-2"
-                            key={header._key}
+                      {columnarray &&
+                        columnarray.addtablecolumns.map((item, ind) => (
+                          <td
+                            className={`border-r border-b border-gray-400  px-3 py-2 `}
                           >
-                            {header.addtableheaders}
-                          </th>
+                            {item.column}
+                          </td>
                         ))}
                     </tr>
-                  </thead>
-                  <tbody>
-                    {table3Column &&
-                      table3Column.map((columnarray, index) => (
-                        <tr>
-                          {columnarray &&
-                            columnarray.addtablecolumns.map((item, ind) => (
-                              <td
-                                className={`border-r border-b border-gray-400  px-3 py-2 `}
-                              >
-                                {item.column}
-                              </td>
-                            ))}
-                        </tr>
-                      ))}
-                  </tbody>
-                </table>
-              </div>
+                  ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-      <div className={`flex md:flex-row flex-col justify-center gap-10 lg:gap-0 lg:justify-evenly items-center pt-10 ${leftSideImage === null ? 'hidden' : ''}`}>
+      <div
+        className={`flex md:flex-row flex-col justify-center gap-10 lg:gap-0 lg:justify-evenly items-center pt-10 ${
+          leftSideImage === null ? "hidden" : ""
+        }`}
+      >
         <img
           src={leftSideImage && leftSideImage.asset.url}
           alt=""
@@ -472,7 +486,65 @@ export const Product = () => {
       </div>
 
       <div>
-        <Explore />
+        <section>
+          <div className="bg-Formbg bg-cover form flex lg:flex-row flex-col justify-center items-center lg:flex-nowrap sm:py-10 py-5 md:px-24 px-5 lg:gap-10 gap-3">
+            <div className="">
+              <p className="text-3xl sm:text-5xl font-medium">
+                {contactTitle ? contactTitle : "Loading..."}
+              </p>
+              <p className="py-5 text-[13px] md:text-start text-justify">
+                {contactContent ? contactContent : "Loading..."}
+              </p>
+            </div>
+            <div className="form-content lg:w-[70%] w-full sm:p-5 p-3  rounded-3xl shadow-2xl">
+              <div className="flex flex-col items-center justify-evenly ">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Name"
+                  className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
+                />
+                <input
+                  type="email"
+                  name="mail"
+                  id="mail"
+                  placeholder="E-mail"
+                  className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
+                />
+                <input
+                  type="text"
+                  name="text"
+                  id="text"
+                  placeholder="Company Name"
+                  className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
+                />
+                <input
+                  type="text"
+                  name="text"
+                  id="text"
+                  placeholder="Company Type"
+                  className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
+                />
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="4"
+                  className="bg-gray-200 p-2 my-1 rounded-lg w-full border border-[#0E82B4]"
+                  placeholder="Message"
+                ></textarea>
+              </div>
+              <div className="flex justify-end">
+                <button
+                  type="submit"
+                  className=" bg-white p-3 px-8 drop-shadow-xl  rounded-lg my-2  font-medium"
+                >
+                  Send
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </article>
   );
