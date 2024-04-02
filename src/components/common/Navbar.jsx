@@ -495,12 +495,12 @@ const Navbar = () => {
               {modelId &&
                 modelId.map((id) => (
                   <Link
-                    to={`/home/products/indoorlights/${id.modelid}`}
+                    to={`/home/products/indoorlights/${id.modelid.toLowerCase()}`}
                     onClick={() => {
                       setLinearDropdown(false);
                       setShowDropdown(false);
                     }}
-                    className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
+                    className="block px-4 py-2 text-xs hover:text-[#F2667C]"
                   >
                     {id ? id.modelid : ""}
                   </Link>
