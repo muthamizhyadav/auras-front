@@ -9,6 +9,7 @@ import { Home } from "./components/common/Home";
 // import { IndoorDL228 } from "./components/IndoorLights/IndoorDL228";
 import {  Product } from "./components/IndoorLights/Product";
 import { Linear } from "./components/Products/Linear";
+import { MoreProducts } from "./components/common/MoreProducts";
 
 
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="home/products/indoorlights/338-series" element={<Indoor338Series />} />
           <Route path="home/products/indoorlights/dl228a" element={<IndoorDL228 />} /> */}
           <Route path="home/products/indoorlights/:id" element={<Product/>} />
+          <Route path="home/products/indoorlights/allproducts" element={<MoreProducts/>}/>
 
         </Route>
       </Routes>

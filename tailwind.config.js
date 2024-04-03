@@ -6,6 +6,7 @@ export default {
       backgroundImage: {
         Formbg: "url('/bgImage.png')",
         Bannerbg: "url('/bannerbg.png')",
+        moreproductsbg: "url('/moreproductsbg.jpg')",
       },
       screens:{
         xs:"428px",
