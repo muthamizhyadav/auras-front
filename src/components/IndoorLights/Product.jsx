@@ -485,9 +485,9 @@ export const Product = () => {
         </div>
       </div>
 
-      <div>
+      
         <section>
-          <div className="bg-Formbg bg-cover form flex lg:flex-row flex-col justify-center items-center lg:flex-nowrap sm:py-10 py-5 md:px-24 px-5 lg:gap-10 gap-3">
+          <div className="bg-Formbg h-full bg-cover form flex lg:flex-row flex-col justify-center items-center lg:flex-nowrap sm:py-10 py-5 md:px-24 px-5 lg:gap-10 gap-3">
             <div className="">
               <p className="text-3xl sm:text-5xl font-medium">
                 {contactTitle ? contactTitle : "Loading..."}
@@ -545,7 +545,7 @@ export const Product = () => {
             </div>
           </div>
         </section>
-      </div>
+      
     </article>
   );
 };
