@@ -296,11 +296,11 @@ const Navbar = () => {
               >
                 Outdoor Lights
               </Link>
-              <Link className="block px-4 py-2 text-xs  ">
+              <Link className="block px-4 py-2 text-xs  " to="home/products/indoorlights/allproducts">
                 <div className="relative">
                   <p
                     className="hover:text-[#F2667C] text-base  flex items-center"
-                    onClick={() => setIndoorDropdownSmall(!IndoorDropdownSmall)}
+                    onClick={() => isOpen(false)}
                   >
                     Indoor Lights <IoMdArrowDropright />
                   </p>

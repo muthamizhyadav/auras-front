@@ -7,7 +7,7 @@ export const Home = () => {
   return (
     <div className='font'>
       <Navbar/>
-      <div style={{ paddingTop: '120px' }}> 
+      <div className='xl:pt-[116px] lg:pt-[95px] sm:pt-[86px] pt-[81px]'> 
         <Outlet />
       </div>
       <Footer/>
