@@ -69,6 +69,10 @@
   animation: nav2 0.3s  ease-in-out;
 }
 
+.searchani1{
+  animation: searchani 0.3s  ease-in-out;
+}
+
 @keyframes nav{
   0%{
       transform: translateX(-100%);
@@ -86,6 +90,17 @@
       transform: translateX(0%);
   }
 }
+
+@keyframes searchani{
+  0%{
+      transform: translateY(-100%);
+  }
+  100%{
+      transform: translateY(0%);
+  }
+}
+
+
 
 
 

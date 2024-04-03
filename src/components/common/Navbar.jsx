@@ -11,7 +11,7 @@ import { IoLogoYoutube } from "react-icons/io5";
 import { FiSearch } from "react-icons/fi";
 import { MdAccountCircle } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
-import { IoMdArrowDropright } from "react-icons/io";
+import { IoIosClose, IoMdArrowDropright } from "react-icons/io";
 import Sanityclient from "./Sanityclient";
 import { CiCircleMore } from "react-icons/ci";
 const Navbar = () => {
@@ -20,7 +20,7 @@ const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [showDropdownsmall, setShowDropdownsmall] = useState(false);
   const [IndoorDropdown, setIndoorDropdown] = useState(false);
-  const [IndoorDropdownSmall, setIndoorDropdownSmall] = useState(false);
+  const [search, setSearch] = useState(false);
   const navbarRef = useRef(null);
   const closeTimeout = useRef(null);
   const toggleNavbar = () => {
@@ -57,6 +57,9 @@ const Navbar = () => {
   };
   const cancelDropdownSmall = () => {
     setShowDropdownsmall(false);
+  };
+  const productsearch = () => {
+    setSearch(!search);
   };
 
   //dynamic navbar
@@ -159,7 +162,10 @@ const Navbar = () => {
               <p className=" lg:text-sm font-medium">Contact us</p>
             </div>
             <div>
-              <FiSearch className="text-[#F2667C] lg:text-xl xl:text-2xl cursor-pointer" />
+              <FiSearch
+                className="text-[#F2667C] lg:text-xl xl:text-2xl cursor-pointer"
+                onClick={productsearch}
+              />
             </div>
             <div>
               <MdAccountCircle className="text-[#F2667C] lg:text-xl xl:text-3xl cursor-pointer" />
@@ -207,7 +213,10 @@ const Navbar = () => {
               </svg>
             </button>
             <div>
-              <FiSearch className="text-[#F2667C] text-3xl" />
+              <FiSearch
+                className="text-[#F2667C] text-3xl"
+                onClick={productsearch}
+              />
             </div>
             <div>
               <MdAccountCircle className="text-[#F2667C] text-3xl" />
@@ -296,7 +305,10 @@ const Navbar = () => {
               >
                 Outdoor Lights
               </Link>
-              <Link className="block px-4 py-2 text-xs  " to="home/products/indoorlights/allproducts">
+              <Link
+                className="block px-4 py-2 text-xs  "
+                to="home/products/indoorlights/allproducts"
+              >
                 <div className="relative">
                   <p
                     className="hover:text-[#F2667C] text-base  flex items-center"
@@ -315,25 +327,6 @@ const Navbar = () => {
               </Link>
             </div>
           )}
-          {/* {IndoorDropdownSmall && (
-            <div className="navbar-animation absolute top-0 w-full bg-white mt-12 z-30 py-2 shadow-md shadow-gray-400 ">
-              <div className="w-full flex flex-col">
-                {modelId.slice(0, 11).map((id) => (
-                  <Link
-                    to={`/home/products/indoorlights/${id.modelid.toLowerCase()}`}
-                    onClick={() => {
-                      setIndoorDropdown(false);
-                      setShowDropdown(false);
-                    }}
-                    className="block px-4 py-2 text-xs hover:text-[#F2667C]"
-                    key={id.modelid} 
-                  >
-                    {id ? id.modelid : ""}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )} */}
         </div>
       </div>
 
@@ -422,6 +415,44 @@ const Navbar = () => {
           </div>
         )}
       </div>
+      {/* Search  for both devices*/}
+      {search && (
+        <div
+          className="absolute w-full top-0 h-full flex pl-3 xs:pl-0 xs:justify-center items-center bg-black searchani1"
+          onMouseLeave={productsearch}
+        >
+          <form className="form">
+            <button>
+              <svg
+                width="17"
+                height="16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-labelledby="search"
+              >
+                <path
+                  d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                  stroke="currentColor"
+                  strokeWidth="1.333"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>
+              </svg>
+            </button>
+            <input
+              placeholder="Search products..."
+              type="text"
+              className="input sm:w-96 w-full placeholder:text-sm"
+            />
+          </form>
+          <IoIosClose
+            className="text-white absolute right-2 cursor-pointer"
+            size={30}
+            onClick={productsearch}
+          />
+        </div>
+      )}
     </section>
   );
 };
