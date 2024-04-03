@@ -300,7 +300,7 @@ const Navbar = () => {
                 <div className="relative">
                   <p
                     className="hover:text-[#F2667C] text-base  flex items-center"
-                    onClick={() => isOpen(false)}
+                    onClick={toggleNavbar}
                   >
                     Indoor Lights <IoMdArrowDropright />
                   </p>
@@ -384,7 +384,7 @@ const Navbar = () => {
         )}
         {IndoorDropdown && (
           <div className="dropdown-animation lg:block hidden absolute w-full bg-white mt-12 z-20 py-2 shadow-md shadow-gray-400 ">
-            <div className="w-full flex justify-evenly">
+            <div className="w-full flex justify-center gap-10">
               {model &&
                 model.slice(0, 6).map((id) => (
                   <Link
@@ -393,7 +393,7 @@ const Navbar = () => {
                       setIndoorDropdown(false);
                       setShowDropdown(false);
                     }}
-                    className="flex justify-center items-center relative p-2 w-28 h-40 bg-white drop-shadow-md text-xs hover:text-[#F2667C]"
+                    className="flex flex-col justify-evenly items-center relative p-2 w-28 h-40 bg-white drop-shadow-md text-xs hover:text-[#F2667C]"
                   >
                     {" "}
                     <img
@@ -402,7 +402,7 @@ const Navbar = () => {
                       className="hover:scale-110 transition-all duration-300"
                     />
                     {console.log(id, "check")}
-                    <p className="absolute bottom-2">{id ? id.modelid : ""}</p>
+                    <p className="">{id ? id.modelid : ""}</p>
                   </Link>
                 ))}
               <Link

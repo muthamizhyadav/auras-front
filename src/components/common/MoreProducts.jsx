@@ -58,7 +58,7 @@ export const MoreProducts = () => {
       </div>
       
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 place-items-center gap-y-5">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 place-items-center gap-y-5 py-5">
         {filteredProducts.map((item) => (
           <Link
             key={item.modelid}
