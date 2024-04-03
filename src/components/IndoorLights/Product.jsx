@@ -22,6 +22,8 @@ export const Product = () => {
     useState("");
   const [specificationTableHeading3, setSpecificationTableHeading3] =
     useState("");
+  const [specificationTableHeading4, setSpecificationTableHeading4] =
+    useState("");
   const [leftSideImage, setleftSideImage] = useState("");
   const [rightSideImage1, setrightSideImage1] = useState("");
   const [rightSideImage2, setrightSideImage2] = useState("");
@@ -42,9 +44,11 @@ export const Product = () => {
   const [table1Column, setTable1Column] = useState([]);
   const [table2Column, setTable2Column] = useState([]);
   const [table3Column, setTable3Column] = useState([]);
+  const [table4Column, setTable4Column] = useState([]);
   const [table1Header, setTable1Header] = useState([]);
   const [table2Header, setTable2Header] = useState([]);
   const [table3Header, setTable3Header] = useState([]);
+  const [table4Header, setTable4Header] = useState([]);
   const [modelId, setModelId] = useState("");
   const [contactTitle, setcontactTitle] = useState('');
   const [contactContent, setcontactContent] = useState('');
@@ -66,7 +70,7 @@ export const Product = () => {
 
   useEffect(() => {
     Sanityclient.fetch(
-      `*[_type == "product"]{modelid, bannerimages[]{ bannerimage{ asset->{ url, id }}}, modalname, features, featurepoints, applicationareas, productPdf{ asset->{ url, id }}, specificationheading, datatable1heading, datatable2heading, datatable3heading, leftsideimage{asset->{ url, id }}, rightsideimage1{asset->{ url, id }}, rightsideimage2{asset->{ url, id }}, model1title, model1contents, model1image{asset->{ url, id }}, model2title, model2contents, model2image{asset->{ url, id }}, model3title, model3contents, model3image{asset->{ url, id }}, model4title, model4contents, model4image{asset->{ url, id }}, contacttitle,  contactcontent, table1headers, table1columns, table2headers, table2columns, table3headers, table3columns,  }`
+      `*[_type == "product"]{modelid, bannerimages[]{ bannerimage{ asset->{ url, id }}}, modalname, features, featurepoints, applicationareas, productPdf{ asset->{ url, id }}, specificationheading, datatable1heading, datatable2heading, datatable3heading, leftsideimage{asset->{ url, id }}, rightsideimage1{asset->{ url, id }}, rightsideimage2{asset->{ url, id }}, model1title, model1contents, model1image{asset->{ url, id }}, model2title, model2contents, model2image{asset->{ url, id }}, model3title, model3contents, model3image{asset->{ url, id }}, model4title, model4contents, model4image{asset->{ url, id }}, contacttitle,  contactcontent, table1headers, table1columns, table2headers, table2columns, table3headers, table3columns, table4columns, table4headers  }`
     )
       .then((data) => {
         console.log(data);
@@ -86,6 +90,7 @@ export const Product = () => {
             setSpecificationTableHeading1(data[i].datatable1heading);
             setSpecificationTableHeading2(data[i].datatable2heading);
             setSpecificationTableHeading3(data[i].datatable3heading);
+            setSpecificationTableHeading4(data[i].datatable4heading);
             setleftSideImage(data[i].leftsideimage);
             setrightSideImage1(data[i].rightsideimage1);
             setrightSideImage2(data[i].rightsideimage2);
@@ -110,6 +115,8 @@ export const Product = () => {
             setModelId(data[i].modelid);
             setcontactTitle(data[i].contacttitle)
             setcontactContent(data[i].contactcontent)
+            setTable4Column(data[i].table4columns)
+            setTable4Header(data[i].table4headers)
           }
         }
       })
@@ -362,6 +369,48 @@ export const Product = () => {
               <tbody>
                 {table3Column &&
                   table3Column.map((columnarray, index) => (
+                    <tr>
+                      {columnarray &&
+                        columnarray.addtablecolumns.map((item, ind) => (
+                          <td
+                            className={`border-r border-b border-gray-400  px-3 py-2 `}
+                          >
+                            {item.column}
+                          </td>
+                        ))}
+                    </tr>
+                  ))}
+              </tbody>
+            </table>
+          </div>
+          <div
+            className={`w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl ${
+              table4Header === null ? "hidden" : ""
+            }`}
+          >
+            <h2 className="font-semibold text-sm pt-5 pb-2">
+              {specificationTableHeading4 ? specificationTableHeading4 : ""}
+            </h2>
+            <table
+              className=" xl:w-full w-[1400px] text-xs border border-gray-400"
+              style={{ tableLayout: "fixed" }}
+            >
+              <thead className="">
+                <tr>
+                  {table4Header &&
+                    table4Header.map((header) => (
+                      <th
+                        className="border-r border-b border-gray-400 text-xs px-3 py-2"
+                        key={header._key}
+                      >
+                        {header.addtableheaders}
+                      </th>
+                    ))}
+                </tr>
+              </thead>
+              <tbody>
+                {table4Column &&
+                  table4Column.map((columnarray, index) => (
                     <tr>
                       {columnarray &&
                         columnarray.addtablecolumns.map((item, ind) => (
