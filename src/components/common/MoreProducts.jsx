@@ -71,10 +71,6 @@ export const MoreProducts = () => {
           <Link
             key={item.modelid}
             to={`/home/products/indoorlights/${item.modelid.toLowerCase()}`}
-            onClick={() => {
-              setIndoorDropdown(false);
-              setShowDropdown(false);
-            }}
             className="flex justify-center items-center relative p-2 sm:w-44 sm:h-48 bg-white drop-shadow-md text-xs hover:text-[#F2667C]"
           >
             {item.modelimage && item.modelimage.asset && (
