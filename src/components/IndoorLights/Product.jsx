@@ -50,8 +50,8 @@ export const Product = () => {
   const [table3Header, setTable3Header] = useState([]);
   const [table4Header, setTable4Header] = useState([]);
   const [modelId, setModelId] = useState("");
-  const [contactTitle, setcontactTitle] = useState('');
-  const [contactContent, setcontactContent] = useState('');
+  const [contactTitle, setcontactTitle] = useState("");
+  const [contactContent, setcontactContent] = useState("");
 
   React.useEffect(() => {
     window.scrollTo({
@@ -113,10 +113,10 @@ export const Product = () => {
             setTable2Column(data[i].table2columns);
             setTable3Column(data[i].table3columns);
             setModelId(data[i].modelid);
-            setcontactTitle(data[i].contacttitle)
-            setcontactContent(data[i].contactcontent)
-            setTable4Column(data[i].table4columns)
-            setTable4Header(data[i].table4headers)
+            setcontactTitle(data[i].contacttitle);
+            setcontactContent(data[i].contactcontent);
+            setTable4Column(data[i].table4columns);
+            setTable4Header(data[i].table4headers);
           }
         }
       })
@@ -238,6 +238,8 @@ export const Product = () => {
               <div className="flex items-center justify-start md:pl-10 lg:pl-[22%]">
                 <a
                   href={productpdf}
+                  target="_blank"
+                  rel="noopener noreferrer" 
                   download
                   className=" flex justify-center items-center mt-5 sm:mt-3  w-48 h-10 rounded bg-white hover:bg-pink-100 shadow-md"
                 >
@@ -534,67 +536,65 @@ export const Product = () => {
         </div>
       </div>
 
-      
-        <section>
-          <div className="bg-Formbg h-full bg-cover form flex lg:flex-row flex-col justify-center items-center lg:flex-nowrap sm:py-10 py-5 md:px-24 px-5 lg:gap-10 gap-3">
-            <div className="">
-              <p className="text-3xl sm:text-5xl font-medium">
-                {contactTitle ? contactTitle : "Loading..."}
-              </p>
-              <p className="py-5 text-[13px] md:text-start text-justify">
-                {contactContent ? contactContent : "Loading..."}
-              </p>
+      <section>
+        <div className="bg-Formbg h-full bg-cover form flex lg:flex-row flex-col justify-center items-center lg:flex-nowrap sm:py-10 py-5 md:px-24 px-5 lg:gap-10 gap-3">
+          <div className="">
+            <p className="text-3xl sm:text-5xl font-medium">
+              {contactTitle ? contactTitle : "Loading..."}
+            </p>
+            <p className="py-5 text-[13px] md:text-start text-justify">
+              {contactContent ? contactContent : "Loading..."}
+            </p>
+          </div>
+          <div className="form-content lg:w-[70%] w-full sm:p-5 p-3  rounded-3xl shadow-2xl">
+            <div className="flex flex-col items-center justify-evenly ">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Name"
+                className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
+              />
+              <input
+                type="email"
+                name="mail"
+                id="mail"
+                placeholder="E-mail"
+                className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
+              />
+              <input
+                type="text"
+                name="text"
+                id="text"
+                placeholder="Company Name"
+                className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
+              />
+              <input
+                type="text"
+                name="text"
+                id="text"
+                placeholder="Company Type"
+                className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
+              />
+              <textarea
+                name="message"
+                id="message"
+                rows="4"
+                className="bg-gray-200 p-2 my-1 rounded-lg w-full border border-[#0E82B4]"
+                placeholder="Message"
+              ></textarea>
             </div>
-            <div className="form-content lg:w-[70%] w-full sm:p-5 p-3  rounded-3xl shadow-2xl">
-              <div className="flex flex-col items-center justify-evenly ">
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Name"
-                  className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
-                />
-                <input
-                  type="email"
-                  name="mail"
-                  id="mail"
-                  placeholder="E-mail"
-                  className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
-                />
-                <input
-                  type="text"
-                  name="text"
-                  id="text"
-                  placeholder="Company Name"
-                  className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
-                />
-                <input
-                  type="text"
-                  name="text"
-                  id="text"
-                  placeholder="Company Type"
-                  className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
-                />
-                <textarea
-                  name="message"
-                  id="message"
-                  rows="4"
-                  className="bg-gray-200 p-2 my-1 rounded-lg w-full border border-[#0E82B4]"
-                  placeholder="Message"
-                ></textarea>
-              </div>
-              <div className="flex justify-end">
-                <button
-                  type="submit"
-                  className=" bg-white p-3 px-8 drop-shadow-xl  rounded-lg my-2  font-medium"
-                >
-                  Send
-                </button>
-              </div>
+            <div className="flex justify-end">
+              <button
+                type="submit"
+                className=" bg-white p-3 px-8 drop-shadow-xl  rounded-lg my-2  font-medium"
+              >
+                Send
+              </button>
             </div>
           </div>
-        </section>
-      
+        </div>
+      </section>
     </article>
   );
 };
