@@ -394,7 +394,7 @@ const Navbar = () => {
                       alt=""
                       className="hover:scale-110 transition-all duration-300"
                     />
-                    {console.log(id, "check")}
+                    {/* {console.log(id, "check")} */}
                     <p className="">{id ? id.modelid : ""}</p>
                   </Link>
                 ))}
