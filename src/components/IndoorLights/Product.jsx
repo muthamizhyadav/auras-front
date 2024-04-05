@@ -465,7 +465,7 @@ export const Product = () => {
             <img
               src={modelImage1 && modelImage1.asset.url}
               alt=""
-              className="w-24 h-24"
+              className="w-24"
             />
             <div className="sm:w-[90%]">
               <p className="font-medium pb-2 text-start">
