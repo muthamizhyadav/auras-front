@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { MdArrowDropDown, MdArrowRight, MdEmail, MdMore } from "react-icons/md";
 import { TiLocation } from "react-icons/ti";
@@ -60,8 +60,9 @@ const Navbar = () => {
   };
   const productsearch = () => {
     setSearch(!search);
+    setdummydata(model);
   };
-
+  const [dummydata, setdummydata] = useState([]);
   //dynamic navbar
   const { id } = useParams();
   const [model, setModel] = useState([]);
@@ -77,6 +78,15 @@ const Navbar = () => {
         console.error("Error fetching content:", error);
       });
   }, [id]);
+
+  const HandleKeydown = (event) => {
+    const fildata = model.filter((items) =>
+      items.modelid.toLowerCase().includes(event.target.value.toLowerCase())
+    );
+
+    setdummydata(fildata);
+  };
+
   return (
     <section
       ref={navbarRef}
@@ -417,40 +427,105 @@ const Navbar = () => {
       </div>
       {/* Search  for both devices*/}
       {search && (
-        <div
-          className="absolute w-full top-0 h-full flex pl-3 xs:pl-0 xs:justify-center items-center bg-black searchani1"
-          onMouseLeave={productsearch}
-        >
-          <form className="form">
-            <button>
-              <svg
-                width="17"
-                height="16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                role="img"
-                aria-labelledby="search"
-              >
-                <path
-                  d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
-                  stroke="currentColor"
-                  strokeWidth="1.333"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                ></path>
-              </svg>
-            </button>
-            <input
-              placeholder="Search products..."
-              type="text"
-              className="input sm:w-96 w-full placeholder:text-sm"
+        <div className="flex flex-col">
+          <div
+            className="absolute w-full top-0 h-full flex pl-3 xs:pl-0 xs:justify-center items-center bg-black searchani1"
+            // onMouseLeave={productsearch}
+          >
+            <div>
+              <form className="form">
+                <button type="submit">
+                  <svg
+                    width="17"
+                    height="16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                    aria-labelledby="search"
+                  >
+                    <path
+                      d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                      stroke="currentColor"
+                      strokeWidth="1.333"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    ></path>
+                  </svg>
+                </button>
+                <input
+                  required
+                  onChange={HandleKeydown}
+                  placeholder="Search products..."
+                  type="text"
+                  className="input sm:w-96 w-full placeholder:text-sm"
+                />
+              </form>
+            </div>
+
+            <IoIosClose
+              className="text-white absolute right-2 cursor-pointer"
+              size={30}
+              onClick={productsearch}
             />
-          </form>
-          <IoIosClose
-            className="text-white absolute right-2 cursor-pointer"
-            size={30}
-            onClick={productsearch}
-          />
+          </div>
+          <div className="bg-white absolute w-full overflow-y-scroll h-screen    gap-2 ">
+            {dummydata.length != 0 ? (
+              <div className="flex flex-wrap gap-3 products justify-center items-center">
+                {dummydata.slice(0, 20).map((id) => (
+                  <Link
+                    to={`/home/products/indoorlights/${id.modelid.toLowerCase()}`}
+                    onClick={() => {
+                      setIndoorDropdown(false);
+                      setShowDropdown(false);
+                      setSearch(false);
+                      window.scrollTo({
+                        top: 0,
+
+                        behavior: "smooth",
+                      });
+                    }}
+                    className="flex mt-5 flex-col justify-evenly items-center relative p-2 w-28 h-40 bg-white drop-shadow-md text-xs hover:text-[#F2667C]"
+                  >
+                    {" "}
+                    <img
+                      src={id.modelimage.asset.url && id.modelimage.asset.url}
+                      alt=""
+                      className="hover:scale-110 transition-all duration-300"
+                    />
+                    {/* {console.log(id, "check")} */}
+                    <p className="">{id ? id.modelid : ""}</p>
+                  </Link>
+                ))}
+                <Link
+                  to="home/products/indoorlights/allproducts"
+                  onClick={() => {
+                    setIndoorDropdown(false);
+                    setShowDropdown(false);
+                    setSearch(false);
+                    window.scrollTo({
+                      top: 0,
+
+                      behavior: "smooth",
+                    });
+                  }}
+                  className="flex mt-5 flex-col justify-evenly items-center relative p-2 w-28 h-40 bg-white drop-shadow-md text-xs hover:text-[#F2667C]"
+                >
+                  <p className="text-pink-500">More...</p>
+                </Link>
+              </div>
+            ) : (
+              <div className="w-full h-screen flex flex-col gap-5 justify-center items-center">
+                <p className="lg:text-4xl md:text-2xl sm:text-xl text-lg font-bold bg-gradient-to-r from-pink-500 via-pink-400 to-pink-300 text-transparent  bg-clip-text">
+                  No Data Found
+                </p>
+                <div className="w-full gap-x-2 flex justify-center items-center">
+                  <div className="w-5 bg-[#d991c2]  h-5 rounded-full animate-bounce"></div>
+                  <div className="w-5 animate-pulse h-5 bg-[#9869b8] rounded-full "></div>
+                  <div className="w-5 h-5  bg-[#6756cc] rounded-full animate-bounce"></div>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       )}
     </section>
