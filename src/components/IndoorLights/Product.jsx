@@ -63,7 +63,7 @@ export const Product = () => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setSelectedImageIndex((prevIndex) => (prevIndex + 3) % bgimage.length);
+      setSelectedImageIndex((prevIndex) => (prevIndex + bgimage.length-1) % bgimage.length);
     }, 2000);
 
     return () => clearInterval(intervalId);
@@ -209,7 +209,7 @@ export const Product = () => {
               <div className=" bg-[#F3F3F3] py-5 lg:py-8 md:bg-Bannerbg bg-contain bg-no-repeat w-full px-5 sm:px-14 flex md:flex-row flex-col md:gap-3 gap-10">
                 <div className="relative w-full md:w-[42%] lg:w-[37%]">
                   <div
-                    className="cursor-pointer bg-cover h-[250px] sm:h-[379px] shadow-2xl drop-shadow-lg rounded-xl w-full"
+                    className="cursor-pointer bg-contain h-[250px] sm:h-[379px] shadow-2xl drop-shadow-lg rounded-xl w-full"
                     style={{
                       backgroundImage: `url(${bgimage[selectedImageIndex]})`,
                       backgroundPosition: "center",
