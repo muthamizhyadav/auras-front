@@ -71,7 +71,7 @@ const Navbar = () => {
       `*[_type == "product"]{ modelid, modelimage{asset->{url,id}} }`
     )
       .then((data) => {
-        console.log(data);
+        //console.log(data);
         setModel(data);
       })
       .catch((error) => {
@@ -363,15 +363,19 @@ const Navbar = () => {
                 Outdoor Lights
               </Link>
               <Link
+              to={"home/products/indoorlights/allproducts"}
                 onClick={() => {
-                  setIndoorDropdown(!IndoorDropdown);
+                 window.scrollTo({
+                  top:0,
+                  behavior:"smooth"
+                 })
                 }}
                 onMouseEnter={() => setIndoorDropdown(true)}
                 className="block px-4 py-2 text-xs  "
               >
                 <div className="relative">
                   <p className="hover:text-[#F2667C] flex items-center">
-                    Indoor Lights <MdArrowDropDown />
+                    Indoor Lights
                   </p>
                 </div>
               </Link>
@@ -385,45 +389,7 @@ const Navbar = () => {
             </div>
           </div>
         )}
-        {IndoorDropdown && (
-          <div className="dropdown-animation lg:block hidden absolute w-full bg-white mt-12 z-20 py-2 shadow-md shadow-gray-400 ">
-            <div className="w-full flex justify-center gap-10">
-              {model &&
-                model.slice(0, 6).map((id) => (
-                  <Link
-                    to={`/home/products/indoorlights/${id.modelid.toLowerCase()}`}
-                    onClick={() => {
-                      setIndoorDropdown(false);
-                      setShowDropdown(false);
-                    }}
-                    className="flex flex-col justify-evenly items-center relative p-2 w-28 h-40 bg-white drop-shadow-md text-xs hover:text-[#F2667C]"
-                  >
-                    {" "}
-                    <img
-                      src={id.modelimage.asset.url && id.modelimage.asset.url}
-                      alt=""
-                      className="hover:scale-110 transition-all duration-300"
-                    />
-                    {/* {console.log(id, "check")} */}
-                    <p className="">{id ? id.modelid : ""}</p>
-                  </Link>
-                ))}
-              <Link
-                className="w-28 h-40 flex items-center justify-center bg-white drop-shadow-md "
-                to="home/products/indoorlights/allproducts"
-                onClick={() => {
-                  setIndoorDropdown(false);
-                  setShowDropdown(false);
-                }}
-              >
-                <div className="flex justify-center items-center gap-1 text-xs hover:text-[#F2667C] hover:scale-110 transition-all duration-300">
-                  <p>MORE</p>
-                  <CiCircleMore />
-                </div>
-              </Link>
-            </div>
-          </div>
-        )}
+      
       </div>
       {/* Search  for both devices*/}
       {search && (
