@@ -8,6 +8,7 @@ import Sanityclient from "../common/Sanityclient";
 import { useParams } from "react-router-dom";
 
 export const Product = () => {
+  const{productname}=useParams()
   const { id } = useParams();
   const [bgimage, Setbgimage] = useState([]);
   const [modalname, setModalName] = useState("");
@@ -72,8 +73,8 @@ export const Product = () => {
 
   useEffect(() => {
     Sanityclient.fetch(
-      `*[_type == "product" && modelid == ${JSON.stringify(
-        id.toUpperCase()
+      `*[_type == ${JSON.stringify(productname)} && modelid == ${JSON.stringify(
+        id
       )} ]{modelid, bannerimages[]{ bannerimage{ asset->{ url, id }}}, modalname, features, featurepoints, applicationareas, productPdf{ asset->{ url, id }}, specificationheading, datatable1heading, datatable2heading, datatable3heading, leftsideimage{asset->{ url, id }}, rightsideimage1{asset->{ url, id }}, rightsideimage2{asset->{ url, id }}, model1title, model1contents, model1image{asset->{ url, id }}, model2title, model2contents, model2image{asset->{ url, id }}, model3title, model3contents, model3image{asset->{ url, id }}, model4title, model4contents, model4image{asset->{ url, id }}, contacttitle,  contactcontent, table1headers, table1columns, table2headers, table2columns, table3headers, table3columns, table4columns, table4headers  }`
     )
       .then((data) => {

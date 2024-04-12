@@ -22,13 +22,13 @@ function App() {
           <Route path="home/products/indoorlights/dl284a" element={<Indoorlights/>}/>
           <Route path="home/products/indoorlights/338-series" element={<Indoor338Series />} />
           <Route path="home/products/indoorlights/dl228a" element={<IndoorDL228 />} /> */}
-          <Route path="home/products/indoorlights/:id" element={<Product />} />
+          <Route path="home/products/individual/:productname/:id" element={<Product />} />
           <Route
-            path="home/products/indoorlights/allproducts"
+            path="home/products/:name/:productCategory"
             element={<MoreProducts />}
           />
           <Route
-            path="home/products/indoorlights/allproducts/:productname"
+            path="home/products/allproduct/:pname/:productname"
             element={<Productlist />}
           />
         </Route>

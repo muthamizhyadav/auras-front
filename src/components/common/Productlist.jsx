@@ -7,11 +7,12 @@ function Productlist() {
   const [Loading, setLoading] = useState(false);
   const nav = useNavigate();
   const { productname } = useParams();
+  const { pname } = useParams();
   console.log(productname);
   useEffect(() => {
-    const product = async () => {
+    const products = async () => {
       await Sanityclient.fetch(
-        `*[_type == "product" && modelcategory->Category == ${JSON.stringify(
+        `*[_type == ${JSON.stringify(pname)} && modelcategory->Category == ${JSON.stringify(
           productname
         )}]{
             modelcategory->,modelid,modelimage{asset->{
@@ -25,8 +26,8 @@ function Productlist() {
         console.log(alldata);
       });
     };
-    product();
-  }, []);
+    products();
+  }, [productname]);
   function handlechange(e) {
     if (e.target.value === "") {
       setalldata(dalldata);
@@ -85,7 +86,7 @@ function Productlist() {
                           behavior: "smooth",
                         });
                       }}
-                      to={`/home/products/indoorlights/${product.modelid}`}
+                      to={`/home/products/individual/${pname}/${product.modelid}`}
                       key={index}
                       className="flex flex-col justify-evenly items-center relative p-2 sm:w-48 sm:h-48 bg-white drop-shadow-md text-xs hover:text-[#F2667C]"
                     >
@@ -96,7 +97,7 @@ function Productlist() {
                           className="hover:scale-110 transition-all mx-auto object-contain w-[80%] duration-300 p-2 "
                         />
                       </div>
-                      <p className="text-lg text-center"> {product.modelid}</p>
+                      <p className="text-lg w-full text-nowrap text-ellipsis overflow-hidden text-center"> {product.modelid}</p>
                     </Link>
                   </div>
                 ))}

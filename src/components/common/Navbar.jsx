@@ -317,7 +317,7 @@ const Navbar = () => {
               </Link>
               <Link
                 className="block px-4 py-2 text-xs  "
-                to="home/products/indoorlights/allproducts"
+                to="home/products/product/productCategory"
               >
                 <div className="relative">
                   <p
@@ -357,13 +357,13 @@ const Navbar = () => {
               </Link>
               <Link
                 onClick={() => setShowDropdown(false)}
-                to="/home/products/outdoorlights"
+                to="/home/products/Outdoor/OutdoorCategory"
                 className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
               >
                 Outdoor Lights
               </Link>
               <Link
-              to={"home/products/indoorlights/allproducts"}
+              to={"home/products/product/productCategory"}
                 onClick={() => {
                  window.scrollTo({
                   top:0,

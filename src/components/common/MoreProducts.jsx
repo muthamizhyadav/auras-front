@@ -14,12 +14,15 @@ export const MoreProducts = () => {
   const [allvalues, setallvalues] = useState([]);
   const [Loading, setLoading] = useState(false);
   const [alldata, setalldata] = useState([]);
+  const {productCategory}=useParams()
+  const {name}=useParams()
+  // console.log(name)
   useEffect(() => {
     const product = async () => {
       const categoryproduct = [];
       try {
         const categories =
-          await Sanityclient.fetch(`*[_type=='productCategory']{
+          await Sanityclient.fetch(`*[_type==${JSON.stringify(productCategory)}]{
         Category
       }`);
         setarrays(categories);
@@ -28,7 +31,7 @@ export const MoreProducts = () => {
           const category = categories[i].Category;
           // console.log(category);
           const results =
-            await Sanityclient.fetch(`*[_type == "product" && modelcategory->Category == ${JSON.stringify(
+            await Sanityclient.fetch(`*[_type == ${JSON.stringify(name)} && modelcategory->Category == ${JSON.stringify(
               category
             )}]{
           modelcategory->,modelid,modelimage{asset->{
@@ -49,7 +52,7 @@ export const MoreProducts = () => {
       }
     };
     product();
-  }, []);
+  }, [name,productCategory]);
   const [imageIndex, setImageIndex] = useState(1);
   const [imageIndex2, setImageIndex2] = useState(1);
   useEffect(() => {
@@ -154,7 +157,7 @@ export const MoreProducts = () => {
         <div className="mt-5 flex flex-col gap-5 p-5 ">
           {/* {console.log(allvalues)} */}
           <p className="uppercase mb-5 text-center lg:text-3xl md:texet-2xl text-xl bg-gradient-to-r from-pink-500 via-pink-400 to-pink-300 text-transparent  bg-clip-text font-semibold">
-            Indoor Lights
+            {name} Lights
           </p>
           {allvalues.length > 0 ? (
             <div className="grid  grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 justify-items-center lg:grid-cols-5">
@@ -176,7 +179,7 @@ export const MoreProducts = () => {
                           behavior: "smooth",
                         });
                       }}
-                      to={`${products2.category}`}
+                      to={`/home/products/allproduct/${name}/${products2.category}`}
                       key={index}
                       className="flex flex-col justify-evenly items-center relative p-2 sm:w-52 sm:h-52 bg-white drop-shadow-md text-xs hover:text-[#F2667C]"
                     >
@@ -191,7 +194,7 @@ export const MoreProducts = () => {
                           ].modelimage.asset.url
                         }
                         alt=""
-                        className="hover:scale-110 transition-all w-full duration-300 p-2 "
+                        className="hover:scale-110 transition-all object-contain w-[80%] duration-300 p-2 "
                       />
                       <p
                         className={`text-md text-center uppercase ${
