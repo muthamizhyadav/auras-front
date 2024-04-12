@@ -8,7 +8,7 @@ import Sanityclient from "../common/Sanityclient";
 import { useParams } from "react-router-dom";
 
 export const Product = () => {
-  const{productname}=useParams()
+  const { productname } = useParams();
   const { id } = useParams();
   const [bgimage, Setbgimage] = useState([]);
   const [modalname, setModalName] = useState("");
@@ -63,7 +63,9 @@ export const Product = () => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setSelectedImageIndex((prevIndex) => (prevIndex + bgimage.length-1) % bgimage.length);
+      setSelectedImageIndex(
+        (prevIndex) => (prevIndex + bgimage.length - 1) % bgimage.length
+      );
     }, 2000);
 
     return () => clearInterval(intervalId);
@@ -176,22 +178,23 @@ export const Product = () => {
                   className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50"
                 >
                   <button
-                    className="w-10 text-white flex justify-center items-center text-xl"
+                    className="w-10 text-white flex  justify-center items-center text-xl"
                     onClick={handlePrevClick}
                   >
                     <GrPrevious />
                   </button>
 
                   <div className="relative w-64 h-64 previewxs:w-80 previewxs:h-80 md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] xl:w-[550px] xl:h-[550px] flex flex-col justify-center items-center">
-                    <div className=" bg-white">
+                    <div className=" w-[90%] h-[90%] bg-transparent">
                       <img
-                        className="w-full h-full"
+                        className="w-full object-contain h-full"
                         src={bgimage[previewIndex]}
                         alt="preview"
                       />
                     </div>
+
                     <button
-                      className="absolute right-3 xl:top-20 top-14 cursor-pointer text-black bg-white rounded-full p-1"
+                      className="absolute -right-5 xl:top-10 top-14 cursor-pointer text-black bg-white rounded-full p-1"
                       onClick={handleCloseOutsideClick}
                     >
                       <TfiClose />
