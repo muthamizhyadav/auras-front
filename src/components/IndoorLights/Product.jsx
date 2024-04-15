@@ -225,7 +225,7 @@ export const Product = () => {
                   />
                 </div>
                 <div className=" w-full md:w-[58%] lg:w-[63%]   sm:pl-0 ">
-                  <p className="text-base xs:text-lg lg:text-2xl font-medium lg:pl-[22%] md:pl-10  border-b-[1.5px] border-[#F2667C] md:border-none mb-5">
+                  <p className="text-base xs:text-lg lg:text-2xl font-medium lg:pl-[22%] md:pl-10  border-b-[1.5px] border-[#F2667C] md:border-none mb-5 capitalize">
                     {modalname ? modalname : ""}
                   </p>
                   <img
@@ -288,7 +288,7 @@ export const Product = () => {
                       {table1Header &&
                         table1Header.map((header) => (
                           <th
-                            className="border-r border-b border-gray-400 text-xs px-3 py-2"
+                            className="border-r capitalize border-b border-gray-400 text-xs px-3 py-2"
                             key={header._key}
                           >
                             {header.addtableheaders}
@@ -303,7 +303,7 @@ export const Product = () => {
                           {columnarray &&
                             columnarray.addtablecolumns.map((item, ind) => (
                               <td
-                                className={`border-r border-b border-gray-400  px-3 py-2 `}
+                                className={`border-r capitalize border-b border-gray-400  px-3 py-2 `}
                               >
                                 {item.column}
                               </td>
