@@ -216,7 +216,7 @@ export const Product = () => {
                     style={{
                       backgroundImage: `url(${bgimage[selectedImageIndex]})`,
                       backgroundPosition: "center",
-                      transition: "background-image 1s ease",
+                      transition: "c 1s ease",
                     }}
                     onClick={() => handleThumbnailClick(selectedImageIndex)}
                   />

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Sanityclient from "./Sanityclient";
+import loading from "../../assets/loading.gif"
 export const MoreProducts = () => {
   const [model, setModel] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
@@ -19,6 +20,8 @@ export const MoreProducts = () => {
   // console.log(name)
   useEffect(() => {
     const product = async () => {
+      setLoading(false);
+
       const categoryproduct = [];
       try {
         const categories =
@@ -63,7 +66,7 @@ export const MoreProducts = () => {
   }, [imageIndex]);
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setImageIndex2((prevIndex) => (prevIndex % 2) + 1);
+      setImageIndex2((prevIndex) => (prevIndex % 1) + 1);
     }, 2000);
     return () => clearInterval(intervalId);
   }, [imageIndex2]);
@@ -80,7 +83,7 @@ export const MoreProducts = () => {
     const intervalId = setInterval(() => {
       setledwalllightsindex(
         (prevIndex) =>
-          (prevIndex + ledwalllightsarray.length + 1) %
+          (prevIndex + ledwalllightsarray.length) %
           ledwalllightsarray.length
       );
     }, 2000);
@@ -157,13 +160,13 @@ export const MoreProducts = () => {
         <div className="mt-5 flex flex-col gap-5 p-5 ">
           {/* {console.log(allvalues)} */}
           <p className="uppercase mb-5 text-center lg:text-3xl md:texet-2xl text-xl bg-gradient-to-r from-pink-500 via-pink-400 to-pink-300 text-transparent  bg-clip-text font-semibold">
-            {name} Lights
+            {name ==="product" ? "INDOOR" : name} Lights
           </p>
           {allvalues.length > 0 ? (
             <div className="grid  grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 justify-items-center lg:grid-cols-5">
               {allvalues &&
                 allvalues.map((products2, index) => (
-                  <div
+                  <div key={index}
                     className={`p-5 ${
                       products2.category
                         .toLowerCase()
@@ -182,20 +185,22 @@ export const MoreProducts = () => {
                       to={`/home/products/allproduct/${name}/${products2.category}`}
                       key={index}
                       className="flex flex-col justify-evenly items-center relative p-2 sm:w-52 sm:h-52 bg-white drop-shadow-md text-xs hover:text-[#F2667C]"
-                    >
+                    >{products2.products.length >0 ?
                       <img
                         src={
-                          products2.products[
-                            (products2.products.length -
-                              (products2.products.length > 5
+                          products2?.products[
+                            (products2?.products.length -
+                              (products2?.products?.length > 5
                                 ? imageIndex
                                 : imageIndex2)) %
-                              products2.products.length
-                          ].modelimage.asset.url
+                              products2?.products?.length
+                          ]?.modelimage?.asset?.url
+                       
                         }
-                        alt=""
-                        className="hover:scale-110 transition-all object-contain w-[80%] duration-300 p-2 "
-                      />
+                        style={{transition: "opacity 0.3s ease-in-out"}}
+                        alt="Loading"
+                        className="hover:scale-110  object-contain w-[80%]  p-2 "
+                      />:<img src={loading} className="hover:scale-110 object-contain w-[80%] p-2 "></img>}
                       <p
                         className={`text-md text-center uppercase ${
                           products2.category
