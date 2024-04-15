@@ -90,11 +90,11 @@ function Productlist() {
                       key={index}
                       className="flex flex-col  items-center relative p-2 sm:w-48 sm:h-48 bg-white drop-shadow-md text-xs hover:text-[#F2667C]"
                     >
-                      <div className="w-full h-full">
+                      <div className="w-[80%] h-[80%]">
                         <img
                           src={product?.modelimage?.asset?.url}
                           alt=""
-                          className="hover:scale-110 transition-all mx-auto object-contain w-[90%] duration-300 p-2 "
+                          className="hover:scale-110 transition-all mx-auto object-contain w-full h-full   duration-300 p-2 "
                         />
                       </div>
                       <p className="text-lg w-full text-nowrap text-ellipsis overflow-hidden text-center"> {product.modelid}</p>

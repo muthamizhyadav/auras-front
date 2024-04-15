@@ -53,7 +53,7 @@ export const Product = () => {
   const [modelId, setModelId] = useState("");
   const [contactTitle, setcontactTitle] = useState("");
   const [contactContent, setcontactContent] = useState("");
-
+  const [notes,setnotes]=useState([])
   React.useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -77,7 +77,9 @@ export const Product = () => {
     Sanityclient.fetch(
       `*[_type == ${JSON.stringify(productname)} && modelid == ${JSON.stringify(
         id
-      )} ]{modelid, bannerimages[]{ bannerimage{ asset->{ url, id }}}, modalname, features, featurepoints, applicationareas, productPdf{ asset->{ url, id }}, specificationheading, datatable1heading, datatable2heading, datatable3heading, leftsideimage{asset->{ url, id }}, rightsideimage1{asset->{ url, id }}, rightsideimage2{asset->{ url, id }}, model1title, model1contents, model1image{asset->{ url, id }}, model2title, model2contents, model2image{asset->{ url, id }}, model3title, model3contents, model3image{asset->{ url, id }}, model4title, model4contents, model4image{asset->{ url, id }}, contacttitle,  contactcontent, table1headers, table1columns, table2headers, table2columns, table3headers, table3columns, table4columns, table4headers  }`
+      )} ]{notes[]{
+        notes
+      },modelid, bannerimages[]{ bannerimage{ asset->{ url, id }}}, modalname, features, featurepoints, applicationareas, productPdf{ asset->{ url, id }}, specificationheading, datatable1heading, datatable2heading, datatable3heading, leftsideimage{asset->{ url, id }}, rightsideimage1{asset->{ url, id }}, rightsideimage2{asset->{ url, id }}, model1title, model1contents, model1image{asset->{ url, id }}, model2title, model2contents, model2image{asset->{ url, id }}, model3title, model3contents, model3image{asset->{ url, id }}, model4title, model4contents, model4image{asset->{ url, id }}, contacttitle,  contactcontent, table1headers, table1columns, table2headers, table2columns, table3headers, table3columns, table4columns, table4headers  }`
     )
       .then((data) => {
         console.log(data);
@@ -111,6 +113,7 @@ export const Product = () => {
           setContent4(data[0].model4contents);
           setmodelImage4(data[0].model4image);
           setTable1Header(data[0].table1headers);
+          setnotes(data[0].notes)
           setTable2Header(data[0].table2headers);
           setTable3Header(data[0].table3headers);
           setTable1Column(data[0].table1columns);
@@ -438,6 +441,16 @@ export const Product = () => {
               </div>
             </div>
           </div>
+          {notes.length>0? <div className="md:px-14 px-5">
+            <p className="text-xl font-semibold">NOTES</p>
+            <div className="flex flex-col gap-3"> {notes && notes.map((note,index)=>
+              <li className="list-disc">
+                {note?.notes}
+              </li>
+            )}</div>
+            
+            </div>:null}
+         
           <div
             className={`flex md:flex-row flex-col justify-center gap-10 lg:gap-0 lg:justify-evenly items-center pt-10 ${
               leftSideImage === null ? "hidden" : ""
@@ -463,9 +476,9 @@ export const Product = () => {
           </div>
           <div>
             <div className=" sm:p-5 flex flex-col gap-5">
-              <h1 className="text-center font-bold text-xl">
+              {/* <h1 className="text-center font-bold text-xl">
                 {modelId ? modelId : ""}
-              </h1>
+              </h1> */}
               <div
                 className={`flex sm:px-14 px-5 sm:flex-row flex-col gap-10 items-center justify-center ${
                   title1 === null ? "hidden" : ""
