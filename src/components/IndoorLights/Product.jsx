@@ -441,7 +441,7 @@ export const Product = () => {
               </div>
             </div>
           </div>
-          {notes.length>0? <div className="md:px-14 px-5">
+          {notes && notes.length>0? <div className="md:px-14 px-5">
             <p className="text-xl font-semibold">NOTES</p>
             <div className="flex flex-col gap-3"> {notes && notes.map((note,index)=>
               <li className="list-disc">
