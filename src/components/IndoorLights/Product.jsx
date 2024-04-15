@@ -441,13 +441,13 @@ export const Product = () => {
               </div>
             </div>
           </div>
-          {notes.length>0? <div className="md:px-14 px-5">
-            <p className="text-xl font-semibold">NOTES</p>
-            <div className="flex flex-col gap-3"> {notes && notes.map((note,index)=>
-              <li className="list-disc">
+          {notes.length>0? <div className="md:px-[75px] px-5">
+            <p className="text-sm font-semibold pb-1">Notes:</p>
+            <ul className="flex text-sm flex-col gap-3 list-disc px-5"> {notes && notes.map((note,index)=>
+              <li className="">
                 {note?.notes}
               </li>
-            )}</div>
+            )}</ul>
             
             </div>:null}
          
