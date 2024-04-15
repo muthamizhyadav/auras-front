@@ -67,7 +67,7 @@ const Navbar = () => {
   //dynamic navbar
   const { id } = useParams();
   const [model, setModel] = useState([]);
-  const [searchproduct,setSearchproduct]=useState("product")
+  const [searchproduct,setSearchproduct]=useState("Outdoor")
   useEffect(() => {
     Sanityclient.fetch(
       `*[_type == ${JSON.stringify(searchproduct)}]{ modelid, modelimage{asset->{url,id}} }`
@@ -447,17 +447,17 @@ const Navbar = () => {
             <p onClick={()=>{
               setcolour(false)
               setSearchproduct("product")
-            }} className={`${colours ? "bg-gray-300" :"bg-pink-300"} rounded-lg px-3 py-2`}>Indoor lights</p>
+            }} className={`${colours ? "bg-gray-300" :"bg-pink-300"} cursor-pointer rounded-lg px-3 py-2`}>Indoor lights</p>
             <p onClick={()=>{
               setcolour(true)
               setSearchproduct("Outdoor")
-            }} className={`${colours ? "bg-pink-300" : "bg-gray-300"} rounded-lg px-3 py-2`}>Outdoor lights</p>
+            }} className={`${colours ? "bg-pink-300" : "bg-gray-300"} cursor-pointer rounded-lg px-3 py-2`}>Outdoor lights</p>
           </div>
             {dummydata.length != 0 ? (
               <div className="flex flex-wrap gap-3 products justify-center items-center">
                 {dummydata.slice(0, 20).map((id) => (
                   <Link
-                    to={`home/products/individual/${searchproduct.toString()}/${id.modelid.toLowerCase()}`}
+                    to={`home/products/individual/${searchproduct}/${id.modelid}`}
                     onClick={() => {
                       setIndoorDropdown(false);
                       setShowDropdown(false);
