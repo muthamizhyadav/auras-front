@@ -445,7 +445,7 @@ export const Product = () => {
             <p className="text-xl font-semibold">NOTES</p>
             <div className="flex flex-col gap-3"> {notes && notes.map((note,index)=>
               <li className="list-disc">
-                {note?.notes}
+                {note?.notes.replace(/^\s+/, '')}
               </li>
             )}</div>
             
