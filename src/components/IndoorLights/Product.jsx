@@ -441,11 +441,11 @@ export const Product = () => {
               </div>
             </div>
           </div>
-          {notes.length>0? <div className="md:px-[75px] px-5">
+          {notes && notes.length>0? <div className="md:px-[75px] px-5">
             <p className="text-sm font-semibold pb-1">Notes:</p>
             <ul className="flex text-sm flex-col gap-3 list-disc px-5"> {notes && notes.map((note,index)=>
               <li className="">
-                {note?.notes}
+                {note?.notes.replace(/^\s+/, '')}
               </li>
             )}</ul>
             
