@@ -39,7 +39,7 @@ function Productlist() {
     }
   }
   return (
-    <div>
+    <div className="overflow-hidden">
       <div className="relative w-full bg-moreproductsbg bg-cover h-[300px] flex justify-center items-center">
         <div className="absolute inset-0 bg-black opacity-30"></div>
         <form className="form" onSubmit={(e) => e.preventDefault()}>
@@ -88,13 +88,13 @@ function Productlist() {
                       }}
                       to={`/home/products/individual/${pname}/${product.modelid}`}
                       key={index}
-                      className="flex flex-col justify-evenly items-center relative p-2 sm:w-48 sm:h-48 bg-white drop-shadow-md text-xs hover:text-[#F2667C]"
+                      className="flex flex-col  items-center relative p-2 sm:w-48 sm:h-48 bg-white drop-shadow-md text-xs hover:text-[#F2667C]"
                     >
                       <div className="w-full h-full">
                         <img
                           src={product?.modelimage?.asset?.url}
                           alt=""
-                          className="hover:scale-110 transition-all mx-auto object-contain w-[80%] duration-300 p-2 "
+                          className="hover:scale-110 transition-all mx-auto object-contain w-[90%] duration-300 p-2 "
                         />
                       </div>
                       <p className="text-lg w-full text-nowrap text-ellipsis overflow-hidden text-center"> {product.modelid}</p>

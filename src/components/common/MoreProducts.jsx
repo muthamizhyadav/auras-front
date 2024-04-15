@@ -60,7 +60,7 @@ export const MoreProducts = () => {
   const [imageIndex2, setImageIndex2] = useState(1);
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setImageIndex((prevIndex) => (prevIndex % 5) + 1);
+      setImageIndex((prevIndex) => (prevIndex % 3) + 1);
     }, 2000);
     return () => clearInterval(intervalId);
   }, [imageIndex]);
@@ -190,7 +190,7 @@ export const MoreProducts = () => {
                         src={
                           products2?.products[
                             (products2?.products.length -
-                              (products2?.products?.length > 5
+                              (products2?.products?.length > 4
                                 ? imageIndex
                                 : imageIndex2)) %
                               products2?.products?.length
