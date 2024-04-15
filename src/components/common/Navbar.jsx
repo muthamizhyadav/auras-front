@@ -15,6 +15,7 @@ import { IoIosClose, IoMdArrowDropright } from "react-icons/io";
 import Sanityclient from "./Sanityclient";
 import { CiCircleMore } from "react-icons/ci";
 const Navbar = () => {
+  const [colours,setcolour]=useState(true)
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
@@ -66,18 +67,20 @@ const Navbar = () => {
   //dynamic navbar
   const { id } = useParams();
   const [model, setModel] = useState([]);
+  const [searchproduct,setSearchproduct]=useState("product")
   useEffect(() => {
     Sanityclient.fetch(
-      `*[_type == "product"]{ modelid, modelimage{asset->{url,id}} }`
+      `*[_type == ${JSON.stringify(searchproduct)}]{ modelid, modelimage{asset->{url,id}} }`
     )
       .then((data) => {
         //console.log(data);
         setModel(data);
+        setdummydata(data)
       })
       .catch((error) => {
         console.error("Error fetching content:", error);
       });
-  }, [id]);
+  }, [searchproduct]);
 
   const HandleKeydown = (event) => {
     const fildata = model.filter((items) =>
@@ -86,6 +89,10 @@ const Navbar = () => {
 
     setdummydata(fildata);
   };
+  function handleclick(){
+    setcolour(!colours)
+    
+  }
 
   return (
     <section
@@ -434,12 +441,23 @@ const Navbar = () => {
               onClick={productsearch}
             />
           </div>
+          
           <div className="bg-white absolute w-full overflow-y-scroll h-screen    gap-2 ">
+          <div className="flex p-5  gap-5">
+            <p onClick={()=>{
+              setcolour(false)
+              setSearchproduct("product")
+            }} className={`${colours ? "bg-gray-300" :"bg-pink-300"} rounded-lg px-3 py-2`}>Indoor lights</p>
+            <p onClick={()=>{
+              setcolour(true)
+              setSearchproduct("Outdoor")
+            }} className={`${colours ? "bg-pink-300" : "bg-gray-300"} rounded-lg px-3 py-2`}>Outdoor lights</p>
+          </div>
             {dummydata.length != 0 ? (
               <div className="flex flex-wrap gap-3 products justify-center items-center">
                 {dummydata.slice(0, 20).map((id) => (
                   <Link
-                    to={`/home/products/indoorlights/${id.modelid.toLowerCase()}`}
+                    to={`home/products/individual/${searchproduct.toString()}/${id.modelid.toLowerCase()}`}
                     onClick={() => {
                       setIndoorDropdown(false);
                       setShowDropdown(false);
@@ -450,16 +468,16 @@ const Navbar = () => {
                         behavior: "smooth",
                       });
                     }}
-                    className="flex mt-5 flex-col justify-evenly items-center relative p-2 w-28 h-40 bg-white drop-shadow-md text-xs hover:text-[#F2667C]"
+                    className="flex overflow-hidden  mt-5 flex-col justify-evenly items-center relative p-2 w-28 h-40 bg-white drop-shadow-md text-xs hover:text-[#F2667C]"
                   >
                     {" "}
                     <img
                       src={id.modelimage.asset.url && id.modelimage.asset.url}
                       alt=""
-                      className="hover:scale-110 transition-all duration-300"
+                      className="hover:scale-110 transition-all w-[80%] duration-300"
                     />
                     {/* {console.log(id, "check")} */}
-                    <p className="">{id ? id.modelid : ""}</p>
+                    <p className="text-nowrap w-full overflow-hidden text-ellipsis  text-center">{id ? id.modelid : ""}</p>
                   </Link>
                 ))}
                 <Link
