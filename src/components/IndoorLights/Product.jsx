@@ -167,8 +167,7 @@ export const Product = () => {
                 <p className="flex items-center font-medium sm:text-base xs:text-xs text-[10px] text-black py-5">
                   Home &nbsp; <FaChevronRight className=" sm:size-3 size-2" />{" "}
                   &nbsp; Products &nbsp;{" "}
-                  <FaChevronRight className=" sm:size-3 size-2" /> &nbsp; Indoor
-                  Lights &nbsp; <FaChevronRight className=" sm:size-3 size-2" />{" "}
+                  <FaChevronRight className=" sm:size-3 size-2" /> &nbsp; <p className="cursor-pointer" onClick={()=>window.history.go(-2)}>{productname =="product" ?"Indoor":productname} Lights</p> &nbsp; <FaChevronRight className=" sm:size-3 size-2" />{" "}
                   &nbsp; {modelId ? modelId : ""}
                 </p>
               </div>

@@ -33,12 +33,17 @@ const Navbar = () => {
     setShowDropdown(true);
     clearTimeout(closeTimeout.current);
   };
+  const navbardata=[
+    {title:"Indoor Product",value:"product",boo:false},
+    {title:"Outdoor Product",value:"Outdoor",boo:false}
+
+]
 
   const closeDropdown = () => {
     closeTimeout.current = setTimeout(() => {
       setShowDropdown(false);
       setIndoorDropdown(false);
-    }, 500);
+    }, 600);
   };
 
   const handleMouseEnter = () => {
@@ -58,6 +63,8 @@ const Navbar = () => {
   };
   const cancelDropdownSmall = () => {
     setShowDropdownsmall(false);
+    setIsOpen(!isOpen)
+    
   };
   const productsearch = () => {
     setSearch(!search);
@@ -65,6 +72,7 @@ const Navbar = () => {
   };
   const [dummydata, setdummydata] = useState([]);
   //dynamic navbar
+  const newColours = Array(navbardata.length).fill(false); 
   const { id } = useParams();
   const [model, setModel] = useState([]);
   const [searchproduct,setSearchproduct]=useState("Outdoor")
@@ -76,12 +84,17 @@ const Navbar = () => {
         //console.log(data);
         setModel(data);
         setdummydata(data)
+      
+         
       })
       .catch((error) => {
         console.error("Error fetching content:", error);
       });
   }, [searchproduct]);
-
+useEffect(()=>{
+  newColours[0]=true
+  setcolour(newColours); 
+},[])
   const HandleKeydown = (event) => {
     const fildata = model.filter((items) =>
       items.modelid.toLowerCase().includes(event.target.value.toLowerCase())
@@ -89,11 +102,14 @@ const Navbar = () => {
 
     setdummydata(fildata);
   };
-  function handleclick(){
-    setcolour(!colours)
-    
-  }
+  function handleclick(index, value) {
+   
+    newColours[index] = true; 
 
+    setcolour(newColours); 
+console.log(colours);
+    setSearchproduct(value); 
+  }
   return (
     <section
       ref={navbarRef}
@@ -316,7 +332,7 @@ const Navbar = () => {
                 Linear Lights
               </Link>
               <Link
-                to="/home/products/outdoorlights"
+                to="/home/products/Outdoor/OutdoorCategory"
                 className="block px-4 py-2   hover:text-[#F2667C]"
                 onClick={cancelDropdownSmall}
               >
@@ -444,14 +460,13 @@ const Navbar = () => {
           
           <div className="bg-white absolute w-full overflow-y-scroll h-screen    gap-2 ">
           <div className="flex p-5  gap-5">
-            <p onClick={()=>{
-              setcolour(false)
-              setSearchproduct("product")
-            }} className={`${colours ? "bg-gray-300" :"bg-pink-300"} cursor-pointer rounded-lg px-3 py-2`}>Indoor lights</p>
-            <p onClick={()=>{
-              setcolour(true)
-              setSearchproduct("Outdoor")
-            }} className={`${colours ? "bg-pink-300" : "bg-gray-300"} cursor-pointer rounded-lg px-3 py-2`}>Outdoor lights</p>
+            {navbardata && navbardata.map((item,index)=>(
+ <p key={index} onClick={(ele)=>handleclick(index,item.value,ele)}  style={{ backgroundColor: colours && colours[index] ? "#FFB6C1" : "#D3D3D3" }} className={` cursor-pointer duration-100  rounded-lg px-3 py-2`}>{item.title}</p>
+            ))}
+            
+            
+           
+           
           </div>
             {dummydata.length != 0 ? (
               <div className="flex flex-wrap gap-3 products justify-center items-center">
