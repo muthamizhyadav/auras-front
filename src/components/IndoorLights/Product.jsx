@@ -272,7 +272,7 @@ export const Product = () => {
               </div>
               <div
                 className={`w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl ${
-                  table1Header === null ? "hidden" : ""
+                  table1Column === null ? "hidden" : ""
                 }`}
               >
                 <h2 className="font-semibold text-sm pt-5 pb-2">
@@ -314,7 +314,7 @@ export const Product = () => {
               </div>
               <div
                 className={`w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl ${
-                  table2Header === null ? "hidden" : ""
+                  table2Column === null ? "hidden" : ""
                 }`}
               >
                 <h2 className="font-semibold text-sm pt-5 pb-2">
@@ -356,7 +356,7 @@ export const Product = () => {
               </div>
               <div
                 className={`w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl ${
-                  table3Header === null ? "hidden" : ""
+                  table3Column === null ? "hidden" : ""
                 }`}
               >
                 <h2 className="font-semibold text-sm pt-5 pb-2">
@@ -398,7 +398,7 @@ export const Product = () => {
               </div>
               <div
                 className={`w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl ${
-                  table4Header === null ? "hidden" : ""
+                  table4Column === null ? "hidden" : ""
                 }`}
               >
                 <h2 className="font-semibold text-sm pt-5 pb-2">
