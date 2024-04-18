@@ -302,7 +302,7 @@ export const Product = () => {
                           {columnarray &&
                             columnarray.addtablecolumns.map((item, ind) => (
                               <td
-                                className={`border-r capitalize border-b border-gray-400  px-3 py-2 `}
+                                className={`border-r border-b border-gray-400  px-3 py-2 `}
                               >
                                 {item.column}
                               </td>
@@ -442,7 +442,7 @@ export const Product = () => {
           </div>
           {notes && notes.length>0? <div className="md:px-[75px] px-5">
             <p className="text-sm font-semibold pb-1">Notes:</p>
-            <ul className="flex text-sm flex-col gap-3 list-disc px-5"> {notes && notes.map((note,index)=>
+            <ul className="flex text-sm flex-col gap-3 list-disc p-5"> {notes && notes.map((note,index)=>
               <li className="">
                 {note?.notes.replace(/^\s+/, '')}
               </li>
