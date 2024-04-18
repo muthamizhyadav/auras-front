@@ -605,13 +605,15 @@ export const Product = () => {
                     placeholder="Message"
                   ></textarea>
                 </div>
-                <div className="flex justify-end">
+                <div className="flex justify-end mt-2">
+                  <div className="bg-white rounded-lg drop-shadow-2xl">
                   <button
                     type="submit"
-                    className=" bg-white p-3 px-8 drop-shadow-xl  rounded-lg my-2  font-medium"
+                    className=" px-8   my-2  font-medium"
                   >
                     Send
                   </button>
+                  </div>
                 </div>
               </div>
             </div>
