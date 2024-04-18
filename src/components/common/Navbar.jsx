@@ -487,7 +487,7 @@ console.log(colours);
                   >
                     {" "}
                     <img
-                      src={id.modelimage.asset.url && id.modelimage.asset.url}
+                      src={id?.modelimage?.asset?.url && id?.modelimage?.asset?.url}
                       alt=""
                       className="hover:scale-110 transition-all w-[80%] duration-300"
                     />
