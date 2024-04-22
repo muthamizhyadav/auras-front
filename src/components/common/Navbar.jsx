@@ -75,7 +75,7 @@ const Navbar = () => {
   const newColours = Array(navbardata.length).fill(false); 
   const { id } = useParams();
   const [model, setModel] = useState([]);
-  const [searchproduct,setSearchproduct]=useState("Outdoor")
+  const [searchproduct,setSearchproduct]=useState("product")
   useEffect(() => {
     Sanityclient.fetch(
       `*[_type == ${JSON.stringify(searchproduct)}]{ modelid, modelimage{asset->{url,id}} }`
