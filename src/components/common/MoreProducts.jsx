@@ -167,7 +167,7 @@ export const MoreProducts = () => {
               {allvalues &&
                 allvalues.map((products2, index) => (
                   <div key={index}
-                    className={`p-5 ${
+                    className={`p-5 w-[80%] h-52 sm:h-fit ${
                       products2.category
                         .toLowerCase()
                         .includes("New Arrival".toLowerCase())
@@ -184,7 +184,7 @@ export const MoreProducts = () => {
                       }}
                       to={`/home/products/allproduct/${name}/${products2.category}`}
                       key={index}
-                      className="flex flex-col justify-evenly items-center relative p-2 sm:w-52 sm:h-52 bg-white drop-shadow-md text-xs hover:text-[#F2667C]"
+                      className="flex flex-col justify-evenly items-center relative p-2 sm:w-52 sm:h-52 w-full h-full bg-white drop-shadow-md text-xs hover:text-[#F2667C]"
                     >{products2.products.length >0 ?
                       <div
                       style={{
@@ -211,7 +211,7 @@ export const MoreProducts = () => {
                         // }
                         // style={{transition: "opacity 0.3s ease-in-out"}}
                       
-                        className="hover:scale-110 bg-center bg-cover  object-contain w-[70%] h-[70%]  p-2 "
+                        className="hover:scale-110 bg-center sm:bg-cover bg-contain bg-no-repeat  object-contain w-full h-full sm:w-[70%] sm:h-[70%]  p-2 "
                       ></div>:<img src={loading} className="hover:scale-110 object-contain w-[80%] p-2 "></img>}
                       <p
                         className={`text-md text-center uppercase ${
