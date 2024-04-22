@@ -496,7 +496,7 @@ console.log(colours);
                   </Link>
                 ))}
                 <Link
-                  to="home/products/indoorlights/allproducts"
+                  to={`home/products/${searchproduct ==='product'?'product/productCategory':searchproduct==="Outdoor"?'Outdoor/OutdoorCategory':''}`}
                   onClick={() => {
                     setIndoorDropdown(false);
                     setShowDropdown(false);
