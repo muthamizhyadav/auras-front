@@ -163,11 +163,11 @@ export const MoreProducts = () => {
             {name ==="product" ? "INDOOR" : name} Lights
           </p>
           {allvalues.length > 0 ? (
-            <div className="grid  grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 justify-items-center lg:grid-cols-5">
+            <div className="grid  grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 justify-items-center lg:grid-cols-4 lg1:grid-cols-5">
               {allvalues &&
                 allvalues.map((products2, index) => (
                   <div key={index}
-                    className={`p-5 w-[80%] h-52 sm:h-fit ${
+                    className={`p-5 sm:w-fit w-full h-52 sm:h-fit ${
                       products2.category
                         .toLowerCase()
                         .includes("New Arrival".toLowerCase())

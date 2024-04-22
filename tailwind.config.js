@@ -10,7 +10,8 @@ export default {
       },
       screens:{
         xs:"428px",
-        previewxs:"404px"
+        previewxs:"404px",
+        lg1:"1100px"
       },
     },
   },

@@ -71,7 +71,7 @@ function Productlist() {
       </div>
       {Loading == true ? (
         <div className="flex flex-col mt-10 gap-5">
-          <p className="text-3xl font-bold text-center uppercase bg-gradient-to-r from-pink-600 via-pink-500 to-pink-400 bg-clip-text text-transparent">
+          <p className="text-xl sm:text-3xl font-bold text-center uppercase bg-gradient-to-r from-pink-600 via-pink-500 to-pink-400 bg-clip-text text-transparent">
             {productname}
           </p>
           {alldata.length > 0 ? (

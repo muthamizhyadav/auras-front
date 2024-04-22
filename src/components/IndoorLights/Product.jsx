@@ -246,13 +246,13 @@ export const Product = () => {
                       </p>
                     </ul>
                   </div>
-                  <div className="flex items-center justify-start md:pl-10 lg:pl-[22%]">
+                  <div className="flex items-center justify-start md:pl-10 lg:pl-[22%] pb-5 md:pb-0">
                     <a
                       href={productpdf}
                       target="_blank"
                       rel="noopener noreferrer"
                       download
-                      className=" flex justify-center cursor-pointer items-center mt-5 sm:mt-3  w-48 h-10 rounded bg-white hover:bg-pink-100 shadow-md"
+                      className=" flex justify-center cursor-pointer items-center mt-3  w-48 h-10 rounded bg-white hover:bg-pink-100 shadow-md"
                     >
                       Specification File
                       <MdDownload className="text-[#F2667C]  my-1 mx-2 " />
@@ -479,7 +479,7 @@ export const Product = () => {
                 {modelId ? modelId : ""}
               </h1> */}
               <div
-                className={`flex sm:px-14 px-5 sm:flex-row flex-col gap-10 items-center justify-center ${
+                className={`flex sm:px-14 px-5 py-10 md:py-5 sm:flex-row flex-col gap-10 items-center justify-center ${
                   title1 === null ? "hidden" : ""
                 }`}
               >
