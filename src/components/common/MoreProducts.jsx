@@ -186,21 +186,33 @@ export const MoreProducts = () => {
                       key={index}
                       className="flex flex-col justify-evenly items-center relative p-2 sm:w-52 sm:h-52 bg-white drop-shadow-md text-xs hover:text-[#F2667C]"
                     >{products2.products.length >0 ?
-                      <img
-                        src={
-                          products2?.products[
-                            (products2?.products.length -
-                              (products2?.products?.length > 4
-                                ? imageIndex
-                                : imageIndex2)) %
-                              products2?.products?.length
-                          ]?.modelimage?.asset?.url
+                      <div
+                      style={{
+                        backgroundImage:`url(${ products2?.products[
+                          (products2?.products.length -
+                            (products2?.products?.length > 4
+                              ? imageIndex
+                              : imageIndex2)) %
+                            products2?.products?.length
+                        ]?.modelimage?.asset?.url
+                     })`,
+                       backgroundPosition: "center",
+                      transition: "0.5s ease",
+                      }} 
+                        // src={
+                        //   products2?.products[
+                        //     (products2?.products.length -
+                        //       (products2?.products?.length > 4
+                        //         ? imageIndex
+                        //         : imageIndex2)) %
+                        //       products2?.products?.length
+                        //   ]?.modelimage?.asset?.url
                        
-                        }
-                        style={{transition: "opacity 0.3s ease-in-out"}}
-                        alt="Loading"
-                        className="hover:scale-110  object-contain w-[80%]  p-2 "
-                      />:<img src={loading} className="hover:scale-110 object-contain w-[80%] p-2 "></img>}
+                        // }
+                        // style={{transition: "opacity 0.3s ease-in-out"}}
+                      
+                        className="hover:scale-110 bg-center bg-cover  object-contain w-[70%] h-[70%]  p-2 "
+                      ></div>:<img src={loading} className="hover:scale-110 object-contain w-[80%] p-2 "></img>}
                       <p
                         className={`text-md text-center uppercase ${
                           products2.category
