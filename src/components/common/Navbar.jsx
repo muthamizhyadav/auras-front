@@ -470,7 +470,7 @@ console.log(colours);
           </div>
             {dummydata.length != 0 ? (
               <div className="flex flex-wrap gap-3 products justify-center items-center">
-                {dummydata.slice(0, 20).map((id) => (
+                {dummydata.slice(0, 19).map((id) => (
                   <Link
                     to={`home/products/individual/${searchproduct}/${id.modelid}`}
                     onClick={() => {
@@ -509,7 +509,7 @@ console.log(colours);
                   }}
                   className="flex mt-5 flex-col justify-evenly items-center relative p-2 w-28 h-40 bg-white drop-shadow-md text-xs hover:text-[#F2667C]"
                 >
-                  <p className="text-pink-500">More...</p>
+                  <p className="text-pink-500 text-base">More...</p>
                 </Link>
               </div>
             ) : (
