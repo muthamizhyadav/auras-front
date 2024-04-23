@@ -88,7 +88,7 @@ function Productlist() {
                       }}
                       to={`/home/products/individual/${pname}/${product.modelid}`}
                       key={index}
-                      className="flex flex-col  items-center relative p-2 sm:w-48 sm:h-48 bg-white drop-shadow-md text-xs hover:text-[#F2667C]"
+                      className="flex flex-col w-[200px] xs:w-80   items-center relative p-2 sm:w-48 sm:h-48 bg-white drop-shadow-md text-xs hover:text-[#F2667C]"
                     >
                       <div className="w-[80%] h-[80%]">
                         <img

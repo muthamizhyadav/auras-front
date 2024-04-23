@@ -65,9 +65,11 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
   const productsearch = () => {
+    setIsOpen(false)
     setSearch(!search);
     setdummydata(model);
   };
+  const width=window.innerWidth;
   const [dummydata, setdummydata] = useState([]);
   //dynamic navbar
   const newColours = Array(navbardata.length).fill(false);
@@ -412,7 +414,7 @@ const Navbar = () => {
       </div>
       {/* Search  for both devices*/}
       {search && (
-        <div className="flex flex-col">
+        <div className="flex overflow-hidden  flex-col">
           <div
             className="absolute w-full top-0 h-full flex pl-3 xs:pl-0 xs:justify-center items-center bg-black searchani1"
             // onMouseLeave={productsearch}
@@ -454,7 +456,7 @@ const Navbar = () => {
             />
           </div>
 
-          <div className="bg-white absolute w-full overflow-y-scroll h-screen    gap-2 ">
+          <div className="bg-white absolute w-full h-screen   gap-2 ">
             <div className="flex p-5  gap-5">
               {navbardata &&
                 navbardata.map((item, index) => (
@@ -465,15 +467,17 @@ const Navbar = () => {
                       backgroundColor:
                         colours && colours[index] ? "#FFB6C1" : "#D3D3D3",
                     }}
-                    className={` cursor-pointer duration-100  rounded-lg px-3 py-2 xs:text-base text-xs`}
+                    className={` cursor-pointer duration-100 w-fit h-fit  rounded-lg px-3 py-2 xs:text-base text-xs`}
                   >
                     {item.title}
                   </p>
                 ))}
             </div>
             {dummydata.length != 0 ? (
-              <div className="flex flex-wrap gap-3 products justify-center items-center">
-                {dummydata.slice(0, 19).map((id) => (
+              <div className="w-full shadow-inner h-[70%] overflow-y-scroll ">
+
+              <div className="flex  pb-8  flex-wrap  gap-3 products  justify-center items-center">
+                {dummydata.map((id) => (
                   <Link
                     to={`home/products/individual/${searchproduct}/${id.modelid}`}
                     onClick={() => {
@@ -525,6 +529,10 @@ const Navbar = () => {
                   <p className="text-pink-500 text-base">More...</p>
                 </Link>
               </div>
+             
+
+              </div>
+             
             ) : (
               <div className="w-full h-screen flex flex-col gap-5 justify-center items-center">
                 <p className="lg:text-4xl md:text-2xl sm:text-xl text-lg font-bold bg-gradient-to-r from-pink-500 via-pink-400 to-pink-300 text-transparent  bg-clip-text">

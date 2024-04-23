@@ -29,7 +29,7 @@ export const MoreProducts = () => {
         Category
       }`);
         setarrays(categories);
-        console.log(categories, "jaja");
+        console.log(categories, "All Products");
         for (let i = 0; i < categories.length; i++) {
           const category = categories[i].Category;
           // console.log(category);
@@ -104,7 +104,7 @@ export const MoreProducts = () => {
   }, [searchQuery]);
   function handleSearch(e) {
     if (e.keyCode === 8) {
-      console.log("aaa");
+  
       setSearchQuery(e.target.value);
       const filteredResults = allvalues.filter((data) =>
         data.category.toLowerCase().includes(e.target.value.toLowerCase())
