@@ -5,6 +5,7 @@ import { Product } from "./components/IndoorLights/Product";
 import { Linear } from "./components/Products/Linear";
 import { MoreProducts } from "./components/common/MoreProducts";
 import Productlist from "./components/common/Productlist";
+import Homepage from "./components/home/Homepage";
 function App() {
   return (
     <Router>
@@ -20,6 +21,7 @@ function App() {
             path="home/products/allproduct/:pname/:productname"
             element={<Productlist />}
           />
+          <Route path="/homePage" element={<Homepage />}/>
         </Route>
       </Routes>
     </Router>

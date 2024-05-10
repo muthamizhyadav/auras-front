@@ -7,6 +7,7 @@ export default {
         Formbg: "url('/bgImage.png')",
         Bannerbg: "url('/bannerbg.png')",
         moreproductsbg: "url('/moreproductsbg.jpg')",
+        banner:"url('/banner1.jpg')",
       },
       screens:{
         xs:"428px",
@@ -14,6 +15,9 @@ export default {
         previewxs:"404px",
         lg1:"1100px"
       },
+      colors:{
+        primaryColor:"#F2667C",
+      }
     },
   },
   plugins: [],

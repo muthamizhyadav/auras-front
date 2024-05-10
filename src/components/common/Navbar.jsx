@@ -139,11 +139,13 @@ const Navbar = () => {
         {/* larger devices */}
         <div className=" xl:justify-around md:justify-between w-full py-1 md:px-5 xl:px-10 items-center bg-transparent hidden lg:flex">
           <div className="">
+            <Link to="/homePage">
             <img
               src={logo}
               alt="auras logo"
               className="xl:ml-16 xl:w-[140px] w-28"
             />
+            </Link>
           </div>
           <div className="flex ml-10 w-3/4 justify-evenly lg:text-xs xl:text-sm font-medium relative">
             <div
