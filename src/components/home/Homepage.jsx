@@ -4,7 +4,7 @@ import line from "../../assets/line.png";
 import line2 from "../../assets/line2.png";
 import tl90 from "../../assets/TL90-LED-Track-light1.png";
 import line3 from "../../assets/line3.png";
-// import back from '../../assets/home1.png'
+import back from '../../assets/home1.png'
 import vector from '../../assets/vec.png'
 import vector2 from '../../assets/img2.png'
 import vector3 from '../../assets/img3.png'
@@ -126,7 +126,7 @@ const Homepage = () => {
             <div style={{backgroundImage:`url(${vector})`}} className="h-14 w-full bg-no-repeat flex justify-center items-center absolute bottom-5 -left-5 ">
             <div className="relative w-full h-full"><p className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-primaryColor w-full flex justify-center items-center font-semibold">Commercial Lights</p></div>
               </div>
-              {/* <img src={back} className="w-full h-full rounded-xl"></img> */}
+              <img src={back} className="w-full h-full rounded-xl"></img>
             </div>
             <div className="xss:w-[300px] w-[95%] relative  h-[350px]">
             <div style={{backgroundImage:`url(${vector})`}} className="h-14 w-full bg-no-repeat flex justify-center items-center absolute bottom-5 -left-5 ">
