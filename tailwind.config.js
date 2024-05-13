@@ -8,6 +8,8 @@ export default {
         Bannerbg: "url('/bannerbg.png')",
         moreproductsbg: "url('/moreproductsbg.jpg')",
         banner:"url('/banner1.jpg')",
+        about:"url('/auras (1).gif')",
+        form:"url('/Rectangle 57.png')",
       },
       screens:{
         xs:"428px",

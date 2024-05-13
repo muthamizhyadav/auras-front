@@ -6,6 +6,8 @@ import { Linear } from "./components/Products/Linear";
 import { MoreProducts } from "./components/common/MoreProducts";
 import Productlist from "./components/common/Productlist";
 import Homepage from "./components/home/Homepage";
+import About from "./components/about/About";
+import Contactus from "./components/contactus/Contactus";
 function App() {
   return (
     <Router>
@@ -22,6 +24,8 @@ function App() {
             element={<Productlist />}
           />
           <Route path="/homePage" element={<Homepage />}/>
+          <Route path="/about" element={<About />} />
+          <Route path="/contactus" element={<Contactus/>} />
         </Route>
       </Routes>
     </Router>

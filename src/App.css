@@ -125,8 +125,8 @@
   height: var(--height-of-input);
   display: flex;
   align-items: center;
-  padding-inline: 0.8em;
-  border-radius: var(--border-radius);
+  /* padding-inline: 0.8em; */
+  /* border-radius: var(--border-radius); */
   transition: border-radius 0.5s ease;
   background: var(--input-bg,#fff);
 }

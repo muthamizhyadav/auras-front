@@ -183,7 +183,7 @@ const Navbar = () => {
             <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
               home decor
             </Link>
-            <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
+            <Link to="/about" className="capitalize hover:text-[#F2667C] cursor-pointer">
               about us
             </Link>
             <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
@@ -193,7 +193,10 @@ const Navbar = () => {
 
           <div className="w-1/4  items-center justify-around xl:px-4 flex">
             <div className="capitalize  shadow-lg cursor-pointer text-[#F2667C] hover:bg-[#F2667C] hover:text-white px-4 py-2 rounded">
+              <Link to="/contactus">
               <p className=" lg:text-sm font-medium">Contact us</p>
+              </Link>
+              
             </div>
             <div>
               <FiSearch
