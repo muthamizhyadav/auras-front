@@ -356,7 +356,7 @@ const Navbar = () => {
                 </div>
               </Link>
               <Link
-                to="home/products/facadelights"
+                to="home/products/facade/FacadeCategory"
                 className="block px-4 py-2   hover:text-[#F2667C] "
                 onClick={cancelDropdownSmall}
               >
@@ -408,7 +408,7 @@ const Navbar = () => {
               </Link>
               <Link
                 onClick={() => setShowDropdown(false)}
-                to="home/products/facadelights"
+                to="home/products/facade/FacadeCategory"
                 className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
               >
                 Facade Lights
