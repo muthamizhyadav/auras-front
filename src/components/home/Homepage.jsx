@@ -76,7 +76,7 @@ const Homepage = () => {
           <div className="lg:hidden block p-5">
             <h1 className=" font-medium text-2xl">New Arrivals</h1>
             <div className="">
-              <hr className="sm:w-1/2 w-full h-0.5 bg-primaryColor " />
+              <hr className="w-1/2 h-0.5 bg-primaryColor " />
             </div>
           </div>
           <div className="flex lg:flex-row flex-col-reverse items-center">
@@ -84,10 +84,10 @@ const Homepage = () => {
               <div className="lg:block hidden">
                 <h1 className="pl-28 font-medium text-4xl">New Arrivals</h1>
                 <div className="pl-36">
-                  <hr className="w-1/3 h-0.5 bg-primaryColor " />
+                  <hr className="w-full h-0.5 bg-primaryColor " />
                 </div>
               </div>
-              <div className="lg:p-10 lg:pt-28 flex flex-col items-center justify-center gap-7 ">
+              <div className="lg:p-10 lg:pt-28 flex flex-col items-start justify-center gap-7 ">
                 <p className="md:text-4xl text-lg font-semibold lg:text-start text-center">
                   TL90 Modular Design Track Light
                 </p>
@@ -110,7 +110,7 @@ const Homepage = () => {
               <img src={line3} alt="" className="w-full" />
             </div>
               <div className="flex lg:flex-row flex-col lg:w-[60%] w-full  relative lg:gap-5 gap-2 items-start lg:items-center ">
-                <h1 className="lg:text-3xl text-2xl">Applications</h1>
+                <h1 className="lg:text-3xl text-2xl font-semibold">Applications</h1>
                 <hr className="w-[50%] h-0.5 bg-primaryColor" />
                 <button className="bg-white shadow-xl  drop-shadow-xl  px-2 py-2 text-sm lg:flex hidden rounded-md">View More</button>
               </div>
@@ -118,25 +118,25 @@ const Homepage = () => {
             </div>
           </div>
           <div>
-            <p className="lg:text-center text-justify px-5">AURAS Lighting stands at the forefront of LED commercial lighting, renowned for its expertise in pioneering LED lighting solutions through cutting-edge development, precision manufacturing, and effective application.</p>
+            <p className="lg:text-center text-justify text-sm lg:w-[75%] px-5 mx-auto py-5">AURAS Lighting stands at the forefront of LED commercial lighting, renowned for its expertise in pioneering LED lighting solutions through cutting-edge development, precision manufacturing, and effective application.</p>
           </div>
 
           <div className="grid lg:grid-cols-3  2xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-y-10 justify-items-center lg:px-10 justify-center items-center">
             <div className="xss:w-[300px] w-[95%] relative  h-[350px]">
             <div style={{backgroundImage:`url(${vector})`}} className="h-14 w-full bg-no-repeat flex justify-center items-center absolute bottom-5 -left-5 ">
-            <div className="relative w-full h-full"><p className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-primaryColor w-full flex justify-center items-center font-semibold">Commercial Lights</p></div>
+            <div className="relative w-full h-full"><p className="absolute top-[40%] left-10 -translate-y-1/2 text-primaryColor w-full flex  items-center font-semibold">Commercial Lights</p></div>
               </div>
               <img src={back} className="w-full h-full rounded-xl"></img>
             </div>
             <div className="xss:w-[300px] w-[95%] relative  h-[350px]">
             <div style={{backgroundImage:`url(${vector})`}} className="h-14 w-full bg-no-repeat flex justify-center items-center absolute bottom-5 -left-5 ">
-            <div className="relative w-full h-full"><p className="absolute w-full justify-center flex items-center top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-primaryColor font-semibold">Outdoor Lights</p></div>
+            <div className="relative w-full h-full"><p className="absolute w-full  flex items-center top-[40%] left-10  -translate-y-1/2 text-primaryColor font-semibold">Outdoor Lights</p></div>
               </div>
               <img src={vector2} className="w-full h-full rounded-xl"></img>
             </div>
             <div className="xss:w-[300px] w-[95%] relative  h-[350px]">
             <div style={{backgroundImage:`url(${vector})`}} className="h-14 w-full bg-no-repeat flex justify-center items-center absolute bottom-5 -left-5 ">
-            <div className="relative w-full h-full"><p className="absolute flex w-full justify-center items-center top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-primaryColor font-semibold">Home Decor</p></div>
+            <div className="relative w-full h-full"><p className="absolute flex w-full  items-center top-[40%] left-10 -translate-y-1/2 text-primaryColor font-semibold">Home Decor</p></div>
               </div>
               <img src={vector3} className="w-full h-full rounded-xl"></img>
             </div>

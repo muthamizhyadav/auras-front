@@ -58,11 +58,11 @@ const About = () => {
     <>
       <div className="bg-about  sm:h-[500px] h-full w-full bg-no-repeat ">
         <div className="bg-black sm:h-[500px] h-full  w-full bg-opacity-60  flex flex-col justify-center items-center ">
-          <div className=" text-center text-white p-10 space-y-3">
+          <div className=" text-center text-white sm:p-10  p-5 space-y-4">
             <h1 className="text-6xl">Welcome to Auras Lighting</h1>
             <h3 className="text-2xl">
               {" "}
-              where every light shines with elegance and purpose
+              Where every light shines with elegance and purpose
             </h3>
             <p className="text-sm sm:w-[70%] text-center mx-auto">
               Established in Dubai with a vision for brilliance and innovation,
@@ -92,12 +92,12 @@ const About = () => {
                     start={0}
                     end={item.number}
                     duration={5}
-                    className="text-white"
+                    className="text-white font-semibold text-3xl"
                   />
-                  <p className="text-white">+</p>
+                  <p className="text-white font-semibold text-3xl">+</p>
                 </div>
                 <div>
-                  <p className="text-white">{item.content}</p>
+                  <p className="text-white text-sm">{item.content}</p>
                 </div>
               </div>
             </div>
@@ -116,24 +116,24 @@ const About = () => {
         </div>
       </div> */}
       <div className="py-10">
-        <div className="relative">
+        <div className="relative lg:h-32 sm:h-36 h-44">
           <h1 className="text-center text-2xl font-bold">Our Culture</h1>
-          <div className="absolute right-0 top-1/2 overflow-hidden ">
+          <div className="absolute right-0 top-4 overflow-hidden ">
             <img src={line} alt="" className="lg:block hidden" />
           </div>
           <div>
             <hr className="w-full h-[2px] bg-primaryColor lg:hidden block" />
           </div>
           <div className="absolute">
-            <p className="2xl:w-full w-[70%] text-center mx-auto ">
-              AURAS has strong capacity in engineering technology and plenty of
+            <p className="2xl:w-full sm:w-[70%] sm:text-center text-justify mx-auto sm:px-0 px-4 py-5 text-sm">
+              AURAS has strong capaci ty in engineering technology and plenty of
               experience. We are highly appraised by our clients and the markets
               for our credible quality and zealous after-service.
             </p>
           </div>
         </div>
 
-        <div className="flex justify-center items-center gap-10 flex-wrap mt-20">
+        <div className="flex justify-center items-center gap-10 flex-wrap ">
           {culture.map((content, index) => (
             <div
               key={index}
@@ -167,7 +167,7 @@ const About = () => {
             <hr className="w-full h-[2px] bg-primaryColor md:hidden block" />
           </div>
           <div className="lg:absolute">
-            <p className="text-sm text-center w-[70%] mx-auto mt-5">
+            <p className="text-sm sm:text-center text-justify sm:px-0 px-5 sm:w-[70%] w-full mx-auto mt-5">
               We're excited to offer you our comprehensive suite of services and
               advantageous business terms. We're dedicated to maximizing your
               benefits and fully committed to supporting your business

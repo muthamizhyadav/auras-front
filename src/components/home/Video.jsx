@@ -16,7 +16,7 @@ function Video() {
                     <p className='text-white sm:text-base text-sm'>Get more in your vision</p>
                 </div>
                 <img src={play} alt='play' className='sm:w-16 w-12 cursor-pointer'></img>
-                  <div className='text-white sm:text-base text-sm w-[80%] mx-auto text-justify md:w-[50%]'>Dive into our video gallery to uncover an extensive range of products waiting to captivate you. Explore further for an immersive experience.</div>
+                  <div className='text-white  text-sm w-[80%] mx-auto text-justify md:w-[50%]'>Dive into our video gallery to uncover an extensive range of products waiting to captivate you. Explore further for an immersive experience.</div>
                </div>
             </div>
 
