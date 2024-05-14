@@ -12,11 +12,11 @@ const Contactus = () => {
             <img src={contact} alt="" className=" h-full -mt-5" />
           </div>
           <div className="md:absolute md:w-[50%] w-full right-1/2  md:translate-x-1/2 top-14 rounded-lg bg-white bg-opacity-[80%] border border-primaryColor md:px-10  px-5 py-5 ">
-            <div className="space-y-3">
-              <h1 className="text-primaryColor text-2xl font-bold text-center">
+            <div className="">
+              <h1 className="text-primaryColor text-2xl font-bold text-center py-1">
                 Contact us
               </h1>
-              <p className="text-center font-medium md:w-[75%] w-full text-sm mx-auto">
+              <p className="text-center font-medium md:w-[75%] w-full text-sm mx-auto py-1">
                 For further questions, including partnership opportunities,
                 please contact using our contact form.
               </p>
