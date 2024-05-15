@@ -4,11 +4,12 @@ import line from "../../assets/line.png";
 import line2 from "../../assets/line2.png";
 import tl90 from "../../assets/TL90-LED-Track-light1.png";
 import line3 from "../../assets/line3.png";
-import back from '../../assets/home1.png'
-import vector from '../../assets/vec.png'
-import vector2 from '../../assets/img2.png'
-import vector3 from '../../assets/img3.png'
+import back from "../../assets/home1.png";
+import vector from "../../assets/vec.png";
+import vector2 from "../../assets/img2.png";
+import vector3 from "../../assets/img3.png";
 import Video from "./Video";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
   return (
@@ -18,7 +19,7 @@ const Homepage = () => {
         <div className="bg-banner h-screen w-full bg-cover bg-no-repeat flex flex-col justify-center ">
           <div className="flex flex-row justify-center items-center gap-5">
             <div className="bg-white bg-opacity-50 w-[70%] h-[110px] flex flex-col justify-center items-center ">
-              <p className="text-white  shadow-black md:text-4xl px-2 sm:text-xl text-sm">
+              <p className="text-white  shadow-black md:text-4xl px-2 sm:text-xl text-sm drop-shadow-lg ">
                 Lighting the Way to Inspired Living
               </p>
             </div>
@@ -49,7 +50,7 @@ const Homepage = () => {
                 <p className="">
                   Experience sophistication with Our Lux Edition. Elevate your
                   space with opulent chandeliers, exquisite table lamps, and
-                  luxurious décor pieces. Indulge in timeless elegance.
+                  luxurious decor pieces. Indulge in timeless elegance.
                 </p>
                 <p>
                   From opulent chandeliers that cast a mesmerizing glow to
@@ -91,9 +92,11 @@ const Homepage = () => {
                 <p className="md:text-4xl sm:text-2xl xs:text-xl text-lg font-semibold lg:text-start text-center">
                   TL90 Modular Design Track Light
                 </p>
-                <button className="w-fit drop-shadow-2xl mx-auto lg:mx-0 rounded-md px-4 bg-white shadow-xl  p-2">
-                  Browse More
-                </button>
+                <Link to="/home/products/allproduct/product/New%20Arrival">
+                  <button className="w-fit drop-shadow-2xl mx-auto font-medium lg:mx-0 text-xs rounded-md px-7 bg-white shadow-xl  p-3 hover:bg-primaryColor hover:text-white">
+                    Browse More
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="sm:w-[35%]  lg:pt-0">
@@ -104,111 +107,139 @@ const Homepage = () => {
         {/* 4th section */}
         <div className="p-5 my-5 flex flex-col gap-5 lg:p-0">
           <div className="relative ">
-            
             <div className=" relative w-full lg:h-16 h-fit flex lg:justify-end">
-            <div className="absolute w-[47%] lg:flex hidden bottom-0 left-0">
-              <img src={line3} alt="" className="w-full" />
-            </div>
-              <div className="flex lg:flex-row flex-col lg:w-[60%] w-full  relative lg:gap-5 gap-2 items-start lg:items-center ">
-                <h1 className="lg:text-3xl text-2xl font-semibold">Applications</h1>
-                <hr className="w-[50%] h-0.5 bg-primaryColor" />
-                <button className="bg-white shadow-xl  drop-shadow-xl  px-2 py-2 text-sm lg:flex hidden rounded-md">View More</button>
+              <div className="absolute w-[47%] lg:flex hidden bottom-0 left-0">
+                <img src={line3} alt="" className="w-full" />
               </div>
-              
+              <div className="flex lg:flex-row flex-col lg:w-[60%] w-full  relative lg:gap-5 gap-2 items-start lg:items-center ">
+                <h1 className="lg:text-3xl text-2xl font-semibold">
+                  Applications
+                </h1>
+                <hr className="w-[50%] h-0.5 bg-primaryColor" />
+                <button className="bg-white shadow-xl  drop-shadow-xl p-3 px-7 font-medium text-xs lg:flex hidden rounded-md hover:bg-primaryColor hover:text-white">
+                  View More
+                </button>
+              </div>
             </div>
           </div>
           <div>
-            <p className="lg:text-center text-justify text-sm lg:w-[75%] lg:px-5 mx-auto py-5">AURAS Lighting stands at the forefront of LED commercial lighting, renowned for its expertise in pioneering LED lighting solutions through cutting-edge development, precision manufacturing, and effective application.</p>
+            <p className="lg:text-center text-justify text-sm lg:w-[75%] lg:px-5 mx-auto py-5">
+              AURAS Lighting stands at the forefront of LED commercial lighting,
+              renowned for its expertise in pioneering LED lighting solutions
+              through cutting-edge development, precision manufacturing, and
+              effective application.
+            </p>
           </div>
 
           <div className="grid lg:grid-cols-3  2xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-y-10 justify-items-center lg:px-10 justify-center items-center">
             <div className="xss:w-[300px] w-[95%] relative  h-[350px]">
-            <div style={{backgroundImage:`url(${vector})`}} className="h-14 w-full bg-no-repeat flex justify-center items-center absolute bottom-5 -left-5 ">
-            <div className="relative w-full h-full"><p className="absolute top-[40%] left-10 -translate-y-1/2 text-primaryColor w-full flex  items-center font-semibold">Commercial Lights</p></div>
+              <div
+                style={{ backgroundImage: `url(${vector})` }}
+                className="h-14 w-full bg-no-repeat flex justify-center items-center absolute bottom-5 -left-5 "
+              >
+                <div className="relative w-full h-full">
+                  <p className="absolute top-[40%] left-10 -translate-y-1/2 text-primaryColor w-full flex  items-center font-semibold">
+                    Commercial Lights
+                  </p>
+                </div>
               </div>
               <img src={back} className="w-full h-full rounded-xl"></img>
             </div>
             <div className="xss:w-[300px] w-[95%] relative  h-[350px]">
-            <div style={{backgroundImage:`url(${vector})`}} className="h-14 w-full bg-no-repeat flex justify-center items-center absolute bottom-5 -left-5 ">
-            <div className="relative w-full h-full"><p className="absolute w-full  flex items-center top-[40%] left-10  -translate-y-1/2 text-primaryColor font-semibold">Outdoor Lights</p></div>
+              <div
+                style={{ backgroundImage: `url(${vector})` }}
+                className="h-14 w-full bg-no-repeat flex justify-center items-center absolute bottom-5 -left-5 "
+              >
+                <div className="relative w-full h-full">
+                  <p className="absolute w-full  flex items-center top-[40%] left-10  -translate-y-1/2 text-primaryColor font-semibold">
+                    Outdoor Lights
+                  </p>
+                </div>
               </div>
               <img src={vector2} className="w-full h-full rounded-xl"></img>
             </div>
             <div className="xss:w-[300px] w-[95%] relative  h-[350px]">
-            <div style={{backgroundImage:`url(${vector})`}} className="h-14 w-full bg-no-repeat flex justify-center items-center absolute bottom-5 -left-5 ">
-            <div className="relative w-full h-full"><p className="absolute flex w-full  items-center top-[40%] left-10 -translate-y-1/2 text-primaryColor font-semibold">Home Decor</p></div>
+              <div
+                style={{ backgroundImage: `url(${vector})` }}
+                className="h-14 w-full bg-no-repeat flex justify-center items-center absolute bottom-5 -left-5 "
+              >
+                <div className="relative w-full h-full">
+                  <p className="absolute flex w-full  items-center top-[40%] left-10 -translate-y-1/2 text-primaryColor font-semibold">
+                    Home Decor
+                  </p>
+                </div>
               </div>
               <img src={vector3} className="w-full h-full rounded-xl"></img>
             </div>
-            
           </div>
-          
         </div>
-        <div className="py-5"><button className="bg-white shadow-xl  mx-auto drop-shadow-xl  px-2 py-2 text-sm lg:hidden flex rounded-md">View More</button></div>
-        
+        <div className="py-5">
+          <button className="bg-white shadow-xl  mx-auto drop-shadow-xl  px-2 py-2 text-sm lg:hidden flex rounded-md">
+            View More
+          </button>
+        </div>
       </div>
       <Video />
       <section>
-            <div className="bg-Formbg h-full bg-cover form flex lg:flex-row flex-col justify-center items-center lg:flex-nowrap sm:py-10 py-5 md:px-24 px-5 lg:gap-10 gap-3">
-              <div className="">
-                <p className="text-3xl sm:text-5xl font-medium">
-                Keen to explore further?
-                </p>
-                <p className="py-5 text-[13px] md:text-start text-justify">
-                If you are interested in our products and would like to receive further information, please fill out the form below to send us your request. or mail to info@auraslighting.com directly.
-                </p>
-              </div>
-              <div className="form-content lg:w-[70%] w-full sm:p-5 p-3  rounded-3xl shadow-2xl">
-                <div className="flex flex-col items-center justify-evenly ">
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="Name"
-                    className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
-                  />
-                  <input
-                    type="email"
-                    name="mail"
-                    id="mail"
-                    placeholder="E-mail"
-                    className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
-                  />
-                  <input
-                    type="text"
-                    name="text"
-                    id="text"
-                    placeholder="Company Name"
-                    className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
-                  />
-                  <input
-                    type="text"
-                    name="text"
-                    id="text"
-                    placeholder="Company Type"
-                    className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
-                  />
-                  <textarea
-                    name="message"
-                    id="message"
-                    rows="4"
-                    className="bg-gray-200 p-2 my-1 rounded-lg w-full border border-[#0E82B4]"
-                    placeholder="Message"
-                  ></textarea>
-                </div>
-                <div className="flex justify-end mt-2">
-                  <div className="bg-white rounded-lg drop-shadow-2xl">
-                  <button
-                    type="submit"
-                    className=" px-8   my-2  font-medium"
-                  >
-                    Send
-                  </button>
-                  </div>
-                </div>
+        <div className="bg-Formbg h-full bg-cover  flex lg:flex-row flex-col justify-center items-center lg:flex-nowrap sm:py-10 py-5 md:px-24 px-5 lg:gap-10 gap-3">
+          <div className="">
+            <p className="text-3xl sm:text-5xl font-medium">
+              Keen to explore further?
+            </p>
+            <p className="py-5 text-[13px] md:text-start text-justify">
+              If you are interested in our products and would like to receive
+              further information, please fill out the form below to send us
+              your request. or mail to info@auraslighting.com directly.
+            </p>
+          </div>
+          <div className="form-content lg:w-[70%] w-full sm:p-5 p-3  rounded-3xl shadow-2xl">
+            <div className="flex flex-col items-center justify-evenly ">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Name"
+                className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
+              />
+              <input
+                type="email"
+                name="mail"
+                id="mail"
+                placeholder="E-mail"
+                className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
+              />
+              <input
+                type="text"
+                name="text"
+                id="text"
+                placeholder="Company Name"
+                className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
+              />
+              <input
+                type="text"
+                name="text"
+                id="text"
+                placeholder="Company Type"
+                className="bg-gray-200 border border-[#0E82B4]  rounded-lg p-3 my-1 w-full"
+              />
+              <textarea
+                name="message"
+                id="message"
+                rows="4"
+                className="bg-gray-200 p-2 my-1 rounded-lg w-full border border-[#0E82B4]"
+                placeholder="Message"
+              ></textarea>
+            </div>
+            <div className="flex justify-end mt-2">
+              <div className="bg-white rounded-lg drop-shadow-2xl">
+                <button type="submit" className=" px-8   my-2  font-medium">
+                  Send
+                </button>
               </div>
             </div>
-          </section>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

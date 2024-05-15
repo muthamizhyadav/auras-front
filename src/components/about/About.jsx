@@ -181,7 +181,7 @@ const About = () => {
       </div>
 
       <section className="pt-5">
-        <div className="bg-form lg:h-[500px] h-full bg-cover form ">
+        <div className="bg-form lg:h-[500px] h-full bg-cover  ">
           <div className="bg-black lg:h-[500px] h-full bg-opacity-40 w-full  flex lg:flex-row flex-col justify-center items-center sm:py-10 py-5 sm:px-24 px-5 text-white">
             <div className="">
               <p className="text-3xl sm:text-5xl font-medium">
