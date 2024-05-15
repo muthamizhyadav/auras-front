@@ -181,7 +181,7 @@ const Homepage = () => {
       </div>
       <Video />
       <section>
-        <div className="bg-Formbg h-full bg-cover form flex lg:flex-row flex-col justify-center items-center lg:flex-nowrap sm:py-10 py-5 md:px-24 px-5 lg:gap-10 gap-3">
+        <div className="bg-Formbg h-full bg-cover  flex lg:flex-row flex-col justify-center items-center lg:flex-nowrap sm:py-10 py-5 md:px-24 px-5 lg:gap-10 gap-3">
           <div className="">
             <p className="text-3xl sm:text-5xl font-medium">
               Keen to explore further?
