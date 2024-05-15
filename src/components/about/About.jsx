@@ -234,7 +234,7 @@ const About = () => {
               </div>
               <div className="flex justify-end mt-2">
                 <div className="bg-white rounded-lg drop-shadow-2xl">
-                  <button type="submit" className=" px-8   my-2  font-medium">
+                  <button type="submit" className=" px-8 text-primaryColor  my-2  font-medium">
                     Send
                   </button>
                 </div>

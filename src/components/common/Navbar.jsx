@@ -307,6 +307,7 @@ const Navbar = () => {
             Home Decor
           </Link>
           <Link
+            to="/about"
             className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
             onClick={toggleNavbar}
           >
@@ -318,12 +319,14 @@ const Navbar = () => {
           >
             Blogs
           </Link>
-          <button
-            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
-            onClick={toggleNavbar}
-          >
-            Contact Us
-          </button>
+          <Link to="/contactus">
+            <button
+              className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
+              onClick={toggleNavbar}
+            >
+              Contact Us
+            </button>
+          </Link>
           {showDropdownsmall && (
             <div className="navbar-animation font-medium w-full absolute top-0 h-full bg-white text-[#F2667C]  py-2  rounded-b-lg z-10">
               <p
