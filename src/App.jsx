@@ -13,7 +13,8 @@ function App() {
     <Router>
       <Routes>
         <Route element={<Home />}>
-          <Route path="/" element={<Linear />} />
+          <Route path="/" element={<Homepage />} />
+          <Route path="/home" element={<Homepage />} />
           <Route path="home/products/individual/:productname/:id" element={<Product />} />
           <Route
             path="home/products/:name/:productCategory"
@@ -23,7 +24,6 @@ function App() {
             path="home/products/allproduct/:pname/:productname"
             element={<Productlist />}
           />
-          <Route path="/homePage" element={<Homepage />}/>
           <Route path="/about" element={<About />} />
           <Route path="/contactus" element={<Contactus/>} />
         </Route>

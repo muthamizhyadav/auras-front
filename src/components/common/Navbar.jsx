@@ -139,7 +139,7 @@ const Navbar = () => {
         {/* larger devices */}
         <div className=" xl:justify-around md:justify-between w-full py-1 md:px-5 xl:px-10 items-center bg-transparent hidden lg:flex">
           <div className="">
-            <Link to="/homePage">
+            <Link to="/home">
               <img
                 src={logo}
                 alt="auras logo"

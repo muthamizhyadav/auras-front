@@ -10,6 +10,7 @@ export default {
         banner:"url('/banner1.jpg')",
         about:"url('/auras (1).gif')",
         form:"url('/Rectangle 57.png')",
+        contactusbg:"url('/src/assets/contact.png')"
       },
       screens:{
         xs:"428px",
