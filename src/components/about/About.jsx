@@ -59,12 +59,12 @@ const About = () => {
       <div className="bg-about  sm:h-[500px] h-full w-full bg-no-repeat ">
         <div className="bg-black sm:h-[500px] h-full  w-full bg-opacity-60  flex flex-col justify-center items-center ">
           <div className=" text-center text-white sm:p-10  p-5 space-y-4">
-            <h1 className="text-6xl">Welcome to Auras Lighting</h1>
+            <h1 className="md:text-5xl text-2xl">Welcome to Auras Lighting</h1>
             <h3 className="text-2xl">
               {" "}
               Where every light shines with elegance and purpose
             </h3>
-            <p className="text-sm sm:w-[70%] text-center mx-auto">
+            <p className="text-sm sm:w-[70%] text-justify md:text-center mx-auto">
               Established in Dubai with a vision for brilliance and innovation,
               Auras Lighting has become a leading provider of lighting
               solutions, illuminating residential, home decor, and office spaces
@@ -86,8 +86,8 @@ const About = () => {
                   className="bg-white rounded-full p-2 w-fit"
                 />
               </div>
-              <div className=" flex flex-col justify-center items-center">
-                <div className="flex flex-row ">
+              <div className=" flex flex-col justify-start lg:justify-center items-start">
+                <div className="flex flex-row justify-center items-center">
                   <CountUp
                     start={0}
                     end={item.number}
@@ -116,16 +116,16 @@ const About = () => {
         </div>
       </div> */}
       <div className="py-10">
-        <div className="relative lg:h-32 sm:h-36 h-44">
-          <h1 className="text-center text-2xl font-bold">Our Culture</h1>
-          <div className="absolute right-0 top-4 overflow-hidden ">
+        <div className="relative p-5 py-3">
+          <h1 className="lg:text-center text-justify text-2xl font-bold">Our Culture</h1>
+          <div className="absolute right-0 top-7 overflow-hidden w-[40%]">
             <img src={line} alt="" className="lg:block hidden w-full" />
           </div>
           <div>
-            <hr className="w-full h-[2px] bg-primaryColor lg:hidden block" />
+            <hr className="w-[60%] h-[2px] bg-primaryColor lg:hidden block" />
           </div>
-          <div className="absolute">
-            <p className="2xl:w-full sm:w-[70%] sm:text-center text-justify mx-auto sm:px-0 px-4 py-5 text-sm">
+          <div className="lg:w-[70%] lg:text-center text-justify mx-auto py-5">
+            <p >
               AURAS has strong capaci ty in engineering technology and plenty of
               experience. We are highly appraised by our clients and the markets
               for our credible quality and zealous after-service.
@@ -133,14 +133,14 @@ const About = () => {
           </div>
         </div>
 
-        <div className="flex justify-center items-center gap-10 flex-wrap ">
+        <div className="grid justify-center items-center gap-10 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-items-center md:px-[80px] 2xl:grid-cols-4 ">
           {culture.map((content, index) => (
             <div
               key={index}
-              className="h-96 w-60 sm:w-72 rounded-xl bg-center bg-cover relative   text-white flex flex-col"
+              className="md:h-[350px]  w-[90%] md:w-72  bg-center bg-cover relative gap-5   text-white flex flex-col"
             >
-              <img src={content.image} alt="" />
-              <h2 className="h-full w-full bg-gradient-to-t absolute top-0 left-0 from-black rounded-xl to-transparent"></h2>
+              <img src={content.image} className="w-full h-full  rounded-xl" alt="" />
+              <h2 className="h-full w-full bg-gradient-to-t absolute bottom-0 left-0 from-black rounded-xl to-transparent"></h2>
               <div className="absolute bottom-3 ">
                 <h2 className="text-white text-2xl font-semibold text-center z-50">
                   {content.header}
@@ -153,28 +153,28 @@ const About = () => {
           ))}
         </div>
       </div>
-      <div className="pt-10">
-        <div className="lg:relative ">
-          <h1 className="text-center text-2xl font-bold">Our Services</h1>
-          <div className="lg:absolute left-0 top-5">
+      <div className="">
+        <div className="lg:relative p-5">
+          <h1 className="lg:text-center text-2xl font-bold">Our Services</h1>
+          <div className="absolute left-0 top-9 overflow-hidden w-[50%]">
             <img
               src={line2}
               alt=""
-              className="xl:w-[90%] w-[50%] md:block hidden"
+              className="w-[80%] lg:block hidden"
             />
           </div>
           <div>
-            <hr className="w-full h-[2px] bg-primaryColor md:hidden block" />
+            <hr className="w-[60%] h-[2px] bg-primaryColor lg:hidden block" />
           </div>
-          <div className="lg:absolute">
-            <p className="text-sm sm:text-center text-justify sm:px-0 px-5 sm:w-[70%] w-full mx-auto mt-5">
+          <div className="">
+            <p className="text-sm sm:text-center text-justify sm:px-0  sm:w-[70%] w-full mx-auto mt-5">
               We're excited to offer you our comprehensive suite of services and
               advantageous business terms. We're dedicated to maximizing your
               benefits and fully committed to supporting your business
               endeavors. Let's collaborate for mutual success!
             </p>
           </div>
-          <div className="w-full flex flex-col justify-center items-center md:p-10 p-3 md:px-20 md:pt-20">
+          <div className="w-full flex flex-col justify-center items-center px-5 py-5">
             <img src={ourServices} alt="" className="w-full"/>
           </div>
         </div>
