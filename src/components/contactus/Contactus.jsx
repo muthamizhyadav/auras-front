@@ -6,9 +6,9 @@ import circle2 from "../../assets/Group 47.png";
 const Contactus = () => {
   return (
     <>
-      <div className="md:relative lg:h-[700px] md:h-[700px]">
+      <div className="md:relative lg:h-[700px] md:h-[700px] ">
         <div className="m-5 ">
-          <div className=" h-[90%] absolute right-0 -z-10">
+          <div className=" md:h-[90%] 2xl:h-full  absolute right-0 -z-10">
             <img src={contact} alt="" className=" h-full -mt-5" />
           </div>
           <div className="md:absolute md:w-[50%] w-full right-1/2  md:translate-x-1/2 top-14 rounded-lg bg-white bg-opacity-[80%] border border-primaryColor md:px-10  px-5 py-5 ">
@@ -21,7 +21,7 @@ const Contactus = () => {
                 please contact using our contact form.
               </p>
               <div className="flex md:flex-row flex-col md:gap-5 justify-center items-center pt-5">
-                <div className="w-full">
+                <div className="w-full flex flex-col">
                   <label htmlFor="" className="text-xs font-semibold">
                     Full Name
                   </label>
@@ -30,10 +30,10 @@ const Contactus = () => {
                     name="name"
                     id="name"
                     placeholder="Full Name"
-                    className="bg-white border border-primaryColor placeholder:text-xs rounded-lg p-2 my-1 lg:w-64 w-full"
+                    className="bg-white border border-primaryColor placeholder:text-xs rounded-lg p-2 my-1 2xl:w-full  w-full"
                   />
                 </div>
-                <div className="w-full">
+                <div className="w-full flex flex-col">
                   <label htmlFor="" className="text-xs font-semibold">
                     Email
                   </label>
@@ -42,12 +42,12 @@ const Contactus = () => {
                     name="mail"
                     id="mail"
                     placeholder="E-mail"
-                    className="bg-white border border-primaryColor placeholder:text-xs rounded-lg p-2 my-1 lg:w-64 w-full"
+                    className="bg-white border border-primaryColor placeholder:text-xs rounded-lg p-2 my-1 2xl:w-full  w-full"
                   />
                 </div>
               </div>
               <div className="flex md:flex-row flex-col md:gap-5 justify-center items-center">
-                <div className="w-full">  
+                <div className="w-full flex flex-col">  
                   <label htmlFor="" className="text-xs font-semibold">
                     Phone Number
                   </label>
@@ -56,10 +56,10 @@ const Contactus = () => {
                     name="name"
                     id="name"
                     placeholder="Phone Number"
-                    className="bg-white border border-primaryColor placeholder:text-xs rounded-lg p-2 my-1 lg:w-64 w-full"
+                    className="bg-white border border-primaryColor placeholder:text-xs rounded-lg p-2 my-1 2xl:w-full  w-full"
                   />
                 </div>
-                <div className="w-full">
+                <div className="w-full flex flex-col">
                   <label htmlFor="" className="text-xs font-semibold">
                     Company Name
                   </label>
@@ -68,11 +68,11 @@ const Contactus = () => {
                     name="mail"
                     id="mail"
                     placeholder="Company Name"
-                    className="bg-white border border-primaryColor placeholder:text-xs rounded-lg p-2 my-1 lg:w-64 w-full"
+                    className="bg-white border border-primaryColor placeholder:text-xs rounded-lg p-2 my-1 2xl:w-full  w-full"
                   />
                 </div>
               </div>
-              <div className="w-full">
+              <div className="w-full flex flex-col">
                 <label htmlFor="" className="text-xs font-semibold">
                   How can we help you?
                 </label>
@@ -82,7 +82,7 @@ const Contactus = () => {
                   id="message"
                   rows="5"
                   placeholder="Describe your problem in at least 250 characters"
-                  className="bg-white border border-primaryColor placeholder:text-xs rounded-lg p-2 my-1 w-full"
+                  className="bg-white border border-primaryColor placeholder:text-xs rounded-lg p-2 my-1  w-full"
                 ></textarea>
               </div>
               <div className="flex flex-col justify-center items-center">

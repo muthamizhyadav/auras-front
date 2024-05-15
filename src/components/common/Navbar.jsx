@@ -65,11 +65,11 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
   const productsearch = () => {
-    setIsOpen(false)
+    setIsOpen(false);
     setSearch(!search);
     setdummydata(model);
   };
-  const width=window.innerWidth;
+  const width = window.innerWidth;
   const [dummydata, setdummydata] = useState([]);
   //dynamic navbar
   const newColours = Array(navbardata.length).fill(false);
@@ -140,11 +140,11 @@ const Navbar = () => {
         <div className=" xl:justify-around md:justify-between w-full py-1 md:px-5 xl:px-10 items-center bg-transparent hidden lg:flex">
           <div className="">
             <Link to="/homePage">
-            <img
-              src={logo}
-              alt="auras logo"
-              className="xl:ml-16 xl:w-[140px] w-28"
-            />
+              <img
+                src={logo}
+                alt="auras logo"
+                className="xl:ml-16 xl:w-[140px] w-28"
+              />
             </Link>
           </div>
           <div className="flex ml-10 w-3/4 justify-evenly lg:text-xs xl:text-sm font-medium relative">
@@ -183,7 +183,10 @@ const Navbar = () => {
             <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
               home decor
             </Link>
-            <Link to="/about" className="capitalize hover:text-[#F2667C] cursor-pointer">
+            <Link
+              to="/about"
+              className="capitalize hover:text-[#F2667C] cursor-pointer"
+            >
               about us
             </Link>
             <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
@@ -194,9 +197,8 @@ const Navbar = () => {
           <div className="w-1/4  items-center justify-around xl:px-4 flex">
             <div className="capitalize  shadow-lg cursor-pointer text-[#F2667C] hover:bg-[#F2667C] hover:text-white px-4 py-2 rounded">
               <Link to="/contactus">
-              <p className=" lg:text-sm font-medium">Contact us</p>
+                <p className=" lg:text-sm font-medium">Contact us</p>
               </Link>
-              
             </div>
             <div>
               <FiSearch
@@ -212,7 +214,9 @@ const Navbar = () => {
         {/* smaller devices */}
         <div className=" flex items-center justify-between px-5 py-1 lg:hidden overflow-hidden">
           <div className="">
-            <img src={logo} alt="auras logo" className="w-20" />
+            <Link to="/homepage">
+              <img src={logo} alt="auras logo" className="w-20" />
+            </Link>
           </div>
           <div className="flex justify-center items-center gap-5">
             <button
@@ -480,11 +484,45 @@ const Navbar = () => {
             </div>
             {dummydata.length != 0 ? (
               <div className="w-full shadow-inner h-[70%] overflow-y-scroll ">
+                <div className="flex  pb-8  flex-wrap  gap-3 products  justify-center items-center">
+                  {dummydata.map((id) => (
+                    <Link
+                      to={`home/products/individual/${searchproduct}/${id.modelid}`}
+                      onClick={() => {
+                        setIndoorDropdown(false);
+                        setShowDropdown(false);
+                        setSearch(false);
+                        window.scrollTo({
+                          top: 0,
 
-              <div className="flex  pb-8  flex-wrap  gap-3 products  justify-center items-center">
-                {dummydata.map((id) => (
+                          behavior: "smooth",
+                        });
+                      }}
+                      className="flex overflow-hidden  mt-5 flex-col justify-evenly items-center relative p-2 w-28 h-40 bg-white drop-shadow-md text-xs hover:text-[#F2667C]"
+                    >
+                      {" "}
+                      <img
+                        src={
+                          id?.modelimage?.asset?.url &&
+                          id?.modelimage?.asset?.url
+                        }
+                        alt=""
+                        className="hover:scale-110 transition-all w-[80%] duration-300"
+                      />
+                      {/* {console.log(id, "check")} */}
+                      <p className="text-nowrap w-full overflow-hidden text-ellipsis  text-center">
+                        {id ? id.modelid : ""}
+                      </p>
+                    </Link>
+                  ))}
                   <Link
-                    to={`home/products/individual/${searchproduct}/${id.modelid}`}
+                    to={`home/products/${
+                      searchproduct === "product"
+                        ? "product/productCategory"
+                        : searchproduct === "Outdoor"
+                        ? "Outdoor/OutdoorCategory"
+                        : ""
+                    }`}
                     onClick={() => {
                       setIndoorDropdown(false);
                       setShowDropdown(false);
@@ -495,49 +533,12 @@ const Navbar = () => {
                         behavior: "smooth",
                       });
                     }}
-                    className="flex overflow-hidden  mt-5 flex-col justify-evenly items-center relative p-2 w-28 h-40 bg-white drop-shadow-md text-xs hover:text-[#F2667C]"
+                    className="flex mt-5 flex-col justify-evenly items-center relative p-2 w-28 h-40 bg-white drop-shadow-md text-xs hover:text-[#F2667C]"
                   >
-                    {" "}
-                    <img
-                      src={
-                        id?.modelimage?.asset?.url && id?.modelimage?.asset?.url
-                      }
-                      alt=""
-                      className="hover:scale-110 transition-all w-[80%] duration-300"
-                    />
-                    {/* {console.log(id, "check")} */}
-                    <p className="text-nowrap w-full overflow-hidden text-ellipsis  text-center">
-                      {id ? id.modelid : ""}
-                    </p>
+                    <p className="text-pink-500 text-base">More...</p>
                   </Link>
-                ))}
-                <Link
-                  to={`home/products/${
-                    searchproduct === "product"
-                      ? "product/productCategory"
-                      : searchproduct === "Outdoor"
-                      ? "Outdoor/OutdoorCategory"
-                      : ""
-                  }`}
-                  onClick={() => {
-                    setIndoorDropdown(false);
-                    setShowDropdown(false);
-                    setSearch(false);
-                    window.scrollTo({
-                      top: 0,
-
-                      behavior: "smooth",
-                    });
-                  }}
-                  className="flex mt-5 flex-col justify-evenly items-center relative p-2 w-28 h-40 bg-white drop-shadow-md text-xs hover:text-[#F2667C]"
-                >
-                  <p className="text-pink-500 text-base">More...</p>
-                </Link>
+                </div>
               </div>
-             
-
-              </div>
-             
             ) : (
               <div className="w-full h-screen flex flex-col gap-5 justify-center items-center">
                 <p className="lg:text-4xl md:text-2xl sm:text-xl text-lg font-bold bg-gradient-to-r from-pink-500 via-pink-400 to-pink-300 text-transparent  bg-clip-text">
