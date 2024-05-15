@@ -6,7 +6,7 @@ import circle2 from "../../assets/Group 47.png";
 const Contactus = () => {
   return (
     <>
-      <div className="md:relative lg:h-[700px] md:h-[700px] ">
+      <div className="md:relative h-screen">
         <div className="m-5 ">
           <div className=" md:h-[90%] 2xl:h-full  absolute right-0 -z-10">
             <img src={contact} alt="" className=" h-full -mt-5" />
@@ -14,7 +14,7 @@ const Contactus = () => {
           <div className="md:absolute md:w-[50%] w-full right-1/2  md:translate-x-1/2 top-14 rounded-lg bg-white bg-opacity-[80%] border border-primaryColor md:px-10  px-5 py-5 ">
             <div className="">
               <h1 className="text-primaryColor text-2xl font-bold text-center py-1">
-                Contact us
+                Contact Us
               </h1>
               <p className="text-center font-medium md:w-[75%] w-full text-sm mx-auto py-1">
                 For further questions, including partnership opportunities,
