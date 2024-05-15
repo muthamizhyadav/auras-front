@@ -34,8 +34,8 @@ const Homepage = () => {
                 <p className="text-white sm:text-base text-sm">Unveiling Our</p>
                 <p className="text-primaryColor xs:text-6xl text-3xl">Lux </p>
               </div>
-              <div className="lg:block hidden">
-                <img src={line2} alt="" className="ml-7" />
+              <div className="lg:block hidden w-full h-full">
+                <img src={line2} alt="" className="ml-7 w-full h-full" />
               </div>
               <div className="lg:hidden block">
                 <hr className="w-full h-0.5 bg-white mt-2" />
@@ -79,24 +79,24 @@ const Homepage = () => {
               <hr className="w-1/2 h-0.5 bg-primaryColor " />
             </div>
           </div>
-          <div className="flex lg:flex-row flex-col-reverse items-center">
-            <div className="lg:p-10 p-5">
+          <div className="flex lg:flex-row flex-col-reverse justify-between items-center">
+            <div className="">
               <div className="lg:block hidden">
                 <h1 className="pl-28 font-medium text-4xl">New Arrivals</h1>
                 <div className="pl-36">
                   <hr className="w-full h-0.5 bg-primaryColor " />
                 </div>
               </div>
-              <div className="lg:p-10 lg:pt-28 flex flex-col items-start justify-center gap-7 ">
-                <p className="md:text-4xl text-lg font-semibold lg:text-start text-center">
+              <div className="lg:p-10 lg:ml-5 lg:pt-28 flex p-5 flex-col items-start justify-center gap-7 ">
+                <p className="md:text-4xl sm:text-2xl xs:text-xl text-lg font-semibold lg:text-start text-center">
                   TL90 Modular Design Track Light
                 </p>
-                <button className="w-fit drop-shadow-2xl rounded-md px-4 bg-white shadow-xl  p-2">
+                <button className="w-fit drop-shadow-2xl mx-auto lg:mx-0 rounded-md px-4 bg-white shadow-xl  p-2">
                   Browse More
                 </button>
               </div>
             </div>
-            <div className="sm:w-[35%] pt-10 lg:pt-0">
+            <div className="sm:w-[35%]  lg:pt-0">
               <img src={tl90} alt="" />
             </div>
           </div>
@@ -118,7 +118,7 @@ const Homepage = () => {
             </div>
           </div>
           <div>
-            <p className="lg:text-center text-justify text-sm lg:w-[75%] px-5 mx-auto py-5">AURAS Lighting stands at the forefront of LED commercial lighting, renowned for its expertise in pioneering LED lighting solutions through cutting-edge development, precision manufacturing, and effective application.</p>
+            <p className="lg:text-center text-justify text-sm lg:w-[75%] lg:px-5 mx-auto py-5">AURAS Lighting stands at the forefront of LED commercial lighting, renowned for its expertise in pioneering LED lighting solutions through cutting-edge development, precision manufacturing, and effective application.</p>
           </div>
 
           <div className="grid lg:grid-cols-3  2xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-y-10 justify-items-center lg:px-10 justify-center items-center">

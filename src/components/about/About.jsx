@@ -119,7 +119,7 @@ const About = () => {
         <div className="relative lg:h-32 sm:h-36 h-44">
           <h1 className="text-center text-2xl font-bold">Our Culture</h1>
           <div className="absolute right-0 top-4 overflow-hidden ">
-            <img src={line} alt="" className="lg:block hidden" />
+            <img src={line} alt="" className="lg:block hidden w-full" />
           </div>
           <div>
             <hr className="w-full h-[2px] bg-primaryColor lg:hidden block" />
