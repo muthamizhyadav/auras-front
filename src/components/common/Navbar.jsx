@@ -215,7 +215,7 @@ const Navbar = () => {
         {/* smaller devices */}
         <div className=" flex items-center justify-between px-5 py-1 lg:hidden overflow-hidden">
           <div className="">
-            <Link to="/homepage">
+            <Link to="/home">
               <img src={logo} alt="auras logo" className="w-20" />
             </Link>
           </div>
