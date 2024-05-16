@@ -75,7 +75,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="bg-black grid lg:grid-cols-4 sm:grid-cols-2  grid-cols-1  justify-around px-10 items-center">
+      <div className="bg-black"> <div className=" grid lg:grid-cols-4 sm:grid-cols-2  grid-cols-1   place-content-end px-8 gap-x-20 lg:gap-0 lg:w-full w-fit mx-auto ">
         {data.map((item, index) => (
           <div className="">
             <div className="flex flex-row lg:justify-center  items-center gap-3 p-5">
@@ -97,13 +97,14 @@ const About = () => {
                   <p className="text-white font-semibold text-3xl">+</p>
                 </div>
                 <div>
-                  <p className="text-white text-sm">{item.content}</p>
+                  <p className="text-white text-xs">{item.content}</p>
                 </div>
               </div>
             </div>
           </div>
         ))}
-      </div>
+      </div></div>
+     
       {/* <div className="relative">
         <h1 className="text-center text-2xl font-bold">Our Culture</h1>
         <div className="absolute right-0 top-1/2 overflow-hidden ">
@@ -181,7 +182,7 @@ const About = () => {
       </div>
 
       <section className="pt-5">
-        <div className="bg-form lg:h-[500px] h-full bg-cover  ">
+        <div className="bg-form lg:h-[500px] h-full bg-cover ">
           <div className="bg-black lg:h-[500px] h-full bg-opacity-40 w-full  flex lg:flex-row flex-col justify-center items-center sm:py-10 py-5 sm:px-24 px-5 text-white">
             <div className="">
               <p className="text-3xl sm:text-5xl font-medium">
