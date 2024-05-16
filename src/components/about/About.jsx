@@ -10,6 +10,7 @@ import img2 from "../../assets/Rectangle 38.png";
 import img3 from "../../assets/Rectangle 39.png";
 import line2 from "../../assets/Vector 35.png";
 import ourServices from "../../assets/Group 49.png";
+import service from '../.././assets/fly.png'
 const About = () => {
   const data = [
     {
@@ -176,7 +177,7 @@ const About = () => {
             </p>
           </div>
           <div className="w-full flex flex-col justify-center items-center px-5 py-5">
-            <img src={ourServices} alt="" className="w-full"/>
+            <img src={service} alt="" className="w-full h-full"/>
           </div>
         </div>
       </div>

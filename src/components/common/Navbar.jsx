@@ -34,8 +34,9 @@ const Navbar = () => {
     clearTimeout(closeTimeout.current);
   };
   const navbardata = [
-    { title: "Indoor Product", value: "product", boo: false },
-    { title: "Outdoor Product", value: "Outdoor", boo: false },
+    { title: "Indoor Lights", value: "product", boo: false },
+    { title: "Outdoor Lights", value: "Outdoor", boo: false },
+    { title: "Facade Lights", value: "facade", boo: false },
   ];
 
   const closeDropdown = () => {
@@ -469,7 +470,7 @@ const Navbar = () => {
           </div>
 
           <div className="bg-white absolute w-full h-screen   gap-2 ">
-            <div className="flex p-5  gap-5">
+            <div className="flex flex-wrap lg:justify-start lg:items-start justify-center items-center p-5  gap-5">
               {navbardata &&
                 navbardata.map((item, index) => (
                   <p
@@ -524,7 +525,7 @@ const Navbar = () => {
                         ? "product/productCategory"
                         : searchproduct === "Outdoor"
                         ? "Outdoor/OutdoorCategory"
-                        : ""
+                        : searchproduct==='facade'?'facade/FacadeCategory':''
                     }`}
                     onClick={() => {
                       setIndoorDropdown(false);
