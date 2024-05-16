@@ -1,12 +1,12 @@
 import React from "react";
-// import  auras from "../../assets/auras.gif"
+import  auras from "../../assets/auras (2).gif"
 import play from "../../assets/play.png";
 import { Link } from "react-router-dom";
 function Video() {
   return (
     <div>
       <div className="w-full relative h-screen">
-        {/* <img src={auras} className='w-full h-full absolute top-0 left-0' alt="" /> */}
+        <img src={auras} className='w-full h-full absolute top-0 left-0' alt="" />
         <div className="bg-black bg-opacity-60 absolute w-full h-full "></div>
         <div className="h-full w-full  absolute flex justify-center items-center">
           <div className="h-full flex flex-col justify-around items-center gap-">
