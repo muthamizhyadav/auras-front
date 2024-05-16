@@ -84,10 +84,10 @@ const About = () => {
                 <img
                   src={item.image}
                   alt=""
-                  className="bg-white rounded-full p-2 w-fit"
+                  className="bg-white rounded-full p-2 w-16"
                 />
               </div>
-              <div className=" flex flex-col justify-start lg:justify-center items-start">
+              <div className="w-44 flex flex-col justify-start lg:justify-center items-start">
                 <div className="flex flex-row justify-center items-center">
                   <CountUp
                     start={0}
