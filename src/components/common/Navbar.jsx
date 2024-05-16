@@ -110,6 +110,9 @@ const Navbar = () => {
     console.log(colours);
     setSearchproduct(value);
   }
+
+
+  
   return (
     <section
       ref={navbarRef}
@@ -155,9 +158,7 @@ const Navbar = () => {
               className="dropdown-container"
             >
               <Link
-                className={`capitalize hover:text-[#F2667C] cursor-pointer ${
-                  location.pathname === "/" ? "text-[#F2667C]" : ""
-                }`}
+                className={`capitalize hover:text-[#F2667C] cursor-pointer`}
               >
                 <span
                   onMouseEnter={toggleDropdown}
@@ -186,7 +187,9 @@ const Navbar = () => {
             </Link>
             <Link
               to="/about"
-              className="capitalize hover:text-[#F2667C] cursor-pointer"
+              className={`capitalize hover:text-[#F2667C] cursor-pointer ${
+                location.pathname === "/about" ? "text-[#F2667C]" : ""
+              }`}
             >
               about us
             </Link>
