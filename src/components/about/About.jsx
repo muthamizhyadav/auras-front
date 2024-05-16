@@ -57,11 +57,11 @@ const About = () => {
 
   return (
     <>
-      <div className="bg-about  sm:h-[500px] h-full w-full bg-no-repeat ">
+      <div className="bg-about  sm:h-[500px] bg-cover h-full w-full bg-no-repeat ">
         <div className="bg-black sm:h-[500px] h-full  w-full bg-opacity-60  flex flex-col justify-center items-center ">
           <div className=" text-center text-white sm:p-10  p-5 space-y-4">
             <h1 className="md:text-5xl text-2xl">Welcome to Auras Lighting</h1>
-            <h3 className="text-2xl">
+            <h3 className="md:text-2xl text-sm">
               {" "}
               Where every light shines with elegance and purpose
             </h3>
