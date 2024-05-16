@@ -4,6 +4,12 @@ import circle1 from "../../assets/Group 46.png";
 import circle2 from "../../assets/Group 47.png";
 
 const Contactus = () => {
+  React.useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
   return (
     <>
       <div className="md:relative bg-contactusbg md:bg-none bg-cover bg-center">

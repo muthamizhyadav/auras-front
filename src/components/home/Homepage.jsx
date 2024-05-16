@@ -12,6 +12,12 @@ import Video from "./Video";
 import { Link } from "react-router-dom";
 
 const Homepage = () => {
+  React.useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
   return (
     <>
       <div>
@@ -92,7 +98,15 @@ const Homepage = () => {
                 <p className="md:text-4xl sm:text-2xl xs:text-xl text-lg font-semibold lg:text-start text-center">
                   TL90 Modular Design Track Light
                 </p>
-                <Link to="/home/products/allproduct/product/New%20Arrival">
+                <Link
+                  to="/home/products/allproduct/product/New%20Arrival"
+                  onClick={() =>
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth",
+                    })
+                  }
+                >
                   <button className="bg-white shadow-xl  drop-shadow-xl p-3 px-7 font-medium text-xs flex  rounded-md hover:bg-primaryColor hover:text-white ">
                     Browse More
                   </button>

@@ -12,6 +12,12 @@ import line2 from "../../assets/Vector 35.png";
 import ourServices from "../../assets/Group 49.png";
 import service from '../.././assets/fly.png'
 const About = () => {
+  React.useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
   const data = [
     {
       image: icon1,
