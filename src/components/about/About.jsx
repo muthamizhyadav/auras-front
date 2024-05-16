@@ -128,7 +128,7 @@ const About = () => {
           </div>
           <div className="lg:w-[70%] lg:text-center text-justify mx-auto py-5">
             <p >
-              AURAS has strong capaci ty in engineering technology and plenty of
+              AURAS has strong capacity in engineering technology and plenty of
               experience. We are highly appraised by our clients and the markets
               for our credible quality and zealous after-service.
             </p>
@@ -196,7 +196,7 @@ const About = () => {
               </p>
             </div>
             <div className="form-content bg-gradient-to-b from-white to-transparent lg:w-[70%] w-full sm:p-5 p-3  rounded-3xl shadow-2xl ">
-              <div className="flex flex-col items-center justify-evenly ">
+              <div className="flex flex-col items-center justify-evenly text-black">
                 <input
                   type="text"
                   name="name"
