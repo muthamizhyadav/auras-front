@@ -16,12 +16,12 @@ const About = () => {
     {
       image: icon1,
       number: "13",
-      content: "Years of experience",
+      content: "Years of Experience",
     },
     {
       image: icon2,
       number: "1000",
-      content: "Employee",
+      content: "Employees",
     },
     {
       image: icon3,
@@ -94,6 +94,8 @@ const About = () => {
                     end={item.number}
                     duration={5}
                     className="text-white font-semibold text-3xl"
+                    enableScrollSpy
+                    scrollSpyOnce
                   />
                   <p className="text-white font-semibold text-3xl">+</p>
                 </div>

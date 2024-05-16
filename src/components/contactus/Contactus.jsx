@@ -29,7 +29,7 @@ const Contactus = () => {
                     type="text"
                     name="name"
                     id="name"
-                    placeholder="Full Name"
+                    // placeholder="Full Name"
                     className="bg-white border text-xs border-primaryColor placeholder:text-xs rounded-lg p-2 my-1 2xl:w-full  w-full"
                   />
                 </div>
@@ -41,7 +41,7 @@ const Contactus = () => {
                     type="email"
                     name="mail"
                     id="mail"
-                    placeholder="E-mail"
+                    // placeholder="E-mail"
                     className="bg-white border border-primaryColor text-xs placeholder:text-xs rounded-lg p-2 my-1 2xl:w-full  w-full"
                   />
                 </div>
@@ -55,7 +55,7 @@ const Contactus = () => {
                     type="text"
                     name="name"
                     id="name"
-                    placeholder="Phone Number"
+                    // placeholder="Phone Number"
                     className="bg-white border text-xs border-primaryColor placeholder:text-xs rounded-lg p-2 my-1 2xl:w-full  w-full"
                   />
                 </div>
@@ -67,7 +67,7 @@ const Contactus = () => {
                     type="email"
                     name="mail"
                     id="mail"
-                    placeholder="Company Name"
+                    // placeholder="Company Name"
                     className="bg-white border text-xs border-primaryColor placeholder:text-xs rounded-lg p-2 my-1 2xl:w-full  w-full"
                   />
                 </div>
@@ -81,7 +81,7 @@ const Contactus = () => {
                   name="message"
                   id="message"
                   rows="6"
-                  placeholder="Describe your problem in at least 250 characters"
+                  // placeholder="Describe your problem in at least 250 characters"
                   className="bg-white border border-primaryColor text-xs placeholder:text-xs rounded-lg p-2 my-1  w-full"
                 ></textarea>
               </div>

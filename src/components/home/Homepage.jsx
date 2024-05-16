@@ -88,12 +88,12 @@ const Homepage = () => {
                   <hr className="w-full h-0.5 bg-primaryColor " />
                 </div>
               </div>
-              <div className="lg:p-10 lg:ml-5 lg:pt-28 flex p-5 flex-col items-start justify-center gap-7 ">
+              <div className="lg:p-10 lg:ml-5 lg:pt-28 flex p-5 flex-col items-center lg:items-start justify-center gap-7 ">
                 <p className="md:text-4xl sm:text-2xl xs:text-xl text-lg font-semibold lg:text-start text-center">
                   TL90 Modular Design Track Light
                 </p>
                 <Link to="/home/products/allproduct/product/New%20Arrival">
-                  <button className="w-fit drop-shadow-2xl mx-auto font-medium lg:mx-0 text-xs rounded-md px-7 bg-white shadow-xl  p-3 hover:bg-primaryColor hover:text-white">
+                  <button className="bg-white shadow-xl  drop-shadow-xl p-3 px-7 font-medium text-xs flex  rounded-md hover:bg-primaryColor hover:text-white ">
                     Browse More
                   </button>
                 </Link>
@@ -173,8 +173,8 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-        <div className="py-5">
-          <button className="bg-white shadow-xl  mx-auto drop-shadow-xl  px-2 py-2 text-sm lg:hidden flex rounded-md">
+        <div className="pb-10">
+          <button className="bg-white shadow-xl  mx-auto drop-shadow-xl  px-7 py-2 text-sm lg:hidden flex rounded-md">
             View More
           </button>
         </div>
