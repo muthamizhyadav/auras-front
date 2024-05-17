@@ -10,7 +10,17 @@ import img2 from "../../assets/Rectangle 38.png";
 import img3 from "../../assets/Rectangle 39.png";
 import line2 from "../../assets/Vector 35.png";
 import ourServices from "../../assets/Group 49.png";
-import service from '../.././assets/fly.png'
+import service from "../.././assets/fly.png";
+import vission from "../../assets/vission.png";
+import mission from "../../assets/mission.png";
+import values from "../../assets/Values.jpg";
+import { PiSelectionAllBold } from "react-icons/pi";
+import { IoShieldCheckmark } from "react-icons/io5";
+import { LuUserCheck2 } from "react-icons/lu";
+import { HiShoppingCart } from "react-icons/hi";
+import { RiCustomerService2Fill } from "react-icons/ri";
+import sustainable from "../../assets/sustainable (1).png";
+
 const About = () => {
   React.useEffect(() => {
     window.scrollTo({
@@ -18,28 +28,28 @@ const About = () => {
       behavior: "smooth",
     });
   }, []);
-  const data = [
-    {
-      image: icon1,
-      number: "13",
-      content: "Years of Experience",
-    },
-    {
-      image: icon2,
-      number: "1000",
-      content: "Employees",
-    },
-    {
-      image: icon3,
-      number: "600",
-      content: "Patents",
-    },
-    {
-      image: icon4,
-      number: "200",
-      content: "Design Engineers",
-    },
-  ];
+  // const data = [
+  //   {
+  //     image: icon1,
+  //     number: "13",
+  //     content: "Years of Experience",
+  //   },
+  //   {
+  //     image: icon2,
+  //     number: "1000",
+  //     content: "Employees",
+  //   },
+  //   {
+  //     image: icon3,
+  //     number: "600",
+  //     content: "Patents",
+  //   },
+  //   {
+  //     image: icon4,
+  //     number: "200",
+  //     content: "Design Engineers",
+  //   },
+  // ];
   const [culture, setculture] = React.useState([
     {
       image: img1,
@@ -60,6 +70,65 @@ const About = () => {
         "We prioritize customers, embrace innovation, value teamwork, uphold commitment, and pursue continuous improvement.",
     },
   ]);
+  const datas = [
+    {
+      image: vission,
+      header: "Vision",
+      content:
+        "Illuminating the world with endless possibilities. Join us in creating spaces filled with warmth and beauty, one light at a time.",
+    },
+    {
+      image: mission,
+      header: "Mission",
+      content:
+        " Brightening your world with exceptional lighting. Offering inspiring lights and outstanding service. Welcome to Auras, where light sparks imagination.",
+    },
+    {
+      image: values,
+      header: "Our Values",
+      content:
+        "We are committed to environmental responsibility in all aspects of our operations.",
+    },
+  ];
+
+  const why = [
+    {
+      icon: <PiSelectionAllBold className="text-primaryColor size-9" />,
+      heading: "Unrivaled Selection",
+      content:
+        "At Auras, we offer a wide range of lights to fit any style, space, and budget. Whether you prefer classic, modern, or innovative designs, we have the perfect light to brighten your world.",
+    },
+    {
+      icon: <IoShieldCheckmark className="text-primaryColor size-9" />,
+      heading: "Quality You Can Trust",
+      content:
+        "We offer top-quality lights crafted to last, ensuring lasting satisfaction for your space.",
+    },
+    {
+      icon: <LuUserCheck2 className="text-primaryColor size-9" />,
+      heading: "Expert Guidance",
+      content:
+        "Don't feel overwhelmed by lighting choices. Our team of experts is here to help you find the perfect light, offering personalized advice and technical support every step of the way.",
+    },
+    {
+      icon: <HiShoppingCart className="text-primaryColor size-9" />,
+      heading: "Seamless Shopping Experience",
+      content:
+        "Shopping for lights is easy and enjoyable at Auras. Our website is designed to be intuitive, informative, and hassle-free, with simple navigation, detailed descriptions, and secure checkout.",
+    },
+    {
+      icon: <RiCustomerService2Fill className="text-primaryColor size-9" />,
+      heading: "Exceptional Customer Service",
+      content:
+        "At Auras, you come first. From browsing our website to post-purchase, we're here for you with exceptional service. Got a question? Need advice? We're just a click or call away.",
+    },
+    {
+      icon: sustainable,
+      heading: "Commitment to Sustainability",
+      content:
+        "At Auras, we're committed to a brighter future through sustainability. With eco-friendly materials and energy-efficient designs, we help you create beautiful, sustainable spaces.",
+    },
+  ];
 
   return (
     <>
@@ -82,7 +151,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="bg-black"> <div className=" grid lg:grid-cols-4 sm:grid-cols-2  grid-cols-1   place-content-end px-8 gap-x-20 lg:gap-0 lg:w-full w-fit mx-auto ">
+      {/* <div className="bg-black"> <div className=" grid lg:grid-cols-4 sm:grid-cols-2  grid-cols-1   place-content-end px-8 gap-x-20 lg:gap-0 lg:w-full w-fit mx-auto ">
         {data.map((item, index) => (
           <div className="">
             <div className="flex flex-row lg:justify-center  items-center gap-3 p-5">
@@ -112,8 +181,8 @@ const About = () => {
             </div>
           </div>
         ))}
-      </div></div>
-     
+      </div></div> */}
+
       {/* <div className="relative">
         <h1 className="text-center text-2xl font-bold">Our Culture</h1>
         <div className="absolute right-0 top-1/2 overflow-hidden ">
@@ -127,7 +196,9 @@ const About = () => {
       </div> */}
       <div className="py-10">
         <div className="relative p-5 py-3">
-          <h1 className="lg:text-center text-justify text-2xl font-bold">Our Culture</h1>
+          <h1 className="lg:text-center text-justify text-2xl font-bold">
+            Our Culture
+          </h1>
           <div className="absolute right-0 top-7 overflow-hidden w-[40%]">
             <img src={line} alt="" className="lg:block hidden w-full" />
           </div>
@@ -135,7 +206,7 @@ const About = () => {
             <hr className="w-[60%] h-[2px] bg-primaryColor lg:hidden block" />
           </div>
           <div className="lg:w-[70%] lg:text-center text-justify mx-auto py-5">
-            <p >
+            <p>
               AURAS has strong capacity in engineering technology and plenty of
               experience. We are highly appraised by our clients and the markets
               for our credible quality and zealous after-service.
@@ -149,7 +220,11 @@ const About = () => {
               key={index}
               className="md:h-[350px]  w-[90%] md:w-72  bg-center bg-cover relative gap-5   text-white flex flex-col"
             >
-              <img src={content.image} className="w-full h-full  rounded-xl" alt="" />
+              <img
+                src={content.image}
+                className="w-full h-full  rounded-xl"
+                alt=""
+              />
               <h2 className="h-full w-full bg-gradient-to-t absolute bottom-0 left-0 from-black rounded-xl to-transparent"></h2>
               <div className="absolute bottom-3 ">
                 <h2 className="text-white text-2xl font-semibold text-center z-50">
@@ -167,11 +242,7 @@ const About = () => {
         <div className="lg:relative p-5">
           <h1 className="lg:text-center text-2xl font-bold">Our Services</h1>
           <div className="absolute left-0 top-9 overflow-hidden w-[50%]">
-            <img
-              src={line2}
-              alt=""
-              className="w-[80%] lg:block hidden"
-            />
+            <img src={line2} alt="" className="w-[80%] lg:block hidden" />
           </div>
           <div>
             <hr className="w-[60%] h-[2px] bg-primaryColor lg:hidden block" />
@@ -185,7 +256,92 @@ const About = () => {
             </p>
           </div>
           <div className="w-full flex flex-col justify-center items-center px-5 py-5">
-            <img src={service} alt="" className="w-full h-full"/>
+            <img src={service} alt="" className="w-full h-full" />
+          </div>
+        </div>
+      </div>
+
+      <div className="py-5">
+        <div className="relative p-5 py-3">
+          <h1 className="lg:text-center text-justify text-2xl font-bold">
+            Our Path and Purpose
+          </h1>
+          <div className="absolute right-0 top-7 overflow-hidden w-[35%]">
+            <img src={line} alt="" className="lg:block hidden w-full" />
+          </div>
+          <div>
+            <hr className="w-[60%] h-[2px] bg-primaryColor lg:hidden block" />
+          </div>
+          <div className="lg:w-[70%] lg:text-center text-justify mx-auto py-5">
+            <p>
+              We aim to become the global leader in innovative solutions that
+              enhance lives worldwide. Our commitment is to consistently deliver
+              high-quality products tailored to our customers' needs, all while
+              promoting sustainability and excellence in everything we do.4o
+            </p>
+          </div>
+          <div className="grid justify-evenly items-center gap-10 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-items-center md:px-[80px] 2xl:grid-cols-4 ">
+            {datas.map((content, index) => (
+              <div
+                key={index}
+                className="md:h-[350px]  w-[90%] md:w-72  bg-center bg-cover relative gap-5   text-white flex flex-col"
+              >
+                <img
+                  src={content.image}
+                  className="w-full h-full  rounded-xl"
+                  alt=""
+                />
+                <h2 className="h-full w-full bg-gradient-to-t absolute bottom-0 left-0 from-black rounded-xl to-transparent"></h2>
+                <div className="absolute bottom-3 ">
+                  <h2 className="text-white text-2xl font-semibold text-center z-50">
+                    {content.header}
+                  </h2>
+                  <p className="px-6 py-2 text-center font-light z-50">
+                    {content.content}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="py-5">
+        <div className="relative p-5 py-3">
+          <h1 className="lg:text-center text-justify text-2xl font-bold">
+            Why Choose Auras
+          </h1>
+          <div className="absolute right-0 top-7 overflow-hidden w-[35%]">
+            <img src={line} alt="" className="lg:block hidden w-full" />
+          </div>
+          <div>
+            <hr className="w-[60%] h-[2px] bg-primaryColor lg:hidden block" />
+          </div>
+          <div className="lg:w-[70%] lg:text-center text-justify mx-auto py-5">
+            <p>
+              choosing Auras for your lighting needs can offer several distinct
+              advantages in a crowded marketplace.
+            </p>
+          </div>
+          <div>
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 w-[85%] mx-auto">
+              {why.map((item, index) => (
+                <div className="bg-white border border-primaryColor p-5 space-y-3 rounded-md transition duration-300 hover:drop-shadow-2xl">
+                  <p className="bg-white drop-shadow-md w-fit p-2 rounded-full text-center  shadow-xl">
+                    {index == 5 ? (
+                      <div>
+                        <img src={item.icon} alt="" className="w-10" />
+                      </div>
+                    ) : (
+                      <div>{item.icon}</div>
+                    )}
+                  </p>
+
+                  <h1 className="font-bold">{item.heading}</h1>
+                  <p className="text-sm">{item.content}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -243,7 +399,10 @@ const About = () => {
               </div>
               <div className="flex justify-end mt-2">
                 <div className="bg-white rounded-lg drop-shadow-2xl">
-                  <button type="submit" className=" px-8 text-primaryColor  my-2  font-medium">
+                  <button
+                    type="submit"
+                    className=" px-8 text-primaryColor  my-2  font-medium"
+                  >
                     Send
                   </button>
                 </div>
