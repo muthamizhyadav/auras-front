@@ -502,7 +502,7 @@ export const Product = () => {
 
           {/* Images section 2 */}
           <div className={`w-full ${modelimages === null ? "hidden" : ""}`}>
-            <div className="w-[87%] mx-auto space-y-5">
+            <div className="w-[87%] mx-auto space-y-5 flex flex-col">
               {
                 modelimages?.map((item)=>(
                   <img src={item?.image?.asset?.url} alt="" className="" />
