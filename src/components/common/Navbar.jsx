@@ -110,6 +110,10 @@ const Navbar = () => {
     console.log(colours);
     setSearchproduct(value);
   }
+
+
+
+  
   return (
     <section
       ref={navbarRef}
@@ -155,9 +159,7 @@ const Navbar = () => {
               className="dropdown-container"
             >
               <Link
-                className={`capitalize hover:text-[#F2667C] cursor-pointer ${
-                  location.pathname === "/" ? "text-[#F2667C]" : ""
-                }`}
+                className={`capitalize hover:text-[#F2667C] cursor-pointer`}
               >
                 <span
                   onMouseEnter={toggleDropdown}
@@ -186,7 +188,9 @@ const Navbar = () => {
             </Link>
             <Link
               to="/about"
-              className="capitalize hover:text-[#F2667C] cursor-pointer"
+              className={`capitalize hover:text-[#F2667C] cursor-pointer ${
+                location.pathname === "/about" ? "text-[#F2667C]" : ""
+              }`}
             >
               about us
             </Link>
@@ -215,7 +219,7 @@ const Navbar = () => {
         {/* smaller devices */}
         <div className=" flex items-center justify-between px-5 py-1 lg:hidden overflow-hidden">
           <div className="">
-            <Link to="/homepage">
+            <Link to="/home">
               <img src={logo} alt="auras logo" className="w-20" />
             </Link>
           </div>
