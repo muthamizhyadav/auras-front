@@ -29,8 +29,13 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const Homepage = () => {
 
+  React.useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
-  
   const swiperRef = useRef(null);
   const [run,setrun]=useState(0)
   useEffect(()=>{
