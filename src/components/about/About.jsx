@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CountUp from "react-countup";
 import icon1 from "../../assets/1 (12).png";
 import icon2 from "../../assets/2 (9).png";
@@ -20,6 +20,7 @@ import { LuUserCheck2 } from "react-icons/lu";
 import { HiShoppingCart } from "react-icons/hi";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import sustainable from "../../assets/sustainable (1).png";
+import Sanityclient from "../common/Sanityclient";
 
 const About = () => {
   React.useEffect(() => {
@@ -90,13 +91,13 @@ const About = () => {
         "We are committed to environmental responsibility in all aspects of our operations.",
     },
   ];
-document.addEventListener('scroll',()=>{
-  const y=window.scrollY
-  const title=document.querySelector('.title')
-  const secondtitle=document.querySelector('.secondtitle')
-  title.style.marginTop=-100+y/1.08+'px'
-  secondtitle.style.marginTop=y/5+'px'
-})
+  document.addEventListener("scroll", () => {
+    const y = window.scrollY;
+    const title = document.querySelector(".title");
+    const secondtitle = document.querySelector(".secondtitle");
+    title.style.marginTop = -100 + y / 1.08 + "px";
+    secondtitle.style.marginTop = y / 5 + "px";
+  });
   const why = [
     {
       icon: <PiSelectionAllBold className="text-primaryColor size-9" />,
@@ -108,7 +109,7 @@ document.addEventListener('scroll',()=>{
       icon: <IoShieldCheckmark className="text-primaryColor size-9" />,
       heading: "Quality You Can Trust",
       content:
-        "We offer top-quality lights crafted to last, ensuring lasting satisfaction for your space.",
+        "We know lighting is an investment, so we offer only the highest quality products. With superior materials and meticulous craftsmanship, every light in our collection is made to last and designed to delight.",
     },
     {
       icon: <LuUserCheck2 className="text-primaryColor size-9" />,
@@ -135,21 +136,104 @@ document.addEventListener('scroll',()=>{
         "At Auras, we're committed to a brighter future through sustainability. With eco-friendly materials and energy-efficient designs, we help you create beautiful, sustainable spaces.",
     },
   ];
+  const [Banner, setBanner] = useState([]);
+  const [ourCulture, setOurCulture] = useState([]);
+  const [ourServices, setOurServices] = useState([]);
+  const [pathAndPurpose, setPathAndPurpose] = useState([]);
+  const [whyChooseAuras, setWhyChooseAuras] = useState([]);
+  useEffect(() => {
+    const getdata = async () => {
+      await Sanityclient.fetch(
+        `*[_type == "about"]{
+        Banner[]{
+          title,
+          subTitle,
+          content,
+        },
+        ourCulture[]{
+          title,
+          definition,
+          contentAndImages[]{
+            image{
+              asset->{
+                url,
+              }
+            },
+            heading,
+            content,
+          }
+        },
+        ourServices[]{
+          title,
+          definition,
+          image{
+            asset->{
+              url,
+            }
+          }
+        },
+        pathAndPurpose[]{
+          title,
+          definition,
+          imageAndContent[]{
+            image{
+              asset->{
+                url,
+              }
+            },
+            title,
+            content,
+          },
+        },
+        whyChooseAuras[]{
+          title,
+          definition,
+          card[]{
+            icon{
+              asset->{
+                url,
+              }
+            },
+            heading,
+            content,
+          }
+        },
+    }`
+      )
+        .then((res) => {
+          setBanner(res[0]);
+          setOurCulture(res[0]);
+          setOurServices(res[0]);
+          setPathAndPurpose(res[0]);
+          setWhyChooseAuras(res[0]);
+          console.log(res[0]);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+    getdata();
+  }, []);
 
   return (
     <>
       <div className="bg-about    h-screen bg-cover secondtitle  w-full bg-no-repeat ">
         <div className="bg-black h-screen   w-full bg-opacity-60  flex flex-col justify-center items-center ">
-          <div className=" text-center text-white sm:p-10 title overflow-hidden p-5 space-y-4">
-            <h1 className="md:text-5xl lg:text-6xl 2xl:text-7xl xs:text-3xl font-semibold title">Welcome to Auras Lighting</h1>
-            <h3 className="md:text-2xl text-sm font-medium text-primaryColor ">
-             
-              Where every light shines with elegance and purpose
-            </h3>
-            <p className="text-sm sm:w-[70%] text-gray-200  text-center mx-auto">
-            Auras Lighting in Dubai offers personalized lighting solutions for homes and offices, specializing in innovation and sophistication.
-            </p>
-          </div>
+          {Banner &&
+            Banner.Banner &&
+            Banner?.Banner?.map((item, index) => (
+              <div className=" text-center text-white sm:p-10 title overflow-hidden p-5 space-y-4">
+                <h1 className="md:text-5xl lg:text-6xl 2xl:text-7xl xs:text-3xl font-semibold title">
+                  {item.title}
+                </h1>
+                <h3 className="md:text-2xl text-sm font-medium text-primaryColor ">
+                  {item.subTitle}
+                </h3>
+                <p className="text-sm sm:w-[70%] text-gray-200  text-center mx-auto">
+                  {item.content}
+                </p>
+              </div>
+            ))}
         </div>
       </div>
       {/* <div className="bg-black"> <div className=" grid lg:grid-cols-4 sm:grid-cols-2  grid-cols-1   place-content-end px-8 gap-x-20 lg:gap-0 lg:w-full w-fit mx-auto ">
@@ -183,168 +267,158 @@ document.addEventListener('scroll',()=>{
           </div>
         ))}
       </div></div> */}
-
-      {/* <div className="relative">
-        <h1 className="text-center text-2xl font-bold">Our Culture</h1>
-        <div className="absolute right-0 top-1/2 overflow-hidden ">
-          <img src={line} alt="" />
-        </div>
-        <div>
-          AURAS has strong capacity in engineering technology and plenty of
-          experience. We are highly appraised by our clients and the markets for
-          our credible quality and zealous after-service.
-        </div>
-      </div> */}
-      <div className="py-10">
-        <div className="relative p-5 py-3">
-          <h1 className="lg:text-center text-justify text-2xl font-bold">
-            Our Culture
-          </h1>
-          <div className="absolute right-0 top-7 overflow-hidden w-[40%]">
-            <img src={line} alt="" className="lg:block hidden w-full" />
-          </div>
-          <div>
-            <hr className="w-[60%] h-[2px] bg-primaryColor lg:hidden block" />
-          </div>
-          <div className="lg:w-[70%] lg:text-center text-justify mx-auto py-5">
-            <p>
-              AURAS has strong capacity in engineering technology and plenty of
-              experience. We are highly appraised by our clients and the markets
-              for our credible quality and zealous after-service.
-            </p>
-          </div>
-        </div>
-
-        <div className="grid justify-center items-center gap-10 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-items-center md:px-[80px] 2xl:grid-cols-4 ">
-          {culture.map((content, index) => (
-            <div
-              key={index}
-              className="md:h-[350px]  w-[90%] md:w-72  bg-center bg-cover relative gap-5   text-white flex flex-col"
-            >
-              <img
-                src={content.image}
-                className="w-full h-full  rounded-xl"
-                alt=""
-              />
-              <h2 className="h-full w-full bg-gradient-to-t absolute bottom-0 left-0 from-black rounded-xl to-transparent"></h2>
-              <div className="absolute bottom-3 ">
-                <h2 className="text-white text-2xl font-semibold text-center z-50">
-                  {content.header}
-                </h2>
-                <p className="px-6 py-2 text-center text-sm font-light z-50">
-                  {content.paragraph}
-                </p>
+      {ourCulture &&
+        ourCulture.ourCulture &&
+        ourCulture?.ourCulture?.map((item, index) => (
+          <div className="py-10">
+            <div className="relative p-5 py-3">
+              <h1 className="lg:text-center text-justify text-2xl font-bold">
+                {item.title}
+              </h1>
+              <div className="absolute right-0 top-7 overflow-hidden w-[40%]">
+                <img src={line} alt="" className="lg:block hidden w-full" />
+              </div>
+              <div>
+                <hr className="w-[60%] h-[2px] bg-primaryColor lg:hidden block" />
+              </div>
+              <div className="lg:w-[70%] lg:text-center text-justify mx-auto py-5">
+                <p>{item.definition}</p>
               </div>
             </div>
-          ))}
-        </div>
-      </div>
-      <div className="">
-        <div className="lg:relative p-5">
-          <h1 className="lg:text-center text-2xl font-bold">Our Services</h1>
-          <div className="absolute left-0 top-9 overflow-hidden w-[50%]">
-            <img src={line2} alt="" className="w-[80%] lg:block hidden" />
-          </div>
-          <div>
-            <hr className="w-[60%] h-[2px] bg-primaryColor lg:hidden block" />
-          </div>
-          <div className="">
-            <p className="text-sm sm:text-center text-justify sm:px-0  sm:w-[70%] w-full mx-auto mt-5">
-              We're excited to offer you our comprehensive suite of services and
-              advantageous business terms. We're dedicated to maximizing your
-              benefits and fully committed to supporting your business
-              endeavors. Let's collaborate for mutual success!
-            </p>
-          </div>
-          <div className="w-full flex flex-col justify-center items-center px-5 py-5">
-            <img src={service} alt="" className="w-full h-full" />
-          </div>
-        </div>
-      </div>
 
-      <div className="py-5">
-        <div className="relative p-5 py-3">
-          <h1 className="lg:text-center text-justify text-2xl font-bold">
-            Our Path and Purpose
-          </h1>
-          <div className="absolute right-0 top-7 overflow-hidden w-[35%]">
-            <img src={line} alt="" className="lg:block hidden w-full" />
-          </div>
-          <div>
-            <hr className="w-[60%] h-[2px] bg-primaryColor lg:hidden block" />
-          </div>
-          <div className="lg:w-[70%] lg:text-center text-justify mx-auto py-5">
-            <p>
-              We aim to become the global leader in innovative solutions that
-              enhance lives worldwide. Our commitment is to consistently deliver
-              high-quality products tailored to our customers' needs, all while
-              promoting sustainability and excellence in everything we do.4o
-            </p>
-          </div>
-          <div className="grid justify-evenly items-center gap-10 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-items-center md:px-[80px] 2xl:grid-cols-4 ">
-            {datas.map((content, index) => (
-              <div
-                key={index}
-                className="md:h-[350px]  w-[90%] md:w-72  bg-center bg-cover relative gap-5   text-white flex flex-col"
-              >
-                <img
-                  src={content.image}
-                  className="w-full h-full  rounded-xl"
-                  alt=""
-                />
-                <h2 className="h-full w-full bg-gradient-to-t absolute bottom-0 left-0 from-black rounded-xl to-transparent"></h2>
-                <div className="absolute bottom-3 ">
-                  <h2 className="text-white text-2xl font-semibold text-center z-50">
-                    {content.header}
-                  </h2>
-                  <p className="px-6 py-2 text-center text-xs  font-light z-50">
-                    {content.content}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <div className="py-5">
-        <div className="relative p-5 py-3">
-          <h1 className="lg:text-center text-justify text-2xl font-bold">
-            Why Choose Auras
-          </h1>
-          <div className="absolute right-0 top-7 overflow-hidden w-[35%]">
-            <img src={line} alt="" className="lg:block hidden w-full" />
-          </div>
-          <div>
-            <hr className="w-[60%] h-[2px] bg-primaryColor lg:hidden block" />
-          </div>
-          <div className="lg:w-[70%] lg:text-center text-justify mx-auto py-5">
-            <p>
-              Choosing Auras for your lighting needs can offer several distinct
-              advantages in a crowded marketplace.
-            </p>
-          </div>
-          <div>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 w-[85%] mx-auto">
-              {why.map((item, index) => (
-                <div className="bg-white border border-primaryColor p-5 space-y-3 rounded-md transition duration-300 hover:drop-shadow-2xl">
-                  <p className="bg-white drop-shadow-md w-fit p-2 rounded-full text-center  shadow-xl">
-                    {index == 5 ? (
-                      <div>
-                        <img src={item.icon} alt="" className="w-10" />
-                      </div>
-                    ) : (
-                      <div>{item.icon}</div>
-                    )}
-                  </p>
-
-                  <h1 className="font-bold">{item.heading}</h1>
-                  <p className="text-sm">{item.content}</p>
+            <div className="grid justify-center items-center gap-10 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-items-center md:px-[80px] 2xl:grid-cols-4 ">
+              {item?.contentAndImages.map((content, index) => (
+                <div
+                  key={index}
+                  className="md:h-[350px]  w-[90%] md:w-72  bg-center bg-cover relative gap-5   text-white flex flex-col"
+                >
+                  <img
+                    src={content?.image?.asset?.url}
+                    className="w-full h-full  rounded-xl"
+                    alt=""
+                  />
+                  <h2 className="h-full w-full bg-gradient-to-t absolute bottom-0 left-0 from-black rounded-xl to-transparent"></h2>
+                  <div className="absolute bottom-3 ">
+                    <h2 className="text-white text-2xl font-semibold text-center z-50">
+                      {content.heading}
+                    </h2>
+                    <p className="px-6 py-2 text-center text-sm font-light z-50">
+                      {content.content}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
-        </div>
+        ))}
+
+      <div className="">
+        {ourServices &&
+          ourServices.ourServices &&
+          ourServices?.ourServices?.map((item, index) => (
+            <div className="lg:relative p-5">
+              <h1 className="lg:text-center text-2xl font-bold">
+                {item.title}
+              </h1>
+              <div className="absolute left-0 top-9 overflow-hidden w-[50%]">
+                <img src={line2} alt="" className="w-[80%] lg:block hidden" />
+              </div>
+              <div>
+                <hr className="w-[60%] h-[2px] bg-primaryColor lg:hidden block" />
+              </div>
+              <div className="">
+                <p className="text-sm sm:text-center text-justify sm:px-0  sm:w-[70%] w-full mx-auto mt-5">
+                  {item.definition}
+                </p>
+              </div>
+              <div className="w-full flex flex-col justify-center items-center px-5 py-5">
+                <img
+                  src={item?.image?.asset?.url}
+                  alt=""
+                  className="w-full h-full"
+                />
+              </div>
+            </div>
+          ))}
+      </div>
+
+      <div className="py-5">
+        {pathAndPurpose &&
+          pathAndPurpose.pathAndPurpose &&
+          pathAndPurpose?.pathAndPurpose?.map((item, index) => (
+            <div className="relative p-5 py-3">
+              <h1 className="lg:text-center text-justify text-2xl font-bold">
+                {item.title}
+              </h1>
+              <div className="absolute right-0 top-7 overflow-hidden w-[35%]">
+                <img src={line} alt="" className="lg:block hidden w-full" />
+              </div>
+              <div>
+                <hr className="w-[60%] h-[2px] bg-primaryColor lg:hidden block" />
+              </div>
+              <div className="lg:w-[70%] lg:text-center text-justify mx-auto py-5">
+                <p>{item.definition}</p>
+              </div>
+              <div className="grid justify-evenly items-center gap-10 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-items-center md:px-[80px] 2xl:grid-cols-4 ">
+                {item?.imageAndContent.map((content, index) => (
+                  <div
+                    key={index}
+                    className="md:h-[350px]  w-[90%] md:w-72 xs:h-full h-80  bg-center bg-cover relative gap-5   text-white flex flex-col"
+                  >
+                    <img
+                      src={content?.image?.asset?.url}
+                      className="w-full h-full  rounded-xl"
+                      alt=""
+                    />
+                    <h2 className="h-full w-full bg-gradient-to-t absolute bottom-0 left-0 from-black rounded-xl to-transparent"></h2>
+                    <div className="absolute bottom-3 ">
+                      <h2 className="text-white text-2xl font-semibold text-center z-50">
+                        {content.title}
+                      </h2>
+                      <p className="px-6 py-2 text-center text-xs mx-auto font-light z-50">
+                        {content.content}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+      </div>
+
+      <div className="py-5">
+        {whyChooseAuras &&
+          whyChooseAuras.whyChooseAuras &&
+          whyChooseAuras?.whyChooseAuras?.map((item, index) => (
+            <div className="relative p-5 py-3">
+              <h1 className="lg:text-center text-justify text-2xl font-bold">
+                {item.title}
+              </h1>
+              <div className="absolute right-0 top-7 overflow-hidden w-[35%]">
+                <img src={line} alt="" className="lg:block hidden w-full" />
+              </div>
+              <div>
+                <hr className="w-[60%] h-[2px] bg-primaryColor lg:hidden block" />
+              </div>
+              <div className="lg:w-[70%] lg:text-center text-justify mx-auto py-5">
+                <p>{item.definition}</p>
+              </div>
+              <div>
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 w-[85%] mx-auto">
+                  {item?.card.map((items, index) => (
+                    <div className="bg-white border border-primaryColor p-5 space-y-3 rounded-md transition duration-300 hover:drop-shadow-2xl">
+                      <p className="bg-white drop-shadow-md w-fit p-2 rounded-full text-center  shadow-xl">
+                        <img src={items?.icon?.asset.url} alt="" className="w-10" />
+                      </p>
+
+                      <h1 className="font-bold">{items.heading}</h1>
+                      <p className="text-sm">{items.content}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
       </div>
 
       <section className="pt-5">
