@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import auraslight from "../../assets/aurasLight1.png";
 import line from "../../assets/line.png";
 import line2 from "../../assets/line2.png";
@@ -10,13 +10,110 @@ import vector2 from "../../assets/img2.png";
 import vector3 from "../../assets/img3.png";
 import Video from "./Video";
 import { Link } from "react-router-dom";
+import { useRef, useState } from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+import strip from '../../assets/strip.jpg'
+import strip2 from '../../assets/strips.jpg'
+import strip3 from '../../assets/roll.jpg'
+import second from '../../assets/Facadelight5.png'
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+import 'swiper/css/pagination';
+
+// import required modules
+import { Navigation ,Autoplay,Pagination} from 'swiper/modules';
+import { FaArrowRight } from "react-icons/fa6";
 
 const Homepage = () => {
+  const swiperRef = useRef(null);
+  const [run,setrun]=useState(0)
+  useEffect(()=>{
+    const intervalId = setInterval(() => {
+      setrun(
+        (prevIndex) => (prevIndex + 3 +1) % 3
+      );
+    }, 10000);
+
+    return () => clearInterval(intervalId);
+  
+  },[])
+  useEffect(()=>{
+    console.log(run)
+  },[run])
   return (
     <>
       <div>
+      <Swiper
+      pagination={{
+        clickable: true,
+      }}
+      ref={swiperRef}
+    
+        rewind={true}
+        // navigation={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        modules={[Navigation,Autoplay,Pagination]}
+        className="mySwiper w-full h-screen -mt-10 "
+      >
+        <SwiperSlide className="w-full h-full flex p-5 justify-center  items-center relative">
+        <img src={strip} className="w-full h-full absolute top-0 object-cover"></img>
+
+          <div className="w-full h-full bg-black bg-opacity-50 absolute top-0"></div>
+        <div className="flex gap-10 z-10   justify-center items-center w-full h-full flex-col">
+          <p className="lg:text-6xl text-2xl xs:text-4xl text-white   font-semibold">LED STRIP LIGHTS</p>
+          <p className="sm:text-base text-xs text-white text-center"> LEDs consume significantly less power, helping you save on energy bills while reducing your carbon footprint </p>
+          <button className="bg-primaryColor overflow-hidden group px-3 py-2 hover:bg-white hover:text-black duration-200  rounded-lg flex justify-center items-center relative gap-2"><span className="group-hover:translate-x-5 transition-all duration-150">Learn More</span>
+          <FaArrowRight className="group-hover:translate-x-10 transition-all duration-150"></FaArrowRight>
+          <FaArrowRight className="group-hover:-translate-x-12 -translate-x-40 absolute transition-all duration-150"></FaArrowRight>
+          
+          
+          </button>
+        </div>
+        </SwiperSlide>
+        <SwiperSlide className="w-full h-full flex p-5 justify-center  items-center relative">
+        <img src={strip2} className="w-full h-full absolute top-0 object-cover"></img>
+
+          <div className="w-full h-full bg-black bg-opacity-50 absolute top-0"></div>
+        <div className="flex gap-10 z-10   justify-center items-center w-full h-full flex-col">
+          <p className="lg:text-6xl text-2xl xs:text-4xl text-white   font-semibold">LED STRIP LIGHTS</p>
+          <p className="sm:text-base text-xs text-white text-center"> LEDs consume significantly less power, helping you save on energy bills while reducing your carbon footprint </p>
+          <button className="bg-primaryColor overflow-hidden group px-3 py-2 hover:bg-white hover:text-black duration-200  rounded-lg flex justify-center items-center relative gap-2"><span className="group-hover:translate-x-5 transition-all duration-150">Learn More</span>
+          <FaArrowRight className="group-hover:translate-x-10 transition-all duration-150"></FaArrowRight>
+          <FaArrowRight className="group-hover:-translate-x-12 -translate-x-40 absolute transition-all duration-150"></FaArrowRight>
+          
+          
+          </button>
+        </div>
+        </SwiperSlide>
+        <SwiperSlide className="w-full h-full flex p-5 justify-center  items-center relative">
+        <img src={strip3} className="w-full h-full absolute top-0 object-cover"></img>
+
+          <div className="w-full h-full bg-black bg-opacity-50 absolute top-0"></div>
+        <div className="flex gap-10 z-10   justify-center items-center w-full h-full flex-col">
+          <p className="lg:text-6xl text-2xl xs:text-4xl text-white   font-semibold">LED STRIP LIGHTS</p>
+          <p className="sm:text-base text-xs text-white text-center"> LEDs consume significantly less power, helping you save on energy bills while reducing your carbon footprint </p>
+          <button className="bg-primaryColor overflow-hidden group px-3 py-2 hover:bg-white hover:text-black duration-200  rounded-lg flex justify-center items-center relative gap-2"><span className="group-hover:translate-x-5 transition-all duration-150">Learn More</span>
+          <FaArrowRight className="group-hover:translate-x-10 transition-all duration-150"></FaArrowRight>
+          <FaArrowRight className="group-hover:-translate-x-12 -translate-x-40 absolute transition-all duration-150"></FaArrowRight>
+          
+          
+          </button>
+        </div>
+        </SwiperSlide>
+        
+
+        
+        
+       
+      </Swiper>
         {/* banner */}
-        <div className="bg-banner h-screen w-full bg-cover bg-no-repeat flex flex-col justify-center ">
+        {/* <div className="bg-banner h-screen w-full bg-cover bg-no-repeat flex flex-col justify-center ">
           <div className="flex flex-row justify-center items-center gap-5">
             <div className="bg-white bg-opacity-50 w-[70%] h-[110px] flex flex-col justify-center items-center ">
               <p className="text-white  shadow-black md:text-4xl px-2 sm:text-xl text-sm drop-shadow-lg ">
@@ -25,7 +122,8 @@ const Homepage = () => {
             </div>
             <div className="bg-white bg-opacity-50 w-[30%] h-[110px]"></div>
           </div>
-        </div>
+        </div> */}
+   
         {/* second secction */}
         <div className="bg-gradient-to-r from-black to-[#666666]">
           <div className="flex lg:flex-row flex-col lg:items-start  items-center justify-center lg:relative">
@@ -75,34 +173,134 @@ const Homepage = () => {
         {/* third section */}
         <div>
           <div className="lg:hidden block p-5">
-            <h1 className=" font-medium text-2xl">New Arrivals</h1>
+            <h1 className=" font-medium text-2xl downtext">New Arrivals</h1>
             <div className="">
               <hr className="w-1/2 h-0.5 bg-primaryColor " />
             </div>
           </div>
-          <div className="flex lg:flex-row flex-col-reverse justify-between items-center">
+         
+          
+          <div className="w-full lg:min-h-[400px] 2xl:h-screen relative overflow-hidden">
+          <div className="hidden lg:block absolute w-full pl-20  pt-10">
+            <h1 className=" font-medium text-3xl downtext">New Arrivals</h1>
             <div className="">
-              <div className="lg:block hidden">
-                <h1 className="pl-28 font-medium text-4xl">New Arrivals</h1>
-                <div className="pl-36">
-                  <hr className="w-full h-0.5 bg-primaryColor " />
-                </div>
-              </div>
-              <div className="lg:p-10 lg:ml-5 lg:pt-28 flex p-5 flex-col items-start justify-center gap-7 ">
-                <p className="md:text-4xl sm:text-2xl xs:text-xl text-lg font-semibold lg:text-start text-center">
-                  TL90 Modular Design Track Light
-                </p>
-                <Link to="/home/products/allproduct/product/New%20Arrival">
-                  <button className="w-fit drop-shadow-2xl mx-auto font-medium lg:mx-0 text-xs rounded-md px-7 bg-white shadow-xl  p-3 hover:bg-primaryColor hover:text-white">
-                    Browse More
-                  </button>
-                </Link>
-              </div>
-            </div>
-            <div className="sm:w-[35%]  lg:pt-0">
-              <img src={tl90} alt="" />
+              <hr className="w-1/2 h-0.5 ml-5 bg-primaryColor " />
             </div>
           </div>
+          {run==0&&
+          <div className="flex lg:flex-row flex-col-reverse w-full h-full justify-between 2xl:items-center ">
+          <div className="lg:w-[60%] w-full">
+           
+            
+            <div className="lg:p-10 lg:ml-5 lg:pt-40 flex p-5 flex-col lg:items-start items-center justify-center gap-7 ">
+              <p className="md:text-4xl downtext sm:text-2xl xs:text-xl text-lg font-semibold lg:text-start text-center">
+                TL99 Modular Design Track Light
+              </p>
+              <Link to="/home/products/allproduct/product/New%20Arrival">
+                <button className="w-fit buds drop-shadow-2xl mx-auto font-medium lg:mx-0 text-xs rounded-md px-7 bg-white shadow-xl  p-3 hover:bg-primaryColor hover:text-white">
+                  Browse More
+                </button>
+              </Link>
+            </div>
+          </div>
+          <div className="sm:w-[35%] w-[80%] flex mx-auto h-full downtext  lg:pt-0">
+            <img src={tl90} alt="" className="w-full h-full" />
+          </div>
+        </div>}
+          {run==1&&
+          <div className="flex lg:flex-row flex-col-reverse w-full h-full justify-between 2xl:items-center ">
+          <div className="lg:w-[60%] w-full">
+            
+            
+            <div className="lg:p-10 lg:ml-5 lg:pt-40 flex p-5 flex-col lg:items-start items-center justify-center gap-7 ">
+              <p className="md:text-4xl downtext sm:text-2xl xs:text-xl text-lg font-semibold lg:text-start text-center">
+                TL99 Modular Design Track Light
+              </p>
+              <Link to="/home/products/allproduct/product/New%20Arrival">
+                <button className="w-fit buds drop-shadow-2xl mx-auto font-medium lg:mx-0 text-xs rounded-md px-7 bg-white shadow-xl  p-3 hover:bg-primaryColor hover:text-white">
+                  Browse More
+                </button>
+              </Link>
+            </div>
+          </div>
+          <div className="sm:w-[35%] w-[80%] flex mx-auto h-full downtext  lg:pt-0">
+            <img src={second} alt="" className="w-full h-full" />
+          </div>
+        </div>}
+          {run==2&&
+          <div className="flex lg:flex-row flex-col-reverse w-full h-full justify-between 2xl:items-center ">
+          <div className="lg:w-[60%] w-full">
+          
+            
+            <div className="lg:p-10 lg:ml-5 lg:pt-40 flex p-5 flex-col lg:items-start items-center justify-center gap-7 ">
+              <p className="md:text-4xl downtext sm:text-2xl xs:text-xl text-lg font-semibold lg:text-start text-center">
+                TL99 Modular Design Track Light
+              </p>
+              <Link to="/home/products/allproduct/product/New%20Arrival">
+                <button className="w-fit buds drop-shadow-2xl mx-auto font-medium lg:mx-0 text-xs rounded-md px-7 bg-white shadow-xl  p-3 hover:bg-primaryColor hover:text-white">
+                  Browse More
+                </button>
+              </Link>
+            </div>
+          </div>
+          <div className="sm:w-[35%] w-[80%] flex mx-auto h-full downtext  lg:pt-0">
+            <img src={tl90} alt="" className="w-full h-full" />
+          </div>
+        </div>}
+          {/* {run==1&&
+          <div className="flex lg:flex-row flex-col-reverse justify-between ">
+          <div className="lg:w-[60%]">
+            <div className="lg:block hidden pl-28 pt-10">
+              <div className="">
+                <hr className="w-full h-0.5 bg-primaryColor " />
+              </div>
+            </div>
+            
+            <div className="lg:p-10 lg:ml-5 lg:pt-28 flex p-5 flex-col items-start justify-center gap-7 ">
+              <p className="md:text-4xl downtext sm:text-2xl xs:text-xl text-lg font-semibold lg:text-start text-center">
+                TL99 Modular Design Track Light
+              </p>
+              <Link to="/home/products/allproduct/product/New%20Arrival">
+                <button className="w-fit buds drop-shadow-2xl mx-auto font-medium lg:mx-0 text-xs rounded-md px-7 bg-white shadow-xl  p-3 hover:bg-primaryColor hover:text-white">
+                  Browse More
+                </button>
+              </Link>
+            </div>
+          </div>
+          <div className="lg:w-[35%]   h-full downtext  lg:pt-0">
+            <img src={second} alt="" className="w-full h-full" />
+          </div>
+        </div>} */}
+          {/* {run==2&& 
+           <div className="flex lg:flex-row flex-col-reverse justify-between ">
+           <div className="lg:w-[60%]">
+             <div className="lg:block hidden pl-28 pt-10">
+               
+               <div className="">
+                 <hr className="w-full h-0.5 bg-primaryColor " />
+               </div>
+             </div>
+             
+             <div className="lg:p-10 lg:ml-5 lg:pt-28 flex p-5 flex-col items-start justify-center gap-7 ">
+               <p className="md:text-4xl downtext sm:text-2xl xs:text-xl text-lg font-semibold lg:text-start text-center">
+                 TL99 Modular Design Track Light
+               </p>
+               <Link to="/home/products/allproduct/product/New%20Arrival">
+                 <button className="w-fit buds drop-shadow-2xl mx-auto font-medium lg:mx-0 text-xs rounded-md px-7 bg-white shadow-xl  p-3 hover:bg-primaryColor hover:text-white">
+                   Browse More
+                 </button>
+               </Link>
+             </div>
+           </div>
+           <div className="sm:w-[35%] h-full downtext  lg:pt-0">
+             <img src={tl90} alt="" className="w-full h-full" />
+           </div>
+         </div>} */}
+            
+          
+          
+          </div>
+          
         </div>
         {/* 4th section */}
         <div className="p-5 my-5 flex flex-col gap-5 lg:p-0">
@@ -115,10 +313,8 @@ const Homepage = () => {
                 <h1 className="lg:text-3xl text-2xl font-semibold">
                   Applications
                 </h1>
-                <hr className="w-[50%] h-0.5 bg-primaryColor" />
-                <button className="bg-white shadow-xl  drop-shadow-xl p-3 px-7 font-medium text-xs lg:flex hidden rounded-md hover:bg-primaryColor hover:text-white">
-                  View More
-                </button>
+                <hr className="w-full h-0.5 bg-primaryColor" />
+              
               </div>
             </div>
           </div>
@@ -132,19 +328,20 @@ const Homepage = () => {
           </div>
 
           <div className="grid lg:grid-cols-3  2xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-y-10 justify-items-center lg:px-10 justify-center items-center">
-            <div className="xss:w-[300px] w-[95%] relative  h-[350px]">
+          <Link className="rounded-xl hover:shadow-lg transition-all ease-in-out flex justify-center items-center  hover:shadow-slate-500" onClick={()=>{window.screenTop({top:0,behaviour:'smooth'})}} to={'/home/products/product/productCategory'}> <div className="xss:w-[300px] w-[95%] relative  h-[350px]">
               <div
                 style={{ backgroundImage: `url(${vector})` }}
                 className="h-14 w-full bg-no-repeat flex justify-center items-center absolute bottom-5 -left-5 "
               >
                 <div className="relative w-full h-full">
                   <p className="absolute top-[40%] left-10 -translate-y-1/2 text-primaryColor w-full flex  items-center font-semibold">
-                    Commercial Lights
+                    Indoor Lights
                   </p>
                 </div>
               </div>
               <img src={back} className="w-full h-full rounded-xl"></img>
-            </div>
+            </div></Link>
+            <Link className="rounded-xl flex justify-center items-center hover:shadow-lg transition-all ease-in-out  hover:shadow-slate-500" onClick={()=>{window.screenTop({top:0,behaviour:'smooth'})}} to={'/home/products/Outdoor/OutdoorCategory'}>
             <div className="xss:w-[300px] w-[95%] relative  h-[350px]">
               <div
                 style={{ backgroundImage: `url(${vector})` }}
@@ -157,7 +354,8 @@ const Homepage = () => {
                 </div>
               </div>
               <img src={vector2} className="w-full h-full rounded-xl"></img>
-            </div>
+            </div></Link>
+            <Link className="rounded-xl flex justify-center items-center hover:shadow-lg transition-all ease-in-out  hover:shadow-slate-500" onClick={()=>{window.screenTop({top:0,behaviour:'smooth'})}} to={'/home/products/facade/FacadeCategory'}>
             <div className="xss:w-[300px] w-[95%] relative  h-[350px]">
               <div
                 style={{ backgroundImage: `url(${vector})` }}
@@ -165,18 +363,31 @@ const Homepage = () => {
               >
                 <div className="relative w-full h-full">
                   <p className="absolute flex w-full  items-center top-[40%] left-10 -translate-y-1/2 text-primaryColor font-semibold">
-                    Home Decor
+                    Facade Lights
                   </p>
                 </div>
               </div>
               <img src={vector3} className="w-full h-full rounded-xl"></img>
-            </div>
+            </div></Link>
+            
+            <Link className="rounded-xl flex justify-center items-center hover:shadow-lg transition-all ease-in-out  hover:shadow-slate-500" onClick={()=>{window.screenTop({top:0,behaviour:'smooth'})}} to={'/home/products/product/productCategory'}><div className="xss:w-[300px] w-[95%] relative  h-[350px]">
+              <div
+                style={{ backgroundImage: `url(${vector})` }}
+                className="h-14 w-full bg-no-repeat flex justify-center items-center absolute bottom-5 -left-5 "
+              >
+                <div className="relative w-full h-full">
+                  <p className="absolute flex w-full  items-center top-[40%] left-10 -translate-y-1/2 text-primaryColor font-semibold">
+                    Linear Lights
+                  </p>
+                </div>
+              </div>
+              <img src={vector3} className="w-full h-full rounded-xl"></img>
+            </div></Link>
+            
           </div>
         </div>
         <div className="py-5">
-          <button className="bg-white shadow-xl  mx-auto drop-shadow-xl  px-2 py-2 text-sm lg:hidden flex rounded-md">
-            View More
-          </button>
+        
         </div>
       </div>
       <Video />

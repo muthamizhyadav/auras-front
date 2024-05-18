@@ -186,3 +186,31 @@ input:focus {
  
  
  
+.downtext{
+  animation: 0.5s downtexts ease-in-out;}
+
+@keyframes downtexts{
+   0%{
+    filter: blur(10px);
+     transform: translateX(50px);
+   }
+   100%{
+    filter: blur(0);
+     transform: translateX(0%);
+   }
+}
+
+
+.buds{
+  animation: 0.5s buddies ease-in-out;}
+
+  @keyframes buddies {
+    0%{
+      filter: blur(10px);
+      transform: translateY(50px);
+    }
+    100%{
+      filter: blur(0);
+      transform: translateY(0px);
+    }
+  }
