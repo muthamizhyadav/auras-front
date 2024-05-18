@@ -38,7 +38,7 @@ const Homepage = () => {
       setrun(
         (prevIndex) => (prevIndex + 3 +1) % 3
       );
-    }, 10000);
+    }, 5000);
 
     return () => clearInterval(intervalId);
   
