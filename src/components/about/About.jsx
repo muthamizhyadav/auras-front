@@ -94,7 +94,7 @@ document.addEventListener('scroll',()=>{
   const y=window.scrollY
   const title=document.querySelector('.title')
   const secondtitle=document.querySelector('.secondtitle')
-  title.style.marginTop=-100+y/1.1+'px'
+  title.style.marginTop=-100+y/1.08+'px'
   secondtitle.style.marginTop=y/5+'px'
 })
   const why = [

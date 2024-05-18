@@ -393,14 +393,14 @@ const Navbar = () => {
               <Link
                 onClick={() => setShowDropdown(false)}
                 to="/home/products/linear/linearCategory"
-                className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
+                className={`block px-4 py-2 text-xs ${location.pathname.includes('/linear')?'text-[#F2667C]':''}  hover:text-[#F2667C]`}
               >
                 Linear Lights
               </Link>
               <Link
                 onClick={() => setShowDropdown(false)}
                 to="/home/products/Outdoor/OutdoorCategory"
-                className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
+                className={`block px-4 py-2 text-xs ${location.pathname.includes('/Outdoor')?'text-[#F2667C]':''}  hover:text-[#F2667C]`}
               >
                 Outdoor Lights
               </Link>
@@ -413,10 +413,10 @@ const Navbar = () => {
                   });
                 }}
                 onMouseEnter={() => setIndoorDropdown(true)}
-                className="block px-4 py-2 text-xs  "
+                className={`block px-4 py-2 text-xs ${location.pathname.includes('/productCategory')?'text-[#F2667C]':''}  hover:text-[#F2667C]`}
               >
                 <div className="relative">
-                  <p className="hover:text-[#F2667C] flex items-center">
+                  <p className=" flex items-center">
                     Indoor Lights
                   </p>
                 </div>
@@ -424,7 +424,7 @@ const Navbar = () => {
               <Link
                 onClick={() => setShowDropdown(false)}
                 to="home/products/facade/FacadeCategory"
-                className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
+                className={`block px-4 py-2 text-xs ${location.pathname.includes('/facade')?'text-[#F2667C]':''}  hover:text-[#F2667C]`}
               >
                 Facade Lights
               </Link>
