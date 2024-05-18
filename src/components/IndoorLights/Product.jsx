@@ -286,7 +286,7 @@ export const Product = () => {
           <div className="w-full md:px-14  rounded-t-xl py-5">
             <div className="">
               <div className="">
-                <p className="text-center font-semibold text-xl py-5">
+                <p className="text-center font-semibold text-xl pt-5">
                   {specificationHeading ? specificationHeading : ""}
                 </p>
               </div>
