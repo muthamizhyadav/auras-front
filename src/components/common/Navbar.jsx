@@ -341,7 +341,7 @@ const Navbar = () => {
                 Back
               </p>
               <Link
-                to="/"
+                to="/home/products/linear/linearCategory"
                 onClick={cancelDropdownSmall}
                 className="block px-4 py-2   hover:text-[#F2667C] "
               >
@@ -389,7 +389,7 @@ const Navbar = () => {
             <div className="flex justify-center w-full">
               <Link
                 onClick={() => setShowDropdown(false)}
-                to="/"
+                to="/home/products/linear/linearCategory"
                 className="block px-4 py-2 text-xs  hover:text-[#F2667C]"
               >
                 Linear Lights
