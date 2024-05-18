@@ -37,6 +37,7 @@ const Navbar = () => {
     { title: "Indoor Lights", value: "product", boo: false },
     { title: "Outdoor Lights", value: "Outdoor", boo: false },
     { title: "Facade Lights", value: "facade", boo: false },
+    { title: "Linear Lights", value: "linear", boo: false },
   ];
 
   const closeDropdown = () => {
@@ -159,7 +160,9 @@ const Navbar = () => {
               className="dropdown-container"
             >
               <Link
-                className={`capitalize hover:text-[#F2667C] cursor-pointer`}
+                className={`capitalize hover:text-[#F2667C] cursor-pointer ${
+                  location.pathname.includes("/product") ? "text-[#F2667C]" : ""
+                }`}
               >
                 <span
                   onMouseEnter={toggleDropdown}

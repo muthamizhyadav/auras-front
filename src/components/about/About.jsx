@@ -90,7 +90,13 @@ const About = () => {
         "We are committed to environmental responsibility in all aspects of our operations.",
     },
   ];
-
+document.addEventListener('scroll',()=>{
+  const y=window.scrollY
+  const title=document.querySelector('.title')
+  const secondtitle=document.querySelector('.secondtitle')
+  title.style.marginTop=y+'px'
+  secondtitle.style.marginTop=y/5+'px'
+})
   const why = [
     {
       icon: <PiSelectionAllBold className="text-primaryColor size-9" />,
@@ -132,12 +138,12 @@ const About = () => {
 
   return (
     <>
-      <div className="bg-about  sm:h-[500px] bg-cover h-full w-full bg-no-repeat ">
+      <div className="bg-about  sm:h-[500px] bg-cover secondtitle h-full w-full bg-no-repeat ">
         <div className="bg-black sm:h-[500px] h-full  w-full bg-opacity-60  flex flex-col justify-center items-center ">
-          <div className=" text-center text-white sm:p-10  p-5 space-y-4">
-            <h1 className="md:text-5xl text-2xl">Welcome to Auras Lighting</h1>
-            <h3 className="md:text-2xl text-sm">
-              {" "}
+          <div className=" text-center text-white sm:p-10 title overflow-hidden p-5 space-y-4">
+            <h1 className="md:text-5xl text-2xl title">Welcome to Auras Lighting</h1>
+            <h3 className="md:text-2xl text-sm ">
+             
               Where every light shines with elegance and purpose
             </h3>
             <p className="text-sm sm:w-[70%] text-justify md:text-center mx-auto">
@@ -230,7 +236,7 @@ const About = () => {
                 <h2 className="text-white text-2xl font-semibold text-center z-50">
                   {content.header}
                 </h2>
-                <p className="px-6 py-2 text-center font-light z-50">
+                <p className="px-6 py-2 text-center text-sm font-light z-50">
                   {content.paragraph}
                 </p>
               </div>
@@ -296,7 +302,7 @@ const About = () => {
                   <h2 className="text-white text-2xl font-semibold text-center z-50">
                     {content.header}
                   </h2>
-                  <p className="px-6 py-2 text-center font-light z-50">
+                  <p className="px-6 py-2 text-center text-xs  font-light z-50">
                     {content.content}
                   </p>
                 </div>
@@ -319,7 +325,7 @@ const About = () => {
           </div>
           <div className="lg:w-[70%] lg:text-center text-justify mx-auto py-5">
             <p>
-              choosing Auras for your lighting needs can offer several distinct
+              Choosing Auras for your lighting needs can offer several distinct
               advantages in a crowded marketplace.
             </p>
           </div>

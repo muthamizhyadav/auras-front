@@ -28,6 +28,9 @@ import { Navigation ,Autoplay,Pagination} from 'swiper/modules';
 import { FaArrowRight } from "react-icons/fa6";
 
 const Homepage = () => {
+
+
+  
   const swiperRef = useRef(null);
   const [run,setrun]=useState(0)
   useEffect(()=>{
@@ -370,7 +373,7 @@ const Homepage = () => {
               <img src={vector3} className="w-full h-full rounded-xl"></img>
             </div></Link>
             
-            <Link className="rounded-xl flex justify-center items-center hover:shadow-lg transition-all ease-in-out  hover:shadow-slate-500" onClick={()=>{window.screenTop({top:0,behaviour:'smooth'})}} to={'/home/products/product/productCategory'}><div className="xss:w-[300px] w-[95%] relative  h-[350px]">
+            <Link className="rounded-xl flex justify-center items-center hover:shadow-lg transition-all ease-in-out  hover:shadow-slate-500" onClick={()=>{window.screenTop({top:0,behaviour:'smooth'})}} to={'/home/products/linear/linearCategory'}><div className="xss:w-[300px] w-[95%] relative  h-[350px]">
               <div
                 style={{ backgroundImage: `url(${vector})` }}
                 className="h-14 w-full bg-no-repeat flex justify-center items-center absolute bottom-5 -left-5 "
