@@ -286,7 +286,7 @@ export const Product = () => {
           <div className="w-full md:px-14  rounded-t-xl py-5">
             <div className="">
               <div className="">
-                <p className="text-center font-semibold text-xl py-5">
+                <p className="text-center font-semibold text-xl pt-5">
                   {specificationHeading ? specificationHeading : ""}
                 </p>
               </div>
@@ -502,7 +502,7 @@ export const Product = () => {
 
           {/* Images section 2 */}
           <div className={`w-full ${modelimages === null ? "hidden" : ""}`}>
-            <div className="w-[87%] mx-auto space-y-5">
+            <div className="w-[87%] mx-auto space-y-5 flex flex-col">
               {
                 modelimages?.map((item)=>(
                   <img src={item?.image?.asset?.url} alt="" className="" />
