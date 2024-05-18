@@ -142,7 +142,7 @@ document.addEventListener('scroll',()=>{
         <div className="bg-black h-screen   w-full bg-opacity-60  flex flex-col justify-center items-center ">
           <div className=" text-center text-white sm:p-10 title overflow-hidden p-5 space-y-4">
             <h1 className="md:text-5xl lg:text-6xl 2xl:text-7xl xs:text-3xl font-semibold title">Welcome to Auras Lighting</h1>
-            <h3 className="md:text-2xl text-sm text-primaryColor ">
+            <h3 className="md:text-2xl text-sm font-medium text-primaryColor ">
              
               Where every light shines with elegance and purpose
             </h3>
