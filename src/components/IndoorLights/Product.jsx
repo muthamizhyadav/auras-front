@@ -6,6 +6,9 @@ import { TfiClose } from "react-icons/tfi";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import Sanityclient from "../common/Sanityclient";
 import { useParams } from "react-router-dom";
+import picture from "../../assets/DL228A-1.jpg";
+import picture2 from "../../assets/DL228A-2.jpg";
+import picture3 from "../../assets/DL228A-3.jpg";
 
 export const Product = () => {
   const { productname } = useParams();
@@ -53,13 +56,16 @@ export const Product = () => {
   const [modelId, setModelId] = useState("");
   const [contactTitle, setcontactTitle] = useState("");
   const [contactContent, setcontactContent] = useState("");
-  const [notes,setnotes]=useState([])
-  React.useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }, []);
+  const [notes, setnotes] = useState([]);
+  const [modeloverview, setModeloverview] = useState([]);
+  const [modelcct, setmodelcct] = useState([]);
+  const [modelimages,setmodelimages] = useState([])
+  // React.useEffect(() => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: "smooth",
+  //   });
+  // }, []);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -79,7 +85,7 @@ export const Product = () => {
         id
       )} ]{notes[]{
         notes
-      },modelid, bannerimages[]{ bannerimage{ asset->{ url, id }}}, modalname, features, featurepoints, applicationareas, productPdf{ asset->{ url, id }}, specificationheading, datatable1heading, datatable2heading, datatable3heading, leftsideimage{asset->{ url, id }}, rightsideimage1{asset->{ url, id }}, rightsideimage2{asset->{ url, id }}, model1title, model1contents, model1image{asset->{ url, id }}, model2title, model2contents, model2image{asset->{ url, id }}, model3title, model3contents, model3image{asset->{ url, id }}, model4title, model4contents, model4image{asset->{ url, id }}, contacttitle,  contactcontent, table1headers, table1columns, table2headers, table2columns, table3headers, table3columns, table4columns, table4headers  }`
+      },modelid, bannerimages[]{ bannerimage{ asset->{ url, id }}}, modalname, features, featurepoints, applicationareas, productPdf{ asset->{ url, id }}, specificationheading, datatable1heading, datatable2heading, datatable3heading, leftsideimage{asset->{ url, id }}, rightsideimage1{asset->{ url, id }}, rightsideimage2{asset->{ url, id }}, model1title, model1contents, model1image{asset->{ url, id }}, model2title, model2contents, model2image{asset->{ url, id }}, model3title, model3contents, model3image{asset->{ url, id }}, model4title, model4contents, model4image{asset->{ url, id }}, contacttitle,  contactcontent, table1headers, table1columns, table2headers, table2columns, table3headers, table3columns, table4columns, table4headers, modelOverview[]{image{asset->{url}},title,overview},specs[]{specname,content[]{contentlist}}, productImages[]{image{asset->{url}}}  }`
     )
       .then((data) => {
         console.log(data);
@@ -113,7 +119,7 @@ export const Product = () => {
           setContent4(data[0].model4contents);
           setmodelImage4(data[0].model4image);
           setTable1Header(data[0].table1headers);
-          setnotes(data[0].notes)
+          setnotes(data[0].notes);
           setTable2Header(data[0].table2headers);
           setTable3Header(data[0].table3headers);
           setTable1Column(data[0].table1columns);
@@ -124,6 +130,9 @@ export const Product = () => {
           setcontactContent(data[0].contactcontent);
           setTable4Column(data[0].table4columns);
           setTable4Header(data[0].table4headers);
+          setModeloverview(data[0].modelOverview);
+          setmodelcct(data[0].specs);
+          setmodelimages(data[0].productImages)
         } else {
           console.log("nodata found");
           setLodaing(true);
@@ -156,10 +165,13 @@ export const Product = () => {
     );
   };
 
+
+
   return (
     <div>
       {Loadings == false ? (
         <article className="font">
+          {/* Banner Section */}
           <section className="">
             <div className="w-full flex pl-5 md:pl-0">
               <div className="w-[9.5%] md:block hidden"></div>
@@ -167,8 +179,15 @@ export const Product = () => {
                 <p className="flex items-center font-medium sm:text-base xs:text-xs text-[10px] text-black py-5">
                   Home &nbsp; <FaChevronRight className=" sm:size-3 size-2" />{" "}
                   &nbsp; Products &nbsp;{" "}
-                  <FaChevronRight className=" sm:size-3 size-2" /> &nbsp; <p className="cursor-pointer" onClick={()=>window.history.go(-2)}>{productname =="product" ?"Indoor":productname} Lights</p> &nbsp; <FaChevronRight className=" sm:size-3 size-2" />{" "}
-                  &nbsp; {modelId ? modelId : ""}
+                  <FaChevronRight className=" sm:size-3 size-2" /> &nbsp;{" "}
+                  <p
+                    className="cursor-pointer"
+                    onClick={() => window.history.go(-2)}
+                  >
+                    {productname == "product" ? "Indoor" : productname} Lights
+                  </p>{" "}
+                  &nbsp; <FaChevronRight className=" sm:size-3 size-2" /> &nbsp;{" "}
+                  {modelId ? modelId : ""}
                 </p>
               </div>
             </div>
@@ -263,6 +282,7 @@ export const Product = () => {
             </section>
           </section>
 
+          {/* Tables */}
           <div className="w-full md:px-14  rounded-t-xl py-5">
             <div className="">
               <div className="">
@@ -440,16 +460,22 @@ export const Product = () => {
               </div>
             </div>
           </div>
-          {notes && notes.length>0? <div className="md:px-[75px] px-5">
-            <p className="text-sm font-semibold pb-1">Notes:</p>
-            <ul className="flex text-sm flex-col gap-3 list-disc p-5"> {notes && notes.map((note,index)=>
-              <li className="">
-                {note?.notes.replace(/^\s+/, '')}
-              </li>
-            )}</ul>
-            
-            </div>:null}
-         
+
+          {/* notes */}
+          {notes && notes.length > 0 ? (
+            <div className="md:px-[75px] px-5">
+              <p className="text-sm font-semibold pb-1">Notes:</p>
+              <ul className="flex text-sm flex-col gap-3 list-disc p-5">
+                {" "}
+                {notes &&
+                  notes.map((note, index) => (
+                    <li className="">{note?.notes.replace(/^\s+/, "")}</li>
+                  ))}
+              </ul>
+            </div>
+          ) : null}
+
+          {/* Images   */}
           <div
             className={`flex md:flex-row flex-col justify-center gap-10 lg:gap-0 lg:justify-evenly items-center pt-10 ${
               leftSideImage === null ? "hidden" : ""
@@ -473,6 +499,68 @@ export const Product = () => {
               />
             </section>
           </div>
+
+          {/* Images section 2 */}
+          <div className={`w-full ${modelimages === null ? "hidden" : ""}`}>
+            <div className="w-[87%] mx-auto space-y-5">
+              {
+                modelimages?.map((item)=>(
+                  <img src={item?.image?.asset?.url} alt="" className="" />
+                ))
+              }
+            </div>
+          </div>
+
+          {/* model overview*/}
+          <div className={`py-5 ${modeloverview === null ? "hidden" : ""}`}>
+            <h2 className="text-center font-semibold text-xl py-5">
+              Model Overview
+            </h2>
+            <div class="flex flex-wrap justify-center items-center gap-5 xs:px-0 px-4 drop-shadow-lg">
+              {modeloverview?.map((item) => (
+                <div className=" flex md:flex-row flex-col  items-center border border-pink-400 p-5 gap-5 w-80  rounded-md bg-white hover:drop-shadow-lg transition-all duration-500">
+                  <div className="w-1/2  rounded-lg">
+                    <img
+                      src={item?.image?.asset?.url}
+                      alt=""
+                      className="w-24
+               h-full rounded-lg"
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <h2 className="font-semibold text-sm">{item?.title}</h2>
+                    {item?.overview?.map((items) => (
+                      <p className="text-xs text-gray-700 text-justify">
+                        {items?.overviewList}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* model cct*/}
+          <div className={`py-5 ${modelcct === null ? "hidden" : ""}`}>
+            <h2 className="text-center font-semibold text-xl py-5">
+              Model CCT
+            </h2>
+            <div className=" flex flex-wrap justify-center items-center gap-5 xs:px-0 px-4 drop-shadow-lg">
+              {modelcct?.map((item) => (
+                <div class="w-80  bg-white rounded-lg border-t-8 border-pink-400 px-4 py-3 flex flex-col justify-around shadow-md hover:drop-shadow-lg transition-all duration-500">
+                  <p class="text-lg font-bold font-sans">{item?.specname}</p>
+
+                  <ul className="list-disc w-full pl-4 py-3 flex flex-col gap-y-1 text-xs text-gray-700 text-justify">
+                   {item?.content?.map((items)=>(
+                    <li>{items?.contentlist}</li>
+                   ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* title and content */}
           <div>
             <div className=" sm:p-5 flex flex-col gap-5">
               {/* <h1 className="text-center font-bold text-xl">
@@ -557,6 +645,7 @@ export const Product = () => {
             </div>
           </div>
 
+          {/* contactus */}
           <section>
             <div className="bg-Formbg h-full bg-cover form flex lg:flex-row flex-col justify-center items-center lg:flex-nowrap sm:py-10 py-5 md:px-24 px-5 lg:gap-10 gap-3">
               <div className="">
@@ -607,12 +696,9 @@ export const Product = () => {
                 </div>
                 <div className="flex justify-end mt-2">
                   <div className="bg-white rounded-lg drop-shadow-2xl">
-                  <button
-                    type="submit"
-                    className=" px-8   my-2  font-medium"
-                  >
-                    Send
-                  </button>
+                    <button type="submit" className=" px-8   my-2  font-medium">
+                      Send
+                    </button>
                   </div>
                 </div>
               </div>
