@@ -94,7 +94,7 @@ document.addEventListener('scroll',()=>{
   const y=window.scrollY
   const title=document.querySelector('.title')
   const secondtitle=document.querySelector('.secondtitle')
-  title.style.marginTop=y+'px'
+  title.style.marginTop=-100+y/1.1+'px'
   secondtitle.style.marginTop=y/5+'px'
 })
   const why = [
@@ -138,21 +138,16 @@ document.addEventListener('scroll',()=>{
 
   return (
     <>
-      <div className="bg-about  sm:h-[500px] bg-cover secondtitle h-full w-full bg-no-repeat ">
-        <div className="bg-black sm:h-[500px] h-full  w-full bg-opacity-60  flex flex-col justify-center items-center ">
+      <div className="bg-about    h-screen bg-cover secondtitle  w-full bg-no-repeat ">
+        <div className="bg-black h-screen   w-full bg-opacity-60  flex flex-col justify-center items-center ">
           <div className=" text-center text-white sm:p-10 title overflow-hidden p-5 space-y-4">
-            <h1 className="md:text-5xl text-2xl title">Welcome to Auras Lighting</h1>
-            <h3 className="md:text-2xl text-sm ">
+            <h1 className="md:text-5xl lg:text-6xl 2xl:text-7xl xs:text-3xl font-semibold title">Welcome to Auras Lighting</h1>
+            <h3 className="md:text-2xl text-sm text-primaryColor ">
              
               Where every light shines with elegance and purpose
             </h3>
-            <p className="text-sm sm:w-[70%] text-justify md:text-center mx-auto">
-              Established in Dubai with a vision for brilliance and innovation,
-              Auras Lighting has become a leading provider of lighting
-              solutions, illuminating residential, home decor, and office spaces
-              with sophistication and style. With over a decade of expertise, we
-              pride ourselves on offering personalized and diversified lighting
-              solutions, tailored to the unique needs of our clientele.
+            <p className="text-sm sm:w-[70%] text-gray-200  text-center mx-auto">
+            Auras Lighting in Dubai offers personalized lighting solutions for homes and offices, specializing in innovation and sophistication.
             </p>
           </div>
         </div>
