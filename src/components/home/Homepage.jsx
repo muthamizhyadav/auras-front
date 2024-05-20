@@ -64,7 +64,7 @@ await Sanityclient.fetch(`*[_type == "home"]{
         asset->{
          url}
     },
-  title,buttonlink
+  title,buttonlink,description
       }
   },
   fourth[]{
@@ -170,68 +170,12 @@ await Sanityclient.fetch(`*[_type == "home"]{
             </SwiperSlide>
       ))
 }
-      {/* <SwiperSlide className="w-full h-full flex p-5 justify-center  items-center relative">
-      <img src={strip} className="w-full h-full absolute top-0 object-cover"></img>
-
-        <div className="w-full h-full bg-black bg-opacity-50 absolute top-0"></div>
-      <div className="flex gap-10 z-10   justify-center items-center w-full h-full flex-col">
-        <p className="lg:text-6xl text-2xl xs:text-4xl text-white   font-semibold">LED STRIP LIGHTS</p>
-        <p className="sm:text-base text-xs text-white text-center"> LEDs consume significantly less power, helping you save on energy bills while reducing your carbon footprint </p>
-        <button className="bg-primaryColor overflow-hidden group px-3 py-2 hover:bg-white hover:text-black duration-200  rounded-lg flex justify-center items-center relative gap-2"><span className="group-hover:translate-x-5 transition-all duration-150">Learn More</span>
-        <FaArrowRight className="group-hover:translate-x-10 transition-all duration-150"></FaArrowRight>
-        <FaArrowRight className="group-hover:-translate-x-12 -translate-x-40 absolute transition-all duration-150"></FaArrowRight>
-        
-        
-        </button>
-      </div>
-      </SwiperSlide> */}
-      {/* <SwiperSlide className="w-full h-full flex p-5 justify-center  items-center relative">
-      <img src={strip2} className="w-full h-full absolute top-0 object-cover"></img>
-
-        <div className="w-full h-full bg-black bg-opacity-50 absolute top-0"></div>
-      <div className="flex gap-10 z-10   justify-center items-center w-full h-full flex-col">
-        <p className="lg:text-6xl text-2xl xs:text-4xl text-white   font-semibold">LED STRIP LIGHTS</p>
-        <p className="sm:text-base text-xs text-white text-center"> LEDs consume significantly less power, helping you save on energy bills while reducing your carbon footprint </p>
-        <button className="bg-primaryColor overflow-hidden group px-3 py-2 hover:bg-white hover:text-black duration-200  rounded-lg flex justify-center items-center relative gap-2"><span className="group-hover:translate-x-5 transition-all duration-150">Learn More</span>
-        <FaArrowRight className="group-hover:translate-x-10 transition-all duration-150"></FaArrowRight>
-        <FaArrowRight className="group-hover:-translate-x-12 -translate-x-40 absolute transition-all duration-150"></FaArrowRight>
-        
-        
-        </button>
-      </div>
-      </SwiperSlide>
-      <SwiperSlide className="w-full h-full flex p-5 justify-center  items-center relative">
-      <img src={strip3} className="w-full h-full absolute top-0 object-cover"></img>
-
-        <div className="w-full h-full bg-black bg-opacity-50 absolute top-0"></div>
-      <div className="flex gap-10 z-10   justify-center items-center w-full h-full flex-col">
-        <p className="lg:text-6xl text-2xl xs:text-4xl text-white   font-semibold">LED STRIP LIGHTS</p>
-        <p className="sm:text-base text-xs text-white text-center"> LEDs consume significantly less power, helping you save on energy bills while reducing your carbon footprint </p>
-        <button className="bg-primaryColor overflow-hidden group px-3 py-2 hover:bg-white hover:text-black duration-200  rounded-lg flex justify-center items-center relative gap-2"><span className="group-hover:translate-x-5 transition-all duration-150">Learn More</span>
-        <FaArrowRight className="group-hover:translate-x-10 transition-all duration-150"></FaArrowRight>
-        <FaArrowRight className="group-hover:-translate-x-12 -translate-x-40 absolute transition-all duration-150"></FaArrowRight>
-        
-        
-        </button>
-      </div>
-      </SwiperSlide> */}
       
-
-      
-      
+     
      
     </Swiper>
       {/* banner */}
-      {/* <div className="bg-banner h-screen w-full bg-cover bg-no-repeat flex flex-col justify-center ">
-        <div className="flex flex-row justify-center items-center gap-5">
-          <div className="bg-white bg-opacity-50 w-[70%] h-[110px] flex flex-col justify-center items-center ">
-            <p className="text-white  shadow-black md:text-4xl px-2 sm:text-xl text-sm drop-shadow-lg ">
-              Lighting the Way to Inspired Living
-            </p>
-          </div>
-          <div className="bg-white bg-opacity-50 w-[30%] h-[110px]"></div>
-        </div>
-      </div> */}
+     
  
       {/* second secction */}
       {alldata&&alldata.second&&alldata.second.map((item, index)=>(
@@ -273,51 +217,7 @@ title
         </div>
       </div>
       ))}
-      {/* <div className="bg-gradient-to-r from-black to-[#666666]">
-        <div className="flex lg:flex-row flex-col lg:items-start  items-center justify-center lg:relative">
-          <hr className="w-16 h-[1px] bg-[#666666] mt-36 lg:block hidden" />
-          <div className="lg:w-[50%] w-full py-10 p-5 lg:pt-20 pt-10">
-            <div className="flex flex-row items-baseline lg:ml-10">
-              <p className="text-white sm:text-base text-sm">Unveiling Our</p>
-              <p className="text-primaryColor xs:text-6xl text-3xl">Lux </p>
-            </div>
-            <div className="lg:block hidden w-full h-full">
-              <img src={line2} alt="" className="ml-7 w-full h-full" />
-            </div>
-            <div className="lg:hidden block">
-              <hr className="w-full h-0.5 bg-white mt-2" />
-            </div>
-            <div className="lg:absolute top-36 left-56 lg:mt-0 mt-2 lg:pl-0 pl-[90px]">
-              <p className="text-primaryColor xs:text-6xl text-3xl">
-                Edition
-              </p>
-            </div>
-            <div className="lg:absolute top-1/2 lg:-mt-5 mt-5 lg:text-start text-justify lg:ml-10 text-white text-sm font-light lg:w-[33%] w-full space-y-5">
-              <p className="">
-                Experience sophistication with Our Lux Edition. Elevate your
-                space with opulent chandeliers, exquisite table lamps, and
-                luxurious decor pieces. Indulge in timeless elegance.
-              </p>
-              <p>
-                From opulent chandeliers that cast a mesmerizing glow to
-                exquisite table lamps that add a touch of glamour to any room,
-                each piece is crafted to perfection. Indulge in the richness
-                of materials and impeccable finishes that define luxury
-                living.
-              </p>
-            </div>
-          </div>
-          <div className="sm:w-[50%]  flex lg:py-16 lg:flex-row  flex-col justify-center lg:p-0 p-10">
-            <img src={auraslight} alt="" className="" />
-            <img
-              src={line}
-              alt=""
-              className="h-[50%] w-full overflow-hidden lg:block hidden"
-            />
-          </div>
-        </div>
-      </div> */}
-
+      
       {/* third section */}
       {alldata&&alldata.thirdSection&&alldata.thirdSection.map((item,index)=>( <div>
         <div className="lg:hidden block p-5">
@@ -345,6 +245,9 @@ title
           <div className="lg:p-10 lg:ml-5 lg:pt-40 flex p-5 flex-col lg:items-start items-center justify-center gap-7 ">
             <p className="md:text-3xl downtext sm:text-2xl xs:text-xl text-lg font-semibold  lg:text-start text-center">
               {listItem?.title}
+            </p>
+            <p className=" text-sm lg:text-start downtext text-justify">
+            {listItem?.description}
             </p>
             <Link onClick={()=>window.scrollTo({top:0,behavior:'smooth'})} to={listItem?.buttonlink}>
               <button className="w-fit buds drop-shadow-2xl mx-auto font-medium lg:mx-0 text-xs rounded-md px-7 bg-white shadow-xl  p-3 hover:bg-primaryColor hover:text-white">
@@ -411,48 +314,6 @@ content}
 </div></Link>
           ))}
        
-          {/* <Link className="rounded-xl flex justify-center items-center hover:shadow-lg transition-all ease-in-out  hover:shadow-slate-500" onClick={()=>{window.screenTop({top:0,behaviour:'smooth'})}} to={'/home/products/Outdoor/OutdoorCategory'}>
-          <div className="xss:w-[300px] w-[95%] relative  h-[350px]">
-            <div
-              style={{ backgroundImage: `url(${vector})` }}
-              className="h-14 w-full bg-no-repeat flex justify-center items-center absolute bottom-5 -left-5 "
-            >
-              <div className="relative w-full h-full">
-                <p className="absolute w-full  flex items-center top-[40%] left-10  -translate-y-1/2 text-primaryColor font-semibold">
-                  Outdoor Lights
-                </p>
-              </div>
-            </div>
-            <img src={vector2} className="w-full h-full rounded-xl"></img>
-          </div></Link>
-          <Link className="rounded-xl flex justify-center items-center hover:shadow-lg transition-all ease-in-out  hover:shadow-slate-500" onClick={()=>{window.screenTop({top:0,behaviour:'smooth'})}} to={'/home/products/facade/FacadeCategory'}>
-          <div className="xss:w-[300px] w-[95%] relative  h-[350px]">
-            <div
-              style={{ backgroundImage: `url(${vector})` }}
-              className="h-14 w-full bg-no-repeat flex justify-center items-center absolute bottom-5 -left-5 "
-            >
-              <div className="relative w-full h-full">
-                <p className="absolute flex w-full  items-center top-[40%] left-10 -translate-y-1/2 text-primaryColor font-semibold">
-                  Facade Lights
-                </p>
-              </div>
-            </div>
-            <img src={vector3} className="w-full h-full rounded-xl"></img>
-          </div></Link>
-          
-          <Link className="rounded-xl flex justify-center items-center hover:shadow-lg transition-all ease-in-out  hover:shadow-slate-500" onClick={()=>{window.screenTop({top:0,behaviour:'smooth'})}} to={'/home/products/linear/linearCategory'}><div className="xss:w-[300px] w-[95%] relative  h-[350px]">
-            <div
-              style={{ backgroundImage: `url(${vector})` }}
-              className="h-14 w-full bg-no-repeat flex justify-center items-center absolute bottom-5 -left-5 "
-            >
-              <div className="relative w-full h-full">
-                <p className="absolute flex w-full  items-center top-[40%] left-10 -translate-y-1/2 text-primaryColor font-semibold">
-                  Linear Lights
-                </p>
-              </div>
-            </div>
-            <img src={vector3} className="w-full h-full rounded-xl"></img>
-          </div></Link> */}
           
         </div>
       </div>
