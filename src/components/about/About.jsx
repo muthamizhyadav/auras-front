@@ -207,7 +207,7 @@ const About = () => {
           setOurServices(res[0]);
           setPathAndPurpose(res[0]);
           setWhyChooseAuras(res[0]);
-          console.log(res[0]);
+         
           setloader(false);
         })
         .catch((err) => {
@@ -235,7 +235,7 @@ const About = () => {
           {Banner &&
             Banner.Banner &&
             Banner?.Banner?.map((item, index) => (
-              <div className=" text-center text-white sm:p-10 title overflow-hidden p-5 space-y-4">
+              <div key={index} className=" text-center text-white sm:p-10 title overflow-hidden p-5 space-y-4">
                 <h1 className="md:text-5xl lg:text-6xl 2xl:text-7xl xs:text-3xl font-semibold title">
                   {item.title}
                 </h1>
@@ -283,7 +283,7 @@ const About = () => {
       {ourCulture &&
         ourCulture.ourCulture &&
         ourCulture?.ourCulture?.map((item, index) => (
-          <div className="py-10">
+          <div key={index} className="py-10">
             <div className="relative p-5 py-3">
               <h1 className="lg:text-center text-justify text-2xl font-bold">
                 {item.title}
@@ -329,7 +329,7 @@ const About = () => {
         {ourServices &&
           ourServices.ourServices &&
           ourServices?.ourServices?.map((item, index) => (
-            <div className="lg:relative p-5">
+            <div key={index} className="lg:relative p-5">
               <h1 className="lg:text-center text-2xl font-bold">
                 {item.title}
               </h1>
@@ -359,7 +359,7 @@ const About = () => {
         {pathAndPurpose &&
           pathAndPurpose.pathAndPurpose &&
           pathAndPurpose?.pathAndPurpose?.map((item, index) => (
-            <div className="relative p-5 py-3">
+            <div key={index} className="relative p-5 py-3">
               <h1 className="lg:text-center text-justify text-2xl font-bold">
                 {item.title}
               </h1>
@@ -403,7 +403,7 @@ const About = () => {
         {whyChooseAuras &&
           whyChooseAuras.whyChooseAuras &&
           whyChooseAuras?.whyChooseAuras?.map((item, index) => (
-            <div className="relative p-5 py-3">
+            <div key={index} className="relative p-5 py-3">
               <h1 className="lg:text-center text-justify text-2xl font-bold">
                 {item.title}
               </h1>
@@ -419,7 +419,7 @@ const About = () => {
               <div>
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 w-[85%] mx-auto">
                   {item?.card.map((items, index) => (
-                    <div className="bg-white border border-primaryColor p-5 space-y-3 rounded-md transition duration-300 hover:drop-shadow-2xl">
+                    <div key={index} className="bg-white border border-primaryColor p-5 space-y-3 rounded-md transition duration-300 hover:drop-shadow-2xl">
                       <p className="bg-white drop-shadow-md w-fit p-2 rounded-full text-center  shadow-xl">
                         <img src={items?.icon?.asset.url} alt="" className="w-10" />
                       </p>

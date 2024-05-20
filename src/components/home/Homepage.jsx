@@ -93,8 +93,7 @@ await Sanityclient.fetch(`*[_type == "home"]{
     setalldata(res[0])
     setloader(false)
     setimages(res[0].thirdSection[0].third)
-    console.log(res[0])
-    console.log(res[0].thirdSection[0].third)
+ 
   })
   }
   getdata();
@@ -118,9 +117,8 @@ await Sanityclient.fetch(`*[_type == "home"]{
     return () => clearInterval(intervalId);
   
   },[image])
-  useEffect(()=>{
-    console.log(run)
-  },[run])
+
+
   return (
 <div>
 {loader == true ?
@@ -153,7 +151,7 @@ await Sanityclient.fetch(`*[_type == "home"]{
       className="mySwiper w-full h-screen -mt-10 "
     >
       {alldata&& alldata.banner&& alldata.banner.map((item,index)=>(
-            <SwiperSlide className="w-full h-full flex p-5 justify-center  items-center relative">
+            <SwiperSlide key={index} className="w-full h-full flex p-5 justify-center  items-center relative">
             <img src={item&&item?.Image?.asset?.url} className="w-full h-full absolute top-0 object-cover"></img>
     
               <div className="w-full h-full bg-black bg-opacity-50 absolute top-0"></div>
@@ -179,7 +177,7 @@ await Sanityclient.fetch(`*[_type == "home"]{
  
       {/* second secction */}
       {alldata&&alldata.second&&alldata.second.map((item, index)=>(
-        <div className="bg-gradient-to-r from-black to-[#666666]">
+        <div key={index} className="bg-gradient-to-r from-black to-[#666666]">
         <div className="flex lg:flex-row flex-col lg:items-start  items-center justify-center lg:relative">
           <hr className="w-16 h-[1px] bg-[#666666] mt-36 lg:block hidden" />
           <div className="lg:w-[50%] w-full py-10 p-5 lg:pt-20 pt-10">
@@ -220,7 +218,7 @@ title
       
       {/* third section */}
       {alldata&&alldata.thirdSection&&alldata.thirdSection.map((item,index)=>( <div>
-        <div className="lg:hidden block p-5">
+        <div key={index} className="lg:hidden block p-5">
           <h1 className=" font-medium text-2xl downtext">{item?.thirdheading}</h1>
           <div className="">
             <hr className="w-1/2 h-0.5 bg-primaryColor " />
@@ -236,7 +234,7 @@ title
           </div>
         </div>
 {item&&item?.third&&item?.third?.map((listItem,indexes)=>(
-<div className="w-full h-full">
+<div key={indexes} className="w-full h-full">
    {run==indexes&&
         <div className="flex lg:flex-row flex-col-reverse w-full h-full justify-between 2xl:items-center ">
         <div className="lg:w-[60%] w-full">
@@ -250,7 +248,7 @@ title
             {listItem?.description}
             </p>
             <Link onClick={()=>window.scrollTo({top:0,behavior:'smooth'})} to={listItem?.buttonlink}>
-              <button className="w-fit buds drop-shadow-2xl mx-auto font-medium lg:mx-0 text-xs rounded-md px-7 bg-white shadow-xl  p-3 hover:bg-primaryColor hover:text-white">
+              <button className="w-fit buds drop-shadow-xl mx-auto font-medium lg:mx-0 text-xs rounded-md px-7 bg-white shadow-xl  p-3 hover:bg-primaryColor hover:text-white">
                 Browse More
               </button>
             </Link>
@@ -271,7 +269,7 @@ title
         
       </div>))}
      {alldata&&alldata.fourth&&alldata?.fourth?.map((item,index)=>(
-      <div className="p-5 my-5 flex flex-col gap-5 lg:p-0">
+      <div key={index} className="p-5 my-5 flex flex-col gap-5 lg:p-0">
         <div className="relative ">
           <div className=" relative w-full lg:h-16 h-fit flex lg:justify-end">
             <div className="absolute w-[47%] 2xl:w-[44%] lg:flex hidden bottom-0 2xl:-bottom-2 left-0">
@@ -297,7 +295,7 @@ content}
 
         <div className="grid lg:grid-cols-3  2xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-y-10 justify-items-center lg:px-10 justify-center items-center">
           {item&&item.card&&item?.card.map((items,indexes)=>(
-<Link className="rounded-xl hover:shadow-lg transition-all ease-in-out flex justify-center items-center  hover:shadow-slate-500" onClick={()=>{window.scrollTo({top:0,behavior:'smooth'})}} to={`/home/products/${items?.Cardtype
+<Link key={indexes} className="rounded-xl hover:shadow-lg transition-all ease-in-out flex justify-center items-center  hover:shadow-slate-500" onClick={()=>{window.scrollTo({top:0,behavior:'smooth'})}} to={`/home/products/${items?.Cardtype
 }/${items?.Cardcategory}`}> <div className="xss:w-[300px] w-[95%] relative  h-[350px]">
 <div
  style={{ backgroundImage: `url(${vector})` }}

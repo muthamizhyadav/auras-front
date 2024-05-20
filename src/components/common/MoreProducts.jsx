@@ -29,7 +29,7 @@ export const MoreProducts = () => {
         Category
       }`);
         setarrays(categories);
-        console.log(categories, "All Products");
+        // console.log(categories, "All Products");
         for (let i = 0; i < categories.length; i++) {
           const category = categories[i].Category;
           // console.log(category);
@@ -45,11 +45,11 @@ export const MoreProducts = () => {
             categoryproduct.push({ category, products: results });
           }
         }
-        console.log(categoryproduct);
+      
         setallvalues(categoryproduct);
         setalldata(categoryproduct);
         setLoading(true);
-        console.log(allvalues);
+       
       } catch (error) {
         console.error("Error fetching data:", error);
       }

@@ -8,7 +8,7 @@ function Productlist() {
   const nav = useNavigate();
   const { productname } = useParams();
   const { pname } = useParams();
-  console.log(productname);
+  
   useEffect(() => {
     const products = async () => {
       await Sanityclient.fetch(
@@ -23,7 +23,7 @@ function Productlist() {
         setalldata(result);
         dsetalldata(result);
         setLoading(true);
-        console.log(alldata);
+      
       });
     };
     products();
@@ -78,7 +78,7 @@ function Productlist() {
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 justify-items-center lg:grid-cols-5">
               {alldata &&
                 alldata.map((product, index) => (
-                  <div className="sm:p-5 p-8">
+                  <div key={index} className="sm:p-5 p-8">
                     <Link
                       onClick={() => {
                         window.scrollTo({

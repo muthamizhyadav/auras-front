@@ -88,7 +88,7 @@ export const Product = () => {
       },modelid, bannerimages[]{ bannerimage{ asset->{ url, id }}}, modalname, features, featurepoints, applicationareas, productPdf{ asset->{ url, id }}, specificationheading, datatable1heading, datatable2heading, datatable3heading, leftsideimage{asset->{ url, id }}, rightsideimage1{asset->{ url, id }}, rightsideimage2{asset->{ url, id }}, model1title, model1contents, model1image{asset->{ url, id }}, model2title, model2contents, model2image{asset->{ url, id }}, model3title, model3contents, model3image{asset->{ url, id }}, model4title, model4contents, model4image{asset->{ url, id }}, contacttitle,  contactcontent, table1headers, table1columns, table2headers, table2columns, table3headers, table3columns, table4columns, table4headers, modelOverview[]{image{asset->{url}},title,overview},specs[]{specname,content[]{contentlist}}, productImages[]{image{asset->{url}}}  }`
     )
       .then((data) => {
-        console.log(data);
+    
         if (data.length !== 0) {
           Setbgimage(
             data[0].bannerimages.map((item) => item.bannerimage.asset.url)
@@ -180,12 +180,12 @@ export const Product = () => {
                   Home &nbsp; <FaChevronRight className=" sm:size-3 size-2" />{" "}
                   &nbsp; Products &nbsp;{" "}
                   <FaChevronRight className=" sm:size-3 size-2" /> &nbsp;{" "}
-                  <p
+                  <span
                     className="cursor-pointer"
                     onClick={() => window.history.go(-2)}
                   >
                     {productname == "product" ? "Indoor" : productname} Lights
-                  </p>{" "}
+                  </span>{" "}
                   &nbsp; <FaChevronRight className=" sm:size-3 size-2" /> &nbsp;{" "}
                   {modelId ? modelId : ""}
                 </p>
@@ -306,7 +306,7 @@ export const Product = () => {
                     <tr>
                       {table1Header &&
                         table1Header.map((header) => (
-                          <th
+                          <th 
                             className="border-r capitalize border-b border-gray-400 text-xs px-3 py-2"
                             key={header._key}
                           >
@@ -318,10 +318,10 @@ export const Product = () => {
                   <tbody>
                     {table1Column &&
                       table1Column.map((columnarray, index) => (
-                        <tr>
+                        <tr key={index}> 
                           {columnarray &&
                             columnarray.addtablecolumns.map((item, ind) => (
-                              <td
+                              <td key={ind}
                                 className={`border-r border-b border-gray-400  px-3 py-2 `}
                               >
                                 {item.column}
@@ -504,8 +504,8 @@ export const Product = () => {
           <div className={`w-full ${modelimages === null ? "hidden" : ""}`}>
             <div className="w-[87%] mx-auto space-y-5 flex flex-col">
               {
-                modelimages?.map((item)=>(
-                  <img src={item?.image?.asset?.url} alt="" className="" />
+                modelimages?.map((item,index)=>(
+                  <img key={index} src={item?.image?.asset?.url} alt="" className="" />
                 ))
               }
             </div>
@@ -516,9 +516,9 @@ export const Product = () => {
             <h2 className="text-center font-semibold text-xl py-5">
               Model Overview
             </h2>
-            <div class="flex flex-wrap justify-center items-center gap-5 xs:px-0 px-4 drop-shadow-lg">
-              {modeloverview?.map((item) => (
-                <div className=" flex md:flex-row flex-col  items-center border border-pink-400 p-5 gap-5 w-80  rounded-md bg-white hover:drop-shadow-lg transition-all duration-500">
+            <div className="flex flex-wrap justify-center items-center gap-5 xs:px-0 px-4 drop-shadow-lg">
+              {modeloverview?.map((item,index) => (
+                <div key={index} className=" flex md:flex-row flex-col  items-center border border-pink-400 p-5 gap-5 w-80  rounded-md bg-white hover:drop-shadow-lg transition-all duration-500">
                   <div className="w-1/2  rounded-lg">
                     <img
                       src={item?.image?.asset?.url}
@@ -529,8 +529,8 @@ export const Product = () => {
                   </div>
                   <div className="space-y-1">
                     <h2 className="font-semibold text-sm">{item?.title}</h2>
-                    {item?.overview?.map((items) => (
-                      <p className="text-xs text-gray-700 text-justify">
+                    {item?.overview?.map((items,index) => (
+                      <p key={index} className="text-xs text-gray-700 text-justify">
                         {items?.overviewList}
                       </p>
                     ))}
@@ -546,13 +546,13 @@ export const Product = () => {
               Model CCT
             </h2>
             <div className=" flex flex-wrap justify-center items-center gap-5 xs:px-0 px-4 drop-shadow-lg">
-              {modelcct?.map((item) => (
-                <div class="w-80  bg-white rounded-lg border-t-8 border-pink-400 px-4 py-3 flex flex-col justify-around shadow-md hover:drop-shadow-lg transition-all duration-500">
-                  <p class="text-lg font-bold font-sans">{item?.specname}</p>
+              {modelcct?.map((item,index) => (
+                <div key={index} className="w-80  bg-white rounded-lg border-t-8 border-pink-400 px-4 py-3 flex flex-col justify-around shadow-md hover:drop-shadow-lg transition-all duration-500">
+                  <p className="text-lg font-bold font-sans">{item?.specname}</p>
 
                   <ul className="list-disc w-full pl-4 py-3 flex flex-col gap-y-1 text-xs text-gray-700 text-justify">
-                   {item?.content?.map((items)=>(
-                    <li>{items?.contentlist}</li>
+                   {item?.content?.map((items,ind)=>(
+                    <li key={ind}>{items?.contentlist}</li>
                    ))}
                   </ul>
                 </div>

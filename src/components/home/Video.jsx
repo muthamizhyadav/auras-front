@@ -20,7 +20,7 @@ function Video() {
           para
         }
       }`).then((res)=>{
-          console.log(res[0],'video')
+          
           setalldata(res[0])
         })
         }
@@ -30,7 +30,7 @@ function Video() {
   return (
     <div>
       {alldata&&alldata.fifth&&alldata.fifth.map((item,index)=>(
- <div className="w-full relative h-screen">
+ <div key={index} className="w-full relative h-screen">
  <img src={item&&item?.image?.asset?.url} className='w-full h-full absolute top-0 left-0' alt="" />
  <div className="bg-black bg-opacity-60 absolute w-full h-full "></div>
  <div className="h-full w-full  absolute flex justify-center items-center">
