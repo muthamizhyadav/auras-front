@@ -136,6 +136,7 @@ const About = () => {
         "At Auras, we're committed to a brighter future through sustainability. With eco-friendly materials and energy-efficient designs, we help you create beautiful, sustainable spaces.",
     },
   ];
+  const[loader,setloader]=useState(true)
   const [Banner, setBanner] = useState([]);
   const [ourCulture, setOurCulture] = useState([]);
   const [ourServices, setOurServices] = useState([]);
@@ -207,6 +208,7 @@ const About = () => {
           setPathAndPurpose(res[0]);
           setWhyChooseAuras(res[0]);
           console.log(res[0]);
+          setloader(false);
         })
         .catch((err) => {
           console.log(err);
@@ -216,7 +218,18 @@ const About = () => {
   }, []);
 
   return (
-    <>
+    (
+      loader?  <div className="w-full h-screen flex flex-col gap-5 justify-center items-center">
+      <p className="lg:text-4xl md:text-2xl sm:text-xl text-lg font-bold bg-gradient-to-r from-pink-500 via-pink-400 to-pink-300 text-transparent  bg-clip-text">
+       
+      </p>
+      <div className="w-full gap-x-2 flex justify-center items-center">
+        <div className="w-5 bg-[#d991c2]  h-5 rounded-full animate-bounce"></div>
+        <div className="w-5 animate-pulse h-5 bg-[#9869b8] rounded-full "></div>
+        <div className="w-5 h-5  bg-[#6756cc] rounded-full animate-bounce"></div>
+      </div>
+    </div>:<>
+   
       <div className="bg-about    h-screen bg-cover secondtitle  w-full bg-no-repeat ">
         <div className="bg-black h-screen   w-full bg-opacity-60  flex flex-col justify-center items-center ">
           {Banner &&
@@ -487,6 +500,10 @@ const About = () => {
         </div>
       </section>
     </>
+
+    )
+    
+    
   );
 };
 
