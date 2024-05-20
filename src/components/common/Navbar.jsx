@@ -532,7 +532,7 @@ const Navbar = () => {
                         ? "product/productCategory"
                         : searchproduct === "Outdoor"
                         ? "Outdoor/OutdoorCategory"
-                        : searchproduct==='facade'?'facade/FacadeCategory':''
+                        : searchproduct==='facade'?'facade/FacadeCategory':searchproduct==='linear'?'linear/linearCategory':''
                     }`}
                     onClick={() => {
                       setIndoorDropdown(false);
