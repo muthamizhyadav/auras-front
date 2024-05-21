@@ -97,6 +97,7 @@ const About = () => {
     const secondtitle = document.querySelector(".secondtitle");
     title.style.marginTop = -100 + y / 1.08 + "px";
     secondtitle.style.marginTop = y / 5 + "px";
+   
   });
   const why = [
     {
@@ -231,7 +232,8 @@ const About = () => {
     </div>:<>
    
       <div className="bg-about    h-screen bg-cover secondtitle  w-full bg-no-repeat ">
-        <div className="bg-black h-screen   w-full bg-opacity-60  flex flex-col justify-center items-center ">
+        <div className="bg-black h-screen relative  w-full bg-opacity-60  flex flex-col justify-center items-center ">
+          <div className="w-full h-full absolute top-0  bg-gradient-to-t from-black via-transparent to-transparent"></div>
           {Banner &&
             Banner.Banner &&
             Banner?.Banner?.map((item, index) => (
