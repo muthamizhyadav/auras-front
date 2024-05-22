@@ -28,6 +28,10 @@ export const Product = () => {
     useState("");
   const [specificationTableHeading4, setSpecificationTableHeading4] =
     useState("");
+  const [specificationTableHeading5, setSpecificationTableHeading5] =
+    useState("");
+  const [specificationTableHeading6, setSpecificationTableHeading6] =
+    useState("");
   const [leftSideImage, setleftSideImage] = useState("");
   const [rightSideImage1, setrightSideImage1] = useState("");
   const [rightSideImage2, setrightSideImage2] = useState("");
@@ -49,10 +53,14 @@ export const Product = () => {
   const [table2Column, setTable2Column] = useState([]);
   const [table3Column, setTable3Column] = useState([]);
   const [table4Column, setTable4Column] = useState([]);
+  const [table5Column, setTable5Column] = useState([]);
+  const [table6Column, setTable6Column] = useState([]);
   const [table1Header, setTable1Header] = useState([]);
   const [table2Header, setTable2Header] = useState([]);
   const [table3Header, setTable3Header] = useState([]);
   const [table4Header, setTable4Header] = useState([]);
+  const [table5Header, setTable5Header] = useState([]);
+  const [table6Header, setTable6Header] = useState([]);
   const [modelId, setModelId] = useState("");
   const [contactTitle, setcontactTitle] = useState("");
   const [contactContent, setcontactContent] = useState("");
@@ -103,6 +111,8 @@ export const Product = () => {
           setSpecificationTableHeading2(data[0].datatable2heading);
           setSpecificationTableHeading3(data[0].datatable3heading);
           setSpecificationTableHeading4(data[0].datatable4heading);
+          setSpecificationTableHeading5(data[0].datatable5heading);
+          setSpecificationTableHeading6(data[0].datatable6heading);
           setleftSideImage(data[0].leftsideimage);
           setrightSideImage1(data[0].rightsideimage1);
           setrightSideImage2(data[0].rightsideimage2);
@@ -130,6 +140,10 @@ export const Product = () => {
           setcontactContent(data[0].contactcontent);
           setTable4Column(data[0].table4columns);
           setTable4Header(data[0].table4headers);
+          setTable5Column(data[0].table5columns);
+          setTable5Header(data[0].table5headers);
+          setTable6Column(data[0].table6columns);
+          setTable6Header(data[0].table6headers);
           setModeloverview(data[0].modelOverview);
           setmodelcct(data[0].specs);
           setmodelimages(data[0].productImages)
@@ -444,6 +458,90 @@ export const Product = () => {
                   <tbody>
                     {table4Column &&
                       table4Column.map((columnarray, index) => (
+                        <tr>
+                          {columnarray &&
+                            columnarray.addtablecolumns.map((item, ind) => (
+                              <td
+                                className={`border-r border-b border-gray-400  px-3 py-2 `}
+                              >
+                                {item.column}
+                              </td>
+                            ))}
+                        </tr>
+                      ))}
+                  </tbody>
+                </table>
+              </div>
+              <div
+                className={`w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl ${
+                  table5Column === null ? "hidden" : ""
+                }`}
+              >
+                <h2 className="font-semibold text-sm pt-5 pb-2">
+                  {specificationTableHeading5 ? specificationTableHeading5 : ""}
+                </h2>
+                <table
+                  className=" xl:w-full w-[1400px] text-xs border border-gray-400"
+                  style={{ tableLayout: "fixed" }}
+                >
+                  <thead className="">
+                    <tr>
+                      {table5Header &&
+                        table5Header.map((header) => (
+                          <th
+                            className="border-r border-b border-gray-400 text-xs px-3 py-2"
+                            key={header._key}
+                          >
+                            {header.addtableheaders}
+                          </th>
+                        ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {table5Column &&
+                      table5Column.map((columnarray, index) => (
+                        <tr>
+                          {columnarray &&
+                            columnarray.addtablecolumns.map((item, ind) => (
+                              <td
+                                className={`border-r border-b border-gray-400  px-3 py-2 `}
+                              >
+                                {item.column}
+                              </td>
+                            ))}
+                        </tr>
+                      ))}
+                  </tbody>
+                </table>
+              </div>
+              <div
+                className={`w-full p-5 lg:overflow-auto overflow-x-scroll drop-shadow-2xl ${
+                  table6Column === null ? "hidden" : ""
+                }`}
+              >
+                <h2 className="font-semibold text-sm pt-5 pb-2">
+                  {specificationTableHeading6 ? specificationTableHeading6 : ""}
+                </h2>
+                <table
+                  className=" xl:w-full w-[1400px] text-xs border border-gray-400"
+                  style={{ tableLayout: "fixed" }}
+                >
+                  <thead className="">
+                    <tr>
+                      {table6Header &&
+                        table4Header.map((header) => (
+                          <th
+                            className="border-r border-b border-gray-400 text-xs px-3 py-2"
+                            key={header._key}
+                          >
+                            {header.addtableheaders}
+                          </th>
+                        ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {table6Column &&
+                      table6Column.map((columnarray, index) => (
                         <tr>
                           {columnarray &&
                             columnarray.addtablecolumns.map((item, ind) => (
