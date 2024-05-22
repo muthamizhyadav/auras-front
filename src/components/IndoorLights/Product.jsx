@@ -9,6 +9,7 @@ import { useParams } from "react-router-dom";
 import picture from "../../assets/DL228A-1.jpg";
 import picture2 from "../../assets/DL228A-2.jpg";
 import picture3 from "../../assets/DL228A-3.jpg";
+import { Link } from "react-router-dom";
 
 export const Product = () => {
   const { productname } = useParams();
@@ -190,8 +191,8 @@ export const Product = () => {
             <div className="w-full flex pl-5 md:pl-0">
               <div className="w-[9.5%] md:block hidden"></div>
               <div className="w-[90.5%]">
-                <p className="flex items-center font-medium sm:text-base xs:text-xs text-[10px] text-black py-5">
-                  Home &nbsp; <FaChevronRight className=" sm:size-3 size-2" />{" "}
+                <p className="flex flex-wrap items-center font-medium sm:text-base xs:text-xs text-[10px] text-black py-5">
+                  <Link to="/" className="cursor-pointer">Homes</Link> &nbsp; <FaChevronRight className=" sm:size-3 size-2" />{" "}
                   &nbsp; Products &nbsp;{" "}
                   <FaChevronRight className=" sm:size-3 size-2" /> &nbsp;{" "}
                   <span
@@ -200,7 +201,7 @@ export const Product = () => {
                   >
                     {productname == "product" ? "Indoor" : productname} Lights
                   </span>{" "}
-                  &nbsp; <FaChevronRight className=" sm:size-3 size-2" /> &nbsp;{" "}
+                  &nbsp; <FaChevronRight className=" sm:size-3 size-2" /> <span className="xs:block hidden">&nbsp;</span>{" "}
                   {modelId ? modelId : ""}
                 </p>
               </div>
