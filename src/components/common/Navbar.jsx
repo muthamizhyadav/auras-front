@@ -118,7 +118,7 @@ const Navbar = () => {
       className="bg-white fixed z-50 w-full font shadow-md shadow-gray-400"
     >
       <div className="w-full">
-        <div className="bg-gray-400 text-black  px-5 sm:px-10 md:px-20 flex justify-between">
+        <div className="bg-primaryColor text-white  px-5 sm:px-10 md:px-20 flex justify-between">
           <div className="py-2 flex">
             <div className="flex items-center pr-2 sm:pr-10 border-r">
               <MdEmail className="" />
