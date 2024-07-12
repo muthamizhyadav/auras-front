@@ -112,25 +112,22 @@ const Navbar = () => {
     setSearchproduct(value);
   }
 
-
-
-  
   return (
     <section
       ref={navbarRef}
       className="bg-white fixed z-50 w-full font shadow-md shadow-gray-400"
     >
       <div className="w-full">
-        <div className="bg-black text-white  px-5 sm:px-10 md:px-20 flex justify-between">
+        <div className="bg-gray-400 text-black  px-5 sm:px-10 md:px-20 flex justify-between">
           <div className="py-2 flex">
             <div className="flex items-center pr-2 sm:pr-10 border-r">
-              <MdEmail className="text-white" />
+              <MdEmail className="" />
               <p className="ml-1 hidden sm:block cursor-pointer text-sm">
                 contact@auraslightings.com
               </p>
             </div>
             <div className="flex items-center ml-2">
-              <TiLocation className="text-white" />
+              <TiLocation className="" />
               <p className="ml-1 hidden sm:block cursor-pointer text-sm">UAE</p>
             </div>
           </div>
@@ -149,11 +146,19 @@ const Navbar = () => {
               <img
                 src={logo}
                 alt="auras logo"
-                className="xl:ml-16 xl:w-[140px] w-28"
+                className="xl:ml-16 xl:w-[170px] w-28"
               />
             </Link>
           </div>
           <div className="flex ml-10 w-3/4 justify-evenly lg:text-xs xl:text-sm font-medium relative">
+            <Link
+              to="/home"
+              className={`capitalize hover:text-[#F2667C] cursor-pointer ${
+                location.pathname === "/home" ? "text-[#F2667C]" : ""
+              }`}
+            >
+              Home
+            </Link>
             <div
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
@@ -173,22 +178,6 @@ const Navbar = () => {
                 </span>
               </Link>
             </div>
-            <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
-              lux edition
-            </Link>
-            <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
-              commercial lights
-            </Link>
-            <Link
-              className={`capitalize hover:text-[#F2667C] cursor-pointer ${
-                location.pathname === "/outdoorlights" ? "text-[#F2667C]" : ""
-              }`}
-            >
-              outdoor lights
-            </Link>
-            <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
-              home decor
-            </Link>
             <Link
               to="/about"
               className={`capitalize hover:text-[#F2667C] cursor-pointer ${
@@ -198,7 +187,7 @@ const Navbar = () => {
               about us
             </Link>
             <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
-              blogs
+              Project Portfolio
             </Link>
           </div>
 
@@ -393,14 +382,18 @@ const Navbar = () => {
               <Link
                 onClick={() => setShowDropdown(false)}
                 to="/home/products/linear/linearCategory"
-                className={`block px-4 py-2 text-xs ${location.pathname.includes('/linear')?'text-[#F2667C]':''}  hover:text-[#F2667C]`}
+                className={`block px-4 py-2 text-xs ${
+                  location.pathname.includes("/linear") ? "text-[#F2667C]" : ""
+                }  hover:text-[#F2667C]`}
               >
                 Linear Lights
               </Link>
               <Link
                 onClick={() => setShowDropdown(false)}
                 to="/home/products/Outdoor/OutdoorCategory"
-                className={`block px-4 py-2 text-xs ${location.pathname.includes('/Outdoor')?'text-[#F2667C]':''}  hover:text-[#F2667C]`}
+                className={`block px-4 py-2 text-xs ${
+                  location.pathname.includes("/Outdoor") ? "text-[#F2667C]" : ""
+                }  hover:text-[#F2667C]`}
               >
                 Outdoor Lights
               </Link>
@@ -413,18 +406,22 @@ const Navbar = () => {
                   });
                 }}
                 onMouseEnter={() => setIndoorDropdown(true)}
-                className={`block px-4 py-2 text-xs ${location.pathname.includes('/productCategory')?'text-[#F2667C]':''}  hover:text-[#F2667C]`}
+                className={`block px-4 py-2 text-xs ${
+                  location.pathname.includes("/productCategory")
+                    ? "text-[#F2667C]"
+                    : ""
+                }  hover:text-[#F2667C]`}
               >
                 <div className="relative">
-                  <p className=" flex items-center">
-                    Indoor Lights
-                  </p>
+                  <p className=" flex items-center">Indoor Lights</p>
                 </div>
               </Link>
               <Link
                 onClick={() => setShowDropdown(false)}
                 to="home/products/facade/FacadeCategory"
-                className={`block px-4 py-2 text-xs ${location.pathname.includes('/facade')?'text-[#F2667C]':''}  hover:text-[#F2667C]`}
+                className={`block px-4 py-2 text-xs ${
+                  location.pathname.includes("/facade") ? "text-[#F2667C]" : ""
+                }  hover:text-[#F2667C]`}
               >
                 Facade Lights
               </Link>
@@ -532,7 +529,11 @@ const Navbar = () => {
                         ? "product/productCategory"
                         : searchproduct === "Outdoor"
                         ? "Outdoor/OutdoorCategory"
-                        : searchproduct==='facade'?'facade/FacadeCategory':searchproduct==='linear'?'linear/linearCategory':''
+                        : searchproduct === "facade"
+                        ? "facade/FacadeCategory"
+                        : searchproduct === "linear"
+                        ? "linear/linearCategory"
+                        : ""
                     }`}
                     onClick={() => {
                       setIndoorDropdown(false);

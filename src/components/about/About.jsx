@@ -382,7 +382,7 @@ const About = () => {
                   >
                     <img
                       src={content?.image?.asset?.url}
-                      className="w-full h-full  rounded-xl"
+                      className="w-full h-full  rounded-xl object-cover"
                       alt=""
                     />
                     <h2 className="h-full w-full bg-gradient-to-t absolute bottom-0 left-0 from-black rounded-xl to-transparent"></h2>
