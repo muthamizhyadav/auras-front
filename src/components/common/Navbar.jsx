@@ -140,7 +140,7 @@ const Navbar = () => {
           </div>
         </div>
         {/* larger devices */}
-        <div className=" xl:justify-around md:justify-between w-full py-1 md:px-5 xl:px-10 items-center bg-transparent hidden lg:flex">
+        <div className="  md:justify-around w-full py-1 md:px-5 xl:px-10 items-center bg-transparent hidden lg:flex">
           <div className="">
             <Link to="/home">
               <img
@@ -150,7 +150,7 @@ const Navbar = () => {
               />
             </Link>
           </div>
-          <div className="flex ml-10 w-3/4 justify-evenly lg:text-xs xl:text-sm font-medium relative">
+          <div className="flex ml-10 w-3/4 justify-evenly  items-center lg:text-xs xl:text-sm font-medium relative">
             <Link
               to="/home"
               className={`capitalize hover:text-[#F2667C] cursor-pointer ${
@@ -187,11 +187,8 @@ const Navbar = () => {
               about us
             </Link>
             <Link className="capitalize hover:text-[#F2667C] cursor-pointer">
-              Project Portfolio
+              Portfolio
             </Link>
-          </div>
-
-          <div className="w-1/4  items-center justify-around xl:px-4 flex">
             <div className="capitalize  shadow-lg cursor-pointer text-[#F2667C] hover:bg-[#F2667C] hover:text-white px-4 py-2 rounded">
               <Link to="/contactus">
                 <p className=" lg:text-sm font-medium">Contact us</p>
@@ -203,10 +200,24 @@ const Navbar = () => {
                 onClick={productsearch}
               />
             </div>
-            <div>
-              <MdAccountCircle className="text-[#F2667C] lg:text-xl xl:text-3xl cursor-pointer" />
-            </div>
           </div>
+
+          {/* <div className="w-1/4  items-center justify-around xl:px-4 flex">
+            <div className="capitalize  shadow-lg cursor-pointer text-[#F2667C] hover:bg-[#F2667C] hover:text-white px-4 py-2 rounded">
+              <Link to="/contactus">
+                <p className=" lg:text-sm font-medium">Contact us</p>
+              </Link>
+            </div>
+            <div>
+              <FiSearch
+                className="text-[#F2667C] lg:text-xl xl:text-2xl cursor-pointer"
+                onClick={productsearch}
+              />
+            </div> */}
+            {/* <div>
+              <MdAccountCircle className="text-[#F2667C] lg:text-xl xl:text-3xl cursor-pointer" />
+            </div> */}
+          {/* </div> */}
         </div>
         {/* smaller devices */}
         <div className=" flex items-center justify-between px-5 py-1 lg:hidden overflow-hidden">
@@ -256,9 +267,9 @@ const Navbar = () => {
                 onClick={productsearch}
               />
             </div>
-            <div>
+            {/* <div>
               <MdAccountCircle className="text-[#F2667C] text-3xl" />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -266,7 +277,7 @@ const Navbar = () => {
       <div
         className={`${
           isOpen ? "block" : "hidden"
-        } lg:hidden bg-white navbar-animation `}
+        } lg:hidden bg-white navbar-animation h-full`}
       >
         <div className="px-2 pt-2 pb-3 relative ">
           <Link className="block px-3 py-2 rounded-md text-base font-medium text-[#F2667C]">
@@ -280,30 +291,6 @@ const Navbar = () => {
           </Link>
 
           <Link
-            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
-            onClick={toggleNavbar}
-          >
-            Lux Edition
-          </Link>
-          <Link
-            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
-            onClick={toggleNavbar}
-          >
-            Commercial Lights
-          </Link>
-          <Link
-            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
-            onClick={toggleNavbar}
-          >
-            Outdoor Lights
-          </Link>
-          <Link
-            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
-            onClick={toggleNavbar}
-          >
-            Home Decor
-          </Link>
-          <Link
             to="/about"
             className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
             onClick={toggleNavbar}
@@ -314,7 +301,7 @@ const Navbar = () => {
             className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-[#F2667C] hover:text-white hover:bg-[#F2667C]"
             onClick={toggleNavbar}
           >
-            Blogs
+            Portfolio
           </Link>
           <Link to="/contactus">
             <button
@@ -325,7 +312,7 @@ const Navbar = () => {
             </button>
           </Link>
           {showDropdownsmall && (
-            <div className="navbar-animation font-medium w-full absolute top-0 h-full bg-white text-[#F2667C]  py-2  rounded-b-lg z-10">
+            <div className="navbar-animation font-medium w-full absolute top-0 h-fit bg-white text-[#F2667C]  py-2  rounded-b-lg z-10 -ml-2">
               <p
                 className="block px-4 py-2   hover:text-[#F2667C] "
                 onClick={() => setShowDropdownsmall(false)}
