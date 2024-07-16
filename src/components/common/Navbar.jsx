@@ -362,10 +362,10 @@ const Navbar = () => {
         {/* dropdowns in larger device */}
         {showDropdown && (
           <div
-            className="dropdown-container dropdown-animation absolute w-full lg:block hidden  bg-white  py-2 shadow-md shadow-gray-400 z-10"
+            className="dropdown-container dropdown-animation absolute w-52 lg:block hidden  bg-white  py-2 shadow-md shadow-gray-400 z-10 left-1/3  translate-x-1/3 lg2:translate-x-1/2 "
             onMouseEnter={handleMouseEnter}
           >
-            <div className="flex justify-center w-full">
+            <div className="flex flex-col justify-center w-full">
               <Link
                 onClick={() => setShowDropdown(false)}
                 to="/home/products/linear/linearCategory"

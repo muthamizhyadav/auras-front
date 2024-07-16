@@ -29,7 +29,7 @@ export const MoreProducts = () => {
         Category
       }`);
         setarrays(categories);
-        // console.log(categories, "All Products");
+        console.log(categories, "All Products");
         for (let i = 0; i < categories.length; i++) {
           const category = categories[i].Category;
           // console.log(category);
@@ -158,7 +158,7 @@ export const MoreProducts = () => {
         </div>
       ) : (
         <div className="mt-5 flex flex-col gap-5 p-5 ">
-          {/* {console.log(allvalues)} */}
+          {console.log(allvalues)}
           <p className="uppercase mb-5 text-center lg:text-3xl md:texet-2xl text-xl bg-gradient-to-r from-pink-500 via-pink-400 to-pink-300 text-transparent  bg-clip-text font-semibold">
             {name ==="product" ? "INDOOR" : name} Lights
           </p>

@@ -97,7 +97,6 @@ const About = () => {
     const secondtitle = document.querySelector(".secondtitle");
     title.style.marginTop = -100 + y / 1.08 + "px";
     secondtitle.style.marginTop = y / 5 + "px";
-   
   });
   const why = [
     {
@@ -137,7 +136,7 @@ const About = () => {
         "At Auras, we're committed to a brighter future through sustainability. With eco-friendly materials and energy-efficient designs, we help you create beautiful, sustainable spaces.",
     },
   ];
-  const[loader,setloader]=useState(true)
+  const [loader, setloader] = useState(true);
   const [Banner, setBanner] = useState([]);
   const [ourCulture, setOurCulture] = useState([]);
   const [ourServices, setOurServices] = useState([]);
@@ -208,7 +207,7 @@ const About = () => {
           setOurServices(res[0]);
           setPathAndPurpose(res[0]);
           setWhyChooseAuras(res[0]);
-         
+
           setloader(false);
         })
         .catch((err) => {
@@ -218,28 +217,29 @@ const About = () => {
     getdata();
   }, []);
 
-  return (
-    (
-      loader?  <div className="w-full h-screen flex flex-col gap-5 justify-center items-center">
-      <p className="lg:text-4xl md:text-2xl sm:text-xl text-lg font-bold bg-gradient-to-r from-pink-500 via-pink-400 to-pink-300 text-transparent  bg-clip-text">
-       
-      </p>
+  return loader ? (
+    <div className="w-full h-screen flex flex-col gap-5 justify-center items-center">
+      <p className="lg:text-4xl md:text-2xl sm:text-xl text-lg font-bold bg-gradient-to-r from-pink-500 via-pink-400 to-pink-300 text-transparent  bg-clip-text"></p>
       <div className="w-full gap-x-2 flex justify-center items-center">
         <div className="w-5 bg-[#d991c2]  h-5 rounded-full animate-bounce"></div>
         <div className="w-5 animate-pulse h-5 bg-[#9869b8] rounded-full "></div>
         <div className="w-5 h-5  bg-[#6756cc] rounded-full animate-bounce"></div>
       </div>
-    </div>:<>
-   
-      <div className="bg-about    h-screen bg-cover secondtitle  w-full bg-no-repeat ">
-        <div className="bg-black h-screen relative  w-full bg-opacity-60  flex flex-col justify-center items-center ">
+    </div>
+  ) : (
+    <>
+      <div className="bg-about h-96 bg-cover secondtitle  w-full bg-no-repeat ">
+        <div className="bg-black h-96 relative  w-full bg-opacity-60  flex flex-col justify-center items-center ">
           <div className="w-full h-full absolute top-0  bg-gradient-to-t from-black via-transparent to-transparent"></div>
           {Banner &&
             Banner.Banner &&
             Banner?.Banner?.map((item, index) => (
-              <div key={index} className=" text-center text-white sm:p-10 title overflow-hidden p-5 space-y-4">
+              <div
+                key={index}
+                className="flex flex-col justify-center items-center text-center text-white sm:p-10 title overflow-hidden p-5 space-y-4"
+              >
                 <h1 className="md:text-5xl lg:text-6xl 2xl:text-7xl xs:text-3xl font-semibold title">
-                  {item.title}
+                  Welcome to <span className="text-primaryColor ">auras</span>
                 </h1>
                 <h3 className="md:text-2xl text-sm font-medium text-primaryColor ">
                   {item.subTitle}
@@ -297,7 +297,11 @@ const About = () => {
                 <hr className="w-[60%] h-[2px] bg-primaryColor lg:hidden block" />
               </div>
               <div className="lg:w-[70%] lg:text-center text-justify mx-auto py-5">
-                <p>{item.definition}</p>
+                <p>
+                  <span className="text-3xl font-bold text-primaryColor">auras</span> has strong capacity in engineering technology and plenty
+                  of experience. We are highly appraised by our clients and the
+                  markets for our credible quality and zealous after-service.
+                </p>
               </div>
             </div>
 
@@ -407,7 +411,7 @@ const About = () => {
           whyChooseAuras?.whyChooseAuras?.map((item, index) => (
             <div key={index} className="relative p-5 py-3">
               <h1 className="lg:text-center text-justify text-2xl font-bold">
-                {item.title}
+                Why Choose <span className="text-3xl font-bold text-primaryColor">auras</span>
               </h1>
               <div className="absolute right-0 top-7 overflow-hidden w-[35%]">
                 <img src={line} alt="" className="lg:block hidden w-full" />
@@ -421,9 +425,16 @@ const About = () => {
               <div>
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 w-[85%] mx-auto">
                   {item?.card.map((items, index) => (
-                    <div key={index} className="bg-white border border-primaryColor p-5 space-y-3 rounded-md transition duration-300 hover:drop-shadow-2xl">
+                    <div
+                      key={index}
+                      className="bg-white border border-primaryColor p-5 space-y-3 rounded-md transition duration-300 hover:drop-shadow-2xl"
+                    >
                       <p className="bg-white drop-shadow-md w-fit p-2 rounded-full text-center  shadow-xl">
-                        <img src={items?.icon?.asset.url} alt="" className="w-10" />
+                        <img
+                          src={items?.icon?.asset.url}
+                          alt=""
+                          className="w-10"
+                        />
                       </p>
 
                       <h1 className="font-bold">{items.heading}</h1>
@@ -502,10 +513,6 @@ const About = () => {
         </div>
       </section>
     </>
-
-    )
-    
-    
   );
 };
 
