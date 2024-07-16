@@ -115,7 +115,7 @@ const Navbar = () => {
   return (
     <section
       ref={navbarRef}
-      className="bg-white fixed z-50 w-full font shadow-md shadow-gray-400 p-3"
+      className="bg-white fixed z-50 w-full font shadow-md shadow-gray-400"
     >
       <div className="w-full">
           {/* <div className="bg-primaryColor text-white  px-5 sm:px-10 md:px-20 flex justify-between">
@@ -140,13 +140,13 @@ const Navbar = () => {
             </div>
           </div> */}
         {/* larger devices */}
-        <div className="lg:flex hidden justify-between px-10 py-1">
+        <div className="lg:flex hidden justify-between items-center px-10 py-1">
           <div className="">
             <Link to="/home">
               <img
                 src={logo}
                 alt="auras logo"
-                className="xl:w-[170px] w-28"
+                className="lg:w-[170px] w-28"
               />
             </Link>
           </div>
@@ -203,7 +203,7 @@ const Navbar = () => {
           </div>
         </div>
         {/* smaller devices */}
-        <div className=" flex items-center justify-between px-5 py-1 lg:hidden overflow-hidden">
+        <div className=" flex items-center justify-between px-5 py-5 lg:hidden overflow-hidden">
           <div className="">
             <Link to="/home">
               <img src={logo} alt="auras logo" className="w-20" />
