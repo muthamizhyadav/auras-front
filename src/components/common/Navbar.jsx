@@ -115,42 +115,42 @@ const Navbar = () => {
   return (
     <section
       ref={navbarRef}
-      className="bg-white fixed z-50 w-full font shadow-md shadow-gray-400"
+      className="bg-white fixed z-50 w-full font shadow-md shadow-gray-400 p-3"
     >
       <div className="w-full">
-        <div className="bg-primaryColor text-white  px-5 sm:px-10 md:px-20 flex justify-between">
-          <div className="py-2 flex">
-            <div className="flex items-center pr-2 sm:pr-10 border-r">
-              <MdEmail className="" />
-              <p className="ml-1 hidden sm:block cursor-pointer text-sm">
-                contact@auraslightings.com
-              </p>
+          {/* <div className="bg-primaryColor text-white  px-5 sm:px-10 md:px-20 flex justify-between">
+            <div className="py-2 flex">
+              <div className="flex items-center pr-2 sm:pr-10 border-r">
+                <MdEmail className="" />
+                <p className="ml-1 hidden sm:block cursor-pointer text-sm">
+                  contact@auraslightings.com
+                </p>
+              </div>
+              <div className="flex items-center ml-2">
+                <TiLocation className="" />
+                <p className="ml-1 hidden sm:block cursor-pointer text-sm">UAE</p>
+              </div>
             </div>
-            <div className="flex items-center ml-2">
-              <TiLocation className="" />
-              <p className="ml-1 hidden sm:block cursor-pointer text-sm">UAE</p>
+            <div className="flex items-center gap-3 xs:gap-5">
+              <RiFacebookBoxFill className="rounded-3xl cursor-pointer" />
+              <FaSquareTwitter className="cursor-pointer" />
+              <RiInstagramFill className="cursor-pointer" />
+              <FaLinkedin className="cursor-pointer" />
+              <IoLogoYoutube className="cursor-pointer" />
             </div>
-          </div>
-          <div className="flex items-center gap-3 xs:gap-5">
-            <RiFacebookBoxFill className="rounded-3xl cursor-pointer" />
-            <FaSquareTwitter className="cursor-pointer" />
-            <RiInstagramFill className="cursor-pointer" />
-            <FaLinkedin className="cursor-pointer" />
-            <IoLogoYoutube className="cursor-pointer" />
-          </div>
-        </div>
+          </div> */}
         {/* larger devices */}
-        <div className="  md:justify-around w-full py-1 md:px-5 xl:px-10 items-center bg-transparent hidden lg:flex">
+        <div className="lg:flex hidden justify-between px-10 py-1">
           <div className="">
             <Link to="/home">
               <img
                 src={logo}
                 alt="auras logo"
-                className="xl:ml-16 xl:w-[170px] w-28"
+                className="xl:w-[170px] w-28"
               />
             </Link>
           </div>
-          <div className="flex ml-10 w-3/4 justify-evenly  items-center lg:text-xs xl:text-sm font-medium relative">
+          <div className="flex  items-center gap-12 text-base font-medium">
             <Link
               to="/home"
               className={`capitalize hover:text-[#F2667C] cursor-pointer ${
@@ -201,23 +201,6 @@ const Navbar = () => {
               />
             </div>
           </div>
-
-          {/* <div className="w-1/4  items-center justify-around xl:px-4 flex">
-            <div className="capitalize  shadow-lg cursor-pointer text-[#F2667C] hover:bg-[#F2667C] hover:text-white px-4 py-2 rounded">
-              <Link to="/contactus">
-                <p className=" lg:text-sm font-medium">Contact us</p>
-              </Link>
-            </div>
-            <div>
-              <FiSearch
-                className="text-[#F2667C] lg:text-xl xl:text-2xl cursor-pointer"
-                onClick={productsearch}
-              />
-            </div> */}
-            {/* <div>
-              <MdAccountCircle className="text-[#F2667C] lg:text-xl xl:text-3xl cursor-pointer" />
-            </div> */}
-          {/* </div> */}
         </div>
         {/* smaller devices */}
         <div className=" flex items-center justify-between px-5 py-1 lg:hidden overflow-hidden">
@@ -312,7 +295,7 @@ const Navbar = () => {
             </button>
           </Link>
           {showDropdownsmall && (
-            <div className="navbar-animation font-medium w-full absolute top-0 h-fit bg-white text-[#F2667C]  py-2  rounded-b-lg z-10 -ml-2">
+            <div className="navbar-animation font-medium w-full  absolute top-0 h-full bg-white text-[#F2667C]  py-2  rounded-b-lg z-10 -ml-5">
               <p
                 className="block px-4 py-2   hover:text-[#F2667C] "
                 onClick={() => setShowDropdownsmall(false)}
@@ -362,14 +345,14 @@ const Navbar = () => {
         {/* dropdowns in larger device */}
         {showDropdown && (
           <div
-            className="dropdown-container dropdown-animation absolute w-52 lg:block hidden  bg-white  py-2 shadow-md shadow-gray-400 z-10 left-1/3  translate-x-1/3 lg2:translate-x-1/2 "
+            className="dropdown-container dropdown-animation absolute w-52 lg:block hidden  bg-white  py-2 shadow-md shadow-gray-400 z-10 right-1/3 lg2:-mr-7 mr-4 top-full "
             onMouseEnter={handleMouseEnter}
           >
             <div className="flex flex-col justify-center w-full">
               <Link
                 onClick={() => setShowDropdown(false)}
                 to="/home/products/linear/linearCategory"
-                className={`block px-4 py-2 text-xs ${
+                className={`block px-4 py-2 text-sm ${
                   location.pathname.includes("/linear") ? "text-[#F2667C]" : ""
                 }  hover:text-[#F2667C]`}
               >
@@ -378,7 +361,7 @@ const Navbar = () => {
               <Link
                 onClick={() => setShowDropdown(false)}
                 to="/home/products/Outdoor/OutdoorCategory"
-                className={`block px-4 py-2 text-xs ${
+                className={`block px-4 py-2 text-sm ${
                   location.pathname.includes("/Outdoor") ? "text-[#F2667C]" : ""
                 }  hover:text-[#F2667C]`}
               >
@@ -393,7 +376,7 @@ const Navbar = () => {
                   });
                 }}
                 onMouseEnter={() => setIndoorDropdown(true)}
-                className={`block px-4 py-2 text-xs ${
+                className={`block px-4 py-2 text-sm ${
                   location.pathname.includes("/productCategory")
                     ? "text-[#F2667C]"
                     : ""
@@ -406,7 +389,7 @@ const Navbar = () => {
               <Link
                 onClick={() => setShowDropdown(false)}
                 to="home/products/facade/FacadeCategory"
-                className={`block px-4 py-2 text-xs ${
+                className={`block px-4 py-2 text-sm ${
                   location.pathname.includes("/facade") ? "text-[#F2667C]" : ""
                 }  hover:text-[#F2667C]`}
               >

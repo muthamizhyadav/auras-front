@@ -21,6 +21,7 @@ import { HiShoppingCart } from "react-icons/hi";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import sustainable from "../../assets/sustainable (1).png";
 import Sanityclient from "../common/Sanityclient";
+import logo from "../../assets/logo.png";
 
 const About = () => {
   React.useEffect(() => {
@@ -238,8 +239,11 @@ const About = () => {
                 key={index}
                 className="flex flex-col justify-center items-center text-center text-white sm:p-10 title overflow-hidden p-5 space-y-4"
               >
-                <h1 className="md:text-5xl lg:text-6xl 2xl:text-7xl xs:text-3xl font-semibold title">
-                  Welcome to <span className="text-primaryColor ">auras</span>
+                <h1 className="md:text-5xl lg:text-6xl 2xl:text-7xl xs:text-3xl font-semibold title flex flex-row items-center">
+                  Welcome to{" "}
+                  <span className="text-primaryColor ">
+                    <img src={logo} alt="" className="w-44"/>
+                  </span>
                 </h1>
                 <h3 className="md:text-2xl text-sm font-medium text-primaryColor ">
                   {item.subTitle}
@@ -298,8 +302,11 @@ const About = () => {
               </div>
               <div className="lg:w-[70%] lg:text-center text-justify mx-auto py-5">
                 <p>
-                  <span className="text-3xl font-bold text-primaryColor">auras</span> has strong capacity in engineering technology and plenty
-                  of experience. We are highly appraised by our clients and the
+                  <span className="text-3xl font-bold text-primaryColor">
+                    auras
+                  </span>{" "}
+                  has strong capacity in engineering technology and plenty of
+                  experience. We are highly appraised by our clients and the
                   markets for our credible quality and zealous after-service.
                 </p>
               </div>
@@ -411,7 +418,10 @@ const About = () => {
           whyChooseAuras?.whyChooseAuras?.map((item, index) => (
             <div key={index} className="relative p-5 py-3">
               <h1 className="lg:text-center text-justify text-2xl font-bold">
-                Why Choose <span className="text-3xl font-bold text-primaryColor">auras</span>
+                Why Choose{" "}
+                <span className="text-3xl font-bold text-primaryColor">
+                  auras
+                </span>
               </h1>
               <div className="absolute right-0 top-7 overflow-hidden w-[35%]">
                 <img src={line} alt="" className="lg:block hidden w-full" />

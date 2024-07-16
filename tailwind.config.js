@@ -17,7 +17,7 @@ export default {
         xss:"400px",
         previewxs:"404px",
         lg1:"1100px",
-        lg2:"1300px",
+        lg2:"1250px",
       },
       colors:{
         primaryColor:"#F2667C",
